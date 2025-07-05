@@ -1,0 +1,17 @@
+### Welcome message
+GET https://localhost:3000/
+
+### Wrong url
+GET http://localhost:3000/wrong-url
+
+### Wrong body
+POST http://localhost:3000/api/users
+
+### User not found
+POST http://localhost:3000/api/users
+content-type: application/json
+
+{
+    "email": "ciccio@email.it",
+    "nome": "Ciccio Pasticcio"
+}
