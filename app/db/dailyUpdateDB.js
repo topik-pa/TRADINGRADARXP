@@ -5,7 +5,7 @@ const alphabet = 'A'//BCDEFGHIJKLMNOPQRSTUVWXYZ#'
 //const schedule = '0 21 * * 1,2,3,4,5'
 const schedule = '*/15 * * * * *'
 
-const getStocksByLetter = async function(letter) {
+export const getStocksByLetter = async function(letter) {
   const url = 'https://live.euronext.com/en/pd_es/data/stocks?mics=dm_all_stock'
   const headers = new Headers()
   headers.append('accept', 'application/json, text/javascript, */*; q=0.01')

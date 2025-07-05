@@ -1,7 +1,8 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable quotes */
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { collectStockInitData } from '../../db/dailyUpdateDB.js'
+//import { getStocksByLetter } from '../../db/dailyUpdateDB.js'
 
 describe('collectStockInitData', () => {
   it('return "null" if null is received', () => {
@@ -26,7 +27,6 @@ describe('collectStockInitData', () => {
 
     expect(result).toEqual(null)
   })
-
   it('return correct data if expected param is passed', () => {
     const stock = [
       "",
@@ -51,7 +51,6 @@ describe('collectStockInitData', () => {
       currency: 'EUR'
     })
   })
-
   it('returns "null" if param is malformed', () => {
     let stock = [
       '',
@@ -116,3 +115,24 @@ describe('collectStockInitData', () => {
     })
   })
 })
+
+
+/*describe('getStocksByLetter', () => {
+  beforeEach(() => {
+    vi.restoreAllMocks() // resetta i mock prima di ogni test
+  })
+
+  it('ritorna il valore corretto dalla chiave richiesta', async() => {
+    const fakeJson = { aaData: 'Mario', age: 42 }
+    global.fetch = vi.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(fakeJson)
+      })
+    )
+
+    const result = await getStocksByLetter('A')
+
+    expect(result).toBe('Mario')
+    expect(fetch).toHaveBeenCalledOnce()
+  })
+})*/
