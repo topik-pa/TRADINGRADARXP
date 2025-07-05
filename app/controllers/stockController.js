@@ -6,7 +6,7 @@ export async function createStock(data) {
     const savedStock = await stock.save()
     return savedStock
   } catch (err) {
-    console.error('Error saving stock:', err)
+    console.error('Error saving stock:\n', err)
     throw err
   }
 }
@@ -23,7 +23,7 @@ export async function upsertStock(data) {
     const stock = await Stock.findOneAndUpdate(filter, update, options)
     return stock
   } catch (err) {
-    console.error('Error during upsert stock:', err)
+    console.error('Error during upsert stock:\n', err)
     throw err
   }
 }

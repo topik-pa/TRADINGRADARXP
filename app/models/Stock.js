@@ -18,22 +18,20 @@ const stockSchema = new mongoose.Schema({
   code:
       {
         type: String,
-        required: [true, 'Stock code is required'],
+        required: [true, 'Stock ISIN is required'],
         nullable: false,
         unique: true
       },
   market:
       {
         type: String,
-        required: [true, 'Stock market is required'],
-        nullable: false,
+        nullable: true,
         unique: false
       },
   currency:
       {
         type: String,
-        required: [true, 'Stock currency is required'],
-        nullable: false,
+        nullable: true,
         unique: false
       }    
 }, { timestamps: true } )

@@ -3,7 +3,7 @@ import JSDOM from 'jsdom'
 import { upsertStock } from '../controllers/stockController.js'
 const alphabet = 'A'//BCDEFGHIJKLMNOPQRSTUVWXYZ#'
 //const schedule = '0 21 * * 1,2,3,4,5'
-const schedule = '*/5 * * * * *'
+const schedule = '*/15 * * * * *'
 
 const getStocksByLetter = async function(letter) {
   const url = 'https://live.euronext.com/en/pd_es/data/stocks?mics=dm_all_stock'
@@ -42,34 +42,43 @@ const getStocksByLetter = async function(letter) {
   }
   return json['aaData']
 }
-const collectStockInitData = function(stock) {
-  return {
-    name: new JSDOM.JSDOM(stock[1]).window.document.querySelector('a').textContent,
-    isin: stock[2],
-    code: stock[3],
-    market: new JSDOM.JSDOM(stock[4]).window.document.querySelector('div').getAttribute('title'),
-    currency: new JSDOM.JSDOM(stock[5]).window.document.querySelector('div').firstChild.nodeValue.trim()
-  }
+export function collectStockInitData(stock) {
+  if (
+    !stock || 
+    !Array.isArray(stock) || 
+    stock.length < 6 ||
+    ['MTAH', 'ETLX'].includes(new JSDOM.JSDOM(stock[4]).window.document.querySelector('div').textContent) || 
+    !new JSDOM.JSDOM(stock[5]).window.document.querySelector('span')
+    // Some entries must not be included: other market or no price/currency data
+  ) return null
+  const name = new JSDOM.JSDOM(stock[1]).window.document.querySelector('a').textContent
+  const isin = stock[2]
+  const code = stock[3] || null
+  const market = new JSDOM.JSDOM(stock[4]).window.document.querySelector('div').getAttribute('title') || null
+  const currency = new JSDOM.JSDOM(stock[5]).window.document.querySelector('div').firstChild.nodeValue.trim() || null
+  if (!name || !isin || !code) return null
+  return { name, isin, code, market, currency }
 }
 export async function dailyUpdateDB() {
   cron.schedule(schedule, async() => {
     // For each alphabet letter...
     for (const letter of alphabet) {
       // Get data from remote
+      console.log('Get remote stocks data')
       const stocks = await getStocksByLetter(letter)
       // For each stock received...
-      stocks.forEach(async stock => {
-        // Some entries must not be included: other market or no price/currency data
-        const marketCode = new JSDOM.JSDOM(stock[4]).window.document.querySelector('div').textContent
-        if (['MTAH', 'ETLX'].includes(marketCode) || !new JSDOM.JSDOM(stock[5]).window.document.querySelector('span') ) return
+      console.log('Saving stocks data')
+      stocks.forEach(async stock => {        
+        const s = collectStockInitData(stock)
+        if (!s) return
         // Upsert stock on DB
         try {
-          await upsertStock(collectStockInitData(stock))
+          await upsertStock(s)
         } catch (error) {
           console.error(error.message)
         }
       })
     }
-
+    console.log('Saving done')
   })
 }
