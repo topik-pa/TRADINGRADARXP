@@ -1,4 +1,3 @@
-import cron from 'node-cron'
 import JSDOM from 'jsdom'
 import logger from '../config/logger.js'
 import { upsertStock } from '../controllers/stockController.js'
@@ -67,29 +66,28 @@ export function collectStockInitData(stock) {
 }
 
 export async function dailyUpdateDB() {
-  cron.schedule(process.env.CRON_SCHEDULE_DB_UPDATE, async() => {
-    const report = reportGenerator('tradingradar.net report del ' + new Date(Date.now()).toLocaleString() + '\n\n')
-    // For each alphabet letter...
-    for (const letter of alphabet) {
-      let sAdded = 0
-      // Get data from remote
-      logger.info('Get remote stocks data')
-      const stocks = await getStocksByLetter(letter)
-      // For each stock received...
-      logger.info('Saving stocks data')
-      // ALERT: for mongoDB service limitation limit must be low
-      const limit = pLimit(5)
-      const results = await Promise.allSettled(
-        stocks.map(stock => {
-          const s = collectStockInitData(stock)
-          if (s) {
-            report.add(s.code+'*')
-            sAdded++
-            limit(() => upsertStock(s).catch(e => logger.error(new Error(e.message))))
-          }
-        })
-      )
-      /*const results = await Promise.allSettled(
+  const report = reportGenerator('tradingradar.net report del ' + new Date(Date.now()).toLocaleString() + '\n\n')
+  // For each alphabet letter...
+  for (const letter of alphabet) {
+    let sAdded = 0
+    // Get data from remote
+    logger.info('Get remote stocks data')
+    const stocks = await getStocksByLetter(letter)
+    // For each stock received...
+    logger.info('Saving stocks data')
+    // ALERT: for mongoDB service limitation limit must be low
+    const limit = pLimit(5)
+    const results = await Promise.allSettled(
+      stocks.map(stock => {
+        const s = collectStockInitData(stock)
+        if (s) {
+          report.add(s.code+'*')
+          sAdded++
+          limit(() => upsertStock(s).catch(e => logger.error(new Error(e.message))))
+        }
+      })
+    )
+    /*const results = await Promise.allSettled(
         stocks.map(stock => {
           const s = collectStockInitData(stock)
           if (s) {
@@ -104,12 +102,11 @@ export async function dailyUpdateDB() {
           }
         })
       )*/
-      const errors = results.filter(r => r.status === 'rejected')
-      report.add(`\n\nLetter ${letter}\nTotal processed: ${results.length}\nStocks added: ${sAdded}\nErrors: ${errors.length}\n\n\n`)
-    }
-    await sendMessage(report.get())
-    logger.info('DB update done')
-  })
+    const errors = results.filter(r => r.status === 'rejected')
+    report.add(`\n\nLetter ${letter}\nTotal processed: ${results.length}\nStocks added: ${sAdded}\nErrors: ${errors.length}\n\n\n`)
+  }
+  await sendMessage(report.get())
+  logger.info('DB update done')
 }
 
 export function reportGenerator(subreport = '') {
