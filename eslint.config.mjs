@@ -17,7 +17,8 @@ export default defineConfig([
     'no-debugger': 'error',
     'space-before-function-paren': ['error', 'never'],
     'object-curly-spacing': ['error', 'always'],
-    'arrow-spacing': ['error', { before: true, after: true }]
+    'arrow-spacing': ['error', { before: true, after: true }],
+    'no-console': 'error'
   } },
   { files: ['**/*.{js,mjs,cjs}'], languageOptions: { globals: globals.node } }
 ])

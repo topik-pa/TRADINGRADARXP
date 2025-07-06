@@ -1,6 +1,6 @@
 import 'dotenv/config'
-
 import express from 'express'
+import logger from './app/config/logger.js'
 
 import { connectToDB } from './app/db/mongoose.js'
 import { dailyUpdateDB } from './app/db/dailyUpdateDB.js'
@@ -28,5 +28,5 @@ app.use((req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`🚀 Server is running on port ${port} in ${process.env.NODE_ENV} mode.`)
+  logger.info(`🚀 Server is running on port ${port} in ${process.env.NODE_ENV} mode.`)
 })

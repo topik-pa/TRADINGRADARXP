@@ -1,5 +1,6 @@
 import cron from 'node-cron'
 import JSDOM from 'jsdom'
+import logger from '../config/logger.js'
 import { upsertStock } from '../controllers/stockController.js'
 import pLimit from 'p-limit'
 import Mailgun from 'mailgun.js'
@@ -37,7 +38,7 @@ export const getStocksByLetter = async function(letter) {
     }
     json = await response.json()
   } catch (error) {
-    console.error(error.message)
+    logger.error(new Error(error.message))
   }
   return json['aaData']
 }
@@ -66,16 +67,16 @@ export async function dailyUpdateDB() {
     // For each alphabet letter...
     for (const letter of alphabet) {
       // Get data from remote
-      console.log('Get remote stocks data')
+      logger.info('Get remote stocks data')
       const stocks = await getStocksByLetter(letter)
       // For each stock received...
-      console.log('Saving stocks data')
+      logger.info('Saving stocks data')
       // ALERT: for mongoDB service limitation limit must be low
       const limit = pLimit(5)
       const results = await Promise.allSettled(
         stocks.map(stock => {
           const s = collectStockInitData(stock)
-          if (s) limit(() => upsertStock(s).catch(e => console.error(e.message)))
+          if (s) limit(() => upsertStock(s).catch(e => logger.error(new Error(e.message))))
         })
       )
       /*const results = await Promise.allSettled(
@@ -96,7 +97,7 @@ export async function dailyUpdateDB() {
       const errors = results.filter(r => r.status === 'rejected')
       report.add(`\nLetter ${letter}\nTotal processed: ${results.length}\nErrors: ${errors.length}`)
     }
-    console.log('Saving done')
+    logger.info('Saving done')
     sendMessage(report.get())
   })
 }
@@ -115,7 +116,7 @@ export function reportGenerator(subreport = '') {
 
 export async function sendMessage(report) {
   if(process.env.NODE_ENV !== 'production') {
-    console.log(report)
+    logger.info(report)
     return
   }
   const mailgun = new Mailgun(FormData)
@@ -132,6 +133,6 @@ export async function sendMessage(report) {
       text: report
     })
   } catch (error) {
-    console.log(error)
+    logger.error(new Error(error.message))
   }
 }

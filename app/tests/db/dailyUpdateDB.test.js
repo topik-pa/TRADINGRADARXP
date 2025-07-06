@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable quotes */
-import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { describe, it, expect, vi/*, beforeEach*/ } from 'vitest'
 import { collectStockInitData } from '../../db/dailyUpdateDB.js'
 // import { getStocksByLetter } from '../../db/dailyUpdateDB.js'
 import { reportGenerator } from '../../db/dailyUpdateDB.js'
