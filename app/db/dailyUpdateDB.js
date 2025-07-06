@@ -4,8 +4,6 @@ import { upsertStock } from '../controllers/stockController.js'
 import pLimit from 'p-limit'
 import Mailgun from 'mailgun.js'
 const alphabet = 'A'//BCDEFGHIJKLMNOPQRSTUVWXYZ#'
-//const schedule = '0 21 * * 1,2,3,4,5'
-const schedule = '*/15 * * * * *'
 
 export const getStocksByLetter = async function(letter) {
   const url = 'https://live.euronext.com/en/pd_es/data/stocks?mics=dm_all_stock'
@@ -61,7 +59,7 @@ export function collectStockInitData(stock) {
   return { name, isin, code, market, currency }
 }
 export async function dailyUpdateDB() {
-  cron.schedule(schedule, async() => {
+  cron.schedule(process.env.CRON_SCHEDULE_DB_UPDATE, async() => {
     const report = reportGenerator('tradingradar.net report del ' + new Date(Date.now()).toLocaleString() + '\n')
     // For each alphabet letter...
     for (const letter of alphabet) {
@@ -112,7 +110,6 @@ function reportGenerator(subreport = '') {
     }
   }
 }
-
 
 async function sendMessage(report) {
   console.log(report)
