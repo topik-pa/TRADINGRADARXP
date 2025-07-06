@@ -63,9 +63,10 @@ export function collectStockInitData(stock) {
 
 export async function dailyUpdateDB() {
   cron.schedule(process.env.CRON_SCHEDULE_DB_UPDATE, async() => {
-    const report = reportGenerator('tradingradar.net report del ' + new Date(Date.now()).toLocaleString() + '\n')
+    const report = reportGenerator('tradingradar.net report del ' + new Date(Date.now()).toLocaleString() + '\n\n')
     // For each alphabet letter...
     for (const letter of alphabet) {
+      let sAdded = 0
       // Get data from remote
       logger.info('Get remote stocks data')
       const stocks = await getStocksByLetter(letter)
@@ -76,7 +77,11 @@ export async function dailyUpdateDB() {
       const results = await Promise.allSettled(
         stocks.map(stock => {
           const s = collectStockInitData(stock)
-          if (s) limit(() => upsertStock(s).catch(e => logger.error(new Error(e.message))))
+          if (s) {
+            report.add(s.code+'*')
+            sAdded++
+            limit(() => upsertStock(s).catch(e => logger.error(new Error(e.message))))
+          }
         })
       )
       /*const results = await Promise.allSettled(
@@ -95,10 +100,10 @@ export async function dailyUpdateDB() {
         })
       )*/
       const errors = results.filter(r => r.status === 'rejected')
-      report.add(`\nLetter ${letter}\nTotal processed: ${results.length}\nErrors: ${errors.length}`)
+      report.add(`\n\nLetter ${letter}\nTotal processed: ${results.length}\nStocks added: ${sAdded}\nErrors: ${errors.length}\n\n\n`)
     }
-    logger.info('Saving done')
-    sendMessage(report.get())
+    await sendMessage(report.get())
+    logger.info('DB update done')
   })
 }
 

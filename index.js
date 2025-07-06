@@ -13,7 +13,7 @@ app.use(express.json())
 
 // Connect to DB
 await connectToDB()
-dailyUpdateDB()
+await dailyUpdateDB()
 
 //Routes
 app.get('/', (req, res) => {
