@@ -33,4 +33,4 @@ await connectToDB()
 cron.schedule(process.env.CRON_SCHEDULE_DB_UPDATE, async() => {
   await dailyUpdateDB()
 })
-await dailyUpdateDB()
+//await dailyUpdateDB()
