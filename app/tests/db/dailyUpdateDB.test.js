@@ -2,7 +2,11 @@
 /* eslint-disable quotes */
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { collectStockInitData } from '../../db/dailyUpdateDB.js'
-//import { getStocksByLetter } from '../../db/dailyUpdateDB.js'
+// import { getStocksByLetter } from '../../db/dailyUpdateDB.js'
+import { reportGenerator } from '../../db/dailyUpdateDB.js'
+// import { sendMessage } from '../../db/dailyUpdateDB.js'
+// import Mailgun from 'mailgun.js'
+// import FormData from 'form-data'
 
 describe('collectStockInitData', () => {
   it('return "null" if null is received', () => {
@@ -116,23 +120,112 @@ describe('collectStockInitData', () => {
   })
 })
 
-
-/*describe('getStocksByLetter', () => {
-  beforeEach(() => {
-    vi.restoreAllMocks() // resetta i mock prima di ogni test
-  })
-
-  it('ritorna il valore corretto dalla chiave richiesta', async() => {
-    const fakeJson = { aaData: 'Mario', age: 42 }
-    global.fetch = vi.fn(() =>
-      Promise.resolve({
-        json: () => Promise.resolve(fakeJson)
-      })
-    )
+/*describe('getStocksByLetter (real fetch)', () => {
+  it('should fetch real data and call fetch once', async() => {
+    // Spy sulla fetch globale, ma senza mockarla
+    const fetchSpy = vi.spyOn(global, 'fetch')
 
     const result = await getStocksByLetter('A')
 
-    expect(result).toBe('Mario')
-    expect(fetch).toHaveBeenCalledOnce()
+    expect(fetchSpy).toHaveBeenCalledOnce()
+    expect(Array.isArray(result)).toBe(true)
+    expect(result.length).toBeGreaterThan(0)
+    expect(Array.isArray(result[0])).toBe(true)
+    expect(result[0].length).toBe(10)
+
+    fetchSpy.mockRestore() // pulizia
   })
 })*/
+
+describe('reportGenerator', () => {
+  it('should return an object with add and get methods', () => {
+    const report = reportGenerator()
+    expect(typeof report.add).toBe('function')
+    expect(typeof report.get).toBe('function')
+  })
+
+  it('should initialize with an empty string if no subreport is passed', () => {
+    const report = reportGenerator()
+    expect(report.get()).toBe('')
+  })
+
+  it('should initialize with the given subreport', () => {
+    const report = reportGenerator('Init: ')
+    expect(report.get()).toBe('Init: ')
+  })
+
+  it('should concatenate added strings', () => {
+    const report = reportGenerator('Start: ')
+    report.add('Line1. ')
+    report.add('Line2.')
+    expect(report.get()).toBe('Start: Line1. Line2.')
+  })
+
+  it('should work with empty strings and spaces', () => {
+    const report = reportGenerator('Report:')
+    report.add(' ')
+    report.add('')
+    report.add('Done')
+    expect(report.get()).toBe('Report: Done')
+  })
+
+  it('should not affect other instances', () => {
+    const r1 = reportGenerator('First')
+    const r2 = reportGenerator('Second')
+
+    r1.add(' One')
+    r2.add(' Two')
+
+    expect(r1.get()).toBe('First One')
+    expect(r2.get()).toBe('Second Two')
+  })
+
+  it('should allow chained additions (manually)', () => {
+    const report = reportGenerator()
+    report.add('A')
+    report.add('B')
+    report.add('C')
+    expect(report.get()).toBe('ABC')
+  })
+
+  it('should support Unicode and special characters', () => {
+    const report = reportGenerator('🚀')
+    report.add('✓ ')
+    report.add('Δεδομένα')
+    expect(report.get()).toBe('🚀✓ Δεδομένα')
+  })
+})
+
+vi.mock('mailgun.js', () => {
+  return {
+    default: vi.fn().mockImplementation(() => ({
+      client: vi.fn().mockReturnValue({
+        messages: {
+          create: vi.fn().mockResolvedValue({ id: '123' })
+        }
+      })
+    }))
+  }
+})
+
+// describe('sendMessage', () => {
+//   beforeEach(() => {
+//     process.env.MAILGUN_SECRET_KEY = 'testkey'
+//   })
+
+//   it('should call mailgun.messages.create with correct parameters', async() => {
+    
+//     const mailgun = new Mailgun(FormData)
+//     const mockCreate = mailgun.client().messages.create
+
+//     const report = 'This is a test report'
+//     await sendMessage(report)
+
+//     expect(mockCreate).toHaveBeenCalledWith('ftt.tradingradar.net', {
+//       from: 'tradingradar.net <followthetitle@ftt.tradingradar.net>',
+//       to: 'Marco Pavan <marcopavan.mp@gmail.com>',
+//       subject: 'Rapporto update DB tradingradar',
+//       text: report
+//     })
+//   })
+// })

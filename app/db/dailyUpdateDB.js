@@ -41,6 +41,7 @@ export const getStocksByLetter = async function(letter) {
   }
   return json['aaData']
 }
+
 export function collectStockInitData(stock) {
   if (
     !stock || 
@@ -58,6 +59,7 @@ export function collectStockInitData(stock) {
   if (!name || !isin || !code) return null
   return { name, isin, code, market, currency }
 }
+
 export async function dailyUpdateDB() {
   cron.schedule(process.env.CRON_SCHEDULE_DB_UPDATE, async() => {
     const report = reportGenerator('tradingradar.net report del ' + new Date(Date.now()).toLocaleString() + '\n')
@@ -99,7 +101,7 @@ export async function dailyUpdateDB() {
   })
 }
 
-function reportGenerator(subreport = '') {
+export function reportGenerator(subreport = '') {
   let result = subreport
   return {
     add(str) {
@@ -111,10 +113,11 @@ function reportGenerator(subreport = '') {
   }
 }
 
-async function sendMessage(report) {
-  console.log(report)
-  return
-  // eslint-disable-next-line no-unreachable
+export async function sendMessage(report) {
+  if(process.env.NODE_ENV === 'development') {
+    console.log(report)
+    return
+  }
   const mailgun = new Mailgun(FormData)
   const mg = mailgun.client({
     username: 'api',
