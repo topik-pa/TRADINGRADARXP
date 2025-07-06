@@ -2,6 +2,7 @@ import cron from 'node-cron'
 import JSDOM from 'jsdom'
 import { upsertStock } from '../controllers/stockController.js'
 import pLimit from 'p-limit'
+import Mailgun from 'mailgun.js'
 const alphabet = 'A'//BCDEFGHIJKLMNOPQRSTUVWXYZ#'
 //const schedule = '0 21 * * 1,2,3,4,5'
 const schedule = '*/15 * * * * *'
@@ -22,7 +23,6 @@ export const getStocksByLetter = async function(letter) {
   headers.append('sec-fetch-mode', 'cors')
   headers.append('sec-fetch-site', 'same-origin')
   headers.append('x-requested-with', 'XMLHttpRequest')
-  headers.append('cookie', 'visid_incap_2790185=tJ0zST2vRpyf+BhOUOoRdSB1wGcAAAAAQUIPAAAAAAApzUo8e5riX9d7mVg5oNPK; OptanonAlertBoxClosed=2025-02-27T14:22:32.981Z; eupubconsent-v2=CQNfCFgQNfCFgAcABBENBeFgAAAAAAAAAChQAAAAAAAA.YAAAAAAAAAAA; visid_incap_2691598=4OiTLlcZQBKDj5fgZHkhjkyWZ2gAAAAAQUIPAAAAAADciS/P1rY4ZtOjjw46INhm; incap_ses_1576_2691598=uJGzED/88x6+HVxD+hPfFQLdZ2gAAAAAhUegshdRztVhprN1SV7c4w==; OptanonConsent=isGpcEnabled=0&datestamp=Fri+Jul+04+2025+18%3A32%3A35+GMT%2B0200+(Ora+legale+dell%E2%80%99Europa+centrale)&version=202310.2.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=d53f7ba6-af79-44ff-bed8-c2f80a3928e5&interactionCount=1&landingPath=NotLandingPage&groups=C0002%3A0%2CC0003%3A0%2CC0001%3A1%2CC0004%3A0%2CV2STACK42%3A0&genVendors=V4%3A0%2CV19%3A0%2CV24%3A0%2CV10%3A0%2CV21%3A0%2CV3%3A0%2CV20%3A0%2C&geolocation=IT%3B62&AwaitingReconsent=false')
   headers.append('Referer', 'https://live.euronext.com/en/products/equities/list')
   headers.append('Referrer-Policy', 'strict-origin-when-cross-origin')
   const body = `draw=4&columns%5B0%5D%5Bdata%5D=0&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=1&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=2&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=3&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=4&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=5&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=6&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=false&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=7&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=false&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=8&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=false&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=9&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=100&search%5Bvalue%5D=&search%5Bregex%5D=false&args%5BinitialLetter%5D=${letter}&iDisplayLength=100&iDisplayStart=0&sSortDir_0=asc&sSortField=name`
@@ -62,6 +62,7 @@ export function collectStockInitData(stock) {
 }
 export async function dailyUpdateDB() {
   cron.schedule(schedule, async() => {
+    const report = reportGenerator('tradingradar.net report del ' + new Date(Date.now()).toLocaleString() + '\n')
     // For each alphabet letter...
     for (const letter of alphabet) {
       // Get data from remote
@@ -69,16 +70,68 @@ export async function dailyUpdateDB() {
       const stocks = await getStocksByLetter(letter)
       // For each stock received...
       console.log('Saving stocks data')
-
-      const limit = pLimit(50)
-      await Promise.allSettled(
+      // ALERT: for mongoDB service limitation limit must be low
+      const limit = pLimit(5)
+      const results = await Promise.allSettled(
         stocks.map(stock => {
           const s = collectStockInitData(stock)
           if (s) limit(() => upsertStock(s).catch(e => console.error(e.message)))
         })
       )
-
+      /*const results = await Promise.allSettled(
+        stocks.map(stock => {
+          const s = collectStockInitData(stock)
+          if (s) {
+            limit(async() => {
+              try {
+                await upsertStock(s)
+              } catch (e) {
+                console.error('Error saving stock: ', s, e.message)
+                throw e // rilancia per far fallire la promessa, e farla risultare "rejected"
+              }
+            })
+          }
+        })
+      )*/
+      const errors = results.filter(r => r.status === 'rejected')
+      report.add(`\nLetter ${letter}\nTotal processed: ${results.length}\nErrors: ${errors.length}`)
     }
     console.log('Saving done')
+    sendMessage(report.get())
   })
+}
+
+function reportGenerator(subreport = '') {
+  let result = subreport
+  return {
+    add(str) {
+      result += str
+    },
+    get() {
+      return result
+    }
+  }
+}
+
+
+async function sendMessage(report) {
+  console.log(report)
+  return
+  // eslint-disable-next-line no-unreachable
+  const mailgun = new Mailgun(FormData)
+  const mg = mailgun.client({
+    username: 'api',
+    key: process.env.MAILGUN_SECRET_KEY,
+    url: 'https://api.eu.mailgun.net'
+  })
+  try {
+    await mg.messages.create('ftt.tradingradar.net', {
+      from: 'tradingradar.net <followthetitle@ftt.tradingradar.net>',
+      to: 'Marco Pavan <marcopavan.mp@gmail.com>',
+      subject: 'Rapporto update DB tradingradar',
+      text: report
+    })
+  } catch (error) {
+    console.log(error)
+  }
 }
