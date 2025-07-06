@@ -114,7 +114,7 @@ export function reportGenerator(subreport = '') {
 }
 
 export async function sendMessage(report) {
-  if(process.env.NODE_ENV === 'development') {
+  if(process.env.NODE_ENV !== 'production') {
     console.log(report)
     return
   }
