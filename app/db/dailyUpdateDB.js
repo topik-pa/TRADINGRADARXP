@@ -4,7 +4,12 @@ import logger from '../config/logger.js'
 import { upsertStock } from '../controllers/stockController.js'
 import pLimit from 'p-limit'
 import Mailgun from 'mailgun.js'
-const alphabet = 'A'//BCDEFGHIJKLMNOPQRSTUVWXYZ#'
+let alphabet
+if(process.env.NODE_ENV !== 'production') {
+  alphabet = 'A'
+} else {
+  alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+}
 
 export const getStocksByLetter = async function(letter) {
   const url = 'https://live.euronext.com/en/pd_es/data/stocks?mics=dm_all_stock'
