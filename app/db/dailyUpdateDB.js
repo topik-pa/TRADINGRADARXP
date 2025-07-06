@@ -1,6 +1,7 @@
 import cron from 'node-cron'
 import JSDOM from 'jsdom'
 import { upsertStock } from '../controllers/stockController.js'
+import pLimit from 'p-limit'
 const alphabet = 'A'//BCDEFGHIJKLMNOPQRSTUVWXYZ#'
 //const schedule = '0 21 * * 1,2,3,4,5'
 const schedule = '*/15 * * * * *'
@@ -68,16 +69,15 @@ export async function dailyUpdateDB() {
       const stocks = await getStocksByLetter(letter)
       // For each stock received...
       console.log('Saving stocks data')
-      stocks.forEach(async stock => {        
-        const s = collectStockInitData(stock)
-        if (!s) return
-        // Upsert stock on DB
-        try {
-          await upsertStock(s)
-        } catch (error) {
-          console.error(error.message)
-        }
-      })
+
+      const limit = pLimit(50)
+      await Promise.allSettled(
+        stocks.map(stock => {
+          const s = collectStockInitData(stock)
+          if (s) limit(() => upsertStock(s).catch(e => console.error(e.message)))
+        })
+      )
+
     }
     console.log('Saving done')
   })
