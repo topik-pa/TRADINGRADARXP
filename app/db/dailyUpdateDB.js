@@ -10,6 +10,13 @@ if(process.env.NODE_ENV !== 'production') {
   alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 }
 
+const SLEEP_TIME = 10000
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms)
+  })
+}
+
 export const getStocksByLetter = async function(letter) {
   const url = 'https://live.euronext.com/en/pd_es/data/stocks?mics=dm_all_stock'
   const headers = new Headers()
@@ -104,6 +111,7 @@ export async function dailyUpdateDB() {
       )*/
     const errors = results.filter(r => r.status === 'rejected')
     report.add(`\n\nLetter ${letter}\nTotal processed: ${results.length}\nStocks added: ${sAdded}\nErrors: ${errors.length}\n\n\n`)
+    await sleep(SLEEP_TIME)
   }
   await sendMessage(report.get())
   logger.info('DB update done')
