@@ -90,7 +90,7 @@ export async function dailyUpdateDB() {
         if (s) {
           report.add(s.code+'*')
           sAdded++
-          limit(() => upsertStock(s).catch(e => logger.error(new Error(e.message))))
+          limit(async() => await upsertStock(s).catch(e => logger.error(new Error(e.message))))
         }
       })
     )
