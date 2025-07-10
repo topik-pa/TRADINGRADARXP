@@ -1,8 +1,12 @@
-import JSDOM from 'jsdom'
-import logger from '../config/logger.js'
+/* eslint-disable no-useless-escape */
+import { JSDOM } from 'jsdom'
+import stockSources from '../config/stock.config.js'
 import { upsertStock } from '../controllers/stockController.js'
+import { cleanDB } from '../utilities/cleanDB.js'
 import pLimit from 'p-limit'
+import logger from '../config/logger.js'
 import Mailgun from 'mailgun.js'
+
 let alphabet
 if(process.env.NODE_ENV !== 'production') {
   alphabet = 'A'
@@ -43,6 +47,7 @@ export const getStocksByLetter = async function(letter) {
   })
   let response, json = null
   try {
+    logger.info(`Conneting to: ${request.url} with param ${letter}`)
     response = await fetch(request)
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`)
@@ -59,20 +64,20 @@ export function collectStockInitData(stock) {
     !stock || 
     !Array.isArray(stock) || 
     stock.length < 6 ||
-    ['MTAH', 'ETLX'].includes(new JSDOM.JSDOM(stock[4]).window.document.querySelector('div').textContent) || 
-    !new JSDOM.JSDOM(stock[5]).window.document.querySelector('span')
+    ['MTAH', 'ETLX'].includes(new JSDOM(stock[4]).window.document.querySelector('div').textContent) || 
+    !new JSDOM(stock[5]).window.document.querySelector('span')
     // Some entries must not be included: other market or no price/currency data
   ) return null
-  const name = new JSDOM.JSDOM(stock[1]).window.document.querySelector('a').textContent
+  const name = new JSDOM(stock[1]).window.document.querySelector('a').textContent
   const isin = stock[2]
   const code = stock[3] || null
-  const market = new JSDOM.JSDOM(stock[4]).window.document.querySelector('div').getAttribute('title') || null
-  const currency = new JSDOM.JSDOM(stock[5]).window.document.querySelector('div').firstChild.nodeValue.trim() || null
+  const market = new JSDOM(stock[4]).window.document.querySelector('div').getAttribute('title') || null
+  const currency = new JSDOM(stock[5]).window.document.querySelector('div').firstChild.nodeValue.trim() || null
   if (!name || !isin || !code) return null
   return { name, isin, code, market, currency }
 }
 
-export async function dailyUpdateDB() {
+export async function dailyInitDB() {
   const report = reportGenerator('tradingradar.net report del ' + new Date(Date.now()).toLocaleString() + '\n\n')
   // For each alphabet letter...
   for (const letter of alphabet) {
@@ -81,16 +86,18 @@ export async function dailyUpdateDB() {
     logger.info('Get remote stocks data')
     const stocks = await getStocksByLetter(letter)
     // For each stock received...
-    logger.info('Saving stocks data')
+    logger.info('Saving stocks init data')
     // ALERT: for mongoDB service limitation limit must be low
     const limit = pLimit(5)
     const results = await Promise.allSettled(
-      stocks.map(stock => {
+      stocks.map(async stock => {
         const s = collectStockInitData(stock)
         if (s) {
+          await populateStock(s)
           report.add(s.code+'*')
           sAdded++
           limit(async() => await upsertStock(s).catch(e => logger.error(new Error(e.message))))
+
         }
       })
     )
@@ -113,8 +120,35 @@ export async function dailyUpdateDB() {
     report.add(`\n\nLetter ${letter}\nTotal processed: ${results.length}\nStocks added: ${sAdded}\nErrors: ${errors.length}\n\n\n`)
     await sleep(SLEEP_TIME)
   }
+  logger.info('Start clean...')
+  await cleanDB()
+  logger.info('Clean done')
+
   await sendMessage(report.get())
-  logger.info('DB update done')
+  logger.info('DB init done')
+}
+
+export async function populateStock(stock) {
+  const source = stockSources.find((s) => s.isin === stock.isin)
+  if(!source) {
+    logger.warn(`Stock ${stock.code} were not found in stock.config`)
+    return
+  }
+  let key, value
+  for (const el of source.sources) {
+    let html
+    try {
+      logger.info('Conneting to: ' + el.url)
+      html = await (await fetch(el.url)).text()
+    } catch (error) {
+      logger.error(new Error(error.message))
+    }
+    el.targets.forEach(t => {
+      key = t.key
+      value = new JSDOM(html).window.document.querySelector(t.path)?.firstChild?.nodeValue.trim() || null
+      stock[key] = value
+    })
+  }
 }
 
 export function reportGenerator(subreport = '') {

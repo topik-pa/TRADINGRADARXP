@@ -33,7 +33,25 @@ const stockSchema = new mongoose.Schema({
         type: String,
         nullable: true,
         unique: false
-      }    
+      },
+  price:
+      {
+        type: String,
+        nullable: true,
+        unique: false
+      },
+  absVariation:
+      {
+        type: String,
+        nullable: true,
+        unique: false
+      }, 
+  relVariation:
+      {
+        type: String,
+        nullable: true,
+        unique: false
+      }         
 }, { timestamps: true } )
 
 export const Stock = mongoose.model('Stock', stockSchema)

@@ -4,7 +4,7 @@ import cron from 'node-cron'
 import logger from './app/config/logger.js'
 
 import { connectToDB } from './app/db/mongoose.js'
-import { dailyUpdateDB } from './app/db/dailyUpdateDB.js'
+import { dailyInitDB } from './app/db/dailyUpdateDB.js'
 
 const app = express()
 const port = process.env.PORT || 8080
@@ -24,9 +24,9 @@ app.listen(port, () => {
 // Connect to DB
 await connectToDB() 
 if (process.env.NODE_ENV === 'development') {
-  await dailyUpdateDB()
+  await dailyInitDB()
 } else {
   cron.schedule(process.env.CRON_SCHEDULE_DB_UPDATE, async() => {
-    await dailyUpdateDB()
+    await dailyInitDB()
   })
 }
