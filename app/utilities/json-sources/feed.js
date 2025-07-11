@@ -1,0 +1,121 @@
+/* eslint-disable no-console */
+import 'dotenv/config'
+import fs from 'fs'
+import { Stock } from '../../models/Stock.js'
+import { connectToDB } from '../../db/mongoose.js'
+import { JSDOM } from 'jsdom'
+import { exit } from 'process'
+
+const OUTPUT_PATH = './app/utilities/json-sources/output.json'
+const alphabet = 'A'//BCDEFGHIJKLMNOPQRSTUVWXYZ'
+const TARGETS = [
+  {
+    key: 'price',
+    path: '#header-instrument-price'
+  },
+  {
+    key: 'absVariation',
+    path: '.mt-auto span:nth-child(2)'
+  },
+  {
+    key: 'relVariation',
+    path: '.mt-auto span:nth-child(3)'
+  }
+]
+
+const SLEEP_TIME = 5000
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms)
+  })
+}
+
+export const getStocksByLetter = async function(letter) {
+  const url = 'https://live.euronext.com/en/pd_es/data/stocks?mics=dm_all_stock'
+  const headers = new Headers()
+  headers.append('accept', 'application/json, text/javascript, */*; q=0.01')
+  headers.append('accept-language', 'it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6')
+  headers.append('cache-control', 'no-cache')
+  headers.append('content-type', 'application/x-www-form-urlencoded; charset=UTF-8')
+  headers.append('pragma', 'no-cache')
+  headers.append('priority', 'u=1, i')
+  headers.append('sec-ch-ua', '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"')
+  headers.append('sec-ch-ua-mobile', '?0')
+  headers.append('sec-ch-ua-platform', 'Linux')
+  headers.append('sec-fetch-dest', 'empty')
+  headers.append('sec-fetch-mode', 'cors')
+  headers.append('sec-fetch-site', 'same-origin')
+  headers.append('x-requested-with', 'XMLHttpRequest')
+  headers.append('Referer', 'https://live.euronext.com/en/products/equities/list')
+  headers.append('Referrer-Policy', 'strict-origin-when-cross-origin')
+  const body = `draw=4&columns%5B0%5D%5Bdata%5D=0&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=1&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=2&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=3&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=4&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=5&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=6&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=false&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=7&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=false&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=8&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=false&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=9&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=100&search%5Bvalue%5D=&search%5Bregex%5D=false&args%5BinitialLetter%5D=${letter}&iDisplayLength=100&iDisplayStart=0&sSortDir_0=asc&sSortField=name`
+  const request = new Request(url, {
+    method: 'POST',
+    body,
+    headers
+  })
+  let response, json = null
+  try {
+    console.log(`Conneting to: ${request.url} with param ${letter}`)
+    response = await fetch(request)
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`)
+    }
+    json = await response.json()
+  } catch (error) {
+    console.error(new Error(error.message))
+  }
+  return json['aaData']
+}
+
+export async function getDataAndPopulate(json) {
+  // For each alphabet letter...
+  for (const letter of alphabet) {
+    // Get data from remote
+    console.log('Get remote stocks data')
+    let stocks
+    try {
+      stocks = await getStocksByLetter(letter)
+    } catch (error) {
+      console.error(error)
+    }
+    // For each stock received...
+    for (const rstock of stocks) {
+      console.log('Search for ' + rstock[3] + ' in DB...')
+      const dbstock = await Stock.findOne({ code: rstock[3] })
+      if(dbstock) {
+        console.log('Founded: ' + rstock[3])
+        const source = {}
+        source.url = new JSDOM(rstock[1]).window.document.querySelector('a').getAttribute('href') || null
+        source.targets = TARGETS
+        const jsonstock = json.find((el) => {return el.code === rstock[3]})
+        // Elimina il vecchio elemento source
+        jsonstock.sources.pop(jsonstock.sources.find((el) => {return el.url === source.url}))
+        jsonstock.sources.push(source)
+      }
+    }
+    console.log('Sleeping...')
+    await sleep(SLEEP_TIME)
+  }
+}
+
+
+
+// Leggi il contenuto del file di input
+fs.readFile(OUTPUT_PATH, 'utf8', async(err, data) => {
+  if (err) {
+    console.error('Errore durante la lettura del file: ' + OUTPUT_PATH, err)
+    return
+  }
+
+  await connectToDB() 
+  const output = JSON.parse(data)
+
+  async function feed() {
+    await getDataAndPopulate(output)
+    fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2), 'utf-8')
+    console.log('File ' + OUTPUT_PATH + ' feeded')
+  }
+  await feed()
+  exit(0)
+})
