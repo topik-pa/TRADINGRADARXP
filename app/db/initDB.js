@@ -1,11 +1,10 @@
-/* eslint-disable no-useless-escape */
+ 
 import { JSDOM } from 'jsdom'
-import stockSources from '../config/stock.config.js'
 import { upsertStock } from '../controllers/stockController.js'
-import { cleanDB } from '../utilities/cleanDB.js'
 import pLimit from 'p-limit'
 import logger from '../config/logger.js'
 import Mailgun from 'mailgun.js'
+
 
 let alphabet
 if(process.env.NODE_ENV !== 'production') {
@@ -14,14 +13,54 @@ if(process.env.NODE_ENV !== 'production') {
   alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 }
 
-const SLEEP_TIME = 10000
-function sleep(ms) {
+const SLEEP_TIME = 10 * 1000 // 10 seconds...
+export function sleep(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms)
   })
 }
 
-export const getStocksByLetter = async function(letter) {
+export async function initDB() {
+  // Init report
+  const report = reportGenerator('tradingradar.net report del ' + new Date(Date.now()).toLocaleString() + '\n\n')
+  // For each alphabet letter...
+  for (const letter of alphabet) {
+    let addedStocks = 0
+    // Get data from remote
+    logger.info('Get remote stocks data')
+    const stocks = await getStocksFromEuronext(letter)
+    // For each stock received...
+    logger.info('Saving stocks init data')
+    report.add('Added stocks for letter: ' + letter)
+    // ALERT: for mongoDB service limitation limit must be low
+    const limit = pLimit(5)
+    const results = await Promise.allSettled(
+      stocks.map(stock => {
+        const s = filterStocksAndBuildData(stock)
+        if (s) {
+          return limit(async() => {
+            try {
+              await upsertStock(s)
+              report.add(s.code+'*')
+              logger.info(s.name + ' saved in DB')
+              addedStocks++
+            } catch (e) {
+              logger.error('Error saving stock: ', s, e.message)
+              throw e // rilancia per far fallire la promessa, e farla risultare "rejected"
+            }
+          })
+        }
+      })
+    )
+    const errors = results.filter(r => r.status === 'rejected')
+
+    report.add(`\n\nTotal processed: ${results.length}\nStocks added: ${addedStocks}\nErrors: ${errors.length}\n\n\n`)
+    await sleep(SLEEP_TIME)
+  } // For each alphabet letter
+  await sendMessage(report.get())
+  logger.info('DB init done')
+}
+export const getStocksFromEuronext = async function(letter) {
   const url = 'https://live.euronext.com/en/pd_es/data/stocks?mics=dm_all_stock'
   const headers = new Headers()
   headers.append('accept', 'application/json, text/javascript, */*; q=0.01')
@@ -56,10 +95,9 @@ export const getStocksByLetter = async function(letter) {
   } catch (error) {
     logger.error(new Error(error.message))
   }
-  return json['aaData']
+  return json?.['aaData']
 }
-
-export function collectStockInitData(stock) {
+export function filterStocksAndBuildData(stock) {
   if (
     !stock || 
     !Array.isArray(stock) || 
@@ -72,85 +110,10 @@ export function collectStockInitData(stock) {
   const isin = stock[2]
   const code = stock[3] || null
   const market = new JSDOM(stock[4]).window.document.querySelector('div').getAttribute('title') || null
-  const currency = new JSDOM(stock[5]).window.document.querySelector('div').firstChild.nodeValue.trim() || null
+  const currency = new JSDOM(stock[5]).window.document.querySelector('div').firstChild.nodeValue?.trim() || null
   if (!name || !isin || !code) return null
   return { name, isin, code, market, currency }
 }
-
-export async function dailyInitDB() {
-  const report = reportGenerator('tradingradar.net report del ' + new Date(Date.now()).toLocaleString() + '\n\n')
-  // For each alphabet letter...
-  for (const letter of alphabet) {
-    let sAdded = 0
-    // Get data from remote
-    logger.info('Get remote stocks data')
-    const stocks = await getStocksByLetter(letter)
-    // For each stock received...
-    logger.info('Saving stocks init data')
-    // ALERT: for mongoDB service limitation limit must be low
-    const limit = pLimit(5)
-    const results = await Promise.allSettled(
-      stocks.map(async stock => {
-        const s = collectStockInitData(stock)
-        if (s) {
-          await populateStock(s)
-          report.add(s.code+'*')
-          sAdded++
-          limit(async() => await upsertStock(s).catch(e => logger.error(new Error(e.message))))
-
-        }
-      })
-    )
-    /*const results = await Promise.allSettled(
-        stocks.map(stock => {
-          const s = collectStockInitData(stock)
-          if (s) {
-            limit(async() => {
-              try {
-                await upsertStock(s)
-              } catch (e) {
-                console.error('Error saving stock: ', s, e.message)
-                throw e // rilancia per far fallire la promessa, e farla risultare "rejected"
-              }
-            })
-          }
-        })
-      )*/
-    const errors = results.filter(r => r.status === 'rejected')
-    report.add(`\n\nLetter ${letter}\nTotal processed: ${results.length}\nStocks added: ${sAdded}\nErrors: ${errors.length}\n\n\n`)
-    await sleep(SLEEP_TIME)
-  }
-  logger.info('Start clean...')
-  await cleanDB()
-  logger.info('Clean done')
-
-  await sendMessage(report.get())
-  logger.info('DB init done')
-}
-
-export async function populateStock(stock) {
-  const source = stockSources.find((s) => s.isin === stock.isin)
-  if(!source) {
-    logger.warn(`Stock ${stock.code} were not found in stock.config`)
-    return
-  }
-  let key, value
-  for (const el of source.sources) {
-    let html
-    try {
-      logger.info('Conneting to: ' + el.url)
-      html = await (await fetch(el.url)).text()
-    } catch (error) {
-      logger.error(new Error(error.message))
-    }
-    el.targets.forEach(t => {
-      key = t.key
-      value = new JSDOM(html).window.document.querySelector(t.path)?.firstChild?.nodeValue.trim() || null
-      stock[key] = value
-    })
-  }
-}
-
 export function reportGenerator(subreport = '') {
   let result = subreport
   return {
@@ -162,9 +125,9 @@ export function reportGenerator(subreport = '') {
     }
   }
 }
-
 export async function sendMessage(report) {
   if(process.env.NODE_ENV !== 'production') {
+    logger.info('Generated report:')
     logger.info(report)
     return
   }

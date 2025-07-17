@@ -1,38 +1,26 @@
 /* eslint-disable no-console */
 import 'dotenv/config'
 import fs from 'fs'
-import { Stock } from '../../models/Stock.js'
-import { connectToDB } from '../../db/mongoose.js'
 import { JSDOM } from 'jsdom'
 import { exit } from 'process'
 
 const OUTPUT_PATH = './app/utilities/json-sources/output.json'
 const BASEURL = 'https://live.euronext.com'
-const alphabet = 'A'//BCDEFGHIJKLMNOPQRSTUVWXYZ'
-let updated = 0
-const TARGETS = [
-  {
-    key: 'price',
-    path: '#header-instrument-price'
-  },
-  {
-    key: 'absVariation',
-    path: '.mt-auto span:nth-child(2)'
-  },
-  {
-    key: 'relVariation',
-    path: '.mt-auto span:nth-child(3)'
-  }
-]
+let alphabet
+if(process.env.NODE_ENV !== 'production') {
+  alphabet = 'A'
+} else {
+  alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+}
 
-const SLEEP_TIME = 5000
+const SLEEP_TIME = 5 * 1000 // 5 seconds...
 function sleep(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms)
   })
 }
 
-export const getStocksByLetter = async function(letter) {
+const getStocksFromEuronext = async function(letter) {
   const url = 'https://live.euronext.com/en/pd_es/data/stocks?mics=dm_all_stock'
   const headers = new Headers()
   headers.append('accept', 'application/json, text/javascript, */*; q=0.01')
@@ -69,38 +57,58 @@ export const getStocksByLetter = async function(letter) {
   }
   return json['aaData']
 }
-
-export async function getDataAndPopulate(json) {
-  // For each alphabet letter...
-  for (const letter of alphabet) {
-    // Get data from remote
-    console.log('Get remote stocks data')
-    let stocks
-    try {
-      stocks = await getStocksByLetter(letter)
-    } catch (error) {
-      console.error(error)
-    }
-    // For each stock received...
-    for (const rstock of stocks) {
-      console.log('Search for ' + rstock[3] + ' in DB...')
-      const dbstock = await Stock.findOne({ code: rstock[3] })
-      if(dbstock) {
-        console.log('Founded: ' + rstock[3])
-        const source = {}
-        source.url = (BASEURL + new JSDOM(rstock[1]).window.document.querySelector('a')?.getAttribute('href')) || null
-        source.targets = TARGETS
-        const jsonstock = json.find((el) => {return el.code === rstock[3]})
-        // Elimina il vecchio elemento source
-        jsonstock.sources.pop(jsonstock.sources.find((el) => {return el.url === source.url}))
-        jsonstock.sources.push(source)
-        updated++
-      }
-    }
-    console.log('Sleeping...')
-    await sleep(SLEEP_TIME)
+export function filterStocksAndBuildData(stock) {
+  if (
+    !stock || 
+    !Array.isArray(stock) || 
+    stock.length < 6 ||
+    ['MTAH', 'ETLX'].includes(new JSDOM(stock[4]).window.document.querySelector('div').textContent) || 
+    !new JSDOM(stock[5]).window.document.querySelector('span')
+    // Some entries must not be included: other market or no price/currency data
+  ) return null
+  const name = new JSDOM(stock[1]).window.document.querySelector('a').textContent
+  const isin = stock[2]
+  const code = stock[3] || null
+  let url = (BASEURL + new JSDOM(stock[1]).window.document.querySelector('a')?.getAttribute('href')) || null
+  if (url) {
+    url = url.replace('product', 'ajax')
+    url = url.replace('equities', 'getDetailedQuote')
   }
+  if (!name || !isin || !code) return null
+  return { name, isin, url }
 }
+
+// export async function getDataAndPopulate(json) {
+//   // For each alphabet letter...
+//   for (const letter of alphabet) {
+//     // Get data from remote
+//     console.log('Get remote stocks data')
+//     let stocks
+//     try {
+//       stocks = await getStocksByLetter(letter)
+//     } catch (error) {
+//       console.error(error)
+//     }
+//     // For each stock received...
+//     for (const rstock of stocks) {
+//       console.log('Search for ' + rstock[3] + ' in DB...')
+//       const dbstock = await Stock.findOne({ code: rstock[3] })
+//       if(dbstock) {
+//         console.log('Founded: ' + rstock[3])
+//         const source = {}
+//         source.url = (BASEURL + new JSDOM(rstock[1]).window.document.querySelector('a')?.getAttribute('href')) || null
+//         source.targets = TARGETS
+//         const jsonstock = json.find((el) => {return el.code === rstock[3]})
+//         // Elimina il vecchio elemento source
+//         jsonstock.sources.pop(jsonstock.sources.find((el) => {return el.url === source.url}))
+//         jsonstock.sources.push(source)
+//         updated++
+//       }
+//     }
+//     console.log('Sleeping...')
+//     await sleep(SLEEP_TIME)
+//   }
+// }
 
 
 
@@ -111,18 +119,34 @@ fs.readFile(OUTPUT_PATH, 'utf8', async(err, data) => {
     return
   }
 
-  await connectToDB() 
   const output = JSON.parse(data)
-
-  async function feed() {
-    await getDataAndPopulate(output)
-    if (updated === 0) {
-      console.log('No updates performed')
-      exit(0)
+  // For each alphabet letter...
+  for (const letter of alphabet) {
+    // Get data from remote
+    console.log('Get remote stocks data')
+    const stocks = await getStocksFromEuronext(letter)
+    // For each stock received...
+    console.log('Saving json source data')
+    for (const stock of stocks) {
+      const s = filterStocksAndBuildData(stock)
+      if(!s) continue
+      console.log('Feeding stock: ', s.name)
+      const jsonStock = output.find((elem) => { return elem.isin === s.isin })
+      if(jsonStock) {
+        jsonStock.sources.pop(jsonStock.sources.find((el) => {return el.url === s.url}))
+        jsonStock.sources.push(s.url)
+      }
     }
-    fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2), 'utf-8')
-    console.log('File ' + OUTPUT_PATH + ' feeded')
   }
-  await feed()
+  await sleep(SLEEP_TIME)
+  // For each alphabet letter
+
+  try {
+    fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2), 'utf-8')
+  } catch (error) {
+    console.log(error)
+  }
+  
+  console.log('File ' + OUTPUT_PATH + ' feeded')
   exit(0)
 })
