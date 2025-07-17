@@ -10,6 +10,6 @@ async function getRawData(path) {
   }
   return raw
 }
-const stockSources = JSON.parse(await getRawData('./app/utilities/out/file.json'))
+const stockSources = JSON.parse(await getRawData('./app/utilities/json-sources/output.json'))
 
 export default stockSources

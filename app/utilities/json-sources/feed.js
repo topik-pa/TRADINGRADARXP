@@ -7,7 +7,9 @@ import { JSDOM } from 'jsdom'
 import { exit } from 'process'
 
 const OUTPUT_PATH = './app/utilities/json-sources/output.json'
+const BASEURL = 'https://live.euronext.com'
 const alphabet = 'A'//BCDEFGHIJKLMNOPQRSTUVWXYZ'
+let updated = 0
 const TARGETS = [
   {
     key: 'price',
@@ -86,12 +88,13 @@ export async function getDataAndPopulate(json) {
       if(dbstock) {
         console.log('Founded: ' + rstock[3])
         const source = {}
-        source.url = new JSDOM(rstock[1]).window.document.querySelector('a').getAttribute('href') || null
+        source.url = (BASEURL + new JSDOM(rstock[1]).window.document.querySelector('a')?.getAttribute('href')) || null
         source.targets = TARGETS
         const jsonstock = json.find((el) => {return el.code === rstock[3]})
         // Elimina il vecchio elemento source
         jsonstock.sources.pop(jsonstock.sources.find((el) => {return el.url === source.url}))
         jsonstock.sources.push(source)
+        updated++
       }
     }
     console.log('Sleeping...')
@@ -113,6 +116,10 @@ fs.readFile(OUTPUT_PATH, 'utf8', async(err, data) => {
 
   async function feed() {
     await getDataAndPopulate(output)
+    if (updated === 0) {
+      console.log('No updates performed')
+      exit(0)
+    }
     fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2), 'utf-8')
     console.log('File ' + OUTPUT_PATH + ' feeded')
   }

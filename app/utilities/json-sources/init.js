@@ -16,17 +16,20 @@ fs.readFile(OUTPUT_PATH, 'utf8', async(err, data) => {
   }
 
   await connectToDB() 
+  const output = []
   const stocks = await Stock.find()
 
-  const output = []
-
-  for (const stock of stocks) {
-    console.log('Inserimento dati stock: ', stock.name)
-    const out = {}
-    out.isin = stock.isin
-    out.code = stock.code
-    out.sources = []
-    output.push(out)
+  if(!stocks.length) {
+    console.log('Il database non contiene stock')
+  } else {
+    for (const stock of stocks) {
+      console.log('Inserimento dati stock: ', stock.name)
+      const out = {}
+      out.isin = stock.isin
+      out.code = stock.code
+      out.sources = []
+      output.push(out)
+    }
   }
 
   await fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2), 'utf-8')
