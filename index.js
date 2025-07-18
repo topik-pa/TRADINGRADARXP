@@ -41,7 +41,9 @@ app.listen(port, () => {
 })
 
 // Connect to DB
-await connectToDB() 
+if (process.env.NODE_ENV !== 'test') {
+  await connectToDB() 
+}
 // INIT DB
 if (process.env.NODE_ENV === 'development') {
   // await initDB()
@@ -51,3 +53,5 @@ if (process.env.NODE_ENV === 'development') {
     await initDB()
   })
 }
+
+export default app

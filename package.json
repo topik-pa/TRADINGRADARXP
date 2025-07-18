@@ -8,7 +8,8 @@
     "start": "NODE_ENV=production node index.js",
     "dev": "NODE_ENV=development nodemon index.js",
     "lint": "eslint .",
-    "test": "vitest",
+    "test-db": "NODE_ENV=test vitest ./app/tests/db",
+    "test-api": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles ./app/tests/api",
     "json-sources-init": "node app/utilities/json-sources/init.js",
     "json-sources-feed": "node app/utilities/json-sources/feed.js"
   },
@@ -26,12 +27,18 @@
     "pino": "^9.7.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
     "@eslint/js": "^9.30.1",
+    "babel-jest": "^30.0.4",
     "eslint": "^9.30.1",
     "globals": "^16.3.0",
+    "jest": "^30.0.4",
+    "mongodb-memory-server": "^10.1.4",
     "nodemon": "^3.1.10",
     "pino-pretty": "^13.0.0",
     "prettier": "^3.6.2",
+    "supertest": "^7.1.3",
     "vitest": "^3.2.4"
   }
 }
