@@ -1,7 +1,7 @@
  
 import { JSDOM } from 'jsdom'
 import { readFile } from 'fs/promises'
-import { upsertStock } from '../controllers/stockController.js'
+import { upsertStock } from '../controllers/db.stock.controller.js'
 import { cleanDB } from '../utilities/cleanDB.js'
 import logger from '../config/logger.js'
 

@@ -7,6 +7,7 @@ import { connectToDB } from './app/db/mongoose.js'
 import { initDB } from './app/db/initDB.js'
 // eslint-disable-next-line no-unused-vars
 import { feedDB } from './app/db/feedDB.js'
+import stockRoutes from './app/routes/stock.routes.js'
 
 const app = express()
 const port = process.env.PORT || 8080
@@ -17,6 +18,22 @@ app.use(express.json())
 //Routes
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the tradingradar XP project' })
+})
+app.use('/api/stock', stockRoutes)
+// 404 handling
+app.use((req, res) => {
+  res.status(404).send({
+    error: 404,
+    message: 'Resource not found'
+  })
+})
+// 500 handling
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) => {
+  return res.status(err.status || 500).send({
+    error: err.status || 500,
+    message: err.message
+  })
 })
 
 app.listen(port, () => {
