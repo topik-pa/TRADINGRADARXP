@@ -1,5 +1,4 @@
 import { Stock } from '../models/Stock.js'
-import logger from '../config/logger.js'
 
 // GET stock by ISIN
 export async function getStockByISIN(req, res, next) {

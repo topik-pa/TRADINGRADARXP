@@ -1,17 +1,25 @@
 ### Welcome message
-GET https://localhost:3000/
+GET http://localhost:3000/
 
 ### Wrong url
 GET http://localhost:3000/wrong-url
 
-### Wrong body
-POST http://localhost:3000/api/users
+### Wrong isin
+GET http://localhost:3000/api/stock/123456
+
+### OK A.B.P. NOCIVELLI
+GET http://localhost:3000/api/stock/IT0005439861
 
 ### User not found
-POST http://localhost:3000/api/users
-content-type: application/json
+# POST http://localhost:3000/api/users
+# content-type: application/json
 
-{
-    "email": "ciccio@email.it",
-    "nome": "Ciccio Pasticcio"
-}
+# {
+#     "email": "ciccio@email.it",
+#     "nome": "Ciccio Pasticcio"
+# }
+### Welcome message
+# POST http://localhost:8080/api/custom/follow
+# Content-Type: application/x-www-form-urlencoded
+
+# name=PippoBaudo&email=pippo@test.it&privacy=true&title=A2a
