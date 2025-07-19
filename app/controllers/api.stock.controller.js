@@ -1,5 +1,16 @@
 import { Stock } from '../models/Stock.js'
 
+// GET all stocks
+export async function getStocks(req, res, next) {
+  let stocks = []
+  try {
+    stocks = await Stock.find({})
+  } catch (error) {
+    return next(error)
+  }
+  return res.json(stocks)
+}
+
 // GET stock by ISIN
 export async function getStockByISIN(req, res, next) {
   const isin = req.params.isin

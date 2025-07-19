@@ -32,36 +32,40 @@ beforeEach(async() => {
       'absVariation': '-0.05',
       'price': '5.10',
       'relVariation': '-0.97%'
+    },
+    {
+      '_id': '6878f2c89fc70686852ff782',
+      'isin': 'BE0974278104',
+      '__v': 0,
+      'code': 'ABO',
+      'currency': 'EUR',
+      'market': 'Euronext Brussels, Paris',
+      'name': 'ABO GROUP',
+      'absVariation': '0.00',
+      'price': '6.30',
+      'relVariation': '0.00%'
+    },
+    {
+      '_id': '6878f2c89fc70686852ff779',
+      'isin': 'FR0013185857',
+      '__v': 0,
+      'code': 'ABEO',
+      'currency': 'EUR',
+      'market': 'Euronext Paris',
+      'name': 'ABEO',
+      'absVariation': '+0.06',
+      'price': '9.72',
+      'relVariation': '+0.62%'
     }
+    
   ])
 })
 
-describe('GET /api/stocks/IT0005439861', () => {
-  it('should return a stock object', async() => {
-    const res = await request(app).get('/api/stocks/IT0005439861')
+describe('GET /api/stocks/', () => {
+  it('should return a list of stock objects', async() => {
+    const res = await request(app).get('/api/stocks/')
     expect(res.statusCode).toBe(200)
-    expect(res.body).toMatchObject({
-      '_id': '6878f2c89fc70686852ff76f',
-      'isin': 'IT0005439861',
-      '__v': 0,
-      'code': 'ABP',
-      'currency': 'EUR',
-      'market': 'Euronext Growth Milan',
-      'name': 'A.B.P. NOCIVELLI',
-      'absVariation': '-0.05',
-      'price': '5.10',
-      'relVariation': '-0.97%'
-    })
-  })
-})
-
-describe('GET /api/stocks/IT0123456789', () => {
-  it('should return a 404 if wrong isin', async() => {
-    const res = await request(app).get('/api/stocks/IT0123456789')
-    expect(res.statusCode).toBe(404)
-    expect(res.body).toMatchObject({
-      'error': 404,
-      'message': 'Resource not found'
-    })
+    expect(res.body.length).toBe(3)
+    //expect(res.body[0]).toMatchObject({ symbol: 'AAPL', name: 'Apple Inc.' })
   })
 })

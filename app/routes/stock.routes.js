@@ -1,6 +1,8 @@
 import express from 'express'
-import { getStockByISIN } from '../controllers/api.stock.controller.js'
+import { getStockByISIN, getStocks } from '../controllers/api.stock.controller.js'
 const router = express.Router()
+
+router.get('/', getStocks)
 
 router.get('/:isin', getStockByISIN)
 

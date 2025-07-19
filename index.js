@@ -19,7 +19,7 @@ app.use(express.json())
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the tradingradar XP project' })
 })
-app.use('/api/stock', stockRoutes)
+app.use('/api/stocks', stockRoutes)
 // 404 handling
 app.use((req, res) => {
   res.status(404).send({
