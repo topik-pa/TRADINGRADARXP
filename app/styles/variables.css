@@ -1,0 +1,86 @@
+:root {
+  /* COLORS */
+  --white:         #FCFCFC;
+  --lightest-gray: #F1F1F1;
+  --lighter-gray:  #E0E0E0;
+  --light-gray:    #A9A9A9;
+  --gray:          #888888;
+  --dark-gray:     #707070;
+  --darker-gray:   #585858;
+  --darkest-gray:  #333333;
+  --black:         #181818;
+
+  --blue: #023baf;
+  --red:  #c0242e;
+  --green:#007e3d;
+  --gold:   #ffd700;
+  --silver: #aaa9ad;
+  --bronze: #cd7f32;
+
+  --primary: var(--white);
+  --secondary: var(--darkest-gray);
+  --tertiary: var(--blue);
+
+  --error: var(--red);
+  --success: var(--green);
+  --link: var(--blue);
+  --text: var(--secondary);
+  --background: var(--primary);
+
+  /* TRANSPARENCIES */
+  --transparent: .1;
+  --semi-transparent: .85;
+  --wt: rgba(255, 255, 255, var(--transparent));
+  --wst: rgba(255, 255, 255, var(--semi-transparent));
+  --bt: rgba(0, 0, 0, var(--transparent));
+  --bst: rgba(0, 0, 0, var(--semi-transparent));
+  --rt: rgba(201, 30, 44, var(--transparent));
+
+  /* FONT SIZES */
+  --font-size-very-small: .85rem;
+  --font-size-small: .9rem;
+  --font-size-normal: 1rem;
+  --font-size-big: 1.2rem;
+  --font-size-bigger: 1.4rem;
+  --font-size-huge: 1.8rem;
+  --font-size-biggest: 2.6rem;
+
+  /* SHADOWS */
+  --shadow: 0 0 10px 0 var(--black);
+  --text-shadow: 0 3px 3px var(--bt);
+
+  /* DIMENSIONS */
+  --xx-small-space: .2rem;
+  --x-small-space: .5rem;
+  --small-space: .7rem;
+  --normal-space: 1rem;
+  --large-space: 1.4rem;
+  --x-large-space: 2.2rem;
+  --xx-large-space: 3.6rem;
+
+  --view-padding: var(--large-space);
+  --section-margin: var(--x-large-space);
+  --gap: var(--x-small-space);
+  --button-padding: var(--small-space);
+  --content: 80%;
+  --input-width: calc(var(--xx-large-space) * 7);
+
+  /* ICONS */
+  --small-icon: var(--small-space);
+  --normal-icon: var(--normal-space);
+  --big-icon: var(--x-large-space);
+
+  /* BORDER RADIUS */
+  --border-radius-small: .3rem;
+  --border-radius-big: .9rem;
+  --border-radius-round: 50%;
+
+  /* Z-INDEXES */
+  --loading: 9;
+  --disclaimer: 9;
+  --main-menu: 99;
+  --modal: 999;
+  --privacy: 9999;
+  --gototop: 99999;
+  --spotLayer: 999999;
+}

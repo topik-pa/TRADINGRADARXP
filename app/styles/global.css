@@ -1,0 +1,86 @@
+html, body {
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow:0 0 1px transparent;
+  text-rendering: optimizeLegibility;
+  letter-spacing: .03rem;
+  color: var(--secondary);
+  background-color: var(--lighter-gray);
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--link);
+  position: relative;
+}
+a:hover {
+  filter: brightness(80%);
+}
+a.ext::after {
+  content: '\21F1';
+  transform: rotate(90deg);
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  font-size: 9px;
+  right: 0;
+}
+
+em, .em {
+  font-weight: 500;
+}
+
+p {
+  margin: var(--x-small-space) 0;
+}
+
+small {
+  font-size: 70%;
+}
+
+ul, ol {
+  margin: var(--normal-space);
+  padding-left: var(--normal-space);
+  list-style: auto;
+}
+
+.clear {
+  clear: both;
+}
+
+.hide {
+  display: none!important;
+}
+.show {
+  display: block!important;
+}
+
+.green, .buy  {
+  color: var(--green);
+}
+.red, .sell {
+  color: var(--red);
+}
+.blue {
+  color: var(--blue);
+}
+
+
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  .content {
+    width: auto;
+  }
+}
