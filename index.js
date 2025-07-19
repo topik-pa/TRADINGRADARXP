@@ -9,12 +9,21 @@ import { initDB } from './app/db/initDB.js'
 import { feedDB } from './app/db/feedDB.js'
 import stockRoutes from './app/routes/stock.routes.js'
 import uiRoutes from './app/routes/ui.routes.js'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+// Emula __dirname in ESM
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const app = express()
 const port = process.env.PORT || 8080
 
 // Parse application/json
 app.use(express.json())
+
+app.set('view engine', 'pug')
+app.set('views', path.join(__dirname, 'app', 'views'))
 
 //Routes
 app.use('/api', stockRoutes)
