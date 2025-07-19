@@ -20,5 +20,6 @@ export default defineConfig([
     'arrow-spacing': ['error', { before: true, after: true }],
     'no-console': 'error'
   } },
-  { files: ['**/*.{js,mjs,cjs}'], languageOptions: { globals: globals.node } }
+  { files: ['**/*.{js,mjs,cjs}'], languageOptions: { globals: globals.node } },
+  { files: ['app/scripts/**/*.{js,mjs,cjs}', 'app/views/**/*.{js,mjs,cjs}'], languageOptions: { globals: globals.browser }, rules: { 'no-console': 'allow' } }
 ])
