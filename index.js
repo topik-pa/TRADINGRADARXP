@@ -39,6 +39,7 @@ app.use((req, res, next) => {
 
 app.use('/styles', express.static(path.join(__dirname, 'app', 'styles')))
 app.use('/assets', express.static(path.join(__dirname, 'app', 'assets')))
+app.use('/views', express.static(path.join(__dirname, 'app', 'views')))
 app.use('/scripts', express.static(path.join(__dirname, 'app', 'scripts')))
 
 app.set('view engine', 'pug')
