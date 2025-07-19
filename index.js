@@ -8,6 +8,7 @@ import { initDB } from './app/db/initDB.js'
 // eslint-disable-next-line no-unused-vars
 import { feedDB } from './app/db/feedDB.js'
 import stockRoutes from './app/routes/stock.routes.js'
+import uiRoutes from './app/routes/ui.routes.js'
 
 const app = express()
 const port = process.env.PORT || 8080
@@ -16,10 +17,8 @@ const port = process.env.PORT || 8080
 app.use(express.json())
 
 //Routes
-app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to the tradingradar XP project' })
-})
-app.use('/api/stocks', stockRoutes)
+app.use('/api', stockRoutes)
+app.use('/', uiRoutes)
 // 404 handling
 app.use((req, res) => {
   res.status(404).send({

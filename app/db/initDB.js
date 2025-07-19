@@ -1,6 +1,6 @@
  
 import { JSDOM } from 'jsdom'
-import { upsertStock } from '../controllers/db.stock.controller.js'
+import { upsertStock } from '../controllers/db.controller.js'
 import pLimit from 'p-limit'
 import logger from '../config/logger.js'
 import Mailgun from 'mailgun.js'

@@ -1,8 +1,7 @@
-// feedDB.test.js
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { feedDB } from '../../db/feedDB.js'
 import * as fs from 'fs/promises'
-import { JSDOM } from 'jsdom'
+// import { JSDOM } from 'jsdom'
 import { upsertStock } from '../../controllers/stockController.js'
 import { cleanDB } from '../../utilities/cleanDB.js'
 import logger from '../../config/logger.js'
@@ -28,12 +27,9 @@ vi.mock('../../config/logger.js', () => ({
   }
 }))
 
-
 vi.mock('../../utilities/sleep.js', () => ({
   sleep: () => Promise.resolve()
 }))
-
-
 
 
 const mockHTML = `
