@@ -1,4 +1,5 @@
 -
+  let prod = process.env.NODE_ENV === 'production'
   let proj_name = 'tradingradar.net'
   let proj_tagline = 'Titoli sull\'orlo di un crisi di nervi'
   let proj_description = 'tradingradar.net interroga  in tempo reale le principali testate del settore e scopre le azioni più interessanti di Borsa Italiana. Qui potrai trovare i dati sulle performance, i trend, i target price, le raccomandazioni delle Banche d\'Affari, i dividendi, le medie, i supporti e resistenze e tanto altro...'
@@ -17,8 +18,12 @@ html(lang=locale)
       meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
       meta(name="author" content=proj_owner)
       link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
-      link(rel="stylesheet", type="text/css", href="/styles/style.css")
-      script(src='/scripts/scripts.js', type='module', defer)
+      if prod
+        link(rel="stylesheet", type="text/css", href="/dist/main.css")
+        script(src='/dist/bundle.js', defer)
+      else
+        link(rel="stylesheet", type="text/css", href="/styles/main.css")
+        script(src='/scripts/index.js', type='module', defer)
       link(rel="dns-prefetch" href="https://www.statcounter.com/")
       link(rel="dns-prefetch" href="https://c.statcounter.com/")
       link(rel="dns-prefetch" href="https://tracking.avapartner.com/")

@@ -41,6 +41,7 @@ app.use('/styles', express.static(path.join(__dirname, 'app', 'styles')))
 app.use('/assets', express.static(path.join(__dirname, 'app', 'assets')))
 app.use('/views', express.static(path.join(__dirname, 'app', 'views')))
 app.use('/scripts', express.static(path.join(__dirname, 'app', 'scripts')))
+app.use('/dist', express.static(path.join(__dirname, 'app', 'dist')))
 
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'app', 'views'))
@@ -71,7 +72,7 @@ app.listen(port, () => {
 
 // Connect to DB
 if (process.env.NODE_ENV !== 'test') {
-  await connectToDB() 
+  await connectToDB()
 }
 // INIT DB
 if (process.env.NODE_ENV === 'development') {

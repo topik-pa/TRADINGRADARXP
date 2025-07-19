@@ -9,27 +9,3 @@
   vertical-align: middle;
   margin-right: var(--xx-small-space);
 }
-.borsa-italiana::before {
-  background-image: url('/assets/images/sources/borsa-italiana-logo.png');
-}
-.il-sole-24-ore::before {
-  background-image: url('/assets/images/sources/il-sole-24-ore-logo.png');
-}
-.milano-finanza::before {
-  background-image: url('/assets/images/sources/milano-finanza-logo.png');
-}
-.soldi-on-line::before {
-  background-image: url('/assets/images/sources/soldi-on-line-logo.png');
-}
-.teleborsa::before {
-  background-image: url('/assets/images/sources/teleborsa-logo.png');
-}
-.repubblica::before {
-  background-image: url('/assets/images/sources/repubblica-aff-e-fin-logo.png');
-}
-.patreon::before {
-  background-image: url('/assets/images/icons/patreon-logo.webp');
-}
-.email::before {
-  background-image: url('/assets/images/icons/email.webp');
-}
