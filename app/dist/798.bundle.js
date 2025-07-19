@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktradingradarxp=self.webpackChunktradingradarxp||[]).push([[798],{798:(a,r,t)=>{t.r(r),t.d(r,{default:()=>d});const d={init:()=>{}}}}]);
