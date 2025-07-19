@@ -2,7 +2,7 @@
 import request from 'supertest'
 import mongoose from 'mongoose'
 import { MongoMemoryServer } from 'mongodb-memory-server'
-import app from '../../../index.js'
+import { app } from '../../../index.js'
 import { Stock } from '../../models/Stock.js'
 
 let mongoServer

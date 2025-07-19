@@ -5,7 +5,7 @@ import * as fs from 'fs/promises'
 import { upsertStock } from '../../controllers/stockController.js'
 import { cleanDB } from '../../utilities/cleanDB.js'
 import logger from '../../config/logger.js'
-import { sleep } from '../../utilities/sleep.js'
+// import { sleep } from '../../utilities/sleep.js'
 
 // MOCK delle dipendenze
 vi.mock('fs/promises', () => ({

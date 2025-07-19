@@ -8,8 +8,8 @@
     "start": "NODE_ENV=production node index.js",
     "dev": "NODE_ENV=development nodemon index.js",
     "lint": "eslint .",
-    "test-db": "NODE_ENV=test vitest ./app/tests/db",
-    "test-api": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles ./app/tests/api",
+    "test:db": "NODE_ENV=test vitest ./app/tests/db",
+    "test:api": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles ./app/tests/api",
     "json-sources-init": "node app/utilities/json-sources/init.js",
     "json-sources-feed": "node app/utilities/json-sources/feed.js"
   },
