@@ -10,7 +10,7 @@
   let og_image = 'https://tradingradar.net/assets/images/tr-og-image.webp'
 
 doctype html
-html(lang="en")
+html(lang=locale)
   head
     block meta 
       meta(charset="utf-8")
@@ -20,6 +20,7 @@ html(lang="en")
       link(rel="dns-prefetch" href="https://www.statcounter.com/")
       link(rel="dns-prefetch" href="https://c.statcounter.com/")
       link(rel="dns-prefetch" href="https://tracking.avapartner.com/")
+      meta(name="og:type" content="website")
   body(id=id, class=className)
     main
       block main

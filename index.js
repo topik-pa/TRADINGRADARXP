@@ -11,6 +11,7 @@ import stockRoutes from './app/routes/stock.routes.js'
 import uiRoutes from './app/routes/ui.routes.js'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { I18n } from 'i18n'
 
 // Emula __dirname in ESM
 const __filename = fileURLToPath(import.meta.url)
@@ -22,8 +23,23 @@ const port = process.env.PORT || 8080
 // Parse application/json
 app.use(express.json())
 
+const i18n = new I18n({
+  locales: ['en', 'it'],
+  directory: path.join(__dirname, 'app', 'locales'),
+  defaultLocale: 'en',
+  queryParameter: 'lang',
+  autoReload: true,
+  updateFiles: false,
+  objectNotation: true
+})
+app.use((req, res, next) => {
+  i18n.init(req, res)
+  next()
+})
+
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'app', 'views'))
+
 
 //Routes
 app.use('/api', stockRoutes)
@@ -62,4 +78,4 @@ if (process.env.NODE_ENV === 'development') {
   })
 }
 
-export default app
+export { app, i18n }

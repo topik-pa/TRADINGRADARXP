@@ -1,12 +1,24 @@
+import { i18n } from '../../index.js'
 
 // HP
 export async function hpView(req, res) {
   // res.json({ message: 'Welcome to the tradingradar XP project...' })
+  const lang = req.params.lang
+  const baseUrl = 'https://www.tradingradar.net'
+  const canonicalUrl = `${baseUrl}/${lang}`
+  const hreflangs = ['en', 'it'].map(code => ({
+    lang: code,
+    url: `${baseUrl}/${code}`
+  }))
+
+  if (!['en', 'it'].includes(lang)) {
+    return res.redirect('/en/') // fallback
+  }
+  i18n.setLocale(req, lang)
   res.render('home', {
     id: 'hp',
     className: 'home',
-    title: 'Scopri ora i segnali di borsa delle tue azioni!',
-    description: 'Ottieni, in tempo reale, segnali di trading secondo le principali testate del settore e trova le azioni più interessanti di Borsa Italiana!',
-    url: req.url
+    canonicalUrl,
+    hreflangs
   })
 }
