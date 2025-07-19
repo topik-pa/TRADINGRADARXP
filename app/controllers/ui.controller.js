@@ -1,20 +1,19 @@
 import { i18n } from '../../index.js'
+const baseUrl = 'https://www.tradingradar.net'
+const supportedLangs = ['en', 'it']
+const fallback = '/en/'
+const hreflangs = supportedLangs.map(code => ({
+  lang: code,
+  url: `${baseUrl}/${code}`
+}))
 
 // HP
 export async function hpView(req, res) {
-  // res.json({ message: 'Welcome to the tradingradar XP project...' })
   const lang = req.params.lang
-  const baseUrl = 'https://www.tradingradar.net'
   const canonicalUrl = `${baseUrl}/${lang}`
-  const hreflangs = ['en', 'it'].map(code => ({
-    lang: code,
-    url: `${baseUrl}/${code}`
-  }))
-
-  if (!['en', 'it'].includes(lang)) {
-    return res.redirect('/en/') // fallback
-  }
+  if (!supportedLangs.includes(lang)) return res.redirect(fallback) // fallback
   i18n.setLocale(req, lang)
+
   res.render('home', {
     id: 'hp',
     className: 'home',
