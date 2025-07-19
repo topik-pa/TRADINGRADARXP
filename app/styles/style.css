@@ -10,3 +10,6 @@
 @import "./loading.css";
 @import "./responsive.css";
 @import "./image-icons.css";
+
+/* Views */
+@import "../views/home.css";
