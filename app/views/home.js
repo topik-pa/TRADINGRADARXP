@@ -11,7 +11,7 @@ async function getAllStocks() {
     const json = await response.json()
     // console.log(json)
     const ul = document.getElementById('stock-list')
-    ul.innerHTML = json.map(stock => `<li><a href="/${lang}/stocks/${stock.isin}">${stock.name}</a></li>`).join('')
+    ul.innerHTML = json.map(stock => `<li><a href="/${lang}/${stock.urlName}">${stock.name}</a></li>`).join('')
   } catch (error) {
     console.error(error.message)
   }

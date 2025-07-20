@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
   res.redirect(301, `/${lang}/`)
 })
 
-router.get('/:lang/stocks/:isin', hpStock)
+router.get('/:lang/:urlname', hpStock)
 router.get('/:lang/', hpView)
 
 export default router

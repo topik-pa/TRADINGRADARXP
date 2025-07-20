@@ -35,6 +35,6 @@ export async function hpStock(req, res) {
     className: 'stock',
     canonicalUrl,
     hreflangs,
-    isin: req.params.isin
+    urlname: req.params.urlname
   })
 }

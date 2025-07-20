@@ -8,6 +8,13 @@ const stockSchema = new mongoose.Schema({
         nullable: false,
         unique: true
       },
+  urlName:
+      {
+        type: String,
+        required: [true, 'Url name is required'],
+        nullable: false,
+        unique: true
+      },
   isin:
       {
         type: String,
@@ -45,13 +52,13 @@ const stockSchema = new mongoose.Schema({
         type: String,
         nullable: true,
         unique: false
-      }, 
+      },
   relVariation:
       {
         type: String,
         nullable: true,
         unique: false
-      }         
+      }
 }, { timestamps: true } )
 
 export const Stock = mongoose.model('Stock', stockSchema)
