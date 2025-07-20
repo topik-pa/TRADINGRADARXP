@@ -21,3 +21,20 @@ export async function hpView(req, res) {
     hreflangs
   })
 }
+
+
+// Stock
+export async function hpStock(req, res) {
+  const lang = req.params.lang
+  const canonicalUrl = `${baseUrl}/${lang}`
+  if (!supportedLangs.includes(lang)) return res.redirect(fallback) // fallback
+  i18n.setLocale(req, lang)
+
+  res.render('stock', {
+    id: 'stock',
+    className: 'stock',
+    canonicalUrl,
+    hreflangs,
+    isin: req.params.isin
+  })
+}

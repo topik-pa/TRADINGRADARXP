@@ -1,5 +1,5 @@
 import express from 'express'
-import { hpView } from '../controllers/ui.controller.js'
+import { hpView, hpStock } from '../controllers/ui.controller.js'
 const router = express.Router()
 
 router.get('/', (req, res) => {
@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
   res.redirect(301, `/${lang}/`)
 })
 
+router.get('/:lang/stocks/:isin', hpStock)
 router.get('/:lang/', hpView)
 
 export default router
