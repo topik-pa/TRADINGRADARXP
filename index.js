@@ -35,6 +35,35 @@ function shouldCompress(req, res) {
   return compression.filter(req, res)
 }
 
+// Set custom headers
+app.use(function(req, res, next) {
+  res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload')
+  res.setHeader('Upgrade-insecure-requests', '1')
+  res.setHeader('Content-Security-Policy', 'default-src \'none\'; script-src https://www.statcounter.com/ \'self\' \'unsafe-inline\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' https://c.statcounter.com/ https://tracking.avapartner.com data:; object-src \'none\'; frame-src https://c.statcounter.com/ \'self\'; form-action \'self\'; font-src \'self\'; media-src \'self\'; connect-src https://c.statcounter.com/ \'self\'; frame-ancestors \'none\'; base-uri \'none\'')
+  res.setHeader('X-Content-Type-Options', 'nosniff')
+  next()
+})
+
+// HTTPS redirect server-side
+app.use((req, res, next) => {
+  if (process.env.NODE_ENV === 'production') {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      return res.redirect('https://' + req.headers.host + req.url)
+    } else { return next() }
+  } else { return next() }
+})
+
+// FROM www. TO not www.
+function wwwRedirect(req, res, next) {
+  if (req.headers.host.slice(0, 4) === 'www.') {
+    const newHost = req.headers.host.slice(4)
+    return res.redirect(301, req.protocol + '://' + newHost + req.originalUrl)
+  }
+  next()
+};
+app.set('trust proxy', true)
+app.use(wwwRedirect)
+
 const i18n = new I18n({
   locales: ['en', 'it'],
   directory: path.join(__dirname, 'app', 'locales'),
