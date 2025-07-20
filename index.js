@@ -12,6 +12,7 @@ import uiRoutes from './app/routes/ui.routes.js'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { I18n } from 'i18n'
+import compression from 'compression'
 
 // Emula __dirname in ESM
 const __filename = fileURLToPath(import.meta.url)
@@ -22,6 +23,17 @@ const port = process.env.PORT || 8080
 
 // Parse application/json
 app.use(express.json())
+
+// Compress responses if browser is capable
+app.use(compression({ filter: shouldCompress }))
+function shouldCompress(req, res) {
+  if (req.headers['x-no-compression']) {
+    // don't compress responses with this request header
+    return false
+  }
+  // fallback to standard filter function
+  return compression.filter(req, res)
+}
 
 const i18n = new I18n({
   locales: ['en', 'it'],
