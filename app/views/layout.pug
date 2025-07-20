@@ -2,7 +2,7 @@
   let prod = process.env.NODE_ENV === 'production'
   let proj_name = 'tradingradar.net'
   let proj_tagline = 'Titoli sull\'orlo di un crisi di nervi'
-  let proj_description = 'tradingradar.net interroga  in tempo reale le principali testate del settore e scopre le azioni più interessanti di Borsa Italiana. Qui potrai trovare i dati sulle performance, i trend, i target price, le raccomandazioni delle Banche d\'Affari, i dividendi, le medie, i supporti e resistenze e tanto altro...'
+  let proj_description = 'tradingradar.net - Titoli sull\'orlo di un crisi di nervi'
   let proj_url = 'https://tradingradar.net'
   let proj_copy = 2025
   let proj_owner = 'Marco Pavan'
@@ -34,4 +34,21 @@ html(lang=locale)
     main
       block main
     footer footer...
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "#{proj_url}",
+        "name": "#{proj_name}",
+        "description": "#{proj_description}",
+        "image": "#{proj_logo}",
+        "author": {
+          "@type": "Person",
+          "name": "#{proj_owner}"
+        },
+        "copyrightHolder": {
+          "@type": "Person",
+          "name": "#{proj_owner}"
+        }
+      }
     
