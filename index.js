@@ -7,7 +7,7 @@ import { connectToDB } from './app/db/mongoose.js'
 import { initDB } from './app/db/initDB.js'
 // eslint-disable-next-line no-unused-vars
 import { feedDB } from './app/db/feedDB.js'
-import stockRoutes from './app/routes/stock.routes.js'
+import apiRoutes from './app/routes/api.routes.js'
 import uiRoutes from './app/routes/ui.routes.js'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -48,7 +48,7 @@ app.set('views', path.join(__dirname, 'app', 'views'))
 
 
 //Routes
-app.use('/api', stockRoutes)
+app.use('/api', apiRoutes)
 app.use('/', uiRoutes)
 // 404 handling
 app.use((req, res) => {
