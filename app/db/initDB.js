@@ -112,8 +112,8 @@ export function filterStocksAndBuildData(stock) {
   const market = new JSDOM(stock[4]).window.document.querySelector('div').getAttribute('title') || null
   const currency = new JSDOM(stock[5]).window.document.querySelector('div').firstChild.nodeValue?.trim() || null
   if (!name || !isin || !code) return null
-  const urlName = encodeURI(name.toLowerCase().replaceAll(/[\s.]/g, '-'))
-  return { name, urlName, isin, code, market, currency }
+  const stockUrl = encodeURI(name.toLowerCase().replaceAll(/[\s.]/g, '-'))
+  return { name, stockUrl, isin, code, market, currency }
 }
 export function reportGenerator(subreport = '') {
   let result = subreport

@@ -8,10 +8,10 @@ const stockSchema = new mongoose.Schema({
         nullable: false,
         unique: true
       },
-  urlName:
+  stockUrl:
       {
         type: String,
-        required: [true, 'Url name is required'],
+        required: [true, 'Stock Url is required'],
         nullable: false,
         unique: true
       },
