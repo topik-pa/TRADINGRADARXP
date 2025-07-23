@@ -14,8 +14,10 @@ body {
   letter-spacing: .03rem;
   color: var(--secondary);
   background-color: var(--lighter-gray);
-  display: flex;
-  flex-direction: column;
+}
+
+main {
+  padding: var(--main-padding)
 }
 
 a {

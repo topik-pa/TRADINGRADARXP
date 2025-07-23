@@ -1,0 +1,25 @@
+@import "./main-logo/main-logo.css";
+@import "./main-menu/main-menu.css";
+
+#header {
+  padding: var(--main-padding);
+  border-bottom: 1px solid var(--light-gray);
+  background: var(--primary);
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+#header a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  #header {
+    
+  }
+}

@@ -1,0 +1,92 @@
+#main-menu li {
+  display: inline-block;
+  padding-right: var(--normal-space);
+  font-weight: 500;
+  text-transform: uppercase;
+
+  max-width: 33ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#main-menu li:last-child {
+  padding-right: 0;
+}
+
+#main-menu ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+#main-menu li.active a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#main-menu .close, .hamburger {
+  display: none;
+}
+.hamburger {
+  font-size: var(--font-size-huge);
+}
+
+@media screen and (max-width: 1024px) {
+  #main-menu li {
+    max-width: 13ch;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: var(--font-size-huge);
+  }
+  #main-menu {
+    position: fixed;
+  }
+  #main-menu > div {
+    top: 7rem;
+    width: 35ch;
+    right: -35ch;
+    position: fixed;
+    transition: right .4s ease-out;
+    background-color: var(--lighter-gray);
+    z-index: var(--main-menu);
+  }
+  #main-menu.show > div{
+    right: 0;
+    box-shadow: 0 0 10px 0 var(--black);
+  }
+  #main-menu.show {
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: var(--main-menu);
+  }
+  #main-menu .close {
+    position: absolute;
+    right: 0;
+    display: block;
+    padding: var(--normal-space);
+    font-weight: bold;
+    font-size: var(--font-size-big);
+  }
+  #main-menu ul {
+    padding: var(--xx-large-space) var(--normal-space);
+  }
+  #main-menu li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+    padding: var(--small-space) 0;
+    max-width: 33ch;
+  }
+  #main-menu li a {
+    padding: var(--normal-space) 0;
+    display: inline-block;
+    width: 100%;
+  }
+}
+

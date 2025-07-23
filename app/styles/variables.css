@@ -30,40 +30,39 @@
   /* TRANSPARENCIES */
   --transparent: .1;
   --semi-transparent: .85;
-  --wt: rgba(255, 255, 255, var(--transparent));
+  /* --wt: rgba(255, 255, 255, var(--transparent));
   --wst: rgba(255, 255, 255, var(--semi-transparent));
   --bt: rgba(0, 0, 0, var(--transparent));
   --bst: rgba(0, 0, 0, var(--semi-transparent));
-  --rt: rgba(201, 30, 44, var(--transparent));
+  --rt: rgba(201, 30, 44, var(--transparent)); */
 
   /* FONT SIZES */
-  --font-size-very-small: .85rem;
+  --font-size-very-small: .8rem;
   --font-size-small: .9rem;
-  --font-size-normal: 1rem;
   --font-size-big: 1.2rem;
-  --font-size-bigger: 1.4rem;
-  --font-size-huge: 1.8rem;
-  --font-size-biggest: 2.6rem;
+  --font-size-bigger: 1.6rem;
+  --font-size-huge: 1.9rem;
+  --font-size-biggest: 2.3rem;
 
   /* SHADOWS */
   --shadow: 0 0 10px 0 var(--black);
-  --text-shadow: 0 3px 3px var(--bt);
+  --text-shadow: 0 3px 3px var(--black);
 
   /* DIMENSIONS */
   --xx-small-space: .2rem;
   --x-small-space: .5rem;
-  --small-space: .7rem;
-  --normal-space: 1rem;
-  --large-space: 1.4rem;
-  --x-large-space: 2.2rem;
-  --xx-large-space: 3.6rem;
+  --small-space: .8rem;
+  --normal-space: 1.3rem;
+  --large-space: 2.1rem;
+  --x-large-space: 2.9rem;
+  --xx-large-space: 3.4rem;
 
-  --view-padding: var(--large-space);
-  --section-margin: var(--x-large-space);
+  --main-padding: var(--small-space);
+  /* --section-margin: var(--x-large-space);
   --gap: var(--x-small-space);
   --button-padding: var(--small-space);
   --content: 80%;
-  --input-width: calc(var(--xx-large-space) * 7);
+  --input-width: calc(var(--xx-large-space) * 7); */
 
   /* ICONS */
   --small-icon: var(--small-space);
@@ -71,8 +70,8 @@
   --big-icon: var(--x-large-space);
 
   /* BORDER RADIUS */
-  --border-radius-small: .3rem;
-  --border-radius-big: .9rem;
+  --border-radius-small: .2rem;
+  --border-radius-big: .8rem;
   --border-radius-round: 50%;
 
   /* Z-INDEXES */
