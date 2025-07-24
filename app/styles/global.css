@@ -7,8 +7,6 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-shadow:0 0 1px transparent;
   text-rendering: optimizeLegibility;
   letter-spacing: .03rem;

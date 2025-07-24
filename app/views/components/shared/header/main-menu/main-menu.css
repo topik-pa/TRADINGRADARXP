@@ -20,9 +20,9 @@
 }
 #main-menu li.active, #main-menu li:hover {
   background: var(--primary);
-  a {
-    color: var(--secondary);
-  }
+}
+#main-menu li.active a, #main-menu li:hover a {
+  color: var(--secondary);
 }
 #main-menu ul {
   margin: 0;
