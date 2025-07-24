@@ -35,7 +35,7 @@ router.get('/:lang/:stockUrl', stockView)
 
 
 // home page
-router.get('/:lang/', hpView)
+router.get('/:lang/{it|en}', hpView)
 
 // root page
 router.get('/', (req, res) => {

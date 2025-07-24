@@ -29,6 +29,7 @@ beforeEach(async() => {
       'currency': 'EUR',
       'market': 'Euronext Growth Milan',
       'name': 'A.B.P. NOCIVELLI',
+      'stockUrl': 'a-b-p--nocivelli',
       'absVariation': '-0.05',
       'price': '5.10',
       'relVariation': '-0.97%'
@@ -48,6 +49,7 @@ describe('GET /api/stocks/IT0005439861', () => {
       'currency': 'EUR',
       'market': 'Euronext Growth Milan',
       'name': 'A.B.P. NOCIVELLI',
+      'stockUrl': 'a-b-p--nocivelli',
       'absVariation': '-0.05',
       'price': '5.10',
       'relVariation': '-0.97%'

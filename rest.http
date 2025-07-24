@@ -1,9 +1,38 @@
-### Welcome message
+### PUBLIC
+### sitemap.xml
+GET http://localhost:3000/sitemap.xml
+
+### robots.txt
+GET http://localhost:3000/robots.txt
+
+### favicon
+GET http://localhost:3000/favicon.ico
+
+
+
+### UI
+### Index
 GET http://localhost:3000/
+
+### Stock
+GET http://localhost:3000/it/aasen-sparebank
+
+### Stock news
+GET http://localhost:3000/it/aasen-sparebank/news
+
+### Stock dividend
+GET http://localhost:3000/it/aasen-sparebank/dividend
+
+### Stock target-price
+GET http://localhost:3000/it/aasen-sparebank/target-price
+
 
 ### Wrong url
 GET http://localhost:3000/wrong-url
 
+
+
+### API
 ### Wrong isin
 GET http://localhost:3000/api/stocks/123456
 
