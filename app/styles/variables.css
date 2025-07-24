@@ -7,18 +7,18 @@
   --gray:          #888888;
   --dark-gray:     #707070;
   --darker-gray:   #585858;
-  --darkest-gray:  #333333;
-  --black:         #181818;
+  --darkest-gray:  #282828;
+  --black:         #222222;
 
   --blue: #023baf;
-  --red:  #c0242e;
-  --green:#007e3d;
+  --red:  #990000;
+  --green:#009900;
   --gold:   #ffd700;
   --silver: #aaa9ad;
   --bronze: #cd7f32;
 
   --primary: var(--white);
-  --secondary: var(--darkest-gray);
+  --secondary: var(--black);
   --tertiary: var(--blue);
 
   --error: var(--red);

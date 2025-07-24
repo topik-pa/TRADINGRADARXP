@@ -1,18 +1,29 @@
+#main-menu {
+  align-self: flex-end;
+}
+
 #main-menu li {
   display: inline-block;
-  padding-right: var(--normal-space);
+  margin: 0 2px;
+  background-color: var(--darkest-gray);
+  background: linear-gradient(360deg, var(--darkest-gray) 66%, rgba(85, 85, 85, 1) 90%, rgba(136, 136, 136, 1) 100%);
+  border-top-left-radius: var(--border-radius-small);
+  border-top-right-radius: var(--border-radius-small);
+}
+#main-menu li a {
+  display: block;
+  padding: var(--main-padding) calc(var(--main-padding) * 3);
   font-weight: 500;
   text-transform: uppercase;
-
-  max-width: 33ch;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
-#main-menu li:last-child {
-  padding-right: 0;
+#main-menu li.active, #main-menu li:hover {
+  background: var(--primary);
+  a {
+    color: var(--secondary);
+  }
 }
-
 #main-menu ul {
   margin: 0;
   padding-left: 0;
@@ -28,11 +39,18 @@
 }
 .hamburger {
   font-size: var(--font-size-huge);
+  color: var(--primary);
+}
+
+@media screen and (max-width: 1280px) {
+  #main-menu li a {
+    padding: var(--main-padding) calc(var(--main-padding) * 2);
+  }
 }
 
 @media screen and (max-width: 1024px) {
-  #main-menu li {
-    max-width: 13ch;
+  #main-menu li a {
+    padding: var(--main-padding) calc(var(--main-padding) * 1);
   }
 }
 
@@ -40,6 +58,12 @@
   .hamburger {
     display: block;
     font-size: var(--font-size-huge);
+  }
+  #main-menu li {
+    background: transparent;
+  }
+  #main-menu li a {
+    color: var(--secondary);
   }
   #main-menu {
     position: fixed;
@@ -50,7 +74,7 @@
     right: -35ch;
     position: fixed;
     transition: right .4s ease-out;
-    background-color: var(--lighter-gray);
+    background-color: var(--primary);
     z-index: var(--main-menu);
   }
   #main-menu.show > div{
@@ -74,7 +98,7 @@
     font-size: var(--font-size-big);
   }
   #main-menu ul {
-    padding: var(--xx-large-space) var(--normal-space);
+    padding: var(--xx-large-space) var(--xx-large-space);
   }
   #main-menu li {
     display: flex;
@@ -82,6 +106,7 @@
     border-bottom: 1px solid var(--light-gray);
     padding: var(--small-space) 0;
     max-width: 33ch;
+    text-align: right;
   }
   #main-menu li a {
     padding: var(--normal-space) 0;

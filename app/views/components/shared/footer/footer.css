@@ -1,0 +1,13 @@
+footer {
+  padding: 0 var(--normal-space);
+  background: var(--secondary);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  flex-direction: column;
+}
+footer a {
+  color: var(--primary);
+  text-decoration: underline;
+}

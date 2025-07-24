@@ -13,7 +13,7 @@ body {
   text-rendering: optimizeLegibility;
   letter-spacing: .03rem;
   color: var(--secondary);
-  background-color: var(--lighter-gray);
+  background-color: var(--primary);
 }
 
 main {
@@ -49,11 +49,11 @@ small {
   font-size: 70%;
 }
 
-ul, ol {
+/* ul, ol {
   margin: var(--normal-space);
   padding-left: var(--normal-space);
   list-style: auto;
-}
+} */
 
 .clear {
   clear: both;

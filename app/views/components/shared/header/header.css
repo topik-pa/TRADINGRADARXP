@@ -3,15 +3,16 @@
 
 #header {
   padding: var(--main-padding);
-  border-bottom: 1px solid var(--light-gray);
-  background: var(--primary);
+  padding-bottom: 0;
+  /* border-bottom: 1px solid var(--light-gray); */
+  background: var(--secondary);
   font-weight: 500;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 #header a {
-  color: var(--secondary);
+  color: var(--primary);
   text-decoration: none;
 }
 #header a:hover {
@@ -20,6 +21,6 @@
 
 @media screen and (max-width: 768px) {
   #header {
-    
+
   }
 }
