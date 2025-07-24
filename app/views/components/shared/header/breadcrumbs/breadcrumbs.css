@@ -1,0 +1,23 @@
+#breadcrumbs {
+  border-bottom: 1px solid var(--darker-gray);
+  text-align: center;
+  padding: var(--main-padding);
+  color: var(--secondary);
+}
+
+#breadcrumbs nav {
+  display: inline-block;
+}
+
+#breadcrumbs span, #breadcrumbs a {
+  font-weight: 500;
+}
+
+/* #breadcrumbs a:not(:first-child)::before {
+  content: '\2192';
+} */
+/* #breadcrumbs a {
+}
+#breadcrumbs a[href] {
+  color: var(--link);
+} */

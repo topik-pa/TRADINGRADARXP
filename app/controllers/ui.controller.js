@@ -38,7 +38,15 @@ export async function stockView(req, res) {
     res.redirect((req.url).replace(lang, fallback))
   } else {
     i18n.setLocale(req, lang)
-    res.render('stock', getViewParams('stock', lang))
+    let params = getViewParams('stock', lang)
+    const breadcrumbs = [
+      {
+        name: req.params.stockUrl
+      }
+    ]
+    params = { ...params, breadcrumbs }
+
+    res.render('stock', params)
   }
 }
 
@@ -50,7 +58,19 @@ export async function stockViewTP(req, res) {
     res.redirect((req.url).replace(lang, fallback))
   } else {
     i18n.setLocale(req, lang)
-    res.render('stock-tp', getViewParams('stock-tp', lang))
+    let params = getViewParams('stock', lang)
+    const breadcrumbs = [
+      {
+        name: req.params.stockUrl,
+        url: '/' + lang + '/' + req.params.stockUrl
+      },
+      {
+        name: 'target-price'
+      }
+    ]
+    params = { ...params, breadcrumbs }
+
+    res.render('stock-tp', params)
   }
 }
 
@@ -62,19 +82,43 @@ export async function stockViewN(req, res) {
     res.redirect((req.url).replace(lang, fallback))
   } else {
     i18n.setLocale(req, lang)
-    res.render('stock-d', getViewParams('stock-d', lang))
+    let params = getViewParams('stock', lang)
+    const breadcrumbs = [
+      {
+        name: req.params.stockUrl,
+        url: '/' + lang + '/' + req.params.stockUrl
+      },
+      {
+        name: 'news'
+      }
+    ]
+    params = { ...params, breadcrumbs }
+
+    res.render('stock-n', params)
   }
 }
 
 
-// Stock news
+// Stock dividend
 export async function stockViewDividend(req, res) {
   const lang = req.params.lang
   if (!supportedLangs.includes(lang)) {
     res.redirect((req.url).replace(lang, fallback))
   } else {
     i18n.setLocale(req, lang)
-    res.render('stock-d', getViewParams('stock-d', lang))
+    let params = getViewParams('stock', lang)
+    const breadcrumbs = [
+      {
+        name: req.params.stockUrl,
+        url: '/' + lang + '/' + req.params.stockUrl
+      },
+      {
+        name: 'dividend'
+      }
+    ]
+    params = { ...params, breadcrumbs }
+
+    res.render('stock-d', params)
   }
 }
 

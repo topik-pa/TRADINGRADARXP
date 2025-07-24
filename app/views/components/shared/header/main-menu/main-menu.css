@@ -6,7 +6,7 @@
   display: inline-block;
   margin: 0 2px;
   background-color: var(--darkest-gray);
-  background: linear-gradient(360deg, var(--darkest-gray) 66%, rgba(85, 85, 85, 1) 90%, rgba(136, 136, 136, 1) 100%);
+  /* background: linear-gradient(360deg, var(--darkest-gray) 66%, rgba(85, 85, 85, 1) 90%, rgba(136, 136, 136, 1) 100%); */
   border-top-left-radius: var(--border-radius-small);
   border-top-right-radius: var(--border-radius-small);
 }

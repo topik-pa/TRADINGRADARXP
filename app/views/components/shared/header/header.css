@@ -1,6 +1,7 @@
 @import "./social-icons/social-icons.css";
 @import "./main-logo/main-logo.css";
 @import "./main-menu/main-menu.css";
+@import "./breadcrumbs/breadcrumbs.css";
 
 header {
   padding: var(--main-padding);
