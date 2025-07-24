@@ -14,7 +14,7 @@
 #main-logo img {
   height: var(--xx-large-space);
   width: auto;
-  vertical-align: middle;
+  vertical-align: bottom;
   margin-right: var(--main-padding);
 }
 

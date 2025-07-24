@@ -30,6 +30,7 @@
   /* TRANSPARENCIES */
   --transparent: .1;
   --semi-transparent: .85;
+  --blue-st: rgba(2, 89, 139, var(--semi-transparent));
   /* --wt: rgba(255, 255, 255, var(--transparent));
   --wst: rgba(255, 255, 255, var(--semi-transparent));
   --bt: rgba(0, 0, 0, var(--transparent));

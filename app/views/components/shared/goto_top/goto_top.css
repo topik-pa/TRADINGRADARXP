@@ -1,0 +1,21 @@
+#goto_top {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: var(--border-radius-small);
+  padding: var(--small-space);
+  margin: var(--small-space);
+  cursor: pointer;
+  font-size: var(--font-size-bigger);
+  background-color: var(--blue-st);
+  z-index: var(--gototop);
+}
+#goto_top:hover {
+  filter: brightness(90%);
+}
+#goto_top.visible {
+  display: block;
+}
