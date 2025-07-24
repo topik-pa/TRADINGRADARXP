@@ -1,0 +1,17 @@
+aside .icon-cheveron-up:before {
+  font-size: var(--normal-space);
+  border: 1px solid;
+  border-radius: 50%;
+  transform: rotate(-90deg);
+  display: inline-block;
+  transform-origin: center;
+  cursor: pointer;
+  position: absolute;
+  top: var(--normal-space);
+  right: calc(var(--normal-space) / -2);
+  transition: all .4s ease-in-out;
+  background-color: var(--white);
+}
+aside.collapsed .icon-cheveron-up:before {
+  transform: rotate(90deg);
+}

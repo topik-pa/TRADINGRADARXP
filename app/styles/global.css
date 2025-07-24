@@ -14,8 +14,24 @@ body {
   background-color: var(--primary);
 }
 
-main {
-  padding: var(--main-padding)
+.layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.layout main {
+  width: 100%;
+  padding: var(--main-padding);
+}
+.layout aside {
+  padding: var(--main-padding);
+  background: var(--light-gray);
+  position: relative;
+  width: 20%;
+  transition: all .4s ease-in-out;
+}
+.layout aside.collapsed {
+  width: 5%;
 }
 
 a {

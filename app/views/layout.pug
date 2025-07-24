@@ -48,8 +48,11 @@ html(lang=locale)
       meta(name="og:site_name" content=proj_name)
   body(id=id, class="view " + className)
     include ./components/shared/header/header.pug
-    main
-      block main
+    div(class="layout")
+      aside
+        block column
+      main
+        block main
     include ./components/shared/footer/footer.pug
     include ./components/shared/goto_top/goto_top.pug
     script(type='application/ld+json').
