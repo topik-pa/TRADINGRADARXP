@@ -8,7 +8,7 @@
     "build": "webpack --mode production --config webpack.config.js",
     "start": "NODE_ENV=production node index.js",
     "dev": "NODE_ENV=development nodemon index.js",
-    "lint": "eslint .",
+    "lint": "eslint . --ignore-pattern './app/dist/*'",
     "test:db": "NODE_ENV=test vitest ./app/tests/db",
     "test:api": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles ./app/tests/api",
     "json-sources-init": "node app/utilities/json-sources/init.js",

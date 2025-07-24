@@ -14,7 +14,8 @@ const modules = {
 if (modules[pageId]) {
   modules[pageId]().then((module) => {
     module.default?.init?.()
+  // eslint-disable-next-line no-unused-vars
   }).catch((err) => {
-    console.warn(err)
+    // console.warn(err)
   })
 }
