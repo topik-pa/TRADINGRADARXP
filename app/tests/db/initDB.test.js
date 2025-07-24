@@ -189,37 +189,37 @@ describe('filterStocksAndBuildData', () => {
 
   it('ritorna null se mancano name o isin o code', () => {
     const stockNoName = [
-      '', 
-      '<a></a>', 
-      'IT0001234567', 
-      'ABC', 
-      '<div title="MTA">MTA</div>', 
+      '',
+      '<a></a>',
+      'IT0001234567',
+      'ABC',
+      '<div title="MTA">MTA</div>',
       '<div><span></span>EUR</div>'
     ]
     expect(filterStocksAndBuildData(stockNoName)).toBeNull()
 
     const stockNoIsin = [
-      '', 
-      '<a>Company</a>', 
-      '', 
-      'ABC', 
-      '<div title="MTA">MTA</div>', 
+      '',
+      '<a>Company</a>',
+      '',
+      'ABC',
+      '<div title="MTA">MTA</div>',
       '<div><span></span>EUR</div>'
     ]
     expect(filterStocksAndBuildData(stockNoIsin)).toBeNull()
 
     const stockNoCode = [
-      '', 
-      '<a>Company</a>', 
-      'IT0001234567', 
-      '', 
-      '<div title="MTA">MTA</div>', 
+      '',
+      '<a>Company</a>',
+      'IT0001234567',
+      '',
+      '<div title="MTA">MTA</div>',
       '<div><span></span>EUR</div>'
     ]
     expect(filterStocksAndBuildData(stockNoCode)).toBeNull()
   })
 
-  it('ritorna oggetto valido se tutti i campi sono corretti', () => {
+  it('ritorna null se manca un campo obbligatorio (name)', () => {
     const stock = [
       '',
       '\u003Ca href=\u0027\/en\/product\/equities\/IT0001233417-MTAA\u0027 data-order=\u0027A2A\u0027 data-title-hover=\u0027A2A\u0027\u003EA2A\u003C\/a\u003E',
@@ -254,7 +254,8 @@ describe('filterStocksAndBuildData', () => {
       'currency': null,
       'isin': 'IT0001233417',
       'market': 'Euronext Milan',
-      'name': 'A2A'
+      'name': 'A2A',
+      'stockUrl': 'a2a'
     })
   })
 })
@@ -272,7 +273,7 @@ describe('sendMessage', () => {
   const mockCreate = vi.fn()
 
   beforeEach(() => {
-    vi.clearAllMocks() 
+    vi.clearAllMocks()
     process.env = { ...originalEnv }
     Mailgun.mockImplementation(() => ({
       client: () => ({

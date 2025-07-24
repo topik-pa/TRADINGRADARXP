@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { feedDB } from '../../db/feedDB.js'
 import * as fs from 'fs/promises'
 // import { JSDOM } from 'jsdom'
-import { upsertStock } from '../../controllers/stockController.js'
+import { upsertStock } from '../../controllers/db.controller.js'
 import { cleanDB } from '../../utilities/cleanDB.js'
 import logger from '../../config/logger.js'
 // import { sleep } from '../../utilities/sleep.js'
@@ -12,7 +12,7 @@ vi.mock('fs/promises', () => ({
   readFile: vi.fn()
 }))
 
-vi.mock('../../controllers/stockController.js', () => ({
+vi.mock('../../controllers/db.controller.js', () => ({
   upsertStock: vi.fn(() => Promise.resolve())
 }))
 
