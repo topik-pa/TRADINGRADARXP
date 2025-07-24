@@ -1,16 +1,32 @@
+@import "./social-icons/social-icons.css";
 @import "./main-logo/main-logo.css";
 @import "./main-menu/main-menu.css";
 
-#header {
+header {
   padding: var(--main-padding);
   padding-bottom: 0;
   /* border-bottom: 1px solid var(--light-gray); */
   background: var(--secondary);
   font-weight: 500;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+}
+
+header > div:nth-child(1)  {
+  display: flex;
+  justify-content: end;
+  padding: var(--xx-small-space);
+  margin-bottom: var(--main-padding);
+  border-bottom: 1px solid var(--darker-gray);
+}
+
+header > div:nth-child(2)  {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 #header a {
   color: var(--primary);
   text-decoration: none;

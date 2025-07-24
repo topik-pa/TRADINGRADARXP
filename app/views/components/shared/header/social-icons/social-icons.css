@@ -1,0 +1,7 @@
+#socials a {
+  margin-left: var(--main-padding);
+  font-size: var(--font-size-big);
+}
+#socials a:hover {
+  filter: brightness(90%);
+}
