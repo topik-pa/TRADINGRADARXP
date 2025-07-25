@@ -1,5 +1,5 @@
 import express from 'express'
-import { hpView, stockView, stockViewTP, stockViewN, stockViewDividend } from '../controllers/ui.controller.js'
+import { hpView, stockView, stockViewTP, stockViewN, stockViewDividend, privacyView, ContactsView, exchangeView } from '../controllers/ui.controller.js'
 const router = express.Router()
 
 // sitemap.xml
@@ -16,26 +16,31 @@ router.get('/favicon.ico', (req, res) => {
 })
 
 
+
+// exchange
+router.get('/:lang(en|it)/:exchange(milano|paris)', exchangeView)
+
+
+
 // stock page - dividend
-router.get('/:lang/:stockUrl/dividend', stockViewDividend)
+router.get('/:lang(it|en)/:stockUrl/dividend', stockViewDividend)
 // stock page - news
-router.get('/:lang/:stockUrl/news', stockViewN)
+router.get('/:lang(it|en)/:stockUrl/news', stockViewN)
 // stock page - target price
-router.get('/:lang/:stockUrl/target-price', stockViewTP)
+router.get('/:lang(it|en)/:stockUrl/target-price', stockViewTP)
 // stock page
-router.get('/:lang/:stockUrl', stockView)
+router.get('/:lang(it|en)/:stockUrl', stockView)
 
 
-// all the stocks index
-// router.get('/:lang/stocks', stocksIndex)
-// all the target prices and reccomendations
-// router.get('/:lang/target-prices', hpView)
-// all the dividends
-// router.get('/:lang/dividends', hpView)
+// privacy
+router.get('/:lang(it|en)/privacy', privacyView)
+// contacts
+router.get('/:lang(it|en)/contacts', ContactsView)
 
 
 // home page
-router.get('/:lang/{it|en}', hpView)
+router.get('/:lang(it|en)', hpView)
+
 
 // root page
 router.get('/', (req, res) => {

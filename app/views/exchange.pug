@@ -1,0 +1,18 @@
+extends layout.pug
+
+block append meta
+  meta(name="og:title" content="")
+  meta(name="og:description" content="")
+  meta(name="og:image" content=og_image)
+  meta(name="og:url" content=canonicalUrl)
+
+  title= __('privacy') + ' | ' + proj_name
+  meta(name="description" content=__('privacy'))
+  meta(name="keywords" content="")
+
+  link(rel="canonical", href=canonicalUrl)
+  each link in hreflangs
+    link(rel="alternate", hreflang=link.lang, href=link.url)
+
+block main
+  h1 exchange...

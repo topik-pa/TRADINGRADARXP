@@ -1,3 +1,5 @@
 {
-	"hello": "Ciao"
+	"hello": "Ciao",
+  "privacy": "Privacy",
+  "contacts": "Contatti"
 }
