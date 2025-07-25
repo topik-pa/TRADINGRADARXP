@@ -31,8 +31,62 @@ export async function hpView(req, res) {
 }
 
 
-// Stock
+// Exchange
 export async function exchangeView(req, res) {
+  const lang = req.params.lang
+  if (!supportedLangs.includes(lang)) {
+    res.redirect((req.url).replace(lang, fallback))
+  } else {
+    i18n.setLocale(req, lang)
+    let params = getViewParams('exchange', lang, req.path)
+    const breadcrumbs = [
+      {
+        name: req.params.exchange
+      }
+    ]
+    params = { ...params, breadcrumbs }
+
+    res.render('exchange', params)
+  }
+}
+// Exchange stocks
+export async function exchangeViewSS(req, res) {
+  const lang = req.params.lang
+  if (!supportedLangs.includes(lang)) {
+    res.redirect((req.url).replace(lang, fallback))
+  } else {
+    i18n.setLocale(req, lang)
+    let params = getViewParams('exchange', lang, req.path)
+    const breadcrumbs = [
+      {
+        name: req.params.exchange
+      }
+    ]
+    params = { ...params, breadcrumbs }
+
+    res.render('exchange', params)
+  }
+}
+// Exchange target prices
+export async function exchangeViewTPS(req, res) {
+  const lang = req.params.lang
+  if (!supportedLangs.includes(lang)) {
+    res.redirect((req.url).replace(lang, fallback))
+  } else {
+    i18n.setLocale(req, lang)
+    let params = getViewParams('exchange', lang, req.path)
+    const breadcrumbs = [
+      {
+        name: req.params.exchange
+      }
+    ]
+    params = { ...params, breadcrumbs }
+
+    res.render('exchange', params)
+  }
+}
+// Exchange dividends
+export async function exchangeViewDD(req, res) {
   const lang = req.params.lang
   if (!supportedLangs.includes(lang)) {
     res.redirect((req.url).replace(lang, fallback))

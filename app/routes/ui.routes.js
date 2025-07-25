@@ -1,5 +1,5 @@
 import express from 'express'
-import { hpView, stockView, stockViewTP, stockViewN, stockViewDividend, privacyView, ContactsView, exchangeView } from '../controllers/ui.controller.js'
+import { hpView, stockView, stockViewTP, stockViewN, stockViewDividend, privacyView, ContactsView, exchangeView, exchangeViewSS, exchangeViewTPS, exchangeViewDD } from '../controllers/ui.controller.js'
 const router = express.Router()
 
 // sitemap.xml
@@ -19,6 +19,9 @@ router.get('/favicon.ico', (req, res) => {
 
 // exchange
 router.get('/:lang(en|it)/:exchange(milano|paris)', exchangeView)
+router.get('/:lang(en|it)/:exchange(milano|paris)/stocks', exchangeViewSS)
+router.get('/:lang(en|it)/:exchange(milano|paris)/target-prices', exchangeViewTPS)
+router.get('/:lang(en|it)/:exchange(milano|paris)/dividends', exchangeViewDD)
 
 
 
