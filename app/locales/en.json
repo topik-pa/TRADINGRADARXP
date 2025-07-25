@@ -1,5 +1,12 @@
 {
 	"hello": "Hello",
   "privacy": "Privacy",
-  "contacts": "Contacts"
+  "contacts": "Contacts",
+  "milanStockExchange": "Milan Stock Exchange",
+  "parisStockExchange": "Paris Stock Exchange",
+  "index": {
+    "title": "*I segnali di Borsa dei principali mercati europei",
+    "subtitle": "*Seleziona il mercato di tuo interesse!",
+    "discoverStocks": "*Scopri tutti i titoli >>"
+  }
 }
