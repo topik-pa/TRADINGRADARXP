@@ -59,6 +59,7 @@ class CmpBullet extends HTMLElement { // (1)
     shadow.append(template.content.cloneNode(true))
     const root = shadow.querySelector('section')
     root.classList.add(this.getAttribute('type'))
+    root.classList.add(this.getAttribute('topic'))
     root.querySelector('.value').classList.add(this.getAttribute('direction'))
   }
 
