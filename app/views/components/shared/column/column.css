@@ -7,7 +7,7 @@ aside .icon-cheveron-up:before {
   transform-origin: center;
   cursor: pointer;
   position: absolute;
-  top: var(--normal-space);
+  top:  calc(var(--normal-space) / -2);
   right: calc(var(--normal-space) / -2);
   transition: all .4s ease-in-out;
   background-color: var(--white);
