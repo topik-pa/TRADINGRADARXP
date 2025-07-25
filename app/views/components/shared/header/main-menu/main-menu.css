@@ -4,7 +4,7 @@
 
 #main-menu li {
   display: inline-block;
-  margin: 0 2px;
+  margin-left: 2px;
   background-color: var(--darkest-gray);
   /* background: linear-gradient(360deg, var(--darkest-gray) 66%, rgba(85, 85, 85, 1) 90%, rgba(136, 136, 136, 1) 100%); */
   border-top-left-radius: var(--border-radius-small);
@@ -44,14 +44,12 @@
 
 @media screen and (max-width: 1280px) {
   #main-menu li a {
-    padding: var(--main-padding) calc(var(--main-padding) * 2);
+    padding: var(--x-small-space) calc(var(--x-small-space) * 3);
   }
 }
 
 @media screen and (max-width: 1024px) {
-  #main-menu li a {
-    padding: var(--main-padding) calc(var(--main-padding) * 1);
-  }
+
 }
 
 @media screen and (max-width: 768px) {

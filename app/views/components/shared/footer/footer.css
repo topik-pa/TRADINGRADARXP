@@ -1,13 +1,11 @@
 footer {
-  padding: 0 var(--normal-space);
+  padding: var(--main-padding) 0;
   background: var(--secondary);
-  color: #FFFFFF;
+  color: var(--white);
   display: flex;
   align-items: center;
-  padding: 1rem 0;
   flex-direction: column;
 }
 footer a {
   color: var(--primary);
-  text-decoration: underline;
 }

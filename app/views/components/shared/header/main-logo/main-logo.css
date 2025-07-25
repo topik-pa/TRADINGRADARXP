@@ -7,20 +7,19 @@
 }
 
 #main-logo span {
-  letter-spacing: 2px;
-  color: var(--light-gray);
-  
-}
-#main-logo span:nth-child(1) {
+  letter-spacing: 2px;  
   font-weight: 100;
 }
+#main-logo span:nth-child(1) {
+  
+}
 #main-logo span:nth-child(2) {
-  font-weight: 600;
   font-style: italic;
 }
 #main-logo span:nth-child(3) {
   color: var(--primary);
   font-style: italic;
+  font-weight: 600;
 }
 
 #main-logo img {
