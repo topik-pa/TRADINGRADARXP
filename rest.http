@@ -42,6 +42,9 @@ GET http://localhost:3000/api/stocks/IT0005439861
 ### OK All stocks
 GET http://localhost:3000/api/stocks/
 
+### OK All stocks Amsterdam Market
+GET http://localhost:3000/api/stocks/milan
+
 ### User not found
 # POST http://localhost:3000/api/users
 # content-type: application/json

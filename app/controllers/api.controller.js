@@ -11,6 +11,19 @@ export async function getStocks(req, res, next) {
   return res.json(stocks)
 }
 
+// GET stocks by Market
+export async function getStocksByMarket(req, res, next) {
+  const exchange = req.params.exchange
+  const re = new RegExp(exchange, 'i')
+  let stocks = []
+  try {
+    stocks = await Stock.find({ market: re })
+  } catch (error) {
+    return next(error)
+  }
+  return res.json(stocks)
+}
+
 // GET stock by ISIN
 export async function getStockByISIN(req, res, next) {
   const isin = req.params.isin
