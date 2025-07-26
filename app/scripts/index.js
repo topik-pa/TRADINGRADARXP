@@ -3,6 +3,7 @@ import gotoTop from '../views/components/shared/goto_top/goto_top.js'
 import column from '../views/components/shared/column/column.js'
 import './CmpBullet.js'
 import './CmpCard.js'
+import './CmpNavigation.js'
 
 const pageId = document.body.id
 

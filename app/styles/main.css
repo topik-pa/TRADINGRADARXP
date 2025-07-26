@@ -10,6 +10,7 @@
 @import "./loading.css";
 @import "./responsive.css";
 @import "./image-icons.css";
+@import "./slotted.css";
 
 
 @import "../views/components/shared/footer/footer.css";

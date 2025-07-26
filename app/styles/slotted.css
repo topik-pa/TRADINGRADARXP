@@ -1,0 +1,20 @@
+.cmp-card-slotted-img {
+  width: 100%;
+}
+
+.cmp-navigation-slotted-li {
+  
+}
+.cmp-navigation-slotted-li:hover {
+  background-color: var(--black);
+  box-shadow: inset 5px 0 0 #0c72f7;
+}
+.cmp-navigation-slotted-li:hover a {
+  color: var(--white);
+}
+.cmp-navigation-slotted-a {
+  color: var(--lightest-gray);
+  text-decoration: none;
+  display: block;
+  padding: var(--main-padding);
+}
