@@ -1,1 +1,1 @@
-"use strict";(self.webpackChunktradingradarxp=self.webpackChunktradingradarxp||[]).push([[798],{798:(t,a,e)=>{e.r(a),e.d(a,{default:()=>d});const d={init:async()=>{const t=await e.e(538).then(e.bind(e,538));try{document.adoptedStyleSheets=[t.default]}catch(t){}alert("pippo")}}}}]);
+"use strict";(self.webpackChunktradingradarxp=self.webpackChunktradingradarxp||[]).push([[798],{798:(t,a,e)=>{e.r(a),e.d(a,{default:()=>d});const d={init:async()=>{const t=await e.e(538).then(e.bind(e,538));try{document.adoptedStyleSheets=[t.default]}catch(t){}}}}}]);
