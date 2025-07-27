@@ -20,7 +20,7 @@
 
 export default  {
   init: async() => {
-    const cssModule = await import('../views/home.css', {
+    const cssModule = await import('./home.css', {
       with: { type: 'css' }
     })
     try {

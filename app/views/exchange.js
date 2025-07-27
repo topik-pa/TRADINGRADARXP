@@ -47,7 +47,7 @@ function createComponent(tag, attrs = {}, children = []) {
 
 export default  {
   init: async() => {
-    const cssModule = await import('../views/exchange.css', {
+    const cssModule = await import('./exchange.css', {
       with: { type: 'css' }
     })
     try {
