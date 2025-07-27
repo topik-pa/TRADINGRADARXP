@@ -18,6 +18,10 @@ block main
   h1= __('index.title')
   h2= __('index.subtitle')
   div
+    //- cmp-bullet(type="blue", topic="performance", direction="positive")
+    //-   span(slot="title") Best performance
+    //-   span(slot="name") A2a
+    //-   span(slot="value") +33.7%
     cmp-card(color="blue")
       span(slot="title")= __('milanStockExchange')
       a(slot="image", title=__('milanStockExchange'), href="milano")

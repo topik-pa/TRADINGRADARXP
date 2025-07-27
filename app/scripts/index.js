@@ -14,7 +14,8 @@ column.init()
 
 
 const modules = {
-  hp: () => import('../views/home.js')
+  hp: () => import('../views/home.js'),
+  exchange: () => import('../views/exchange.js')
 }
 
 if (modules[pageId]) {

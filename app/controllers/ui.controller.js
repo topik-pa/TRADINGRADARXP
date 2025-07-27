@@ -34,17 +34,19 @@ export async function hpView(req, res) {
 // Exchange
 export async function exchangeView(req, res) {
   const lang = req.params.lang
+  const exchange = req.params.exchange
   if (!supportedLangs.includes(lang)) {
     res.redirect((req.url).replace(lang, fallback))
   } else {
     i18n.setLocale(req, lang)
     let params = getViewParams('exchange', lang, req.path)
+
     const breadcrumbs = [
       {
-        name: req.params.exchange
+        name: exchange
       }
     ]
-    params = { ...params, breadcrumbs }
+    params = { ...params, breadcrumbs, exchange }
 
     res.render('exchange', params)
   }

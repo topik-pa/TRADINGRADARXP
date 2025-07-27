@@ -18,10 +18,10 @@ router.get('/favicon.ico', (req, res) => {
 
 
 // exchange
-router.get('/:lang(en|it)/:exchange(milano|paris)', exchangeView)
-router.get('/:lang(en|it)/:exchange(milano|paris)/stocks', exchangeViewSS)
-router.get('/:lang(en|it)/:exchange(milano|paris)/target-prices', exchangeViewTPS)
-router.get('/:lang(en|it)/:exchange(milano|paris)/dividends', exchangeViewDD)
+router.get('/:lang(en|it)/:exchange(milan|paris)', exchangeView)
+router.get('/:lang(en|it)/:exchange(milan|paris)/stocks', exchangeViewSS)
+router.get('/:lang(en|it)/:exchange(milan|paris)/target-prices', exchangeViewTPS)
+router.get('/:lang(en|it)/:exchange(milan|paris)/dividends', exchangeViewDD)
 
 
 
