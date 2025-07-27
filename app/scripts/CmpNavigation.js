@@ -35,13 +35,12 @@ class CmpNavigation extends HTMLElement {
     super()
     const shadow = this.attachShadow({ mode: 'open' })
     shadow.append(template.content.cloneNode(true))
-    const root = shadow.querySelector('section')
+    //const root = shadow.querySelector('section')
     //root.classList.add(this.getAttribute('color'))
     //root.classList.add(this.getAttribute('topic'))
     //root.querySelector('header').classList.add(this.getAttribute('color'))
     //root.querySelector('img').setAttribute('src', this.getAttribute('src'))
   }
-
 }
 
 customElements.define('cmp-navigation', CmpNavigation)

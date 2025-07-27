@@ -40,14 +40,12 @@ export async function exchangeView(req, res) {
   } else {
     i18n.setLocale(req, lang)
     let params = getViewParams('exchange', lang, req.path)
-
     const breadcrumbs = [
       {
         name: exchange
       }
     ]
     params = { ...params, breadcrumbs, exchange }
-
     res.render('exchange', params)
   }
 }
@@ -65,7 +63,6 @@ export async function exchangeViewSS(req, res) {
       }
     ]
     params = { ...params, breadcrumbs }
-
     res.render('exchange', params)
   }
 }
@@ -83,7 +80,6 @@ export async function exchangeViewTPS(req, res) {
       }
     ]
     params = { ...params, breadcrumbs }
-
     res.render('exchange', params)
   }
 }
@@ -101,7 +97,6 @@ export async function exchangeViewDD(req, res) {
       }
     ]
     params = { ...params, breadcrumbs }
-
     res.render('exchange', params)
   }
 }
@@ -121,7 +116,6 @@ export async function stockView(req, res) {
       }
     ]
     params = { ...params, breadcrumbs }
-
     res.render('stock', params)
   }
 }
@@ -145,7 +139,6 @@ export async function stockViewTP(req, res) {
       }
     ]
     params = { ...params, breadcrumbs }
-
     res.render('stock-tp', params)
   }
 }
@@ -169,7 +162,6 @@ export async function stockViewN(req, res) {
       }
     ]
     params = { ...params, breadcrumbs }
-
     res.render('stock-n', params)
   }
 }
@@ -193,7 +185,6 @@ export async function stockViewDividend(req, res) {
       }
     ]
     params = { ...params, breadcrumbs }
-
     res.render('stock-d', params)
   }
 }
@@ -213,7 +204,6 @@ export async function privacyView(req, res) {
       }
     ]
     params = { ...params, breadcrumbs }
-
     res.render('privacy', params)
   }
 }
@@ -234,7 +224,6 @@ export async function ContactsView(req, res) {
       }
     ]
     params = { ...params, breadcrumbs }
-
     res.render('contacts', params)
   }
 }

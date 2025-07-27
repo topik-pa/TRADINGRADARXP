@@ -11,18 +11,17 @@ mainMenu.toggleMobileMenu()
 gotoTop.init()
 column.init()
 
-
-
+// Import views specific scripts
 const modules = {
   hp: () => import('../views/home.js'),
   exchange: () => import('../views/exchange.js')
 }
 
+// Execute view specific script
 if (modules[pageId]) {
   modules[pageId]().then((module) => {
     module.default?.init?.()
-  // eslint-disable-next-line no-unused-vars
-  }).catch((err) => {
+  }).catch((_err) => {
     // console.warn(err)
   })
 }

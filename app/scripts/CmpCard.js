@@ -71,7 +71,6 @@ class CmpCard extends HTMLElement {
     root.querySelector('header').classList.add(this.getAttribute('color'))
     //root.querySelector('img').setAttribute('src', this.getAttribute('src'))
   }
-
 }
 
 customElements.define('cmp-card', CmpCard)

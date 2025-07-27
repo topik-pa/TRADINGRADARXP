@@ -50,8 +50,7 @@ template.innerHTML = `
   </section>
 `
 
-
-class CmpBullet extends HTMLElement { // (1)
+class CmpBullet extends HTMLElement {
 
   constructor() {
     super()
@@ -62,9 +61,6 @@ class CmpBullet extends HTMLElement { // (1)
     root.classList.add(this.getAttribute('topic'))
     root.querySelector('.value').classList.add(this.getAttribute('direction'))
   }
-
-
-
 }
 
-customElements.define('cmp-bullet', CmpBullet) // (2)
+customElements.define('cmp-bullet', CmpBullet)

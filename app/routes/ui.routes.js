@@ -2,6 +2,10 @@ import express from 'express'
 import { hpView, stockView, stockViewTP, stockViewN, stockViewDividend, privacyView, ContactsView, exchangeView, exchangeViewSS, exchangeViewTPS, exchangeViewDD } from '../controllers/ui.controller.js'
 const router = express.Router()
 
+const CURRENT_EXCHANGES = 'milan|oslo|paris|amsterdam|brussels|lisbon|dublin'
+const CURRENT_LANGS = 'it|en'
+
+
 // sitemap.xml
 router.get('/sitemap.xml', (req, res) => {
   res.sendFile('/public/sitemap.xml', { root: './app' })
@@ -16,40 +20,38 @@ router.get('/favicon.ico', (req, res) => {
 })
 
 
-
-// exchange
-router.get('/:lang(en|it)/:exchange(milan|paris)', exchangeView)
-router.get('/:lang(en|it)/:exchange(milan|paris)/stocks', exchangeViewSS)
-router.get('/:lang(en|it)/:exchange(milan|paris)/target-prices', exchangeViewTPS)
-router.get('/:lang(en|it)/:exchange(milan|paris)/dividends', exchangeViewDD)
-
+// Exchange
+router.get(`/:lang(en|it)/:exchange(${CURRENT_EXCHANGES})`, exchangeView)
+router.get(`/:lang(en|it)/:exchange(${CURRENT_EXCHANGES})/stocks`, exchangeViewSS)
+router.get(`/:lang(en|it)/:exchange(${CURRENT_EXCHANGES})/target-prices`, exchangeViewTPS)
+router.get(`/:lang(en|it)/:exchange(${CURRENT_EXCHANGES})/dividends`, exchangeViewDD)
 
 
-// stock page - dividend
-router.get('/:lang(it|en)/:stockUrl/dividend', stockViewDividend)
-// stock page - news
-router.get('/:lang(it|en)/:stockUrl/news', stockViewN)
-// stock page - target price
-router.get('/:lang(it|en)/:stockUrl/target-price', stockViewTP)
-// stock page
-router.get('/:lang(it|en)/:stockUrl', stockView)
+// Stock page - dividend
+router.get(`/:lang(${CURRENT_LANGS})/:stockUrl/dividend`, stockViewDividend)
+// Stock page - news
+router.get(`/:lang(${CURRENT_LANGS})/:stockUrl/news`, stockViewN)
+// Stock page - target price
+router.get(`/:lang(${CURRENT_LANGS})/:stockUrl/target-price`, stockViewTP)
+// Stock page
+router.get(`/:lang(${CURRENT_LANGS})/:stockUrl`, stockView)
 
 
-// privacy
-router.get('/:lang(it|en)/privacy', privacyView)
-// contacts
-router.get('/:lang(it|en)/contacts', ContactsView)
+// Privacy
+router.get(`/:lang(${CURRENT_LANGS})/privacy`, privacyView)
+// Contacts
+router.get(`/:lang(${CURRENT_LANGS})/contacts`, ContactsView)
 
 
-// home page
-router.get('/:lang(it|en)', hpView)
+// Home page
+router.get(`/:lang(${CURRENT_LANGS})`, hpView)
 
 
 // root page
 router.get('/', (req, res) => {
-  // Rileva lingua preferita dal browser
+  // Get browser prefered language
   const lang = req.acceptsLanguages('en', 'it') || 'en'
-  // Reindirizza in modo permanente
+  // Redirects
   res.redirect(301, `/${lang}/`)
 })
 
