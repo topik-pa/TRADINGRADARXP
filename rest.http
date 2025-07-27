@@ -26,6 +26,9 @@ GET http://localhost:3000/it/aasen-sparebank/dividend
 ### Stock target-price
 GET http://localhost:3000/it/aasen-sparebank/target-price
 
+### Exchanhe Milano
+GET http://localhost:3000/it/milan
+
 
 ### Wrong url
 GET http://localhost:3000/wrong-url

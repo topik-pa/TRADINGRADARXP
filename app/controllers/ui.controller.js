@@ -1,4 +1,4 @@
-import { i18n } from '../../index.js'
+import { i18n } from '../../server.js'
 const baseUrl = 'https://www.tradingradar.net'
 const supportedLangs = ['en', 'it']
 const fallback = 'en'
