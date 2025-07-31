@@ -8,11 +8,6 @@
 
 #main-logo a span {
   letter-spacing: 2px;  
-  font-weight: 600;
-}
-#main-logo a span:nth-child(4) {
-  color: var(--primary);
-  font-style: italic;
   font-weight: 100;
 }
 
