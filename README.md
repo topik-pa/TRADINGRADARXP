@@ -7,3 +7,10 @@ attenzione algli exchange supportati (stringhe poco strutturate)
 const baseUrl = 'https://www.tradingradar.net' -> si puà fare meglio?
 
 
+LOGO
+indicizzazione db
+
+config webpack
+
+config js con variabili global
+
