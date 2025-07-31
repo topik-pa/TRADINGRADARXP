@@ -43,19 +43,31 @@ const stockSchema = new mongoose.Schema({
       },
   price:
       {
-        type: String,
+        type: Number,
         nullable: true,
         unique: false
       },
   absVariation:
       {
-        type: String,
+        type: Number,
         nullable: true,
         unique: false
       },
   relVariation:
       {
         type: String,
+        nullable: true,
+        unique: false
+      },
+  perf1M:
+      {
+        type: Number,
+        nullable: true,
+        unique: false
+      },
+  perf52W:
+      {
+        type: Number,
         nullable: true,
         unique: false
       }
