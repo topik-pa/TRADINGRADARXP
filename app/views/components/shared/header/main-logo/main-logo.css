@@ -12,9 +12,9 @@
 }
 
 #main-logo img {
-  height: 5rem;
+  height: 4rem;
   width: auto;
-  vertical-align: bottom;
+  vertical-align: middle;
   margin-right: var(--main-padding);
 }
 

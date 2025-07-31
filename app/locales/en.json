@@ -4,6 +4,12 @@
   "contacts": "Contacts",
   "milanStockExchange": "Milan Stock Exchange",
   "parisStockExchange": "Paris Stock Exchange",
+  "osloStockExchange": "Oslo Stock Exchange",
+  "amsterdamStockExchange": "Amsterdam Stock Exchange",
+  "brusselsStockExchange": "Brussels Stock Exchange",
+  "lisbonStockExchange": "Lisbon Stock Exchange",
+  "dublinStockExchange": "Dublin Stock Exchange",
+  "euronextGlobal": "Euronext Global",
   "index": {
     "title": "*I segnali di Borsa dei principali mercati europei",
     "subtitle": "*Seleziona il mercato di tuo interesse!",

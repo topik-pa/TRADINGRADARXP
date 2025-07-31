@@ -2,7 +2,7 @@ import express from 'express'
 import { getStockByStockUrl,/* getStockByISIN,*/ getStocksByMarket, getStocks } from '../controllers/api.controller.js'
 const router = express.Router()
 
-const CURRENT_EXCHANGES = 'milan|oslo|paris|amsterdam|brussels|lisbon|dublin'
+const CURRENT_EXCHANGES = 'milan|oslo|paris|amsterdam|brussels|lisbon|dublin|global'
 
 // GET stocks by Exchange
 router.get(`/stocks/:exchange(${CURRENT_EXCHANGES})`, getStocksByMarket)

@@ -1,17 +1,18 @@
 const template = document.createElement('template')
 template.innerHTML = `
   <style>
-
     section {
       border-bottom: 1px solid var(--light-gray);
-      width: 100%;
-      max-width: 15rem;
+      width: 18rem;
+      margin-bottom: var(--main-padding);
     }
     header {
       border-top-left-radius: var(--border-radius-small);
       border-top-right-radius: var(--border-radius-small);
       padding: var(--main-padding);
       text-transform: uppercase;
+      background-color: #B0ACAC;
+      background: linear-gradient(90deg,rgba(176, 172, 172, 1) 50%, rgba(102, 101, 101, 1) 100%);
     }
     header.blue {
       background-color: #0c72f7;

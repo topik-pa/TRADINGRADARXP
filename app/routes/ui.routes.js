@@ -2,7 +2,7 @@ import express from 'express'
 import { hpView, stockView, privacyView, ContactsView, exchangeView } from '../controllers/ui.controller.js'
 const router = express.Router()
 
-const CURRENT_EXCHANGES = 'milan|oslo|paris|amsterdam|brussels|lisbon|dublin'
+const CURRENT_EXCHANGES = 'milan|oslo|paris|amsterdam|brussels|lisbon|dublin|global'
 const CURRENT_LANGS = 'it|en'
 
 
@@ -21,7 +21,7 @@ router.get('/favicon.ico', (req, res) => {
 
 
 // Exchange
-router.get(`/:lang(en|it)/:exchange(${CURRENT_EXCHANGES})`, exchangeView)
+router.get(`/:lang(${CURRENT_LANGS})/:exchange(${CURRENT_EXCHANGES})`, exchangeView)
 
 
 // Stock page

@@ -17,10 +17,10 @@ function getHighlights(stocks) {
   let worst = stocks[0]
   let best = stocks[0]
   stocks.forEach(stock => {
-    if (+stock.relVariation.replace('%','') > +best.relVariation.replace('%','')) {
+    if (+stock.relVariation?.replace('%','') > +best.relVariation?.replace('%','')) {
       best = stock
     }
-    if (+stock.relVariation.replace('%','') < +worst.relVariation.replace('%','')) {
+    if (+stock.relVariation?.replace('%','') < +worst.relVariation?.replace('%','')) {
       worst = stock
     }
   })
@@ -57,6 +57,7 @@ export default  {
 
     const main = document.querySelector('main')
     const stocks = await getStocks()
+    if (stocks.length === 0) return
     const { worst, best } = getHighlights(stocks)
 
     const worstBullet = createComponent('cmp-bullet', { direction: 'negative' }, [
