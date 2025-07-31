@@ -18,7 +18,6 @@ const getViewParams = function(id, lang, path) {
 }
 
 
-
 // HP
 export async function hpView(req, res) {
   const lang = req.params.lang
@@ -49,62 +48,12 @@ export async function exchangeView(req, res) {
     res.render('exchange', params)
   }
 }
-// Exchange stocks
-export async function exchangeViewSS(req, res) {
-  const lang = req.params.lang
-  if (!supportedLangs.includes(lang)) {
-    res.redirect((req.url).replace(lang, fallback))
-  } else {
-    i18n.setLocale(req, lang)
-    let params = getViewParams('exchange', lang, req.path)
-    const breadcrumbs = [
-      {
-        name: req.params.exchange
-      }
-    ]
-    params = { ...params, breadcrumbs }
-    res.render('exchange', params)
-  }
-}
-// Exchange target prices
-export async function exchangeViewTPS(req, res) {
-  const lang = req.params.lang
-  if (!supportedLangs.includes(lang)) {
-    res.redirect((req.url).replace(lang, fallback))
-  } else {
-    i18n.setLocale(req, lang)
-    let params = getViewParams('exchange', lang, req.path)
-    const breadcrumbs = [
-      {
-        name: req.params.exchange
-      }
-    ]
-    params = { ...params, breadcrumbs }
-    res.render('exchange', params)
-  }
-}
-// Exchange dividends
-export async function exchangeViewDD(req, res) {
-  const lang = req.params.lang
-  if (!supportedLangs.includes(lang)) {
-    res.redirect((req.url).replace(lang, fallback))
-  } else {
-    i18n.setLocale(req, lang)
-    let params = getViewParams('exchange', lang, req.path)
-    const breadcrumbs = [
-      {
-        name: req.params.exchange
-      }
-    ]
-    params = { ...params, breadcrumbs }
-    res.render('exchange', params)
-  }
-}
 
 
 // Stock
 export async function stockView(req, res) {
   const lang = req.params.lang
+  const stockUrl = req.params.stockUrl
   if (!supportedLangs.includes(lang)) {
     res.redirect((req.url).replace(lang, fallback))
   } else {
@@ -112,80 +61,11 @@ export async function stockView(req, res) {
     let params = getViewParams('stock', lang, req.path)
     const breadcrumbs = [
       {
-        name: req.params.stockUrl
+        name: stockUrl
       }
     ]
-    params = { ...params, breadcrumbs }
+    params = { ...params, breadcrumbs, stockUrl }
     res.render('stock', params)
-  }
-}
-
-
-// Stock target price
-export async function stockViewTP(req, res) {
-  const lang = req.params.lang
-  if (!supportedLangs.includes(lang)) {
-    res.redirect((req.url).replace(lang, fallback))
-  } else {
-    i18n.setLocale(req, lang)
-    let params = getViewParams('stock', lang, req.path)
-    const breadcrumbs = [
-      {
-        name: req.params.stockUrl,
-        url: '/' + lang + '/' + req.params.stockUrl
-      },
-      {
-        name: 'target-price'
-      }
-    ]
-    params = { ...params, breadcrumbs }
-    res.render('stock-tp', params)
-  }
-}
-
-
-// Stock news
-export async function stockViewN(req, res) {
-  const lang = req.params.lang
-  if (!supportedLangs.includes(lang)) {
-    res.redirect((req.url).replace(lang, fallback))
-  } else {
-    i18n.setLocale(req, lang)
-    let params = getViewParams('stock', lang, req.path)
-    const breadcrumbs = [
-      {
-        name: req.params.stockUrl,
-        url: '/' + lang + '/' + req.params.stockUrl
-      },
-      {
-        name: 'news'
-      }
-    ]
-    params = { ...params, breadcrumbs }
-    res.render('stock-n', params)
-  }
-}
-
-
-// Stock dividend
-export async function stockViewDividend(req, res) {
-  const lang = req.params.lang
-  if (!supportedLangs.includes(lang)) {
-    res.redirect((req.url).replace(lang, fallback))
-  } else {
-    i18n.setLocale(req, lang)
-    let params = getViewParams('stock', lang, req.path)
-    const breadcrumbs = [
-      {
-        name: req.params.stockUrl,
-        url: '/' + lang + '/' + req.params.stockUrl
-      },
-      {
-        name: 'dividend'
-      }
-    ]
-    params = { ...params, breadcrumbs }
-    res.render('stock-d', params)
   }
 }
 
@@ -207,7 +87,6 @@ export async function privacyView(req, res) {
     res.render('privacy', params)
   }
 }
-
 
 
 // Contacts
