@@ -13,7 +13,7 @@ if(process.env.NODE_ENV !== 'production') {
   alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 }
 
-const SLEEP_TIME = 5 * 1000 // 5 seconds...
+const SLEEP_TIME = 2 * 1000 // 5 seconds...
 function sleep(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms)
@@ -59,10 +59,10 @@ const getStocksFromEuronext = async function(letter) {
 }
 export function filterStocksAndBuildData(stock) {
   if (
-    !stock || 
-    !Array.isArray(stock) || 
+    !stock ||
+    !Array.isArray(stock) ||
     stock.length < 6 ||
-    ['MTAH', 'ETLX'].includes(new JSDOM(stock[4]).window.document.querySelector('div').textContent) || 
+    ['MTAH', 'ETLX'].includes(new JSDOM(stock[4]).window.document.querySelector('div').textContent) ||
     !new JSDOM(stock[5]).window.document.querySelector('span')
     // Some entries must not be included: other market or no price/currency data
   ) return null
@@ -74,8 +74,9 @@ export function filterStocksAndBuildData(stock) {
     url = url.replace('product', 'ajax')
     url = url.replace('equities', 'getDetailedQuote')
   }
+  const urlPerformance = url.replace('getDetailedQuote', 'getPerformances')
   if (!name || !isin || !code) return null
-  return { name, isin, url }
+  return { name, isin, url, urlPerformance }
 }
 
 // export async function getDataAndPopulate(json) {
@@ -133,8 +134,11 @@ fs.readFile(OUTPUT_PATH, 'utf8', async(err, data) => {
       console.log('Feeding stock: ', s.name)
       const jsonStock = output.find((elem) => { return elem.isin === s.isin })
       if(jsonStock) {
-        jsonStock.sources.pop(jsonStock.sources.find((el) => {return el.url === s.url}))
+        //jsonStock.sources.pop(jsonStock.sources.find((el) => {return el.url === s.url}))
         jsonStock.sources.push(s.url)
+
+        //jsonStock.sources.pop(jsonStock.sources.find((el) => {return el.url2 === s.url2}))
+        jsonStock.sources.push(s.urlPerformance)
       }
     }
   }
@@ -146,7 +150,7 @@ fs.readFile(OUTPUT_PATH, 'utf8', async(err, data) => {
   } catch (error) {
     console.log(error)
   }
-  
+
   console.log('File ' + OUTPUT_PATH + ' feeded')
   exit(0)
 })

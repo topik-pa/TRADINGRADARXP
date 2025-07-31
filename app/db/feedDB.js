@@ -1,4 +1,4 @@
- 
+
 import { JSDOM } from 'jsdom'
 import { readFile } from 'fs/promises'
 import { upsertStock } from '../controllers/db.controller.js'
@@ -28,8 +28,19 @@ const TARGETS = [
       key: 'relVariation',
       path: '.mt-auto span:nth-child(3)'
     }
+  ],
+  [
+    {
+      key: 'perf1M',
+      path: 'table > tbody > tr:nth-child(3) > td:nth-child(3)'
+    },
+    {
+      key: 'perf52W',
+      path: 'table > tbody > tr:nth-child(3) > td:nth-child(4)'
+    }
   ]
 ]
+
 
 export async function feedDB() {
   const json = JSON.parse(
@@ -41,7 +52,7 @@ export async function feedDB() {
   for (const stock of json) {
     // For every url in source...
     for (const [i, url] of stock.sources.entries()) {
-      let html, key, value 
+      let html, key, value
       const update = {}
       logger.info('Conneting to: ' + url)
       try {

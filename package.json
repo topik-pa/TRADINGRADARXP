@@ -11,8 +11,8 @@
     "lint": "eslint . --ignore-pattern './app/dist/*'",
     "test:db": "NODE_ENV=test vitest ./app/tests/db",
     "test:api": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles ./app/tests/api",
-    "json-sources-init": "node app/utilities/json-sources/init.js",
-    "json-sources-feed": "node app/utilities/json-sources/feed.js"
+    "sources:init": "node app/utilities/json-sources/init.js",
+    "sources:feed": "node app/utilities/json-sources/feed.js"
   },
   "keywords": [],
   "author": "",
