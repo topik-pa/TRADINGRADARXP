@@ -25,11 +25,27 @@ export async function getStocksByMarket(req, res, next) {
 }
 
 // GET stock by ISIN
-export async function getStockByISIN(req, res, next) {
-  const isin = req.params.isin
+// export async function getStockByISIN(req, res, next) {
+//   const isin = req.params.isin
+//   let stock
+//   try {
+//     stock = await Stock.findOne({ isin: isin })
+//   } catch (error) {
+//     return next(error)
+//   }
+//   if (!stock) return res.status(404).json({
+//     error: 404,
+//     message: 'Resource not found'
+//   })
+//   return res.json(stock)
+// }
+
+// GET stock by stockUrl
+export async function getStockByStockUrl(req, res, next) {
+  const stockUrl = req.params.stockurl
   let stock
   try {
-    stock = await Stock.findOne({ isin: isin })
+    stock = await Stock.findOne({ stockUrl: stockUrl })
   } catch (error) {
     return next(error)
   }

@@ -14,7 +14,8 @@ column.init()
 // Import views specific scripts
 const modules = {
   hp: () => import('../views/home.js'),
-  exchange: () => import('../views/exchange.js')
+  exchange: () => import('../views/exchange.js'),
+  stock: () => import('../views/stock.js')
 }
 
 // Execute view specific script

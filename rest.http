@@ -42,6 +42,9 @@ GET http://localhost:3000/api/stocks/123456
 ### OK A.B.P. NOCIVELLI
 GET http://localhost:3000/api/stocks/IT0005439861
 
+### OK Aeffe
+GET http://localhost:3000/api/stocks/aeffe
+
 ### OK All stocks
 GET http://localhost:3000/api/stocks/
 
