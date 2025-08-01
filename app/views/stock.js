@@ -13,19 +13,6 @@ async function getStock() {
   }
 }
 
-function getHighlights(stocks) {
-  let worst = stocks[0]
-  let best = stocks[0]
-  stocks.forEach(stock => {
-    if (+stock.relVariation.replace('%','') > +best.relVariation.replace('%','')) {
-      best = stock
-    }
-    if (+stock.relVariation.replace('%','') < +worst.relVariation.replace('%','')) {
-      worst = stock
-    }
-  })
-  return { worst, best }
-}
 
 function createComponent(tag, attrs = {}, children = []) {
   const el = document.createElement(tag)
@@ -35,7 +22,7 @@ function createComponent(tag, attrs = {}, children = []) {
   }
   // Aggiunge i figli (contenuto, slot, ecc.)
   for (const child of children) {
-    if (typeof child === 'string') {
+    if (typeof child === 'string' || typeof child === 'number') {
       el.appendChild(document.createTextNode(child))
     } else {
       el.appendChild(child)
@@ -57,7 +44,6 @@ export default  {
 
     const main = document.querySelector('main')
     const stock = await getStock()
-    // const { worst, best } = getHighlights(stocks)
 
     const lastPriceBullet = createComponent('cmp-bullet', { direction: 'negative' }, [
       createComponent('span', { slot: 'title' }, ['Ultimo prezzo']),
@@ -66,11 +52,19 @@ export default  {
     ])
     document.getElementById('stock-details').appendChild(lastPriceBullet)
 
-    // const bestBullet = createComponent('cmp-bullet', { direction: 'positive' }, [
-    //   createComponent('span', { slot: 'title' }, ['In evidenza']),
-    //   createComponent('span', { slot: 'name' }, [best.name]),
-    //   createComponent('span', { slot: 'value' }, [best.relVariation])
-    // ])
-    // document.getElementById('stock-list').appendChild(bestBullet)
+    const performance1M = createComponent('cmp-bullet', { direction: 'negative' }, [
+      createComponent('span', { slot: 'title' }, ['Performance mensile']),
+      createComponent('span', { slot: 'name' }, [stock.name]),
+      createComponent('span', { slot: 'value' }, [stock.perf1M])
+    ])
+    document.getElementById('stock-details').appendChild(performance1M)
+
+    const performance1A = createComponent('cmp-bullet', { direction: 'negative' }, [
+      createComponent('span', { slot: 'title' }, ['Performance annuale']),
+      createComponent('span', { slot: 'name' }, [stock.name]),
+      createComponent('span', { slot: 'value' }, [stock.perf52W])
+    ])
+    document.getElementById('stock-details').appendChild(performance1A)
+
   }
 }
