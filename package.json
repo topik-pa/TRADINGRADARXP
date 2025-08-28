@@ -12,8 +12,7 @@
     "test:db": "NODE_ENV=test vitest ./app/tests/db",
     "test:api": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles ./app/tests/api",
     "sources:init": "node app/utilities/json-sources/init.js",
-    "sources:euronext": "node app/utilities/json-sources/euronext.js",
-    "sources:yahoo": "node app/utilities/json-sources/yahoo.js"
+    "sources:feed": "node app/utilities/json-sources/feed.js"
   },
   "keywords": [],
   "author": "",
