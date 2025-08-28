@@ -1,4 +1,42 @@
 import { Stock } from '../models/Stock.js'
+const ACCENT = 2
+
+// GET all stocks accents
+export async function getStocksAccents(req, res, next) {
+  let stocks = []
+  try {
+    stocks = await Stock.find({
+      $or: [
+        { relVariation: { $gt: ACCENT } },
+        { relVariation: { $lt: -ACCENT } }
+      ]
+    }).sort({ relVariation: -1 })
+  } catch (error) {
+    return next(error)
+  }
+  return res.json(stocks)
+}
+
+// GET all stocks exchange accents
+export async function getStocksAccentsByExchange(req, res, next) {
+  const exchange = req.params.exchange
+  const re = new RegExp(exchange, 'i')
+  let stocks = []
+  try {
+    stocks = await Stock.find({
+      $and: [
+        { market: re },
+        { $or: [
+          { relVariation: { $gt: ACCENT } },
+          { relVariation: { $lt: -ACCENT } }
+        ] }
+      ]
+    }).sort({ relVariation: -1 })
+  } catch (error) {
+    return next(error)
+  }
+  return res.json(stocks)
+}
 
 // GET all stocks
 export async function getStocks(req, res, next) {
