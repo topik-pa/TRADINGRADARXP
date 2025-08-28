@@ -261,6 +261,15 @@
     ]
   },
   {
+    "name": "Acerinox",
+    "isin": "ES0132105018",
+    "code": "1ACX",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/ES0132105018-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/ES0132105018-BGEM"
+    ]
+  },
+  {
     "name": "ACHETER-LOUER.FR",
     "isin": "FR001400SOY2",
     "code": "ALALO",
@@ -600,15 +609,6 @@
     "sources": [
       "https://live.euronext.com/en/ajax/getDetailedQuote/US0080731088-BGEM",
       "https://live.euronext.com/en/ajax/getPerformances/US0080731088-BGEM"
-    ]
-  },
-  {
-    "name": "AES Corp/The",
-    "isin": "US00130H1059",
-    "code": "1AES",
-    "sources": [
-      "https://live.euronext.com/en/ajax/getDetailedQuote/US00130H1059-BGEM",
-      "https://live.euronext.com/en/ajax/getPerformances/US00130H1059-BGEM"
     ]
   }
 ]

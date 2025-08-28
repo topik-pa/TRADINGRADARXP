@@ -16,7 +16,9 @@ block append meta
 
 block main
   h1= __('index.title')
-  h2= __('index.subtitle')
+  p= __('index.subtitle')
+  h2 Titoli in evidenza oggi lundedì 13 febbraio
+  h2 Dettagli dei mercati
   div(class="cards")
     cmp-card(color="red")
       span(slot="title")= __('euronextGlobal')
@@ -89,6 +91,7 @@ block main
       span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
       span(slot="link")
         a(href="#", title=__('dublinStockExchange'))= __('index.discoverStocks')                        
+  h2 Come operare: scegli i servizi di AVA trade
 
 block column 
   include ./components/shared/column/column.pug

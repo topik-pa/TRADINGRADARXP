@@ -7,7 +7,7 @@ import logger from '../config/logger.js'
 
 const OUTPUT_PATH = '../utilities/json-sources/output.json'
 
-const SLEEP_TIME = 3 * 1000 // 3 seconds...
+const SLEEP_TIME = 0.5 * 1000 // 3 seconds...
 function sleep(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms)

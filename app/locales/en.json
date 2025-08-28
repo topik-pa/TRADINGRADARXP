@@ -2,6 +2,7 @@
 	"hello": "Hello",
   "privacy": "Privacy",
   "contacts": "Contacts",
+  "exchanges": "Exchanges",
   "milanStockExchange": "Milan Stock Exchange",
   "parisStockExchange": "Paris Stock Exchange",
   "osloStockExchange": "Oslo Stock Exchange",

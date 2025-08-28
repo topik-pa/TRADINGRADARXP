@@ -1,11 +1,21 @@
 aside 
   span(id="colcollapse", class="icon-cheveron-up")
   cmp-navigation
-    span(slot="title") Exchanges
+    span(slot="title")= __('exchanges')
     span(slot="list")
       li(class="cmp-navigation-slotted-li")
-        a(href="#", class="cmp-navigation-slotted-a") Uno
+        a(href="global", class="cmp-navigation-slotted-a")=  __('euronextGlobal')
       li(class="cmp-navigation-slotted-li")
-        a(href="#", class="cmp-navigation-slotted-a") Due
+        a(href="milan", class="cmp-navigation-slotted-a")=  __('milanStockExchange')
       li(class="cmp-navigation-slotted-li")
-        a(href="#", class="cmp-navigation-slotted-a") tre
+        a(href="paris", class="cmp-navigation-slotted-a")=  __('parisStockExchange')
+      li(class="cmp-navigation-slotted-li")
+        a(href="oslo", class="cmp-navigation-slotted-a")=  __('osloStockExchange')
+      li(class="cmp-navigation-slotted-li")
+        a(href="amsterdam", class="cmp-navigation-slotted-a")=  __('amsterdamStockExchange')
+      li(class="cmp-navigation-slotted-li")
+        a(href="brussels", class="cmp-navigation-slotted-a")=  __('brusselsStockExchange')
+      li(class="cmp-navigation-slotted-li")
+        a(href="lisbon", class="cmp-navigation-slotted-a")=  __('lisbonStockExchange')
+      li(class="cmp-navigation-slotted-li")
+        a(href="dublin", class="cmp-navigation-slotted-a")=  __('dublinStockExchange')                                      

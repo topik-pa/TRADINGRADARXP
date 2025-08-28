@@ -35,7 +35,7 @@ function shouldCompress(req, res) {
 app.use(function(req, res, next) {
   res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload')
   res.setHeader('Upgrade-insecure-requests', '1')
-  res.setHeader('Content-Security-Policy', 'default-src \'none\'; script-src https://www.statcounter.com/ \'self\'; style-src \'self\'; img-src \'self\' https://c.statcounter.com/ https://tracking.avapartner.com; object-src \'none\'; frame-src https://c.statcounter.com/ \'self\'; form-action \'self\'; font-src \'self\'; media-src \'self\'; connect-src https://c.statcounter.com/ \'self\'; frame-ancestors \'none\'; base-uri \'none\'')
+  res.setHeader('Content-Security-Policy', 'default-src \'none\'; script-src https://www.statcounter.com/ \'self\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' https://c.statcounter.com/ https://tracking.avapartner.com; object-src \'none\'; frame-src https://c.statcounter.com/ \'self\'; form-action \'self\'; font-src \'self\'; media-src \'self\'; connect-src https://c.statcounter.com/ \'self\'; frame-ancestors \'none\'; base-uri \'none\'')
   res.setHeader('X-Content-Type-Options', 'nosniff')
   next()
 })

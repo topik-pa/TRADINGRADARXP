@@ -43,7 +43,7 @@ const stockSchema = new mongoose.Schema({
       },
   price:
       {
-        type: Number,
+        type: String,
         nullable: true,
         unique: false
       },

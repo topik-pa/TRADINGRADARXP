@@ -2,6 +2,7 @@
 	"hello": "Ciao",
   "privacy": "Privacy",
   "contacts": "Contatti",
+  "exchanges": "Mercati",
   "milanStockExchange": "Borsa di Milano",
   "parisStockExchange": "Borsa di Parigi",
   "osloStockExchange": "Borsa di Oslo",
@@ -11,8 +12,8 @@
   "dublinStockExchange": "Borsa di Dublino",
   "euronextGlobal": "Euronext Global",
   "index": {
-    "title": "I segnali di Borsa dei principali mercati europei",
-    "subtitle": "Seleziona il mercato di tuo interesse!",
+    "title": "tradingradar.net: titoli sull'orlo di una crisi di nervi",
+    "subtitle": "tradingradar.net interroga in tempo reale le principali testate del settore e scopre le azioni più interessanti.",
     "discoverStocks": "Scopri tutti i titoli >>"
   }
 }
