@@ -30,16 +30,18 @@ beforeEach(async() => {
       'market': 'Euronext Growth Milan',
       'name': 'A.B.P. NOCIVELLI',
       'stockUrl': 'a-b-p--nocivelli',
-      'absVariation': '-0.05',
+      'absVariation': -0.05,
       'price': '5.10',
-      'relVariation': '-0.97%'
+      'relVariation': '-0.97%',
+      'perf1M': -4.35,
+      'perf52W': 60.29
     }
   ])
 })
 
-describe('GET /api/stocks/IT0005439861', () => {
+describe('GET stock by stock fragment', () => {
   it('should return a stock object', async() => {
-    const res = await request(app).get('/api/stocks/IT0005439861')
+    const res = await request(app).get('/api/stocks/a-b-p--nocivelli')
     expect(res.statusCode).toBe(200)
     expect(res.body).toMatchObject({
       '_id': '6878f2c89fc70686852ff76f',
@@ -50,16 +52,18 @@ describe('GET /api/stocks/IT0005439861', () => {
       'market': 'Euronext Growth Milan',
       'name': 'A.B.P. NOCIVELLI',
       'stockUrl': 'a-b-p--nocivelli',
-      'absVariation': '-0.05',
+      'absVariation': -0.05,
       'price': '5.10',
-      'relVariation': '-0.97%'
+      'relVariation': '-0.97%',
+      'perf1M': -4.35,
+      'perf52W': 60.29
     })
   })
 })
 
-describe('GET /api/stocks/IT0123456789', () => {
+describe('GET /api/stocks/not-existent-stock', () => {
   it('should return a 404 if wrong isin', async() => {
-    const res = await request(app).get('/api/stocks/IT0123456789')
+    const res = await request(app).get('/api/stocks/0123456789')
     expect(res.statusCode).toBe(404)
     expect(res.body).toMatchObject({
       'error': 404,
