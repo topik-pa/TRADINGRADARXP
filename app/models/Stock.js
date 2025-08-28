@@ -43,7 +43,7 @@ const stockSchema = new mongoose.Schema({
       },
   price:
       {
-        type: String,
+        type: Number,
         nullable: true,
         unique: false
       },
@@ -55,7 +55,7 @@ const stockSchema = new mongoose.Schema({
       },
   relVariation:
       {
-        type: String,
+        type: Number,
         nullable: true,
         unique: false
       },
@@ -66,6 +66,18 @@ const stockSchema = new mongoose.Schema({
         unique: false
       },
   perf52W:
+      {
+        type: Number,
+        nullable: true,
+        unique: false
+      },
+  volume:
+      {
+        type: Number,
+        nullable: true,
+        unique: false
+      },
+  cap:
       {
         type: Number,
         nullable: true,

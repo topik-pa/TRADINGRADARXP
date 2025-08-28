@@ -2,12 +2,12 @@
 import { JSDOM } from 'jsdom'
 import { readFile } from 'fs/promises'
 import { upsertStock } from '../controllers/db.controller.js'
-import { cleanDB } from '../utilities/cleanDB.js'
+// import { cleanDB } from '../utilities/cleanDB.js'
 import logger from '../config/logger.js'
 
 const OUTPUT_PATH = '../utilities/json-sources/output.json'
 
-const SLEEP_TIME = 0.5 * 1000 // 3 seconds...
+const SLEEP_TIME = 0.2 * 1000 // 3 seconds...
 function sleep(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms)
@@ -38,6 +38,16 @@ const TARGETS = [
       key: 'perf52W',
       path: 'table > tbody > tr:nth-child(3) > td:nth-child(4)'
     }
+  ],
+  [
+    {
+      key: 'volume',
+      path: 'table > tbody > tr:nth-child(3) > td:nth-child(2)'
+    },
+    {
+      key: 'cap',
+      path: 'table > tbody > tr:nth-child(13) > td:nth-child(2)'
+    }
   ]
 ]
 
@@ -50,7 +60,7 @@ export async function feedDB() {
   )
   // For every stock in JSON...
   for (const stock of json) {
-    // For every url in source...
+    // For every url in sources...
     for (const [i, url] of stock.sources.entries()) {
       let html, key, value
       const update = {}
@@ -64,6 +74,17 @@ export async function feedDB() {
       TARGETS[i].forEach(t => {
         key = t.key
         value = new JSDOM(html).window.document.querySelector(t.path)?.firstChild?.nodeValue.trim() || null //!!
+        if (key==='relVariation') {
+          value = value?.replace(/[()%]/g, '')
+        }
+        if (key==='price' || key==='volume') {
+          value = value?.replace(/[,]/g, '')
+        }
+        if (key==='cap' && value) {
+          const order = value.slice(-1)
+          const digits = value.slice(0, -1)
+          value = order === 'B' ? digits * 1_000_000_000 : digits * 1_000_000
+        }
         update[key] = value
       })
       try {
@@ -72,11 +93,11 @@ export async function feedDB() {
       } catch (error) {
         logger.error(new Error(error.message))
       }
-    } // For every url in source
+    } // For every url in sources
     await sleep(SLEEP_TIME)
   } // For every stock in JSON
   // Clean DB data
-  logger.info('Start DB clean...')
-  await cleanDB()
-  logger.info('DB clean done')
+  //logger.info('Start DB clean...')
+  // await cleanDB()
+  //logger.info('DB clean done')
 }

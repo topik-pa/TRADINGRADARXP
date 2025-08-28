@@ -75,8 +75,9 @@ export function filterStocksAndBuildData(stock) {
     url = url.replace('equities', 'getDetailedQuote')
   }
   const urlPerformance = url.replace('getDetailedQuote', 'getPerformances')
+  const urlVolume = `https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/${url.split('/').pop()}/full`
   if (!name || !isin || !code) return null
-  return { name, isin, url, urlPerformance }
+  return { name, isin, url, urlPerformance, urlVolume }
 }
 
 // export async function getDataAndPopulate(json) {
@@ -139,6 +140,7 @@ fs.readFile(OUTPUT_PATH, 'utf8', async(err, data) => {
 
         //jsonStock.sources.pop(jsonStock.sources.find((el) => {return el.url2 === s.url2}))
         jsonStock.sources.push(s.urlPerformance)
+        jsonStock.sources.push(s.urlVolume)
       }
     }
   }

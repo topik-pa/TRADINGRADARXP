@@ -51,6 +51,12 @@ GET http://localhost:3000/api/stocks/
 ### OK All stocks Milan Market
 GET http://localhost:3000/api/stocks/milan
 
+### OK All stocks accents
+GET http://localhost:3000/api/stocks/accents
+
+### OK All stocks accents by market
+GET http://localhost:3000/api/stocks/accents/paris
+
 ### User not found
 # POST http://localhost:3000/api/users
 # content-type: application/json
