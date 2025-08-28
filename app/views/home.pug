@@ -17,7 +17,11 @@ block append meta
 block main
   h1= __('index.title')
   p= __('index.subtitle')
-  h2 Titoli in evidenza oggi lundedì 13 febbraio
+  section
+    h2 Titoli in evidenza oggi lunedì 13 febbraio
+    div(id="bests")
+    div(id="worsts")
+
   h2 Dettagli dei mercati
   div(class="cards")
     cmp-card(color="red")
