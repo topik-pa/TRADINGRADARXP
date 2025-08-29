@@ -83,7 +83,7 @@ export async function feedDB() {
         if (key==='cap' && value) {
           const order = value.slice(-1)
           const digits = value.slice(0, -1)
-          value = order === 'B' ? digits * 1_000_000_000 : digits * 1_000_000
+          value = order === 'B' ? digits * 1_000 : digits
         }
         update[key] = value
       })
