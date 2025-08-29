@@ -12,20 +12,6 @@ async function getStocks() {
   }
 }
 
-function getHighlights(stocks) {
-  let worst = stocks[0]
-  let best = stocks[0]
-  stocks.forEach(stock => {
-    if (+stock.relVariation?.replace('%','') > +best.relVariation?.replace('%','')) {
-      best = stock
-    }
-    if (+stock.relVariation?.replace('%','') < +worst.relVariation?.replace('%','')) {
-      worst = stock
-    }
-  })
-  return { worst, best }
-}
-
 function createComponent(tag, attrs = {}, children = []) {
   const el = document.createElement(tag)
   // Imposta attributi

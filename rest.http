@@ -57,6 +57,18 @@ GET http://localhost:3000/api/stocks/accents
 ### OK All stocks accents by market
 GET http://localhost:3000/api/stocks/accents/paris
 
+### OK GET all stocks best performance 1M
+GET http://localhost:3000/api/stocks/performance/up
+
+### OK GET all stocks worst performance 1M
+GET http://localhost:3000/api/stocks/performance/down
+
+### OK GET all stocks exchange performance 1M
+GET http://localhost:3000/api/stocks/performance/paris/up
+
+### OK GET all stocks exchange performance 1M
+GET http://localhost:3000/api/stocks/performance/paris/down
+
 ### User not found
 # POST http://localhost:3000/api/users
 # content-type: application/json

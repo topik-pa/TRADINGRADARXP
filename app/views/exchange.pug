@@ -16,5 +16,22 @@ block append meta
 
 block main
   h1= exchange
-  div(id="stock-list")
+  section 
+    h2 Migliore e peggiore performance
+    div(id="highlights")
+  section
+    h2 Titoli in evidenza
+    h3 Azioni rialziste
+    div(id="bests")
+    h3 Azioni ribassiste
+    div(id="worsts")
+  section
+    h2 Le performance più interessanti
+    h3 Migliori perfomance rialziste dell'ultimo mese
+    div(id="performance-up")
+    h3 Peggiori perfomance ribassiste dell'ultimo mese
+    div(id="performance-down")
 
+
+block column 
+  include ./components/shared/column/column.pug

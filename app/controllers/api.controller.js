@@ -1,6 +1,32 @@
 import { Stock } from '../models/Stock.js'
 const ACCENT = 2
 
+// GET all stocks best performance 1M
+export async function getStocksPerformance(req, res, next) {
+  const trend = req.params.trend === 'up' ? -1 : 1
+  let stocks = []
+  try {
+    stocks = await Stock.find({}).sort({ perf1M: trend }).limit(10)
+  } catch (error) {
+    return next(error)
+  }
+  return res.json(stocks)
+}
+// GET all stocks exchange performance 1M
+export async function getStocksPerformanceByExchange(req, res, next) {
+  const trend = req.params.trend === 'up' ? -1 : 1
+  const exchange = req.params.exchange
+  const re = new RegExp(exchange, 'i')
+  let stocks = []
+  try {
+    stocks = await Stock.find({ market: re }).sort({ perf1M: trend }).limit(10)
+  } catch (error) {
+    return next(error)
+  }
+  return res.json(stocks)
+}
+
+
 // GET all stocks accents
 export async function getStocksAccents(req, res, next) {
   let stocks = []
