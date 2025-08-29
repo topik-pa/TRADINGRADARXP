@@ -30,7 +30,7 @@ template.innerHTML = `
     footer {
       background-color: var(--lighter-gray);
       filter: brightness(80%);
-      margin-top: var(--normal-space);
+      margin-top: var(--base-space);
       padding: var(--xx-small-space);
       display: flex;
       justify-content: end;

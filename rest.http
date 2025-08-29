@@ -17,18 +17,8 @@ GET http://localhost:3000/
 ### Stock
 GET http://localhost:3000/it/aasen-sparebank
 
-### Stock news
-GET http://localhost:3000/it/aasen-sparebank/news
-
-### Stock dividend
-GET http://localhost:3000/it/aasen-sparebank/dividend
-
-### Stock target-price
-GET http://localhost:3000/it/aasen-sparebank/target-price
-
-### Exchanhe Milano
+### Exchange Milano
 GET http://localhost:3000/it/milan
-
 
 ### Wrong url
 GET http://localhost:3000/wrong-url
@@ -36,12 +26,6 @@ GET http://localhost:3000/wrong-url
 
 
 ### API
-### Wrong isin
-GET http://localhost:3000/api/stocks/123456
-
-### OK A.B.P. NOCIVELLI
-GET http://localhost:3000/api/stocks/IT0005439861
-
 ### OK Aeffe
 GET http://localhost:3000/api/stocks/aeffe
 
@@ -51,11 +35,15 @@ GET http://localhost:3000/api/stocks/
 ### OK All stocks Milan Market
 GET http://localhost:3000/api/stocks/milan
 
+
+
 ### OK All stocks accents
 GET http://localhost:3000/api/stocks/accents
 
 ### OK All stocks accents by market
 GET http://localhost:3000/api/stocks/accents/paris
+
+
 
 ### OK GET all stocks best performance 1M
 GET http://localhost:3000/api/stocks/performance/up
@@ -68,6 +56,8 @@ GET http://localhost:3000/api/stocks/performance/paris/up
 
 ### OK GET all stocks exchange performance 1M
 GET http://localhost:3000/api/stocks/performance/paris/down
+
+
 
 ### User not found
 # POST http://localhost:3000/api/users

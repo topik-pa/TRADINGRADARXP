@@ -91,7 +91,7 @@
     position: absolute;
     right: 0;
     display: block;
-    padding: var(--normal-space);
+    padding: var(--base-space);
     font-weight: bold;
     font-size: var(--font-size-big);
   }
@@ -107,7 +107,7 @@
     text-align: right;
   }
   #main-menu li a {
-    padding: var(--normal-space) 0;
+    padding: var(--base-space) 0;
     display: inline-block;
     width: 100%;
   }

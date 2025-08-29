@@ -64,8 +64,8 @@ small {
 }
 
 /* ul, ol {
-  margin: var(--normal-space);
-  padding-left: var(--normal-space);
+  margin: var(--base-space);
+  padding-left: var(--base-space);
   list-style: auto;
 } */
 

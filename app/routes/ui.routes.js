@@ -23,7 +23,6 @@ router.get('/favicon.ico', (req, res) => {
 // Exchange
 router.get(`/:lang(${CURRENT_LANGS})/:exchange(${CURRENT_EXCHANGES})`, exchangeView)
 
-
 // Stock page
 router.get(`/:lang(${CURRENT_LANGS})/:stockUrl`, stockView)
 

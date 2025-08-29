@@ -11,7 +11,7 @@ const stockSchema = new mongoose.Schema({
   stockUrl:
       {
         type: String,
-        required: [true, 'Stock Url is required'],
+        required: [true, 'Stock url fragment is required'],
         nullable: false,
         unique: true
       },

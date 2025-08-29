@@ -1,5 +1,5 @@
 aside .icon-cheveron-up:before {
-  font-size: var(--normal-space);
+  font-size: var(--base-space);
   border: 1px solid;
   border-radius: 50%;
   transform: rotate(-90deg);
@@ -7,8 +7,8 @@ aside .icon-cheveron-up:before {
   transform-origin: center;
   cursor: pointer;
   position: absolute;
-  top:  calc(var(--normal-space) / -2);
-  right: calc(var(--normal-space) / -2);
+  top:  calc(var(--base-space) / -2);
+  right: calc(var(--base-space) / -2);
   transition: all .4s ease-in-out;
   background-color: var(--white);
 }

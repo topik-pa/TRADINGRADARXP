@@ -1,57 +1,42 @@
 import { Stock } from '../models/Stock.js'
 const ACCENT = 2
 
-// GET all stocks best performance 1M
+// GET all stocks performance 1M
 export async function getStocksPerformance(req, res, next) {
   const trend = req.params.trend === 'up' ? -1 : 1
-  let stocks = []
-  try {
-    stocks = await Stock.find({}).sort({ perf1M: trend }).limit(10)
-  } catch (error) {
-    return next(error)
-  }
-  return res.json(stocks)
-}
-// GET all stocks exchange performance 1M
-export async function getStocksPerformanceByExchange(req, res, next) {
-  const trend = req.params.trend === 'up' ? -1 : 1
   const exchange = req.params.exchange
-  const re = new RegExp(exchange, 'i')
+  let query
+  if (exchange) {
+    const re = new RegExp(exchange, 'i')
+    query = { market: re }
+  } else {
+    query = {}
+  }
   let stocks = []
   try {
-    stocks = await Stock.find({ market: re }).sort({ perf1M: trend }).limit(10)
+    stocks = await Stock.find(query).sort({ perf1M: trend }).limit(10)
   } catch (error) {
     return next(error)
   }
   return res.json(stocks)
 }
 
-
-// GET all stocks accents
-export async function getStocksAccents(req, res, next) {
-  let stocks = []
-  try {
-    stocks = await Stock.find({
-      $or: [
-        { relVariation: { $gt: ACCENT } },
-        { relVariation: { $lt: -ACCENT } }
-      ]
-    }).sort({ relVariation: -1 })
-  } catch (error) {
-    return next(error)
-  }
-  return res.json(stocks)
-}
 
 // GET all stocks exchange accents
-export async function getStocksAccentsByExchange(req, res, next) {
+export async function getStocksAccents(req, res, next) {
   const exchange = req.params.exchange
-  const re = new RegExp(exchange, 'i')
+  let query
+  if (exchange) {
+    const re = new RegExp(exchange, 'i')
+    query = { market: re }
+  } else {
+    query = {}
+  }
   let stocks = []
   try {
     stocks = await Stock.find({
       $and: [
-        { market: re },
+        query,
         { $or: [
           { relVariation: { $gt: ACCENT } },
           { relVariation: { $lt: -ACCENT } }
@@ -64,45 +49,26 @@ export async function getStocksAccentsByExchange(req, res, next) {
   return res.json(stocks)
 }
 
-// GET all stocks
+
+// GET stocks
 export async function getStocks(req, res, next) {
-  let stocks = []
-  try {
-    stocks = await Stock.find({})
-  } catch (error) {
-    return next(error)
-  }
-  return res.json(stocks)
-}
-
-// GET stocks by Market
-export async function getStocksByMarket(req, res, next) {
   const exchange = req.params.exchange
-  const re = new RegExp(exchange, 'i')
+  let query
+  if (exchange) {
+    const re = new RegExp(exchange, 'i')
+    query = { market: re }
+  } else {
+    query = {}
+  }
   let stocks = []
   try {
-    stocks = await Stock.find({ market: re })
+    stocks = await Stock.find(query)
   } catch (error) {
     return next(error)
   }
   return res.json(stocks)
 }
 
-// GET stock by ISIN
-// export async function getStockByISIN(req, res, next) {
-//   const isin = req.params.isin
-//   let stock
-//   try {
-//     stock = await Stock.findOne({ isin: isin })
-//   } catch (error) {
-//     return next(error)
-//   }
-//   if (!stock) return res.status(404).json({
-//     error: 404,
-//     message: 'Resource not found'
-//   })
-//   return res.json(stock)
-// }
 
 // GET stock by stockUrl
 export async function getStockByStockUrl(req, res, next) {
