@@ -31,8 +31,8 @@ beforeEach(async() => {
       'name': 'A.B.P. NOCIVELLI',
       'stockUrl': 'a-b-p--nocivelli',
       'absVariation': -0.05,
-      'price': '5.10',
-      'relVariation': '-0.97%',
+      'price': 5.10,
+      'relVariation': -0.97,
       'perf1M': -4.35,
       'perf52W': 60.29
     }
@@ -53,8 +53,8 @@ describe('GET stock by stock fragment', () => {
       'name': 'A.B.P. NOCIVELLI',
       'stockUrl': 'a-b-p--nocivelli',
       'absVariation': -0.05,
-      'price': '5.10',
-      'relVariation': '-0.97%',
+      'price': 5.10,
+      'relVariation': -0.97,
       'perf1M': -4.35,
       'perf52W': 60.29
     })

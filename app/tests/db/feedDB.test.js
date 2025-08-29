@@ -3,7 +3,6 @@ import { feedDB } from '../../db/feedDB.js'
 import * as fs from 'fs/promises'
 // import { JSDOM } from 'jsdom'
 import { upsertStock } from '../../controllers/db.controller.js'
-import { cleanDB } from '../../utilities/cleanDB.js'
 import logger from '../../config/logger.js'
 // import { sleep } from '../../utilities/sleep.js'
 
@@ -14,10 +13,6 @@ vi.mock('fs/promises', () => ({
 
 vi.mock('../../controllers/db.controller.js', () => ({
   upsertStock: vi.fn(() => Promise.resolve())
-}))
-
-vi.mock('../../utilities/cleanDB.js', () => ({
-  cleanDB: vi.fn(() => Promise.resolve())
 }))
 
 vi.mock('../../config/logger.js', () => ({
@@ -71,10 +66,9 @@ describe('feedDB', () => {
       isin: 'TEST123',
       price: '123.45',
       absVariation: '+1.23',
-      relVariation: '+2.34%'
+      relVariation: '+2.34'
     })
 
-    expect(cleanDB).toHaveBeenCalled()
     expect(logger.info).toHaveBeenCalledWith(expect.stringContaining('Conneting to:'))
   })
 })
