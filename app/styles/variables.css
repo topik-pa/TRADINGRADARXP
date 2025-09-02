@@ -58,6 +58,7 @@
   --large-space: 1.3rem;
   --x-large-space: 1.8rem;
   --xx-large-space: 2.4rem;
+  --xxx-large-space: 3.2rem;
 
   --main-padding: var(--small-space);
   --section-margin: var(--xx-large-space);
