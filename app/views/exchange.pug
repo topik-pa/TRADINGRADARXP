@@ -15,22 +15,24 @@ block append meta
     link(rel="alternate", hreflang=link.lang, href=link.url)
 
 block main
-  h1= exchange
-  section 
-    h2 Migliore e peggiore performance
-    div(id="highlights")
+  include ./components/shared/breadcrumbs/breadcrumbs.pug
+  h1= __(`${exchange}StockExchange`)
+
   section
-    h2 Titoli in evidenza
-    h3 Azioni rialziste
-    div(id="bests")
-    h3 Azioni ribassiste
-    div(id="worsts")
+    h2 Titoli in rally oggi lunedì 13 febbraio
+    div
+      h3 Azioni in rally rialzista
+      div(id="bests", class="bullet-wrap")
+    div
+      h3 Azioni in rally ribassista
+      div(id="worsts", class="bullet-wrap")
+
   section
     h2 Le performance più interessanti
     h3 Migliori perfomance rialziste dell'ultimo mese
-    div(id="performance-up")
+    div(id="performance-up", class="bullet-wrap")
     h3 Peggiori perfomance ribassiste dell'ultimo mese
-    div(id="performance-down")
+    div(id="performance-down", class="bullet-wrap")
 
 
 block column 

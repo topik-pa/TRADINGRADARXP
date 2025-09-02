@@ -1,20 +1,33 @@
 
 #main-logo {
-  font-size: var(--font-size-biggest);
+  font-size: var(--font-size-huge);
   font-family: "Orbitron", sans-serif;
   font-weight: 700;
   padding-bottom: var(--main-padding);
 }
 
+#main-logo a div {
+  line-height: 80%;
+}
 #main-logo a span {
   letter-spacing: 2px;  
+  font-weight: 600;
+}
+#main-logo a span:nth-child(3) {
+  font-weight: 100;
+  font-style: italic;
+}
+
+#main-logo a small {
+  display: block;
+  font-size: 43%;
+  font-style: italic;
   font-weight: 100;
 }
 
 #main-logo img {
   height: 4rem;
   width: auto;
-  vertical-align: middle;
   margin-right: var(--main-padding);
 }
 

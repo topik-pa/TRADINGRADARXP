@@ -1,4 +1,4 @@
-aside .icon-cheveron-up:before {
+aside#column .icon-cheveron-up:before {
   font-size: var(--base-space);
   border: 1px solid;
   border-radius: 50%;
@@ -12,6 +12,36 @@ aside .icon-cheveron-up:before {
   transition: all .4s ease-in-out;
   background-color: var(--white);
 }
-aside.collapsed .icon-cheveron-up:before {
+aside#column.collapsed .icon-cheveron-up:before {
   transform: rotate(90deg);
+}
+
+aside#column {
+  color: var(--white);
+  font-size: var(--font-size-small);
+}
+
+aside#column a {
+  color: var(--white);
+}
+
+aside#column h4 {
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  margin: 0;
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: var(--darkest-gray);
+  padding: var(--main-padding);
+}
+
+aside#column .col-widget {
+  margin-top: var(--x-large-space);
+}
+
+aside#column a[title="Telegram"] {
+  display: block;
+  margin-top: var(--base-space);
+  text-align: center;
+  font-size: var(--font-size-base);
 }

@@ -15,89 +15,101 @@ block append meta
     link(rel="alternate", hreflang=link.lang, href=link.url)
 
 block main
-  h1= __('index.title')
-  p= __('index.subtitle')
+  section(class="flex")
+    div(class="rounded")
+      h1= __('index.title')
+      p= __('index.subtitle')
+    div(class="rounded")
+      h2 Cosa sono i titoli "in rally"
+
   section
-    h2 Titoli in evidenza oggi lunedì 13 febbraio
-    h3 Azioni rialziste
-    div(id="bests")
-    h3 Azioni ribassiste
-    div(id="worsts")
+    h2 Titoli in rally oggi lunedì 13 febbraio
+    div
+      h3 Azioni in rally rialzista
+      div(id="bests", class="bullet-wrap")
+    div
+      h3 Azioni in rally ribassista
+      div(id="worsts", class="bullet-wrap")
 
-  h2 Dettagli dei mercati
-  div(class="cards")
-    cmp-card(color="red")
-      span(slot="title")= __('euronextGlobal')
-      a(slot="image", title=__('euronextGlobal'), href="global")
-        img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
-      span(slot="subtitle")= __('euronextGlobal')
-      span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
-      span(slot="link")
-        a(href="#", title=__('euronextGlobal'))= __('index.discoverStocks')
+  section
+    h2 Dettagli dei mercati
+    div(class="cards")
+      cmp-card(color="red")
+        span(slot="title")= __('euronextGlobal')
+        a(slot="image", title=__('euronextGlobal'), href="global")
+          img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
+        span(slot="subtitle")= __('euronextGlobal')
+        span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
+        span(slot="link")
+          a(href="#", title=__('euronextGlobal'))= __('index.discoverStocks')
 
-    cmp-card(color="blue")
-      span(slot="title")= __('milanStockExchange')
-      a(slot="image", title=__('milanStockExchange'), href="milan")
-        img(src="/assets/images/exchanges/borsa-italiana.webp", class="cmp-card-slotted-img")
-      span(slot="subtitle")= __('milanStockExchange')
-      span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
-      span(slot="link")
-        a(href="#", title=__('milanStockExchange'))= __('index.discoverStocks')
+      cmp-card(color="blue")
+        span(slot="title")= __('milanStockExchange')
+        a(slot="image", title=__('milanStockExchange'), href="milan")
+          img(src="/assets/images/exchanges/borsa-italiana.webp", class="cmp-card-slotted-img")
+        span(slot="subtitle")= __('milanStockExchange')
+        span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
+        span(slot="link")
+          a(href="#", title=__('milanStockExchange'))= __('index.discoverStocks')
 
-    cmp-card(color="yellow")
-      span(slot="title")= __('parisStockExchange')
-      a(slot="image", title=__('parisStockExchange'), href="paris")
-        img(src="/assets/images/exchanges/bourse_de_paris.webp", class="cmp-card-slotted-img")
-      span(slot="subtitle")= __('parisStockExchange')
-      span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
-      span(slot="link")
-        a(href="#", title=__('parisStockExchange'))= __('index.discoverStocks')
+      cmp-card(color="yellow")
+        span(slot="title")= __('parisStockExchange')
+        a(slot="image", title=__('parisStockExchange'), href="paris")
+          img(src="/assets/images/exchanges/bourse_de_paris.webp", class="cmp-card-slotted-img")
+        span(slot="subtitle")= __('parisStockExchange')
+        span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
+        span(slot="link")
+          a(href="#", title=__('parisStockExchange'))= __('index.discoverStocks')
 
-    cmp-card(color="green")
-      span(slot="title")= __('osloStockExchange')
-      a(slot="image", title=__('osloStockExchange'), href="oslo")
-        img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
-      span(slot="subtitle")= __('osloStockExchange')
-      span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
-      span(slot="link")
-        a(href="#", title=__('osloStockExchange'))= __('index.discoverStocks')
+      cmp-card(color="green")
+        span(slot="title")= __('osloStockExchange')
+        a(slot="image", title=__('osloStockExchange'), href="oslo")
+          img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
+        span(slot="subtitle")= __('osloStockExchange')
+        span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
+        span(slot="link")
+          a(href="#", title=__('osloStockExchange'))= __('index.discoverStocks')
 
-    cmp-card(color="green")
-      span(slot="title")= __('amsterdamStockExchange')
-      a(slot="image", title=__('amsterdamStockExchange'), href="amsterdam")
-        img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
-      span(slot="subtitle")= __('amsterdamStockExchange')
-      span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
-      span(slot="link")
-        a(href="#", title=__('amsterdamStockExchange'))= __('index.discoverStocks')
+      cmp-card(color="green")
+        span(slot="title")= __('amsterdamStockExchange')
+        a(slot="image", title=__('amsterdamStockExchange'), href="amsterdam")
+          img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
+        span(slot="subtitle")= __('amsterdamStockExchange')
+        span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
+        span(slot="link")
+          a(href="#", title=__('amsterdamStockExchange'))= __('index.discoverStocks')
 
-    cmp-card(color="green")
-      span(slot="title")= __('brusselsStockExchange')
-      a(slot="image", title=__('brusselsStockExchange'), href="brussels")
-        img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
-      span(slot="subtitle")= __('brusselsStockExchange')
-      span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
-      span(slot="link")
-        a(href="#", title=__('brusselsStockExchange'))= __('index.discoverStocks')
+      cmp-card(color="green")
+        span(slot="title")= __('brusselsStockExchange')
+        a(slot="image", title=__('brusselsStockExchange'), href="brussels")
+          img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
+        span(slot="subtitle")= __('brusselsStockExchange')
+        span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
+        span(slot="link")
+          a(href="#", title=__('brusselsStockExchange'))= __('index.discoverStocks')
 
-    cmp-card(color="green")
-      span(slot="title")= __('lisbonStockExchange')
-      a(slot="image", title=__('lisbonStockExchange'), href="lisbon")
-        img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
-      span(slot="subtitle")= __('lisbonStockExchange')
-      span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
-      span(slot="link")
-        a(href="#", title=__('lisbonStockExchange'))= __('index.discoverStocks')
+      cmp-card(color="green")
+        span(slot="title")= __('lisbonStockExchange')
+        a(slot="image", title=__('lisbonStockExchange'), href="lisbon")
+          img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
+        span(slot="subtitle")= __('lisbonStockExchange')
+        span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
+        span(slot="link")
+          a(href="#", title=__('lisbonStockExchange'))= __('index.discoverStocks')
 
-    cmp-card(color="green")
-      span(slot="title")= __('dublinStockExchange')
-      a(slot="image", title=__('dublinStockExchange'), href="dublin")
-        img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
-      span(slot="subtitle")= __('dublinStockExchange')
-      span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
-      span(slot="link")
-        a(href="#", title=__('dublinStockExchange'))= __('index.discoverStocks')                        
-  h2 Come operare: scegli i servizi di AVA trade
+      cmp-card(color="green")
+        span(slot="title")= __('dublinStockExchange')
+        a(slot="image", title=__('dublinStockExchange'), href="dublin")
+          img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
+        span(slot="subtitle")= __('dublinStockExchange')
+        span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
+        span(slot="link")
+          a(href="#", title=__('dublinStockExchange'))= __('index.discoverStocks')                        
+  
+  section
+    h2 Come operare: scegli i servizi di AVA trade
+
+  aside(id="disclaimer") #[em Attenzione: ] operare in Borsa e fare trading costituiscono #[em azioni ad alto rischio]. Le informazioni qui presentate non costituiscono una sollecitazione di acquisto o vendita di titoli azionari e si intendono #[em per puro uso informativo]. Il Portale Web tradingradar.net non si dichiara responsabile di un utilizzo improprio delle informazioni qui ottenute.
 
 block column 
   include ./components/shared/column/column.pug

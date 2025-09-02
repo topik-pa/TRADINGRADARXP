@@ -1,77 +1,18 @@
-/* eslint-disable no-console */
-async function getStocks() {
-  const exchange = document.body.dataset.exchange
-  const url = '/api/stocks/' + exchange
-  try {
-    const response = await fetch(url)
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`)
-    }
-    return await response.json()
-  } catch (error) {
-    console.error(error.message)
-  }
-}
+import { createComponent, getData } from '../scripts/globals.js'
 
-async function getAccents() {
-  const exchange = document.body.dataset.exchange
-  const url = '/api/stocks/accents/' + exchange
-  try {
-    const response = await fetch(url)
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`)
-    }
-    return await response.json()
-  } catch (error) {
-    console.error(error.message)
-  }
-}
-
-async function getPerformance1M(trend) {
-  const exchange = document.body.dataset.exchange
-  const url = '/api/stocks/performance/' + exchange + '/' + trend
-  try {
-    const response = await fetch(url)
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`)
-    }
-    return await response.json()
-  } catch (error) {
-    console.error(error.message)
-  }
-}
-
-function getHighlights(stocks) {
-  let worst = stocks[0]
-  let best = stocks[0]
-  stocks.forEach(stock => {
-    if (stock.relVariation > best.relVariation) {
-      best = stock
-    }
-    if (stock.relVariation < worst.relVariation) {
-      worst = stock
-    }
-  })
-  return { worst, best }
-}
-
-function createComponent(tag, attrs = {}, children = []) {
-  const el = document.createElement(tag)
-  // Imposta attributi
-  for (const [key, value] of Object.entries(attrs)) {
-    el.setAttribute(key, value)
-  }
-  // Aggiunge i figli (contenuto, slot, ecc.)
-  for (const child of children) {
-    if (!child) continue
-    if (typeof child === 'string' || typeof child === 'number') {
-      el.appendChild(document.createTextNode(child))
-    } else {
-      el.appendChild(child)
-    }
-  }
-  return el
-}
+// function getHighlights(stocks) {
+//   let worst = stocks[0]
+//   let best = stocks[0]
+//   stocks.forEach(stock => {
+//     if (stock.relVariation > best.relVariation) {
+//       best = stock
+//     }
+//     if (stock.relVariation < worst.relVariation) {
+//       worst = stock
+//     }
+//   })
+//   return { worst, best }
+// }
 
 
 export default  {
@@ -84,27 +25,28 @@ export default  {
     // eslint-disable-next-line no-empty
     } catch (err) {}
 
-    const main = document.querySelector('main')
-    const stocks = await getStocks()
-    if (stocks.length === 0) return
-    const { worst, best } = getHighlights(stocks)
+    const exchange = document.body.dataset.exchange
 
-    const worstBullet = createComponent('cmp-bullet', { direction: 'negative' }, [
-      createComponent('span', { slot: 'title' }, ['In evidenza']),
-      createComponent('span', { slot: 'name' }, [worst.name]),
-      createComponent('span', { slot: 'value' }, [worst.relVariation])
-    ])
-    document.getElementById('highlights').appendChild(worstBullet)
+    // const stocks = await getData('/api/stocks/' + exchange)
+    // if (stocks.length !== 0) {
+    //   const { worst, best } = getHighlights(stocks)
 
-    const bestBullet = createComponent('cmp-bullet', { direction: 'positive' }, [
-      createComponent('span', { slot: 'title' }, ['In evidenza']),
-      createComponent('span', { slot: 'name' }, [best.name]),
-      createComponent('span', { slot: 'value' }, [best.relVariation])
-    ])
-    document.getElementById('highlights').appendChild(bestBullet)
+    //   const bestBullet = createComponent('cmp-bullet', { direction: 'positive' }, [
+    //     createComponent('span', { slot: 'title' }, ['In evidenza']),
+    //     createComponent('span', { slot: 'name' }, [best.name]),
+    //     createComponent('span', { slot: 'value' }, [best.relVariation])
+    //   ])
+    //   document.getElementById('highlights-up').appendChild(bestBullet)
 
+    //   const worstBullet = createComponent('cmp-bullet', { direction: 'negative' }, [
+    //     createComponent('span', { slot: 'title' }, ['In evidenza']),
+    //     createComponent('span', { slot: 'name' }, [worst.name]),
+    //     createComponent('span', { slot: 'value' }, [worst.relVariation])
+    //   ])
+    //   document.getElementById('highlights-down').appendChild(worstBullet)
+    // }
 
-    let accents = await getAccents()
+    let accents = await getData('/api/stocks/accents/' + exchange)
 
     accents = accents.filter((s) => {
       if(s.volume !== null && s.price !== null) {
@@ -123,7 +65,7 @@ export default  {
     })
 
 
-    const bestPerformance = await getPerformance1M('up')
+    const bestPerformance = await getData('/api/stocks/performance/' + exchange + '/' + 'up')
     bestPerformance.forEach(stock => {
       const direction = stock.relVariation > 0 ? 'positive' : 'negative'
       const bullet = createComponent('cmp-bullet', { direction: direction }, [
@@ -134,7 +76,7 @@ export default  {
       document.getElementById('performance-up').appendChild(bullet)
     })
 
-    const wostPerformance = await getPerformance1M('down')
+    const wostPerformance = await getData('/api/stocks/performance/' + exchange + '/' + 'down')
     wostPerformance.forEach(stock => {
       const direction = stock.relVariation > 0 ? 'positive' : 'negative'
       const bullet = createComponent('cmp-bullet', { direction: direction }, [

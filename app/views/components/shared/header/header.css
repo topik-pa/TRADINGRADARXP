@@ -1,7 +1,6 @@
 @import "./social-icons/social-icons.css";
 @import "./main-logo/main-logo.css";
 @import "./main-menu/main-menu.css";
-@import "./breadcrumbs/breadcrumbs.css";
 
 header {
   padding: var(--main-padding);
@@ -17,7 +16,7 @@ header {
 header > div:nth-child(1)  {
   display: flex;
   justify-content: end;
-  padding-bottom: var(--xx-small-space);
+  padding-bottom: var(--main-padding);
   margin-bottom: var(--main-padding);
   border-bottom: 1px solid var(--darker-gray);
 }
@@ -31,9 +30,8 @@ header > div:nth-child(2)  {
 #header a {
   color: var(--primary);
   text-decoration: none;
-}
-#header a:hover {
-  text-decoration: underline;
+  display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width: 768px) {

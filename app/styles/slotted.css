@@ -6,15 +6,12 @@
   
 }
 .cmp-navigation-slotted-li:hover {
-  background-color: var(--black);
-  box-shadow: inset 5px 0 0 #0c72f7;
-}
-.cmp-navigation-slotted-li:hover a {
-  color: var(--white);
+  background-color: var(--darkest-gray);
+  box-shadow: inset 5px 0 0 var(--blue);
 }
 .cmp-navigation-slotted-a {
-  color: var(--lightest-gray);
-  text-decoration: none;
+  color: var(--white);
+  text-decoration-color: var(--gray);
   display: block;
-  padding: var(--main-padding);
+  padding: var(--x-small-space) var(--small-space) var(--x-small-space);
 }

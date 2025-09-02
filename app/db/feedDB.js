@@ -42,11 +42,11 @@ const TARGETS = [
   [
     {
       key: 'volume',
-      path: 'table > tbody > tr:nth-child(3) > td:nth-child(2)'
+      path: 'table > tbody > tr:nth-child(4) > td:nth-child(2)'
     },
     {
       key: 'cap',
-      path: 'table > tbody > tr:nth-child(13) > td:nth-child(2)'
+      path: 'table > tbody > tr:nth-child(14) > td:nth-child(2)'
     }
   ]
 ]

@@ -1,4 +1,4 @@
-aside 
+aside(id="column") 
   span(id="colcollapse", class="icon-cheveron-up")
   cmp-navigation
     span(slot="title")= __('exchanges')
@@ -18,4 +18,10 @@ aside
       li(class="cmp-navigation-slotted-li")
         a(href="lisbon", class="cmp-navigation-slotted-a")=  __('lisbonStockExchange')
       li(class="cmp-navigation-slotted-li")
-        a(href="dublin", class="cmp-navigation-slotted-a")=  __('dublinStockExchange')                                      
+        a(href="dublin", class="cmp-navigation-slotted-a")=  __('dublinStockExchange')
+  div(class="col-widget")
+    h4 Telegram 
+    p Per ottenere le azioni con i maggiori rialzi o ribassi della giornata. 
+    a(href="https://t.me/tradingradarnet", title="Telegram") #[i(class="icon-telegram")] Segui su Telegram
+
+                                      

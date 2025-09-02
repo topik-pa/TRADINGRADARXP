@@ -2,11 +2,12 @@ const template = document.createElement('template')
 template.innerHTML = `
   <style>
     nav {
-      background-color: var(--darker-gray);
-      color: var(--lightest-gray);
+      background-color: var(--black);
+      font-size: var(--font-size-small);
     }
     h4 {
       margin: 0;
+      color: var(--white);
       text-transform: uppercase;
       background-color: var(--darkest-gray);
       padding: var(--main-padding);
@@ -16,7 +17,6 @@ template.innerHTML = `
       padding: 0;
       list-style: none;
       font-weight: 500;
-      font-size: var(--font-size-big);
     }
   </style>
   <nav>

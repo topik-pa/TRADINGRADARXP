@@ -1,7 +1,8 @@
 #breadcrumbs {
   border-bottom: 1px solid var(--darker-gray);
   text-align: center;
-  padding: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  margin-bottom: calc(var(--main-padding) * 2);
   color: var(--secondary);
 }
 

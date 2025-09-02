@@ -12,6 +12,7 @@ body {
   letter-spacing: .03rem;
   color: var(--secondary);
   background-color: var(--primary);
+  font-size: var(--font-size-small);
 }
 
 .layout {
@@ -23,24 +24,33 @@ body {
   width: 100%;
   padding: var(--main-padding);
 }
-.layout aside {
+.layout #column {
   padding: var(--main-padding);
-  background: var(--light-gray);
+  background: var(--black);
   position: relative;
   width: 20%;
   transition: all .4s ease-in-out;
 }
-.layout aside.collapsed {
+.layout #column.collapsed {
   width: 5%;
+}
+
+#disclaimer {
+  border-top: 1px solid var(--darker-gray);
+  background-color: var(--lighter-gray);
+  padding: var(--large-space);
+  background-color: var(--rt);
+  text-align: center;
+  z-index: var(--disclaimer);
 }
 
 a {
   color: var(--link);
   position: relative;
 }
-a:hover {
+/* a:hover {
   filter: brightness(80%);
-}
+} */
 a.ext::after {
   content: '\21F1';
   transform: rotate(90deg);
@@ -90,6 +100,36 @@ small {
   color: var(--blue);
 }
 
+section {
+  margin-bottom: var(--xx-large-space);
+  > div {
+    margin: var(--x-large-space) 0;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--main-padding);
+  > div {
+    width: 50%;
+  }
+}
+
+.rounded {
+  background-color: var(--white);
+  border-radius: var(--border-radius-big);
+  padding: var(--main-padding);
+  border: 1px solid var(--light-gray);
+  position: relative;
+}
+
+.bullet-wrap {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: var(--main-padding);
+}
 
 
 @media screen and (max-width: 768px) {

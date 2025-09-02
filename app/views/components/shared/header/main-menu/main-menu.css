@@ -4,7 +4,7 @@
 
 #main-menu li {
   display: inline-block;
-  margin-left: 2px;
+  margin-left: 1px;
   background-color: var(--darkest-gray);
   /* background: linear-gradient(360deg, var(--darkest-gray) 66%, rgba(85, 85, 85, 1) 90%, rgba(136, 136, 136, 1) 100%); */
   border-top-left-radius: var(--border-radius-small);
@@ -12,11 +12,12 @@
 }
 #main-menu li a {
   display: block;
-  padding: var(--main-padding) calc(var(--main-padding) * 3);
+  padding: var(--main-padding) calc(var(--main-padding) * 2);
   font-weight: 500;
   text-transform: uppercase;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-size: var(--font-size-small);
 }
 #main-menu li.active, #main-menu li:hover {
   background: var(--primary);
@@ -27,11 +28,6 @@
 #main-menu ul {
   margin: 0;
   padding-left: 0;
-}
-
-#main-menu li.active a {
-  text-decoration: underline;
-  font-weight: bold;
 }
 
 #main-menu .close, .hamburger {
