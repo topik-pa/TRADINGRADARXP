@@ -34,7 +34,7 @@ function createComponent(tag, attrs = {}, children = []) {
 
 export default  {
   init: async() => {
-    const cssModule = await import('./exchange.css', {
+    const cssModule = await import('./stock.css', {
       with: { type: 'css' }
     })
     try {
@@ -42,8 +42,10 @@ export default  {
     // eslint-disable-next-line no-empty
     } catch (err) {}
 
-    const main = document.querySelector('main')
+    // const main = document.querySelector('main')
     const stock = await getStock()
+
+    document.getElementById('stock-name').innerHTML = stock.name
 
     const lastPriceBullet = createComponent('cmp-bullet', { direction: 'negative' }, [
       createComponent('span', { slot: 'title' }, ['Ultimo prezzo']),
@@ -52,19 +54,33 @@ export default  {
     ])
     document.getElementById('stock-details').appendChild(lastPriceBullet)
 
+    const relVariationBullet = createComponent('cmp-bullet', { direction: 'negative' }, [
+      createComponent('span', { slot: 'title' }, ['Variazione %']),
+      createComponent('span', { slot: 'name' }, [stock.name]),
+      createComponent('span', { slot: 'value' }, [stock.relVariation])
+    ])
+    document.getElementById('stock-details').appendChild(relVariationBullet)
+
+    const volumeBullet = createComponent('cmp-bullet', { direction: 'negative' }, [
+      createComponent('span', { slot: 'title' }, ['Volume']),
+      createComponent('span', { slot: 'name' }, [stock.name]),
+      createComponent('span', { slot: 'value' }, [stock.volume])
+    ])
+    document.getElementById('stock-details').appendChild(volumeBullet)
+
     const performance1M = createComponent('cmp-bullet', { direction: 'negative' }, [
       createComponent('span', { slot: 'title' }, ['Performance mensile']),
       createComponent('span', { slot: 'name' }, [stock.name]),
       createComponent('span', { slot: 'value' }, [stock.perf1M])
     ])
-    document.getElementById('stock-details').appendChild(performance1M)
+    document.getElementById('stock-performance').appendChild(performance1M)
 
     const performance1A = createComponent('cmp-bullet', { direction: 'negative' }, [
       createComponent('span', { slot: 'title' }, ['Performance annuale']),
       createComponent('span', { slot: 'name' }, [stock.name]),
       createComponent('span', { slot: 'value' }, [stock.perf52W])
     ])
-    document.getElementById('stock-details').appendChild(performance1A)
+    document.getElementById('stock-performance').appendChild(performance1A)
 
   }
 }
