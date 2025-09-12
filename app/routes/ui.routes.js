@@ -1,5 +1,11 @@
 import express from 'express'
-import { hpView, stockView, privacyView, ContactsView, exchangeView } from '../controllers/ui.controller.js'
+import {
+  hpView,
+  stockView,
+  privacyView,
+  contactsView,
+  aboutView,
+  exchangeView } from '../controllers/ui.controller.js'
 const router = express.Router()
 
 const CURRENT_EXCHANGES = 'milan|oslo|paris|amsterdam|brussels|lisbon|dublin|global'
@@ -23,14 +29,17 @@ router.get('/favicon.ico', (req, res) => {
 // Exchange
 router.get(`/:lang(${CURRENT_LANGS})/:exchange(${CURRENT_EXCHANGES})`, exchangeView)
 
-// Stock page
-router.get(`/:lang(${CURRENT_LANGS})/:stockUrl`, stockView)
-
-
 // Privacy
 router.get(`/:lang(${CURRENT_LANGS})/privacy`, privacyView)
+
 // Contacts
-router.get(`/:lang(${CURRENT_LANGS})/contacts`, ContactsView)
+router.get(`/:lang(${CURRENT_LANGS})/contacts`, contactsView)
+
+// About
+router.get(`/:lang(${CURRENT_LANGS})/about`, aboutView)
+
+// Stock page
+router.get(`/:lang(${CURRENT_LANGS})/:stockUrl`, stockView)
 
 
 // Home page

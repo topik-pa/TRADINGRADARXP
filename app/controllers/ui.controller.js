@@ -90,7 +90,7 @@ export async function privacyView(req, res) {
 
 
 // Contacts
-export async function ContactsView(req, res) {
+export async function contactsView(req, res) {
   const lang = req.params.lang
   if (!supportedLangs.includes(lang)) {
     res.redirect((req.url).replace(lang, fallback))
@@ -107,6 +107,24 @@ export async function ContactsView(req, res) {
   }
 }
 
+
+// About
+export async function aboutView(req, res) {
+  const lang = req.params.lang
+  if (!supportedLangs.includes(lang)) {
+    res.redirect((req.url).replace(lang, fallback))
+  } else {
+    i18n.setLocale(req, lang)
+    let params = getViewParams('about', lang, req.path)
+    const breadcrumbs = [
+      {
+        name: 'about'
+      }
+    ]
+    params = { ...params, breadcrumbs }
+    res.render('about', params)
+  }
+}
 
 // Stocks index
 // export async function stocksIndex(req, res) {
