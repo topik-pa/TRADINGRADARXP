@@ -1,7 +1,7 @@
 
 import { JSDOM } from 'jsdom'
 import { readFile } from 'fs/promises'
-import { upsertStock } from '../controllers/db.controller.js'
+import { upsertStock, readStock } from '../controllers/db.controller.js'
 // import { cleanDB } from '../utilities/cleanDB.js'
 import logger from '../config/logger.js'
 
@@ -52,7 +52,7 @@ const TARGETS = [
 ]
 
 
-export async function feedDB() {
+export async function feedDB(mode) {
   const json = JSON.parse(
     await readFile(
       new URL(OUTPUT_PATH, import.meta.url)
@@ -71,6 +71,13 @@ export async function feedDB() {
         logger.error(new Error(error.message))
       }
       update.isin = stock.isin
+
+      let savedStock = null
+      // if(mode === 'fod') {
+      savedStock = await readStock(stock.isin)
+      update.history = savedStock?.history ? savedStock.history : {}
+      // }
+
       TARGETS[i].forEach(t => {
         key = t.key
         value = new JSDOM(html).window.document.querySelector(t.path)?.firstChild?.nodeValue.trim() || null //!!
@@ -79,6 +86,14 @@ export async function feedDB() {
         }
         if (key==='price' || key==='volume') {
           value = value?.replace(/[,]/g, '')
+
+          update.history[key] = Array.isArray(savedStock?.history?.[key]) ? savedStock?.history?.[key] : []
+          if(mode === 'fod') {
+            update.history[key].push(+value)
+            if (update.history[key].length > 25) update.history[key].shift()
+          } else {
+            update.history[key][update.history[key].length - 1] = +value
+          }
         }
         if (key==='cap' && value) {
           const order = value.slice(-1)
@@ -86,6 +101,8 @@ export async function feedDB() {
           value = order === 'B' ? digits * 1_000 : digits
         }
         update[key] = value
+
+
       })
       try {
         logger.info('Updating stock: ' + stock.name)

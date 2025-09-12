@@ -1,4 +1,6 @@
 /* eslint-disable no-console */
+import '../scripts/vendor/Chart.js'
+
 async function getStock() {
   const stockUrl = document.body.dataset.stock
   const url = '/api/stocks/' + stockUrl
@@ -42,8 +44,36 @@ export default  {
     // eslint-disable-next-line no-empty
     } catch (err) {}
 
+
+
     // const main = document.querySelector('main')
     const stock = await getStock()
+
+    const variazioni = stock.history.price
+    const volumi = stock.history.volume
+
+    const ctx = document.getElementById('myChart')
+    new window.Chart(ctx, {
+      data: {
+        datasets: [
+          {
+            type: 'line',
+            label: 'Variazione prezzo',
+            data: variazioni,
+            yAxisID: 'yPrice'
+          },
+          {
+            type: 'bar',
+            label: 'Variazione Volumi',
+            data: volumi,
+            yAxisID: 'yVolume'
+          }],
+        labels: ['-4', '-3', '-2', '-1', 'Today']
+      },
+      options: {
+        responsive: true
+      }
+    })
 
     document.getElementById('stock-name').innerHTML = stock.name
 

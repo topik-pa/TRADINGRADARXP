@@ -12,6 +12,16 @@ export async function createStock(data) {
   }
 }
 
+export async function readStock(isin) {
+  try {
+    const stock = await Stock.findOne({ isin })
+    return stock
+  } catch (err) {
+    logger.error(new Error(`Error during read stock:\n${err}`))
+    throw err
+  }
+}
+
 export async function upsertStock(data) {
   try {
     const filter = { isin: data.isin }

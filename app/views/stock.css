@@ -6,3 +6,8 @@
 #stock-details {
   justify-content: space-evenly;
 }
+
+#stock-graph {
+  width: 50%;
+  margin: 0 auto;
+}

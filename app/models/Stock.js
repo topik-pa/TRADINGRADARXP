@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
+const Schema = mongoose.Schema
 
-const stockSchema = new mongoose.Schema({
+const stockSchema = new Schema({
   name:
       {
         type: String,
@@ -80,6 +81,12 @@ const stockSchema = new mongoose.Schema({
   cap:
       {
         type: Number,
+        nullable: true,
+        unique: false
+      },
+  history:
+      {
+        type: Schema.Types.Mixed,
         nullable: true,
         unique: false
       }

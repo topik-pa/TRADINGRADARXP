@@ -110,6 +110,7 @@ if (process.env.NODE_ENV !== 'test') {
 // INIT DB
 if (process.env.NODE_ENV === 'development') {
   // await initDB()
+  // await feedDB('fod')
   // await feedDB()
 } else {
   cron.schedule(process.env.CRON_SCHEDULE_DB_UPDATE, async() => {
