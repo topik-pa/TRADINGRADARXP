@@ -12,7 +12,8 @@ vi.mock('fs/promises', () => ({
 }))
 
 vi.mock('../../controllers/db.controller.js', () => ({
-  upsertStock: vi.fn(() => Promise.resolve())
+  upsertStock: vi.fn(() => Promise.resolve()),
+  readStock: vi.fn(() => Promise.resolve())
 }))
 
 vi.mock('../../config/logger.js', () => ({

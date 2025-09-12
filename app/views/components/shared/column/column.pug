@@ -25,7 +25,7 @@ aside(id="column")
     a(href="https://t.me/tradingradarnet", title="Telegram") #[i(class="icon-telegram")] Segui su Telegram
   div(class="col-widget partner")
     h4 Investi con AVA
-    p(class="center")
+    p(class="center") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit sem ante, eget lobortis lorem tincidunt et. Etiam vehicula odio nec lorem commodo efficitur. #[br]
       script.avaJavaCode(type='text/javascript').
         (function () {
         const locale = "#{locale}"
@@ -42,6 +42,27 @@ aside(id="column")
         ifr.setAttribute("frameborder", "0");
         ifr.setAttribute("scrolling","no");
         ifr.setAttribute("style", "width:250px;height:250px;");
+        const cP = document.getElementsByClassName("avaJavaCode")[cIX];
+        cP.parentNode.insertBefore(ifr, cP);
+        }());
+    
+    p(class="center") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit sem ante, eget lobortis lorem tincidunt et. Etiam vehicula odio nec lorem commodo efficitur. #[br]
+      script.avaJavaCode(type='text/javascript').
+        (function () {
+        const locale = "#{locale}"
+        const bannerMap = {
+          it: '35461',
+          en: '35472'
+        }
+        const url = `https://tracking.avapartner.com/impression/?affid=209215&html5Id=${bannerMap[locale]}&adTheme=804&campaign=214764&campaignName=Default%20Campaign&tag=209215`;
+        if (!window.aSC) window.aSC = 0;
+        window.aSC += 1;
+        const cIX = window.aSC - 1;
+        const ifr = document.createElement("iframe");
+        ifr.setAttribute("src", url + "&sid=" + Math.random());
+        ifr.setAttribute("frameborder", "0");
+        ifr.setAttribute("scrolling","no");
+        ifr.setAttribute("style", "width:300px;height:600px;");
         const cP = document.getElementsByClassName("avaJavaCode")[cIX];
         cP.parentNode.insertBefore(ifr, cP);
         }());
