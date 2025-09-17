@@ -1,11 +1,19 @@
 const template = document.createElement('template')
 template.innerHTML = `
   <style>
-    div {
+    .bullet {
       border: 1px solid var(--lighter-gray);
       background-color: var(--lighter-gray);
       border-radius: var(--border-radius-small);
       width: 18rem;
+      &:hover {
+        filter:brightness(90%);
+        .name a {
+          text-decoration: underline;
+          text-decoration-color: var(--dark-gray);
+          text-decoration-thickness: 1px;
+        }
+      }
       &.positive {
         background-color: var(--green);
         background: linear-gradient(22deg,rgba(153, 255, 204, .15) 50%, rgba(0, 158, 79, .15) 100%);
@@ -27,50 +35,65 @@ template.innerHTML = `
         }
       }
     }
-    h4 {
-      padding: var(--main-padding);
-      margin-top: 0;
+    .head {
+      padding: var(--main-padding) var(--main-padding) var(--x-large-space) var(--main-padding);
+      font-weight: 500;
+      color: var(--darker-gray)
     }
     .name {
       padding: 0 var(--main-padding);
-      font-size: var(--font-size-big);
-      font-weight: 500;
-      display: block;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      a {
+        color: var(--secondary);
+        font-size: var(--font-size-big);
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
     .value {
-      padding: var(--small-space) var(--main-padding);
+      padding: var(--x-small-space) var(--main-padding);
       font-size: var(--font-size-biggest);
       font-style: italic;
       font-weight: bold;
       text-shadow: 0 1px 0px var(--darkest-gray);
+      span {
+        font-size: var(--font-size-bigger);
+      }
     }
     footer {
       background-color: var(--lighter-gray);
-      margin-top: var(--base-space);
-      padding: var(--x-small-space);
+      padding: var(--xx-small-space);
       display: flex;
       justify-content: end;
       a {
-        color: var(--white);
-        font-weight: 500;
-        font-style: italic;
+        text-decoration: none;
+        color: var(--primary);
+        font-size: var(--font-size-x-small);
+        text-shadow: 0 1px 0px var(--darkest-gray);
+        span {
+          font-size: var(--font-size-big);
+        }
+        &:hover {
+          font-style: italic;
+        }
       }
     }
   </style>
-  <div>
-    <h4>
-      <slot name="title"></slot>
-    </h4>
-    <span class="name">
-      <slot name="name"></slot>
-    </span>
-    <span class="value">
-      <slot name="value"></slot>
-    </span>
-    <footer><a href="#">Scopri maggiori dettagli >> </a></footer>
+  <div class="bullet">
+    <header class="head">
+      <slot name="head"></slot>
+    </header>
+    <div class="name">
+      <a href="#"><slot name="name"></slot></a>
+    </div>
+    <div class="value">
+      <slot name="value"></slot><span>%</span>
+    </div>
+    <footer>
+      <a href="#"><slot name="footer"></slot>&nbsp;<span>&#10148;</span></a>
+    </footer>
   </div>
 `
 
@@ -84,8 +107,8 @@ class CmpBullet extends HTMLElement {
   }
 
   connectedCallback() {
-    this.root.classList.add(this.getAttribute('topic'))
     this.root.classList.add(this.getAttribute('direction'))
+    this.root.querySelectorAll('a').forEach((el) => {el.href = this.getAttribute('slug')})
   }
 }
 

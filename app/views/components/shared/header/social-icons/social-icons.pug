@@ -1,3 +1,22 @@
+-
+  let socials = [
+    {
+      name: 'Telegram',
+      url: 'https://t.me/tradingradarnet/',
+      icon: 'icon-telegram'
+    },
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/markopavan/',
+      icon: 'icon-linkedin2'
+    },
+    {
+      name: 'Mail',
+      url: 'mailto:info@tradingradar.net',
+      icon: 'icon-envelop'
+    }
+  ]
+
 div(id="socials")
   each social in socials
     a(href=social.url, title=social.name)

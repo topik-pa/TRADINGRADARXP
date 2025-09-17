@@ -67,6 +67,7 @@ em, .em {
 
 p {
   margin: var(--x-small-space) 0;
+  line-height: 130%;
 }
 
 small {
@@ -130,7 +131,7 @@ section {
 
 .bullet-wrap {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--main-padding);
 }

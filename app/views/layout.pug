@@ -1,31 +1,13 @@
 -
   let prod = process.env.NODE_ENV === 'production'
   let proj_name = 'tradingradar.net'
-  let proj_tagline = 'Titoli sull\'orlo di un crisi di nervi'
-  let proj_description = 'tradingradar.net - Titoli sull\'orlo di un crisi di nervi'
+  let proj_tagline= __('proj_tagline')
   let proj_url = 'https://tradingradar.net'
   let proj_copy = 2025
   let proj_owner = 'Marco Pavan'
   let proj_email = 'marco@tradingradar.net'
   let proj_logo = 'https://tradingradar.net/assets/images/logo.webp'
   let og_image = 'https://tradingradar.net/assets/images/tr-og-image.webp'
-  let socials = [
-    {
-      name: 'Telegram',
-      url: 'https://t.me/tradingradarnet/',
-      icon: 'icon-telegram'
-    },
-    {
-      name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/markopavan/',
-      icon: 'icon-linkedin2'
-    },
-    {
-      name: 'Mail',
-      url: 'mailto:info@tradingradar.net',
-      icon: 'icon-envelop'
-    }
-  ]
 
 doctype html
 html(lang=locale)
@@ -60,7 +42,7 @@ html(lang=locale)
         "@type": "WebSite",
         "url": "#{proj_url}",
         "name": "#{proj_name}",
-        "description": "#{proj_description}",
+        "description": "#{proj_name} #{proj_tagline}",
         "image": "#{proj_logo}",
         "author": {
           "@type": "Person",

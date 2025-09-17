@@ -1,20 +1,44 @@
 {
 	"hello": "Hello",
-  "privacy": "Privacy",
-  "contacts": "Contacts",
-  "exchanges": "Exchanges",
-  "milanStockExchange": "Milan Stock Exchange",
-  "parisStockExchange": "Paris Stock Exchange",
-  "osloStockExchange": "Oslo Stock Exchange",
-  "amsterdamStockExchange": "Amsterdam Stock Exchange",
-  "brusselsStockExchange": "Brussels Stock Exchange",
-  "lisbonStockExchange": "Lisbon Stock Exchange",
-  "dublinStockExchange": "Dublin Stock Exchange",
-  "euronextGlobal": "Euronext Global",
-  "tagline": "...stocks on the verge of a nervous breakdown",
+  "proj_name": "tradingradar.net",
+  "proj_description": "Find the best investment opportunities by taking advantage of stocks in rally phase.",
+  "proj_tagline": "...stocks on the verge of a nervous breakdown",
+  "views": {
+    "home": "Home",
+    "privacy": "Privacy",
+    "contacts": "Contacts",
+    "exchanges": "Exchanges"
+  },
+  "exchanges": {
+    "milanStockExchange": "Milan Stock Exchange",
+    "parisStockExchange": "Paris Stock Exchange",
+    "osloStockExchange": "Oslo Stock Exchange",
+    "amsterdamStockExchange": "Amsterdam Stock Exchange",
+    "brusselsStockExchange": "Brussels Stock Exchange",
+    "lisbonStockExchange": "Lisbon Stock Exchange",
+    "dublinStockExchange": "Dublin Stock Exchange",
+    "euronextGlobal": "Euronext Global"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "contacts": "Contacts"
+  },
+  "column": {
+    "exchanges": "Exchanges"
+
+  },
   "index": {
-    "title": "*I segnali di Borsa dei principali mercati europei",
-    "subtitle": "*Seleziona il mercato di tuo interesse!",
-    "discoverStocks": "*Scopri tutti i titoli >>"
+    "title": "*tradingradar.net",
+    "description": "*<em>...titoli sull'orlo di una crisi di nervi</em>. <br><br>tradingradar.net interroga in tempo reale le quotazioni delle principali azioni europee ed evidenzia i <em>titoli</em> che sono <em>in fase di rally</em>. <br>Trova i titoli azionari che stanno vivendo un <em>momento di forte espansione o di forte contrazione</em> e decidi la tua strategia. <br><br><em>Segui il mercato</em> e basa le tue azioni assecondando il momento!",
+    "section2": {
+      "title": "*Titoli in rally ogg <em>{{date}}</em>",
+      "rallyUpTitle": "*Titoli in rally rialzista",
+      "rallyDownTitle": "*Titoli in rally ribassista"
+    },
+    "section3": {
+      "title": "*Dettagli dei mercati",
+      "discover": "Scopri tutti i titoli >>"
+    }
   }
 }

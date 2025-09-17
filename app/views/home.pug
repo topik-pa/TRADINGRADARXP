@@ -1,14 +1,14 @@
 extends layout.pug
 
 block append meta
-  meta(name="og:title" content="")
-  meta(name="og:description" content="")
+  meta(name="og:title" content=__('views.home') + ' | ' + __('proj_name') )
+  meta(name="og:description" content=__('proj_description'))
   meta(name="og:image" content=og_image)
   meta(name="og:url" content=canonicalUrl)
 
-  title= __('Hello') 
-  meta(name="description" content=__('Hello'))
-  meta(name="keywords" content="")
+  title= __('home') + ' | ' + __('proj_name') 
+  meta(name="description" content=__('proj_description'))
+  meta(name="keywords" content="trading, radar")
 
   link(rel="canonical", href=canonicalUrl)
   each link in hreflangs
@@ -17,97 +17,118 @@ block append meta
 block main
   section(class="flex")
     div(class="rounded")
-      h1= __('index.title')
-      p= __('index.subtitle')
+      h1!= __('index.title')
+      p!= __('index.description')
     div(class="rounded")
-      h2 Cosa sono i titoli "in rally"
+      h2!= __('index.subtitle')
+      p!= __('index.rally')
 
   section
-    h2 Titoli in rally oggi lunedì 13 febbraio
+    h2!= __('index.section2.title', { date: new Date().toLocaleDateString('it-IT',{ weekday:'long', day:'numeric', month:'long' })})
     div
-      h3 Azioni in rally rialzista
+      h3= __('index.section2.rallyUpTitle')
       div(id="bests", class="bullet-wrap")
     div
-      h3 Azioni in rally ribassista
+      h3= __('index.section2.rallyDownTitle')
       div(id="worsts", class="bullet-wrap")
 
   section
-    h2 Dettagli dei mercati
+    h2= __('index.section3.title')
     div(class="cards")
       cmp-card(color="red")
-        span(slot="title")= __('euronextGlobal')
-        a(slot="image", title=__('euronextGlobal'), href="global")
+        span(slot="title")= __('exchanges.euronextGlobal')
+        a(slot="image", title=__('exchanges.euronextGlobal'), href="global")
           img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
-        span(slot="subtitle")= __('euronextGlobal')
+        span(slot="subtitle")= __('exchanges.euronextGlobal')
         span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
         span(slot="link")
-          a(href="#", title=__('euronextGlobal'))= __('index.discoverStocks')
+          a(href="#", title=__('exchanges.euronextGlobal'))= __('index.section3.discover')
 
       cmp-card(color="blue")
-        span(slot="title")= __('milanStockExchange')
-        a(slot="image", title=__('milanStockExchange'), href="milan")
+        span(slot="title")= __('exchanges.milanStockExchange')
+        a(slot="image", title=__('exchanges.milanStockExchange'), href="milan")
           img(src="/assets/images/exchanges/borsa-italiana.webp", class="cmp-card-slotted-img")
-        span(slot="subtitle")= __('milanStockExchange')
+        span(slot="subtitle")= __('exchanges.milanStockExchange')
         span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
         span(slot="link")
-          a(href="#", title=__('milanStockExchange'))= __('index.discoverStocks')
+          a(href="#", title=__('exchanges.milanStockExchange'))= __('index.section3.discover')
 
       cmp-card(color="yellow")
-        span(slot="title")= __('parisStockExchange')
-        a(slot="image", title=__('parisStockExchange'), href="paris")
+        span(slot="title")= __('exchanges.parisStockExchange')
+        a(slot="image", title=__('exchanges.parisStockExchange'), href="paris")
           img(src="/assets/images/exchanges/bourse_de_paris.webp", class="cmp-card-slotted-img")
-        span(slot="subtitle")= __('parisStockExchange')
+        span(slot="subtitle")= __('exchanges.parisStockExchange')
         span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
         span(slot="link")
-          a(href="#", title=__('parisStockExchange'))= __('index.discoverStocks')
+          a(href="#", title=__('exchanges.parisStockExchange'))= __('index.section3.discover')
 
       cmp-card(color="green")
-        span(slot="title")= __('osloStockExchange')
-        a(slot="image", title=__('osloStockExchange'), href="oslo")
+        span(slot="title")= __('exchanges.osloStockExchange')
+        a(slot="image", title=__('exchanges.osloStockExchange'), href="oslo")
           img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
-        span(slot="subtitle")= __('osloStockExchange')
+        span(slot="subtitle")= __('exchanges.osloStockExchange')
         span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
         span(slot="link")
-          a(href="#", title=__('osloStockExchange'))= __('index.discoverStocks')
+          a(href="#", title=__('exchanges.osloStockExchange'))= __('index.section3.discover')
 
       cmp-card(color="green")
-        span(slot="title")= __('amsterdamStockExchange')
-        a(slot="image", title=__('amsterdamStockExchange'), href="amsterdam")
+        span(slot="title")= __('exchanges.amsterdamStockExchange')
+        a(slot="image", title=__('exchanges.amsterdamStockExchange'), href="amsterdam")
           img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
-        span(slot="subtitle")= __('amsterdamStockExchange')
+        span(slot="subtitle")= __('exchanges.amsterdamStockExchange')
         span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
         span(slot="link")
-          a(href="#", title=__('amsterdamStockExchange'))= __('index.discoverStocks')
+          a(href="#", title=__('exchanges.amsterdamStockExchange'))= __('index.section3.discover')
 
       cmp-card(color="green")
-        span(slot="title")= __('brusselsStockExchange')
-        a(slot="image", title=__('brusselsStockExchange'), href="brussels")
+        span(slot="title")= __('exchanges.brusselsStockExchange')
+        a(slot="image", title=__('exchanges.brusselsStockExchange'), href="brussels")
           img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
-        span(slot="subtitle")= __('brusselsStockExchange')
+        span(slot="subtitle")= __('exchanges.brusselsStockExchange')
         span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
         span(slot="link")
-          a(href="#", title=__('brusselsStockExchange'))= __('index.discoverStocks')
+          a(href="#", title=__('exchanges.brusselsStockExchange'))= __('index.section3.discover')
 
       cmp-card(color="green")
-        span(slot="title")= __('lisbonStockExchange')
-        a(slot="image", title=__('lisbonStockExchange'), href="lisbon")
+        span(slot="title")= __('exchanges.lisbonStockExchange')
+        a(slot="image", title=__('exchanges.lisbonStockExchange'), href="lisbon")
           img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
-        span(slot="subtitle")= __('lisbonStockExchange')
+        span(slot="subtitle")= __('exchanges.lisbonStockExchange')
         span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
         span(slot="link")
-          a(href="#", title=__('lisbonStockExchange'))= __('index.discoverStocks')
+          a(href="#", title=__('exchanges.lisbonStockExchange'))= __('index.section3.discover')
 
       cmp-card(color="green")
-        span(slot="title")= __('dublinStockExchange')
-        a(slot="image", title=__('dublinStockExchange'), href="dublin")
+        span(slot="title")= __('exchanges.dublinStockExchange')
+        a(slot="image", title=__('exchanges.dublinStockExchange'), href="dublin")
           img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
-        span(slot="subtitle")= __('dublinStockExchange')
+        span(slot="subtitle")= __('exchanges.dublinStockExchange')
         span(slot="description") **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed commodo arcu, non venenatis eros.
         span(slot="link")
-          a(href="#", title=__('dublinStockExchange'))= __('index.discoverStocks')                        
+          a(href="#", title=__('exchanges.dublinStockExchange'))= __('index.section3.discover')                        
   
   section
     h2 Come operare: scegli i servizi di AVA trade
+    p(class="center") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit sem ante, eget lobortis lorem tincidunt et. Etiam vehicula odio nec lorem commodo efficitur. #[br]
+      script.avaJavaCode(type='text/javascript').
+        (function () {
+        const locale = "#{locale}"
+        const bannerMap = {
+          it: '36240',
+          en: '35669'
+        }
+        const url = `https://tracking.avapartner.com/impression/?affid=209215&html5Id=${bannerMap[locale]}&adTheme=770&campaign=214764&campaignName=Default%20Campaign&tag=209215`;
+        if (!window.aSC) window.aSC = 0;
+        window.aSC += 1;
+        const cIX = window.aSC - 1;
+        const ifr = document.createElement("iframe");
+        ifr.setAttribute("src", url + "&sid=" + Math.random());
+        ifr.setAttribute("frameborder", "0");
+        ifr.setAttribute("scrolling","no");
+        ifr.setAttribute("style", "width:640px;height:120px;");
+        const cP = document.getElementsByClassName("avaJavaCode")[cIX];
+        cP.parentNode.insertBefore(ifr, cP);
+        }());
 
   aside(id="disclaimer") #[em Attenzione: ] operare in Borsa e fare trading costituiscono #[em azioni ad alto rischio]. Le informazioni qui presentate non costituiscono una sollecitazione di acquisto o vendita di titoli azionari e si intendono #[em per puro uso informativo]. Il Portale Web tradingradar.net non si dichiara responsabile di un utilizzo improprio delle informazioni qui ottenute.
 

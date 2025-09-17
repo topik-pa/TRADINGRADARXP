@@ -1,8 +1,8 @@
 div(id="main-logo")
-  a(href=proj_url, title="Home page")
-    img(src="/assets/images/logo.webp", alt=proj_name+' logo', width="125", height="125")
+  a(href=proj_url, title= __('views.home'))
+    img(src="/assets/images/logo.webp", alt=proj_name + ' logo', width="125", height="125")
     div
       span trading
       span radar
       span .net
-      small= __('tagline')
+      small= __('proj_tagline')
