@@ -8,7 +8,7 @@ import Mailgun from 'mailgun.js'
 
 let alphabet
 if(process.env.NODE_ENV !== 'production') {
-  alphabet = 'A'
+  alphabet = 'ABC'
 } else {
   alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 }

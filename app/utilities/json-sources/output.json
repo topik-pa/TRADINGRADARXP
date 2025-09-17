@@ -258,5 +258,1815 @@
       "https://live.euronext.com/en/ajax/getPerformances/IE00B4BNMY34-BGEM",
       "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IE00B4BNMY34-BGEM/full"
     ]
+  },
+  {
+    "name": "ACCOR",
+    "isin": "FR0000120404",
+    "code": "AC",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000120404-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000120404-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000120404-XPAR/full"
+    ]
+  },
+  {
+    "name": "ACCSYS",
+    "isin": "GB00BQQFX454",
+    "code": "AXS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/GB00BQQFX454-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/GB00BQQFX454-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/GB00BQQFX454-XAMS/full"
+    ]
+  },
+  {
+    "name": "ACEA",
+    "isin": "IT0001207098",
+    "code": "ACE",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0001207098-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0001207098-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0001207098-MTAA/full"
+    ]
+  },
+  {
+    "name": "Acerinox",
+    "isin": "ES0132105018",
+    "code": "1ACX",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/ES0132105018-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/ES0132105018-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/ES0132105018-BGEM/full"
+    ]
+  },
+  {
+    "name": "ACHETER-LOUER.FR",
+    "isin": "FR0014011O84",
+    "code": "ALALO",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0014011O84-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0014011O84-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0014011O84-ALXP/full"
+    ]
+  },
+  {
+    "name": "ACINQUE",
+    "isin": "IT0001382024",
+    "code": "AC5",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0001382024-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0001382024-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0001382024-MTAA/full"
+    ]
+  },
+  {
+    "name": "ACKERMANS V.HAAREN",
+    "isin": "BE0003764785",
+    "code": "ACKB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0003764785-XBRU",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0003764785-XBRU",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0003764785-XBRU/full"
+    ]
+  },
+  {
+    "name": "ACM RESEARCH INC-C",
+    "isin": "US00108J1097",
+    "code": "1ACMR",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US00108J1097-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US00108J1097-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US00108J1097-BGEM/full"
+    ]
+  },
+  {
+    "name": "ACOMO",
+    "isin": "NL0000313286",
+    "code": "ACOMO",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL0000313286-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/NL0000313286-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL0000313286-XAMS/full"
+    ]
+  },
+  {
+    "name": "ACQUAZZURRA",
+    "isin": "IT0005443061",
+    "code": "ACQ",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0005443061-EXGM",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0005443061-EXGM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0005443061-EXGM/full"
+    ]
+  },
+  {
+    "name": "ACS ACTIVIDADES",
+    "isin": "ES0167050915",
+    "code": "1ACS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/ES0167050915-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/ES0167050915-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/ES0167050915-BGEM/full"
+    ]
+  },
+  {
+    "name": "ACTEOS",
+    "isin": "FR0000076861",
+    "code": "EOS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000076861-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000076861-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000076861-XPAR/full"
+    ]
+  },
+  {
+    "name": "ACTIA GROUP",
+    "isin": "FR0000076655",
+    "code": "ALATI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000076655-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000076655-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000076655-ALXP/full"
+    ]
+  },
+  {
+    "name": "ACTIVIUM GROUP",
+    "isin": "FR0010979377",
+    "code": "MLACT",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0010979377-XMLI",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0010979377-XMLI",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0010979377-XMLI/full"
+    ]
+  },
+  {
+    "name": "ADC SIIC",
+    "isin": "BE0974269012",
+    "code": "ALDV",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0974269012-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0974269012-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0974269012-XPAR/full"
+    ]
+  },
+  {
+    "name": "AddTech",
+    "isin": "SE0014781795",
+    "code": "1ADDT",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/SE0014781795-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/SE0014781795-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/SE0014781795-BGEM/full"
+    ]
+  },
+  {
+    "name": "ADEC INNOVATIONS",
+    "isin": "NL0015002K91",
+    "code": "MLADE",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL0015002K91-MLXB",
+      "https://live.euronext.com/en/ajax/getPerformances/NL0015002K91-MLXB",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL0015002K91-MLXB/full"
+    ]
+  },
+  {
+    "name": "ADECCO",
+    "isin": "CH0012138605",
+    "code": "1ADEN",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/CH0012138605-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/CH0012138605-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/CH0012138605-BGEM/full"
+    ]
+  },
+  {
+    "name": "ADEUNIS",
+    "isin": "FR0013284627",
+    "code": "ALARF",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0013284627-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0013284627-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0013284627-ALXP/full"
+    ]
+  },
+  {
+    "name": "ADIDAS",
+    "isin": "DE000A1EWWW0",
+    "code": "1ADS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/DE000A1EWWW0-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/DE000A1EWWW0-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/DE000A1EWWW0-BGEM/full"
+    ]
+  },
+  {
+    "name": "ADLER GROUP",
+    "isin": "LU1250154413",
+    "code": "1ADJ",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/LU1250154413-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/LU1250154413-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/LU1250154413-BGEM/full"
+    ]
+  },
+  {
+    "name": "ADOBE",
+    "isin": "US00724F1012",
+    "code": "1ADBE",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US00724F1012-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US00724F1012-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US00724F1012-BGEM/full"
+    ]
+  },
+  {
+    "name": "ADOCIA",
+    "isin": "FR0011184241",
+    "code": "ADOC",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0011184241-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0011184241-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0011184241-XPAR/full"
+    ]
+  },
+  {
+    "name": "ADOCIA BSA",
+    "isin": "FR001400XVZ4",
+    "code": "ADOBS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR001400XVZ4-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR001400XVZ4-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR001400XVZ4-ALXP/full"
+    ]
+  },
+  {
+    "name": "ADOMOS",
+    "isin": "FR001400UT31",
+    "code": "ALADO",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR001400UT31-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR001400UT31-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR001400UT31-ALXP/full"
+    ]
+  },
+  {
+    "name": "ADP",
+    "isin": "FR0010340141",
+    "code": "ADP",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0010340141-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0010340141-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0010340141-XPAR/full"
+    ]
+  },
+  {
+    "name": "ADS MARITIME HOLD",
+    "isin": "CY0108052115",
+    "code": "ADS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/CY0108052115-MERK",
+      "https://live.euronext.com/en/ajax/getPerformances/CY0108052115-MERK",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/CY0108052115-MERK/full"
+    ]
+  },
+  {
+    "name": "ADUX",
+    "isin": "FR0012821890",
+    "code": "ALDUX",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0012821890-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0012821890-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0012821890-ALXP/full"
+    ]
+  },
+  {
+    "name": "ADVANCED MICRO DEV",
+    "isin": "US0079031078",
+    "code": "1AMD",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US0079031078-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US0079031078-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US0079031078-BGEM/full"
+    ]
+  },
+  {
+    "name": "ADVENTURE",
+    "isin": "IT0005607715",
+    "code": "ADV",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0005607715-EXGM",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0005607715-EXGM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0005607715-EXGM/full"
+    ]
+  },
+  {
+    "name": "ADVICENNE",
+    "isin": "FR0013296746",
+    "code": "ALDVI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0013296746-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0013296746-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0013296746-ALXP/full"
+    ]
+  },
+  {
+    "name": "ADVINI",
+    "isin": "FR0000053043",
+    "code": "ALAVI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000053043-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000053043-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000053043-ALXP/full"
+    ]
+  },
+  {
+    "name": "ADYEN",
+    "isin": "NL0012969182",
+    "code": "ADYEN",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL0012969182-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/NL0012969182-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL0012969182-XAMS/full"
+    ]
+  },
+  {
+    "name": "AEDES",
+    "isin": "IT0005349052",
+    "code": "AEDES",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0005349052-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0005349052-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0005349052-MTAA/full"
+    ]
+  },
+  {
+    "name": "AEDIFICA",
+    "isin": "BE0003851681",
+    "code": "AED",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0003851681-XBRU",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0003851681-XBRU",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0003851681-XBRU/full"
+    ]
+  },
+  {
+    "name": "AEFFE",
+    "isin": "IT0001384590",
+    "code": "AEF",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0001384590-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0001384590-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0001384590-MTAA/full"
+    ]
+  },
+  {
+    "name": "AEGON",
+    "isin": "BMG0112X1056",
+    "code": "AGN",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BMG0112X1056-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/BMG0112X1056-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BMG0112X1056-XAMS/full"
+    ]
+  },
+  {
+    "name": "AELIS FARMA",
+    "isin": "FR0014007ZB4",
+    "code": "AELIS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0014007ZB4-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0014007ZB4-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0014007ZB4-XPAR/full"
+    ]
+  },
+  {
+    "name": "AENA SME",
+    "isin": "ES0105046017",
+    "code": "1AENA",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/ES0105046017-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/ES0105046017-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/ES0105046017-BGEM/full"
+    ]
+  },
+  {
+    "name": "AERKOMM INC",
+    "isin": "US00774B2088",
+    "code": "AKOM",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US00774B2088-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/US00774B2088-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US00774B2088-XPAR/full"
+    ]
+  },
+  {
+    "name": "AEROPORTO G. M. BO",
+    "isin": "IT0001006128",
+    "code": "ADB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0001006128-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0001006128-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0001006128-MTAA/full"
+    ]
+  },
+  {
+    "name": "AEROVIRONMENT INC",
+    "isin": "US0080731088",
+    "code": "1AVAV",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US0080731088-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US0080731088-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US0080731088-BGEM/full"
+    ]
+  },
+  {
+    "name": "B&C SPEAKERS",
+    "isin": "IT0001268561",
+    "code": "BEC",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0001268561-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0001268561-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0001268561-MTAA/full"
+    ]
+  },
+  {
+    "name": "B&S Group",
+    "isin": "LU1789205884",
+    "code": "BSGR",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/LU1789205884-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/LU1789205884-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/LU1789205884-XAMS/full"
+    ]
+  },
+  {
+    "name": "B.COM.PORTUGUES",
+    "isin": "PTBCP0AM0015",
+    "code": "BCP",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/PTBCP0AM0015-XLIS",
+      "https://live.euronext.com/en/ajax/getPerformances/PTBCP0AM0015-XLIS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/PTBCP0AM0015-XLIS/full"
+    ]
+  },
+  {
+    "name": "B.F.",
+    "isin": "IT0005187460",
+    "code": "BFG",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0005187460-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0005187460-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0005187460-MTAA/full"
+    ]
+  },
+  {
+    "name": "B2 Impact",
+    "isin": "NO0010633951",
+    "code": "B2I",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NO0010633951-XOSL",
+      "https://live.euronext.com/en/ajax/getPerformances/NO0010633951-XOSL",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NO0010633951-XOSL/full"
+    ]
+  },
+  {
+    "name": "BAIKOWSKI",
+    "isin": "FR0013384369",
+    "code": "ALBKK",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0013384369-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0013384369-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0013384369-ALXP/full"
+    ]
+  },
+  {
+    "name": "BAINS MER MONACO",
+    "isin": "MC0000031187",
+    "code": "BAIN",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/MC0000031187-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/MC0000031187-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/MC0000031187-XPAR/full"
+    ]
+  },
+  {
+    "name": "BAKKAFROST",
+    "isin": "FO0000000179",
+    "code": "BAKKA",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FO0000000179-XOSL",
+      "https://live.euronext.com/en/ajax/getPerformances/FO0000000179-XOSL",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FO0000000179-XOSL/full"
+    ]
+  },
+  {
+    "name": "Ball Corp",
+    "isin": "US0584981064",
+    "code": "1BALL",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US0584981064-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US0584981064-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US0584981064-BGEM/full"
+    ]
+  },
+  {
+    "name": "BALTIC SEA PROP",
+    "isin": "NO0010810476",
+    "code": "BALT",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NO0010810476-MERK",
+      "https://live.euronext.com/en/ajax/getPerformances/NO0010810476-MERK",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NO0010810476-MERK/full"
+    ]
+  },
+  {
+    "name": "BALYO",
+    "isin": "FR0013258399",
+    "code": "BALYO",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0013258399-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0013258399-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0013258399-XPAR/full"
+    ]
+  },
+  {
+    "name": "BAM GROEP KON",
+    "isin": "NL0000337319",
+    "code": "BAMNB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL0000337319-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/NL0000337319-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL0000337319-XAMS/full"
+    ]
+  },
+  {
+    "name": "BANCA GENERALI",
+    "isin": "IT0001031084",
+    "code": "BGN",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0001031084-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0001031084-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0001031084-MTAA/full"
+    ]
+  },
+  {
+    "name": "BANCA IFIS",
+    "isin": "IT0003188064",
+    "code": "IF",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0003188064-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0003188064-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0003188064-MTAA/full"
+    ]
+  },
+  {
+    "name": "BANCA MEDIOLANUM",
+    "isin": "IT0004776628",
+    "code": "BMED",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0004776628-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0004776628-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0004776628-MTAA/full"
+    ]
+  },
+  {
+    "name": "BANCA MPS",
+    "isin": "IT0005508921",
+    "code": "BMPS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0005508921-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0005508921-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0005508921-MTAA/full"
+    ]
+  },
+  {
+    "name": "BANCA SISTEMA",
+    "isin": "IT0003173629",
+    "code": "BST",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0003173629-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0003173629-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0003173629-MTAA/full"
+    ]
+  },
+  {
+    "name": "BANCO BPM",
+    "isin": "IT0005218380",
+    "code": "BAMI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0005218380-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0005218380-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0005218380-MTAA/full"
+    ]
+  },
+  {
+    "name": "BANCO DE SABADELL",
+    "isin": "ES0113860A34",
+    "code": "1SAB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/ES0113860A34-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/ES0113860A34-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/ES0113860A34-BGEM/full"
+    ]
+  },
+  {
+    "name": "BANCO SANTANDER",
+    "isin": "ES0113900J37",
+    "code": "1SANX",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/ES0113900J37-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/ES0113900J37-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/ES0113900J37-BGEM/full"
+    ]
+  },
+  {
+    "name": "BANIJAY GROUP",
+    "isin": "NL0015000X07",
+    "code": "BNJ",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL0015000X07-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/NL0015000X07-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL0015000X07-XAMS/full"
+    ]
+  },
+  {
+    "name": "BANIJAY GROUP WARR",
+    "isin": "NL0015000H56",
+    "code": "BNJW",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL0015000H56-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/NL0015000H56-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL0015000H56-XAMS/full"
+    ]
+  },
+  {
+    "name": "BANIMMO A",
+    "isin": "BE0003870871",
+    "code": "BANI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0003870871-XBRU",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0003870871-XBRU",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0003870871-XBRU/full"
+    ]
+  },
+  {
+    "name": "BANK OF AMERICA",
+    "isin": "US0605051046",
+    "code": "1BAC",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US0605051046-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US0605051046-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US0605051046-BGEM/full"
+    ]
+  },
+  {
+    "name": "BANK OF IRELAND GP",
+    "isin": "IE00BD1RP616",
+    "code": "BIRG",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IE00BD1RP616-XMSM",
+      "https://live.euronext.com/en/ajax/getPerformances/IE00BD1RP616-XMSM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IE00BD1RP616-XMSM/full"
+    ]
+  },
+  {
+    "name": "BANK OZK",
+    "isin": "US06417N1037",
+    "code": "1OZK",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US06417N1037-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US06417N1037-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US06417N1037-BGEM/full"
+    ]
+  },
+  {
+    "name": "Bankinter",
+    "isin": "ES0113679I37",
+    "code": "1BKT",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/ES0113679I37-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/ES0113679I37-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/ES0113679I37-BGEM/full"
+    ]
+  },
+  {
+    "name": "BANQUP GROUP",
+    "isin": "BE0974371032",
+    "code": "BANQ",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0974371032-XBRU",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0974371032-XBRU",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0974371032-XBRU/full"
+    ]
+  },
+  {
+    "name": "BARBARA BUI",
+    "isin": "FR0000062788",
+    "code": "BUI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000062788-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000062788-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000062788-XPAR/full"
+    ]
+  },
+  {
+    "name": "BARCO",
+    "isin": "BE0974362940",
+    "code": "BAR",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0974362940-XBRU",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0974362940-XBRU",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0974362940-XBRU/full"
+    ]
+  },
+  {
+    "name": "BARINGS CORE SPAIN",
+    "isin": "ES0105362000",
+    "code": "MLBAR",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/ES0105362000-XMLI",
+      "https://live.euronext.com/en/ajax/getPerformances/ES0105362000-XMLI",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/ES0105362000-XMLI/full"
+    ]
+  },
+  {
+    "name": "BARRAMUNDI GROUP",
+    "isin": "SGXZ33675836",
+    "code": "BARRA",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/SGXZ33675836-MERK",
+      "https://live.euronext.com/en/ajax/getPerformances/SGXZ33675836-MERK",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/SGXZ33675836-MERK/full"
+    ]
+  },
+  {
+    "name": "BARRY CALLEBAUT",
+    "isin": "CH0009002962",
+    "code": "1BARN",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/CH0009002962-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/CH0009002962-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/CH0009002962-BGEM/full"
+    ]
+  },
+  {
+    "name": "BASF",
+    "isin": "DE000BASF111",
+    "code": "1BAS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/DE000BASF111-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/DE000BASF111-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/DE000BASF111-BGEM/full"
+    ]
+  },
+  {
+    "name": "BASIC-FIT",
+    "isin": "NL0011872650",
+    "code": "BFIT",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL0011872650-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/NL0011872650-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL0011872650-XAMS/full"
+    ]
+  },
+  {
+    "name": "BASICNET",
+    "isin": "IT0001033700",
+    "code": "BAN",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0001033700-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0001033700-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0001033700-MTAA/full"
+    ]
+  },
+  {
+    "name": "BASSAC",
+    "isin": "FR0004023208",
+    "code": "BASS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0004023208-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0004023208-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0004023208-XPAR/full"
+    ]
+  },
+  {
+    "name": "BASTIDE LE CONFORT",
+    "isin": "FR0000035370",
+    "code": "BLC",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000035370-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000035370-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000035370-XPAR/full"
+    ]
+  },
+  {
+    "name": "BASTOGI SPA",
+    "isin": "IT0004412497",
+    "code": "B",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0004412497-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0004412497-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0004412497-MTAA/full"
+    ]
+  },
+  {
+    "name": "BAWAG Group",
+    "isin": "AT0000BAWAG2",
+    "code": "1BGA",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/AT0000BAWAG2-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/AT0000BAWAG2-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/AT0000BAWAG2-BGEM/full"
+    ]
+  },
+  {
+    "name": "BAXTER INTERN",
+    "isin": "US0718131099",
+    "code": "1BAX",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US0718131099-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US0718131099-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US0718131099-BGEM/full"
+    ]
+  },
+  {
+    "name": "BAYER",
+    "isin": "DE000BAY0017",
+    "code": "1BAYN",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/DE000BAY0017-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/DE000BAY0017-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/DE000BAY0017-BGEM/full"
+    ]
+  },
+  {
+    "name": "BBVA",
+    "isin": "ES0113211835",
+    "code": "1BBVA",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/ES0113211835-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/ES0113211835-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/ES0113211835-BGEM/full"
+    ]
+  },
+  {
+    "name": "BCA POP SONDRIO",
+    "isin": "IT0000784196",
+    "code": "BPSO",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0000784196-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0000784196-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0000784196-MTAA/full"
+    ]
+  },
+  {
+    "name": "BCA PROFILO",
+    "isin": "IT0001073045",
+    "code": "PRO",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0001073045-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0001073045-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0001073045-MTAA/full"
+    ]
+  },
+  {
+    "name": "BCO DESIO BRIANZA",
+    "isin": "IT0001041000",
+    "code": "BDB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0001041000-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0001041000-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0001041000-MTAA/full"
+    ]
+  },
+  {
+    "name": "BE SEMICONDUCTOR",
+    "isin": "NL0012866412",
+    "code": "BESI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL0012866412-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/NL0012866412-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL0012866412-XAMS/full"
+    ]
+  },
+  {
+    "name": "BEBO HEALTH",
+    "isin": "CH1148983609",
+    "code": "MLBBO",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/CH1148983609-XMLI",
+      "https://live.euronext.com/en/ajax/getPerformances/CH1148983609-XMLI",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/CH1148983609-XMLI/full"
+    ]
+  },
+  {
+    "name": "Bechtle",
+    "isin": "DE0005158703",
+    "code": "1BC8",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/DE0005158703-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/DE0005158703-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/DE0005158703-BGEM/full"
+    ]
+  },
+  {
+    "name": "BECTON, DICKINSON",
+    "isin": "US0758871091",
+    "code": "1BDX",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US0758871091-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US0758871091-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US0758871091-BGEM/full"
+    ]
+  },
+  {
+    "name": "BEEWIZE",
+    "isin": "IT0001487047",
+    "code": "BWZ",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0001487047-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0001487047-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0001487047-MTAA/full"
+    ]
+  },
+  {
+    "name": "BEIERSDORF",
+    "isin": "DE0005200000",
+    "code": "1BEI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/DE0005200000-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/DE0005200000-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/DE0005200000-BGEM/full"
+    ]
+  },
+  {
+    "name": "BEKAERT",
+    "isin": "BE0974258874",
+    "code": "BEKB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0974258874-XBRU",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0974258874-XBRU",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0974258874-XBRU/full"
+    ]
+  },
+  {
+    "name": "BELIMO",
+    "isin": "CH1101098163",
+    "code": "1BEAN",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/CH1101098163-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/CH1101098163-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/CH1101098163-BGEM/full"
+    ]
+  },
+  {
+    "name": "BELLINI NAUTICA",
+    "isin": "IT0005497042",
+    "code": "BELL",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0005497042-EXGM",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0005497042-EXGM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0005497042-EXGM/full"
+    ]
+  },
+  {
+    "name": "BELUGA",
+    "isin": "BE0003723377",
+    "code": "BELU",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0003723377-VPXB",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0003723377-VPXB",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0003723377-VPXB/full"
+    ]
+  },
+  {
+    "name": "BELYSSE GROUP",
+    "isin": "BE0974314461",
+    "code": "BELYS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0974314461-XBRU",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0974314461-XBRU",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0974314461-XBRU/full"
+    ]
+  },
+  {
+    "name": "BENETEAU",
+    "isin": "FR0000035164",
+    "code": "BEN",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000035164-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000035164-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000035164-XPAR/full"
+    ]
+  },
+  {
+    "name": "BENFICA",
+    "isin": "PTSLB0AM0010",
+    "code": "SLBEN",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/PTSLB0AM0010-XLIS",
+      "https://live.euronext.com/en/ajax/getPerformances/PTSLB0AM0010-XLIS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/PTSLB0AM0010-XLIS/full"
+    ]
+  },
+  {
+    "name": "BENTLEY SYSTEMS IN",
+    "isin": "US08265T2087",
+    "code": "1BSY",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US08265T2087-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US08265T2087-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US08265T2087-BGEM/full"
+    ]
+  },
+  {
+    "name": "BERGEN CARBON SOL",
+    "isin": "NO0010950249",
+    "code": "BCS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NO0010950249-MERK",
+      "https://live.euronext.com/en/ajax/getPerformances/NO0010950249-MERK",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NO0010950249-MERK/full"
+    ]
+  },
+  {
+    "name": "BERGENBIO",
+    "isin": "NO0013251173",
+    "code": "BGBIO",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NO0013251173-XOSL",
+      "https://live.euronext.com/en/ajax/getPerformances/NO0013251173-XOSL",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NO0013251173-XOSL/full"
+    ]
+  },
+  {
+    "name": "BERKSHIRE HATHAWAY",
+    "isin": "US0846707026",
+    "code": "1BRK",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US0846707026-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US0846707026-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US0846707026-BGEM/full"
+    ]
+  },
+  {
+    "name": "BERNARD LOISEAU",
+    "isin": "FR0000066961",
+    "code": "ALDBL",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000066961-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000066961-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000066961-ALXP/full"
+    ]
+  },
+  {
+    "name": "C. LATTE D'ITALIA",
+    "isin": "IT0003023980",
+    "code": "CLI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0003023980-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0003023980-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0003023980-MTAA/full"
+    ]
+  },
+  {
+    "name": "C3.ai Inc",
+    "isin": "US12468P1049",
+    "code": "1C3",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US12468P1049-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US12468P1049-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US12468P1049-BGEM/full"
+    ]
+  },
+  {
+    "name": "CA TOULOUSE 31 CCI",
+    "isin": "FR0000045544",
+    "code": "CAT31",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000045544-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000045544-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000045544-XPAR/full"
+    ]
+  },
+  {
+    "name": "CABASSE",
+    "isin": "FR001400DIY6",
+    "code": "ALCAB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR001400DIY6-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR001400DIY6-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR001400DIY6-ALXP/full"
+    ]
+  },
+  {
+    "name": "CABKA",
+    "isin": "NL00150000S7",
+    "code": "CABKA",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL00150000S7-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/NL00150000S7-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL00150000S7-XAMS/full"
+    ]
+  },
+  {
+    "name": "CABKA EUR 12W",
+    "isin": "NL00150000U3",
+    "code": "DSCW2",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL00150000U3-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/NL00150000U3-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL00150000U3-XAMS/full"
+    ]
+  },
+  {
+    "name": "CABKA EUR 13W",
+    "isin": "NL00150000V1",
+    "code": "DSCW3",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL00150000V1-XAMS",
+      "https://live.euronext.com/en/ajax/getPerformances/NL00150000V1-XAMS",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL00150000V1-XAMS/full"
+    ]
+  },
+  {
+    "name": "CADELER",
+    "isin": "DK0061412772",
+    "code": "CADLR",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/DK0061412772-XOSL",
+      "https://live.euronext.com/en/ajax/getPerformances/DK0061412772-XOSL",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/DK0061412772-XOSL/full"
+    ]
+  },
+  {
+    "name": "Cadence Design",
+    "isin": "US1273871087",
+    "code": "1CDNS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US1273871087-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US1273871087-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US1273871087-BGEM/full"
+    ]
+  },
+  {
+    "name": "CAFOM",
+    "isin": "FR0010151589",
+    "code": "ALCAF",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0010151589-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0010151589-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0010151589-ALXP/full"
+    ]
+  },
+  {
+    "name": "CAIRN HOMES PLC",
+    "isin": "IE00BWY4ZF18",
+    "code": "C5H",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IE00BWY4ZF18-XMSM",
+      "https://live.euronext.com/en/ajax/getPerformances/IE00BWY4ZF18-XMSM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IE00BWY4ZF18-XMSM/full"
+    ]
+  },
+  {
+    "name": "CAIRO COMMUNICAT",
+    "isin": "IT0004329733",
+    "code": "CAI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0004329733-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0004329733-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0004329733-MTAA/full"
+    ]
+  },
+  {
+    "name": "CAIXABANK",
+    "isin": "ES0140609019",
+    "code": "1CABK",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/ES0140609019-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/ES0140609019-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/ES0140609019-BGEM/full"
+    ]
+  },
+  {
+    "name": "CAL-MAINE FOODS IN",
+    "isin": "US1280302027",
+    "code": "1CALM",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US1280302027-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US1280302027-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US1280302027-BGEM/full"
+    ]
+  },
+  {
+    "name": "CALEFFI",
+    "isin": "IT0003025019",
+    "code": "CLF",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0003025019-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0003025019-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0003025019-MTAA/full"
+    ]
+  },
+  {
+    "name": "CALIBRE",
+    "isin": "FR0014004QR6",
+    "code": "ALIBR",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0014004QR6-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0014004QR6-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0014004QR6-ALXP/full"
+    ]
+  },
+  {
+    "name": "CALIBRE BSA K1",
+    "isin": "FR0013507977",
+    "code": "IBRK1",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0013507977-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0013507977-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0013507977-ALXP/full"
+    ]
+  },
+  {
+    "name": "CALIBRE BSA K2A",
+    "isin": "FR0013507985",
+    "code": "IBRKA",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0013507985-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0013507985-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0013507985-ALXP/full"
+    ]
+  },
+  {
+    "name": "CALIBRE BSA K2B",
+    "isin": "FR0013508009",
+    "code": "IBRKB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0013508009-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0013508009-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0013508009-ALXP/full"
+    ]
+  },
+  {
+    "name": "CALTAGIRONE",
+    "isin": "IT0003127930",
+    "code": "CALT",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0003127930-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0003127930-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0003127930-MTAA/full"
+    ]
+  },
+  {
+    "name": "CALTAGIRONE EDIT",
+    "isin": "IT0001472171",
+    "code": "CED",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0001472171-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0001472171-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0001472171-MTAA/full"
+    ]
+  },
+  {
+    "name": "CAMBI",
+    "isin": "NO0010078850",
+    "code": "CAMBI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NO0010078850-MERK",
+      "https://live.euronext.com/en/ajax/getPerformances/NO0010078850-MERK",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NO0010078850-MERK/full"
+    ]
+  },
+  {
+    "name": "CAMBODGE NOM.",
+    "isin": "FR001400SUB7",
+    "code": "CBDG",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR001400SUB7-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR001400SUB7-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR001400SUB7-XPAR/full"
+    ]
+  },
+  {
+    "name": "CAMPARI",
+    "isin": "NL0015435975",
+    "code": "CPR",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL0015435975-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/NL0015435975-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL0015435975-MTAA/full"
+    ]
+  },
+  {
+    "name": "CAMPINE",
+    "isin": "BE0003825420",
+    "code": "CAMB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0003825420-XBRU",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0003825420-XBRU",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0003825420-XBRU/full"
+    ]
+  },
+  {
+    "name": "CANDELA INVEST",
+    "isin": "BE0974298300",
+    "code": "CAND",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0974298300-ALXB",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0974298300-ALXB",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0974298300-ALXB/full"
+    ]
+  },
+  {
+    "name": "CAPELLI",
+    "isin": "FR0012969095",
+    "code": "ALCAP",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0012969095-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0012969095-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0012969095-ALXP/full"
+    ]
+  },
+  {
+    "name": "CAPGEMINI",
+    "isin": "FR0000125338",
+    "code": "CAP",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000125338-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000125338-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000125338-XPAR/full"
+    ]
+  },
+  {
+    "name": "CAPITAL B",
+    "isin": "FR0011053636",
+    "code": "ALCPB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0011053636-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0011053636-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0011053636-ALXP/full"
+    ]
+  },
+  {
+    "name": "CAPITAL B BSA 26",
+    "isin": "FR001400YPQ3",
+    "code": "CPBBS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR001400YPQ3-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR001400YPQ3-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR001400YPQ3-ALXP/full"
+    ]
+  },
+  {
+    "name": "Capital One Fin",
+    "isin": "US14040H1059",
+    "code": "1COF",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US14040H1059-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US14040H1059-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US14040H1059-BGEM/full"
+    ]
+  },
+  {
+    "name": "CAPSOL TECHNOLOGI",
+    "isin": "NO0010923121",
+    "code": "CAPSL",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NO0010923121-XOSL",
+      "https://live.euronext.com/en/ajax/getPerformances/NO0010923121-XOSL",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NO0010923121-XOSL/full"
+    ]
+  },
+  {
+    "name": "CARBIOS",
+    "isin": "FR0011648716",
+    "code": "ALCRB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0011648716-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0011648716-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0011648716-ALXP/full"
+    ]
+  },
+  {
+    "name": "Cardinal Health",
+    "isin": "US14149Y1082",
+    "code": "1CAH",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US14149Y1082-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US14149Y1082-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US14149Y1082-BGEM/full"
+    ]
+  },
+  {
+    "name": "CARE PROPERTY INV.",
+    "isin": "BE0974273055",
+    "code": "CPINV",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0974273055-XBRU",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0974273055-XBRU",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0974273055-XBRU/full"
+    ]
+  },
+  {
+    "name": "CAREL INDUSTRIES",
+    "isin": "IT0005331019",
+    "code": "CRL",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0005331019-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0005331019-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0005331019-MTAA/full"
+    ]
+  },
+  {
+    "name": "CARL ZEISS MEDITEC",
+    "isin": "DE0005313704",
+    "code": "1AFX",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/DE0005313704-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/DE0005313704-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/DE0005313704-BGEM/full"
+    ]
+  },
+  {
+    "name": "CARLYLE GROUP",
+    "isin": "US14316J1088",
+    "code": "1CG",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US14316J1088-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US14316J1088-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US14316J1088-BGEM/full"
+    ]
+  },
+  {
+    "name": "CARMAT",
+    "isin": "FR0010907956",
+    "code": "ALCAR",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0010907956-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0010907956-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0010907956-ALXP/full"
+    ]
+  },
+  {
+    "name": "CARMILA",
+    "isin": "FR0010828137",
+    "code": "CARM",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0010828137-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0010828137-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0010828137-XPAR/full"
+    ]
+  },
+  {
+    "name": "CARREFOUR",
+    "isin": "FR0000120172",
+    "code": "CA",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000120172-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000120172-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000120172-XPAR/full"
+    ]
+  },
+  {
+    "name": "Carrier Global",
+    "isin": "US14448C1045",
+    "code": "1CARR",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US14448C1045-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US14448C1045-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US14448C1045-BGEM/full"
+    ]
+  },
+  {
+    "name": "CARVANA CO",
+    "isin": "US1468691027",
+    "code": "1CVNA",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US1468691027-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US1468691027-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US1468691027-BGEM/full"
+    ]
+  },
+  {
+    "name": "CASINO BSA3",
+    "isin": "FR001400OJ98",
+    "code": "COBS3",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR001400OJ98-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR001400OJ98-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR001400OJ98-XPAR/full"
+    ]
+  },
+  {
+    "name": "CASINO GUICHARD",
+    "isin": "FR001400OKR3",
+    "code": "CO",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR001400OKR3-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR001400OKR3-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR001400OKR3-XPAR/full"
+    ]
+  },
+  {
+    "name": "CASTA DIVA GROUP",
+    "isin": "IT0005003782",
+    "code": "CDG",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0005003782-EXGM",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0005003782-EXGM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0005003782-EXGM/full"
+    ]
+  },
+  {
+    "name": "CATANA GROUP",
+    "isin": "FR0010193052",
+    "code": "ALCAT",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0010193052-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0010193052-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0010193052-ALXP/full"
+    ]
+  },
+  {
+    "name": "CATERING INTL SCES",
+    "isin": "FR0000064446",
+    "code": "ALCIS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000064446-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000064446-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000064446-ALXP/full"
+    ]
+  },
+  {
+    "name": "CATERPILLAR",
+    "isin": "US1491231015",
+    "code": "1CAT",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US1491231015-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US1491231015-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US1491231015-BGEM/full"
+    ]
+  },
+  {
+    "name": "CAVENDISH HYDROGEN",
+    "isin": "NO0013219535",
+    "code": "CAVEN",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NO0013219535-XOSL",
+      "https://live.euronext.com/en/ajax/getPerformances/NO0013219535-XOSL",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NO0013219535-XOSL/full"
+    ]
+  },
+  {
+    "name": "CBI",
+    "isin": "FR0014007LW0",
+    "code": "ALCBI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0014007LW0-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0014007LW0-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0014007LW0-ALXP/full"
+    ]
+  },
+  {
+    "name": "CBI BSA A",
+    "isin": "FR001400O416",
+    "code": "CBBSA",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR001400O416-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR001400O416-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR001400O416-ALXP/full"
+    ]
+  },
+  {
+    "name": "CBI BSA B",
+    "isin": "FR001400O408",
+    "code": "CBSAB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR001400O408-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR001400O408-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR001400O408-ALXP/full"
+    ]
+  },
+  {
+    "name": "CBO TERRITORIA",
+    "isin": "FR0010193979",
+    "code": "CBOT",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0010193979-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0010193979-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0010193979-XPAR/full"
+    ]
+  },
+  {
+    "name": "Cboe Global",
+    "isin": "US12503M1080",
+    "code": "1CBOE",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US12503M1080-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US12503M1080-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US12503M1080-BGEM/full"
+    ]
+  },
+  {
+    "name": "CBRE Group Inc",
+    "isin": "US12504L1098",
+    "code": "1CBRE",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US12504L1098-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US12504L1098-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US12504L1098-BGEM/full"
+    ]
+  },
+  {
+    "name": "CDW Corp/DE",
+    "isin": "US12514G1085",
+    "code": "1CDW",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US12514G1085-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US12514G1085-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US12514G1085-BGEM/full"
+    ]
+  },
+  {
+    "name": "CECONOMY",
+    "isin": "DE0007257503",
+    "code": "1CEC",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/DE0007257503-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/DE0007257503-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/DE0007257503-BGEM/full"
+    ]
+  },
+  {
+    "name": "CEGEDIM",
+    "isin": "FR0000053506",
+    "code": "ALCGM",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000053506-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000053506-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000053506-ALXP/full"
+    ]
+  },
+  {
+    "name": "Celanese Corp",
+    "isin": "US1508701034",
+    "code": "1CE",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US1508701034-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US1508701034-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US1508701034-BGEM/full"
+    ]
+  },
+  {
+    "name": "CELLECTIS",
+    "isin": "FR0010425595",
+    "code": "ALCLS",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0010425595-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0010425595-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0010425595-ALXP/full"
+    ]
+  },
+  {
+    "name": "Cellnex Telecom",
+    "isin": "ES0105066007",
+    "code": "1CLNX",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/ES0105066007-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/ES0105066007-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/ES0105066007-BGEM/full"
+    ]
+  },
+  {
+    "name": "CELLULARLINE",
+    "isin": "IT0005244618",
+    "code": "CELL",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0005244618-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0005244618-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0005244618-MTAA/full"
+    ]
+  },
+  {
+    "name": "CELYAD ONCOLOGY",
+    "isin": "BE0974260896",
+    "code": "CYAD",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0974260896-XBRU",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0974260896-XBRU",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0974260896-XBRU/full"
+    ]
+  },
+  {
+    "name": "CEMBRE",
+    "isin": "IT0001128047",
+    "code": "CMB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/IT0001128047-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/IT0001128047-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/IT0001128047-MTAA/full"
+    ]
+  },
+  {
+    "name": "CEMENTIR HOLDING",
+    "isin": "NL0013995087",
+    "code": "CEM",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/NL0013995087-MTAA",
+      "https://live.euronext.com/en/ajax/getPerformances/NL0013995087-MTAA",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/NL0013995087-MTAA/full"
+    ]
+  },
+  {
+    "name": "Cencora Inc",
+    "isin": "US03073E1055",
+    "code": "1COR",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US03073E1055-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US03073E1055-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US03073E1055-BGEM/full"
+    ]
+  },
+  {
+    "name": "CENERGY",
+    "isin": "BE0974303357",
+    "code": "CENER",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0974303357-XBRU",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0974303357-XBRU",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0974303357-XBRU/full"
+    ]
+  },
+  {
+    "name": "CENTENE",
+    "isin": "US15135B1017",
+    "code": "1CNC",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US15135B1017-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US15135B1017-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US15135B1017-BGEM/full"
+    ]
+  },
+  {
+    "name": "CenterPoint En",
+    "isin": "US15189T1079",
+    "code": "1CNP",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/US15189T1079-BGEM",
+      "https://live.euronext.com/en/ajax/getPerformances/US15189T1079-BGEM",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/US15189T1079-BGEM/full"
+    ]
+  },
+  {
+    "name": "CERINNOV GROUP",
+    "isin": "FR0013178712",
+    "code": "ALPCV",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0013178712-ALXP",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0013178712-ALXP",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0013178712-ALXP/full"
+    ]
+  },
+  {
+    "name": "CFE",
+    "isin": "BE0003883031",
+    "code": "CFEB",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/BE0003883031-XBRU",
+      "https://live.euronext.com/en/ajax/getPerformances/BE0003883031-XBRU",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/BE0003883031-XBRU/full"
+    ]
+  },
+  {
+    "name": "CFI",
+    "isin": "FR0000037475",
+    "code": "CFI",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000037475-XPAR",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000037475-XPAR",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000037475-XPAR/full"
+    ]
+  },
+  {
+    "name": "CFM INDOSUEZWEALTH",
+    "isin": "MC0010000826",
+    "code": "MLCFM",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/MC0010000826-XMLI",
+      "https://live.euronext.com/en/ajax/getPerformances/MC0010000826-XMLI",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/MC0010000826-XMLI/full"
+    ]
+  },
+  {
+    "name": "CH.FER DEPARTEMENT",
+    "isin": "FR0000037871",
+    "code": "MLCFD",
+    "sources": [
+      "https://live.euronext.com/en/ajax/getDetailedQuote/FR0000037871-XMLI",
+      "https://live.euronext.com/en/ajax/getPerformances/FR0000037871-XMLI",
+      "https://live.euronext.com/en/intraday_chart/getDetailedQuoteAjax/FR0000037871-XMLI/full"
+    ]
   }
 ]

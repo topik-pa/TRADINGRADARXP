@@ -1,5 +1,5 @@
 import { Stock } from '../models/Stock.js'
-const ACCENT = 2
+const ACCENT = 5
 
 // GET all stocks performance 1M
 export async function getStocksPerformance(req, res, next) {

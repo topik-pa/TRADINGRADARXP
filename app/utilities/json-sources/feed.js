@@ -8,7 +8,7 @@ const OUTPUT_PATH = './app/utilities/json-sources/output.json'
 const BASEURL = 'https://live.euronext.com'
 let alphabet
 if(process.env.NODE_ENV !== 'production') {
-  alphabet = 'A'
+  alphabet = 'ABC'
 } else {
   alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 }

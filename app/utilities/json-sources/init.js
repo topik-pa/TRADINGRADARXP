@@ -8,12 +8,12 @@ const OUTPUT_PATH = './app/utilities/json-sources/output.json'
 
 let alphabet
 if(process.env.NODE_ENV !== 'production') {
-  alphabet = 'A'
+  alphabet = 'ABC'
 } else {
   alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 }
 
-const SLEEP_TIME = 2 * 1000 // 5 seconds...
+const SLEEP_TIME = 0.2 * 1000 // 5 seconds...
 function sleep(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms)
