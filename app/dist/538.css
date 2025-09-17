@@ -1,1 +1,1 @@
-#hp main div{display:flex;justify-content:space-between}
+main.hp .cards{display:flex;flex-wrap:wrap;justify-content:space-between}main.hp .cards .card{margin-bottom:var(--main-padding)}

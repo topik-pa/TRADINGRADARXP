@@ -3,7 +3,7 @@
 @import "./main-menu/main-menu.css";
 
 header {
-  padding: var(--main-padding);
+  padding: var(--x-small-space) var(--main-padding) var(--main-padding);
   padding-bottom: 0;
   /* border-bottom: 1px solid var(--light-gray); */
   background: var(--secondary);
@@ -16,7 +16,7 @@ header {
 header > div:nth-child(1)  {
   display: flex;
   justify-content: end;
-  padding-bottom: var(--main-padding);
+  padding-bottom: var(--x-small-space);
   margin-bottom: var(--main-padding);
   border-bottom: 1px solid var(--darker-gray);
 }
