@@ -6,3 +6,29 @@ main.hp .cards {
 main.hp .cards .card{
   margin-bottom: var(--main-padding);
 }
+
+main.hp .rounded:nth-child(1), main.hp .rounded:nth-child(2) {
+  background: linear-gradient(22deg,rgba(234, 233, 230, 0.15) 15%, rgba(148, 147, 146, 0.15) 100%);
+  &::after {
+    content: ' ';
+    filter: grayscale(.6);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 4rem;
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+main.hp .rounded:nth-child(1) {
+  &::after {
+    background-image: url('/assets/images/logo.webp');
+  }
+}
+main.hp .rounded:nth-child(2) {
+  &::after {
+    background-image: url('/assets/images/updown.webp');
+  }
+}

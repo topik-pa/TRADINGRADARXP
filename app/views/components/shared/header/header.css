@@ -17,7 +17,7 @@ header > div:nth-child(1)  {
   display: flex;
   justify-content: end;
   padding-bottom: var(--x-small-space);
-  margin-bottom: var(--main-padding);
+  margin-bottom: var(--x-small-space);
   border-bottom: 1px solid var(--darker-gray);
 }
 
