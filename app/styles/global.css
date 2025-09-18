@@ -26,7 +26,7 @@ body {
 }
 .layout #column {
   padding: var(--main-padding);
-  background: var(--black);
+  background: var(--darker-gray);
   position: relative;
   width: 20%;
   transition: all .4s ease-in-out;
@@ -131,7 +131,7 @@ section {
 
 .bullet-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: var(--main-padding);
 }

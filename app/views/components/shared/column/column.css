@@ -45,3 +45,7 @@ aside#column a[title="Telegram"] {
   text-align: center;
   font-size: var(--font-size-base);
 }
+
+aside#column .partner > div {
+  margin-bottom: var(--x-large-space);
+}

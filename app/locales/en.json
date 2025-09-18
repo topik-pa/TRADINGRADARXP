@@ -17,7 +17,15 @@
     "brusselsStockExchange": "Brussels Stock Exchange",
     "lisbonStockExchange": "Lisbon Stock Exchange",
     "dublinStockExchange": "Dublin Stock Exchange",
-    "euronextGlobal": "Euronext Global"
+    "euronextGlobal": "Euronext Global",
+    "milanStockExchangeDescription": "*Cuore finanziario italiano, nota per titoli bancari ed energetici, volatilità interessante per il day trading.",
+    "parisStockExchangeDescription": "*Mercato dinamico con grandi multinazionali, buona liquidità e settori chiave come lusso e industria.",
+    "osloStockExchangeDescription": "*Specializzata in energia e shipping, ideale per chi cerca volatilità legata a petrolio e materie prime.",
+    "amsterdamStockExchangeDescription": "*Forte su tecnologia, e-commerce e finanza, garantisce movimenti rapidi e buone opportunità di scalping.",
+    "brusselsStockExchangeDescription": "*Piccolo ma stabile, offre titoli difensivi e industriali, adatto a strategie di breve termine mirate.",
+    "lisbonStockExchangeDescription": "*Mercato ridotto, concentrato su energia e telecomunicazioni, utile per chi cerca trend chiari e lineari.",
+    "dublinStockExchangeDescription": "*Focus su finanza e farmaceutica, buona volatilità grazie alle multinazionali tech e sanitarie quotate.",
+    "euronextGlobalDescription": "*Piattaforma paneuropea che unisce più borse, ampia liquidità e diversificazione settoriale per il trading veloce."
   },
   "header": {
     "home": "Home",
@@ -39,6 +47,10 @@
     "section3": {
       "title": "*Dettagli dei mercati",
       "discover": "Scopri tutti i titoli >>"
+    },
+    "section4": {
+      "title": "*Vivi l'emozione del trading azionario con i servizi proposti da AvaTrade",
+      "text": "*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit sem ante, eget lobortis lorem tincidunt et. Etiam vehicula odio nec lorem commodo efficitur."
     }
   }
 }
