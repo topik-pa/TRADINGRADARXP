@@ -1,13 +1,3 @@
-main.hp .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: var(--main-padding);
-}
-main.hp .cards .card{
-  margin-bottom: var(--main-padding);
-}
-
 main.hp .rounded:nth-child(1), main.hp .rounded:nth-child(2) {
   background: linear-gradient(22deg,rgba(232, 246, 255, 0.15) 70%, rgba(63, 101, 128, 0.15) 100%);
   border-color: var(--blue);
@@ -24,13 +14,23 @@ main.hp .rounded:nth-child(1), main.hp .rounded:nth-child(2) {
     right: 0;
   }
 }
-main.hp .rounded:nth-child(1) {
-  &::after {
-    background-image: url('/assets/images/logo.webp');
+main.hp .rounded:nth-child(1)::after {
+  background-image: url('/assets/images/logo.webp');
+}
+main.hp .rounded:nth-child(2)::after {
+  background-image: url('/assets/images/updown.webp');
+}
+
+main.hp #cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--main-padding);
+  .card {
+    margin-bottom: var(--main-padding);
   }
 }
-main.hp .rounded:nth-child(2) {
-  &::after {
-    background-image: url('/assets/images/updown.webp');
-  }
+
+main.hp #worsts {
+  flex-direction: row-reverse;
 }

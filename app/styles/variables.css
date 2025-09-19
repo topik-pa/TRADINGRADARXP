@@ -30,7 +30,7 @@
   /* TRANSPARENCIES */
   --transparent: .1;
   --semi-transparent: .85;
-  --blue-st: rgba(2, 89, 139, var(--semi-transparent));
+  --blue-st: rgba(63, 101, 128, var(--semi-transparent));
   /* --wt: rgba(255, 255, 255, var(--transparent));
   --wst: rgba(255, 255, 255, var(--semi-transparent));
   --bt: rgba(0, 0, 0, var(--transparent));
@@ -38,13 +38,12 @@
   --rt: rgba(201, 30, 44, var(--transparent)); */
 
   /* FONT SIZES */
-  --font-size-very-small: .75rem;
   --font-size-small: .875rem;
-  --font-size-base: 1rem;
-  --font-size-big: 1.25rem;
-  --font-size-bigger: 1.5rem;
-  --font-size-huge: 2.2rem;
-  --font-size-biggest: 2.5rem;
+  --font-size-base: 1.11rem;
+  --font-size-big: 1.411rem;
+  --font-size-bigger: 1.793rem;
+  --font-size-huge: 2.279rem;
+  --font-size-biggest: 2.7rem;
 
   /* SHADOWS */
   --shadow: 0 0 10px 0 var(--black);
@@ -56,9 +55,9 @@
   --small-space: .8rem;
   --base-space: 1rem;
   --large-space: 1.3rem;
-  --x-large-space: 1.8rem;
-  --xx-large-space: 2.4rem;
-  --xxx-large-space: 3.2rem;
+  --x-large-space: 2.1rem;
+  --xx-large-space: 3.4rem;
+  --xxx-large-space: 4.5rem;
 
   --main-padding: var(--small-space);
   --section-margin: var(--xx-large-space);

@@ -1,5 +1,19 @@
 /* eslint-disable no-console */
 
+const STATUS = {
+  idle: 'idle',
+  loading: 'loading',
+  success: 'success',
+  error: 'error'
+}
+
+export function updateStatus(targets, status) {
+  targets.forEach((target) => {
+    target.classList.remove(...Object.values(STATUS))
+    target.classList.add(STATUS[status])
+  })
+}
+
 export function createComponent(tag, attrs = {}, children = []) {
   const el = document.createElement(tag)
   // Imposta attributi
@@ -33,7 +47,7 @@ export async function getData(url) {
 export function removeSmallCaps(stocks) {
   return stocks.filter((s) => {
     if(s.volume !== null && s.price !== null) {
-      return s.volume * s.price >= 10_000
+      return s.volume * s.price >= 1_000_000
     }
   })
 }

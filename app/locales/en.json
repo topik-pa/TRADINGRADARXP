@@ -33,10 +33,11 @@
     "contacts": "Contacts"
   },
   "column": {
-    "exchanges": "Exchanges"
-
+    "exchanges": "*Exchanges"
   },
+  "disclaimer": "*<em>Attenzione</em>: operare in Borsa e fare trading costituiscono <em>azioni ad alto rischio</em>. Le informazioni qui presentate non costituiscono una sollecitazione di acquisto o vendita di titoli azionari e si intendono <em>per puro uso informativo</em>. Il Portale Web tradingradar.net non si dichiara responsabile di un utilizzo improprio delle informazioni qui ottenute.",
   "index": {
+    "keywords": "trading, radar",
     "title": "*tradingradar.net",
     "description": "*<em>...titoli sull'orlo di una crisi di nervi</em>. <br><br>tradingradar.net interroga in tempo reale le quotazioni delle principali azioni europee ed evidenzia i <em>titoli</em> che sono <em>in fase di rally</em>. <br>Trova i titoli azionari che stanno vivendo un <em>momento di forte espansione o di forte contrazione</em> e decidi la tua strategia. <br><br><em>Segui il mercato</em> e basa le tue azioni assecondando il momento!",
     "section2": {

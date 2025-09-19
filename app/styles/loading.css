@@ -7,21 +7,14 @@
   position: relative;
 }
 .loading:before {
-  content: 'Recupero dati...';
+  content: '';
   background-color: rgba(255,255,255,.85);
-  box-shadow: 0px 0px 15px 5px var(--light-gray);
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: var(--loading);
-
-  text-align: center;
-  font-weight: 500;
-  font-size: var(--font-size-bigger);
-  padding: var(--x-large-space);
-  text-shadow: var(--text-shadow);
 }
 .loading:after {
   content: '';

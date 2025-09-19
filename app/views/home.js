@@ -1,4 +1,9 @@
-import { createComponent, getData, removeSmallCaps } from '../scripts/globals.js'
+import {
+  createComponent,
+  getData,
+  removeSmallCaps,
+  updateStatus
+} from '../scripts/globals.js'
 
 export default  {
   init: async() => {
@@ -10,7 +15,18 @@ export default  {
     // eslint-disable-next-line no-unused-vars, no-empty
     } catch (err) {}
 
-    let accents = await getData('/api/stocks/accents')
+    const $bests = document.getElementById('bests')
+    const $worsts = document.getElementById('worsts')
+    const $cards = document.getElementById('cards')
+
+    updateStatus([$bests, $worsts, $cards], 'loading')
+    let accents = []
+    try {
+      accents = await getData('/api/stocks/accents')
+    } catch (error) {
+      updateStatus([$bests, $worsts, $cards], 'error')
+      // console.error(error)
+    }
     if (accents.length === 0) return
     accents = removeSmallCaps(accents)
     accents.forEach(stock => {
@@ -24,5 +40,6 @@ export default  {
       ])
       document.getElementById(id).appendChild(bullet)
     })
+    updateStatus([$bests, $worsts, $cards], 'success')
   }
 }

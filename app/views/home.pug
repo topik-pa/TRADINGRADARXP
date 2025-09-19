@@ -8,7 +8,7 @@ block append meta
 
   title= __('home') + ' | ' + __('proj_name') 
   meta(name="description" content=__('proj_description'))
-  meta(name="keywords" content="trading, radar")
+  meta(name="keywords" content=__('index.keywords'))
 
   link(rel="canonical", href=canonicalUrl)
   each link in hreflangs
@@ -24,7 +24,7 @@ block main
       p!= __('index.rally')
 
   section
-    h2!= __('index.section2.title', { date: new Date().toLocaleDateString('it-IT',{ weekday:'long', day:'numeric', month:'long' })})
+    h2!= __('index.section2.title', { date: new Date().toLocaleDateString(locale ,{ weekday:'long', day:'numeric', month:'long' })})
     div
       h3= __('index.section2.rallyUpTitle')
       div(id="bests", class="bullet-wrap")
@@ -34,11 +34,11 @@ block main
 
   section
     h2= __('index.section3.title')
-    div(class="cards")
+    div(id="cards")
       cmp-card(color="red")
         span(slot="title")= __('exchanges.euronextGlobal')
         a(slot="image", title=__('exchanges.euronextGlobal'), href="global")
-          img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
+          img(src="/assets/images/exchanges/placeholder.jpg", width="262", height="262", loading="lazy", alt=__('exchanges.euronextGlobal'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.euronextGlobal')
         span(slot="description")= __('exchanges.euronextGlobalDescription')
         span(slot="link")
@@ -47,7 +47,7 @@ block main
       cmp-card(color="blue")
         span(slot="title")= __('exchanges.milanStockExchange')
         a(slot="image", title=__('exchanges.milanStockExchange'), href="milan")
-          img(src="/assets/images/exchanges/borsa-italiana.webp", class="cmp-card-slotted-img")
+          img(src="/assets/images/exchanges/borsa-italiana.webp", width="262", height="262", loading="lazy", alt=__('exchanges.milanStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.milanStockExchange')
         span(slot="description")= __('exchanges.milanStockExchangeDescription')
         span(slot="link")
@@ -56,7 +56,7 @@ block main
       cmp-card(color="yellow")
         span(slot="title")= __('exchanges.parisStockExchange')
         a(slot="image", title=__('exchanges.parisStockExchange'), href="paris")
-          img(src="/assets/images/exchanges/bourse_de_paris.webp", class="cmp-card-slotted-img")
+          img(src="/assets/images/exchanges/bourse_de_paris.webp", width="262", height="262", loading="lazy", alt=__('exchanges.parisStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.parisStockExchange')
         span(slot="description")= __('exchanges.parisStockExchangeDescription')
         span(slot="link")
@@ -65,7 +65,7 @@ block main
       cmp-card(color="green")
         span(slot="title")= __('exchanges.osloStockExchange')
         a(slot="image", title=__('exchanges.osloStockExchange'), href="oslo")
-          img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
+          img(src="/assets/images/exchanges/placeholder.jpg", width="262", height="262", loading="lazy", alt=__('exchanges.osloStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.osloStockExchange')
         span(slot="description")= __('exchanges.osloStockExchangeDescription')
         span(slot="link")
@@ -74,7 +74,7 @@ block main
       cmp-card(color="green")
         span(slot="title")= __('exchanges.amsterdamStockExchange')
         a(slot="image", title=__('exchanges.amsterdamStockExchange'), href="amsterdam")
-          img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
+          img(src="/assets/images/exchanges/placeholder.jpg", width="262", height="262", loading="lazy", alt=__('exchanges.amsterdamStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.amsterdamStockExchange')
         span(slot="description")= __('exchanges.amsterdamStockExchangeDescription')
         span(slot="link")
@@ -83,7 +83,7 @@ block main
       cmp-card(color="green")
         span(slot="title")= __('exchanges.brusselsStockExchange')
         a(slot="image", title=__('exchanges.brusselsStockExchange'), href="brussels")
-          img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
+          img(src="/assets/images/exchanges/placeholder.jpg", width="262", height="262", loading="lazy", alt=__('exchanges.brusselsStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.brusselsStockExchange')
         span(slot="description")= __('exchanges.brusselsStockExchangeDescription')
         span(slot="link")
@@ -92,7 +92,7 @@ block main
       cmp-card(color="green")
         span(slot="title")= __('exchanges.lisbonStockExchange')
         a(slot="image", title=__('exchanges.lisbonStockExchange'), href="lisbon")
-          img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
+          img(src="/assets/images/exchanges/placeholder.jpg", width="262", height="262", loading="lazy", alt=__('exchanges.lisbonStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.lisbonStockExchange')
         span(slot="description")= __('exchanges.lisbonStockExchangeDescription')
         span(slot="link")
@@ -101,7 +101,7 @@ block main
       cmp-card(color="green")
         span(slot="title")= __('exchanges.dublinStockExchange')
         a(slot="image", title=__('exchanges.dublinStockExchange'), href="dublin")
-          img(src="/assets/images/exchanges/placeholder.jpg", class="cmp-card-slotted-img")
+          img(src="/assets/images/exchanges/placeholder.jpg", width="262", height="262", loading="lazy", alt=__('exchanges.dublinStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.dublinStockExchange')
         span(slot="description")= __('exchanges.dublinStockExchangeDescription')
         span(slot="link")
@@ -131,7 +131,7 @@ block main
         cP.parentNode.insertBefore(ifr, cP);
         }());
 
-  aside(id="disclaimer") #[em Attenzione: ] operare in Borsa e fare trading costituiscono #[em azioni ad alto rischio]. Le informazioni qui presentate non costituiscono una sollecitazione di acquisto o vendita di titoli azionari e si intendono #[em per puro uso informativo]. Il Portale Web tradingradar.net non si dichiara responsabile di un utilizzo improprio delle informazioni qui ottenute.
+  aside(id="disclaimer")!= __('disclaimer')
 
 block column 
   include ./components/shared/column/column.pug
