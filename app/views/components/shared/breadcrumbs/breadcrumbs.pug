@@ -1,8 +1,8 @@
 if breadcrumbs
-  div(id="breadcrumbs") Sei in: 
+  div(id="breadcrumbs")= __('breadcrumbs.text')
     nav
-      a(href="/", title="Home") home
+      a(href="/", title="Home")= __('header.home')
       span &nbsp;
       each elem in breadcrumbs
-        a(href=elem.url, title=elem.name) #{elem.name}
-        span &nbsp;
+        span &nbsp;&#10142;&nbsp;
+        a(href=elem.url, title=__(elem.name))= __(elem.name)

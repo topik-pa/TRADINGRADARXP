@@ -23,7 +23,9 @@ body {
 .layout main {
   width: 100%;
   padding: var(--main-padding);
-  padding-top: var(--x-large-space);
+  &.hp {
+    padding-top: var(--x-large-space);
+  }
 }
 .layout #column {
   padding: var(--main-padding);
@@ -64,6 +66,7 @@ a.ext::after {
 
 em, .em {
   font-weight: 500;
+  font-style: italic;
 }
 
 p {
