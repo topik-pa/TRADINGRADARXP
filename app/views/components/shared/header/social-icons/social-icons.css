@@ -1,6 +1,6 @@
 #socials a {
   margin-left: var(--main-padding);
-  font-size: var(--font-size-big);
+  font-size: var(--font-size-base);
 }
 #socials a:hover {
   filter: brightness(90%);
