@@ -16,7 +16,7 @@ const nodeRules = {
   'space-before-function-paren': ['error', 'never'],
   'object-curly-spacing': ['error', 'always'],
   'arrow-spacing': ['error', { before: true, after: true }],
-  'no-console': 'error'
+  'no-console': 'warn'
 }
 
 
