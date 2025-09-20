@@ -51,3 +51,18 @@ export function removeSmallCaps(stocks) {
     }
   })
 }
+
+export function printStockList(stocks, $target, key) {
+  stocks.forEach((stock) => {
+    const $li = document.createElement('li')
+    const $a = document.createElement('a')
+    $a.innerText = stock.name
+    $a.title = stock.name
+    $a.href = stock.stockUrl
+    const $span = document.createElement('span')
+    $span.innerText = stock[key] + '%' || ''
+    $li.appendChild($a)
+    $li.appendChild($span)
+    $target.appendChild($li)
+  })
+}

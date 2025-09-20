@@ -1,14 +1,14 @@
 extends layout.pug
 
 block append meta
-  meta(name="og:title" content="")
-  meta(name="og:description" content="")
+  meta(name="og:title" content= __(`exchanges.${exchange}StockExchange`) + ' | ' + __('proj_name') )
+  meta(name="og:description" content=__('exchange.meta.description'))
   meta(name="og:image" content=og_image)
   meta(name="og:url" content=canonicalUrl)
 
-  title= __('privacy') + ' | ' + proj_name
-  meta(name="description" content=__('privacy'))
-  meta(name="keywords" content="")
+  title= __(`exchanges.${exchange}StockExchange`) + ' | ' + __('proj_name')
+  meta(name="description" content=__('exchange.meta.description', {exchange: __(exchange)}))
+  meta(name="keywords" content=__('exchange.meta.keywords', {keywords: __(exchange)}))
 
   link(rel="canonical", href=canonicalUrl)
   each link in hreflangs
@@ -16,25 +16,35 @@ block append meta
 
 block main
   include ./components/shared/breadcrumbs/breadcrumbs.pug
-  h1= __(`${exchange}StockExchange`)
 
+  h1= __(`exchanges.${exchange}StockExchange`)
   section
-    h2 Titoli in rally oggi lunedì 13 febbraio
+    h2!= __('exchange.section1.title', { date: new Date().toLocaleDateString(locale ,{ weekday:'long', day:'numeric', month:'long' })})
     div
-      h3 Azioni in rally rialzista
+      h3= __('exchange.section1.rallyUpTitle')
       div(id="bests", class="bullet-wrap")
     div
-      h3 Azioni in rally ribassista
+      h3= __('exchange.section1.rallyDownTitle')
       div(id="worsts", class="bullet-wrap")
 
-  section
-    h2 Le performance più interessanti
-    h3 Migliori perfomance rialziste dell'ultimo mese
-    div(id="performance-up", class="bullet-wrap")
-    h3 Peggiori perfomance ribassiste dell'ultimo mese
-    div(id="performance-down", class="bullet-wrap")
+  //- section
+  //-   h2= __('exchange.section2.title')
+  //-   h3= __('exchange.section2.subtitleUp')
+  //-   div(id="performance-up", class="bullet-wrap")
+  //-   h3= __('exchange.section2.subtitleDown')
+  //-   div(id="performance-down", class="bullet-wrap")
 
-  aside(id="disclaimer") #[em Attenzione: ] operare in Borsa e fare trading costituiscono #[em azioni ad alto rischio]. Le informazioni qui presentate non costituiscono una sollecitazione di acquisto o vendita di titoli azionari e si intendono #[em per puro uso informativo]. Il Portale Web tradingradar.net non si dichiara responsabile di un utilizzo improprio delle informazioni qui ottenute.
+  section
+    h2= __('exchange.section2.title')
+    div(class="list-wrapper")
+      div(id="perf-month-up")
+        h3= __('exchange.section2.subtitleUp')
+        ul(id="performance-up", class="trlist rank")
+      div(id="perf-month-down")
+        h3= __('exchange.section2.subtitleDown')
+        ul(id="performance-down", class="trlist rank")
+
+  aside(id="disclaimer")!= __('disclaimer')
 
 
 block column 

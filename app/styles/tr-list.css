@@ -1,0 +1,45 @@
+ul.trlist {
+  text-shadow: 0 0 var(--light-gray);
+  max-height: 30rem;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+ul.trlist li {
+  padding: var(--small-space);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  margin: 0;
+  border-radius: var(--border-radius-small);
+}
+/* ranked list */
+ul.rank li:nth-child(1) a, ul.rank li:nth-child(2) a, ul.rank li:nth-child(3) a {
+  text-transform: uppercase;
+}
+ul.rank li:nth-child(1) a {
+  font-weight: bold;
+}
+ul.rank li:nth-child(1) a:before, ul.rank li:nth-child(2) a:before, ul.rank li:nth-child(3) a:before {
+  font-family: 'icomoon' !important;
+  content: "\e99e";
+  font-size: var(--font-size-big);
+  margin-right: var(--x-small-space);
+  vertical-align: text-bottom;
+  text-shadow: 1px 1px var(--black);
+  display: inline-block;
+}
+ul.rank li:nth-child(1) a:before {
+  color: var(--gold);
+}
+ul.rank li:nth-child(2) a:before {
+  color: var(--silver);
+}
+ul.rank li:nth-child(3) a:before {
+  color: var(--bronze);
+}
+
+ul.trlist li:nth-child(odd) {
+  background-color: var(--lightest-gray);
+}

@@ -24,3 +24,4 @@ Fix errori cast in aggiornamento DB
 
 Soluzione per dati DB (cap: null) derivanti dalla diversa fascia oraria
 
+Ottimizzare dati restituiti da chiamate api

@@ -3,14 +3,14 @@
   "proj_name": "tradingradar.net",
   "proj_description": "Trova le migliori opportunità di investimento sfruttando i titoli azionari in fase di rally",
   "proj_tagline": "...titoli sull'orlo di una crisi di nervi",
-  "milan": "Borsa di Milano",
-  "paris": "Borsa di Parigi",
-  "oslo": "Borsa di Oslo",
-  "amsterdam": "Borsa di Amsterdam",
-  "brussels": "Borsa di Brussels",
-  "lisbon": "Borsa di Lisbona",
-  "dublin": "Borsa di Dublino",
-  "global": "Euronext Global",
+  "milan": "Milano",
+  "paris": "Parigi",
+  "oslo": "Oslo",
+  "amsterdam": "Amsterdam",
+  "brussels": "Brussels",
+  "lisbon": "Lisbona",
+  "dublin": "Dublino",
+  "global": "Global",
   "views": {
     "home": "Home",
     "privacy": "Privacy",
@@ -65,6 +65,22 @@
     "section4": {
       "title": "Vivi l'emozione del trading azionario con i servizi proposti da AvaTrade",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit sem ante, eget lobortis lorem tincidunt et. Etiam vehicula odio nec lorem commodo efficitur."
+    }
+  },
+  "exchange": {
+    "meta": {
+      "keywords": "{{keywords}}, mercato, mercati, borsa, trading, radar",
+      "description": "Descrizione: {{exchange}}"
+    },
+    "section1": {
+      "title": "Titoli in rally oggi <em>{{date}}</em>",
+      "rallyUpTitle": "Titoli in rally rialzista",
+      "rallyDownTitle": "Titoli in rally ribassista"
+    },
+    "section2": {
+      "title": "Le performance più interessanti",
+      "subtitleUp": "Migliori perfomance rialziste dell'ultimo mese",
+      "subtitleDown": "Peggiori perfomance ribassiste dell'ultimo mese"
     }
   }
 }

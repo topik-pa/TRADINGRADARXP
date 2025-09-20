@@ -138,6 +138,19 @@ section {
   margin-bottom: var(--x-large-space);
 }
 
+.list-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.list-wrapper h3 {
+  margin-bottom: var(--large-space);
+}
+.list-wrapper > div {
+  margin: var(--large-space) 0;
+  width: 48%;
+}
+
 
 @media screen and (max-width: 768px) {
   main {
