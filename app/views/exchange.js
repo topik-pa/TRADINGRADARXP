@@ -67,5 +67,6 @@ export default  {
     }
     printStockList(worstPerformance, $perfDown, 'perf1M')
     updateStatus([$perfDown], 'success')
+
   }
 }

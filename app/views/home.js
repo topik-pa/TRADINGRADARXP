@@ -2,7 +2,8 @@ import {
   createComponent,
   getData,
   removeSmallCaps,
-  updateStatus
+  updateStatus,
+  printStockList
 } from '../scripts/globals.js'
 
 export default  {
@@ -41,5 +42,31 @@ export default  {
       document.getElementById(id).appendChild(bullet)
     })
     updateStatus([$bests, $worsts, $cards], 'success')
+
+
+    const $perfUp = document.getElementById('performance-up')
+    updateStatus([$perfUp], 'loading')
+    let bestPerformance = []
+    try {
+      bestPerformance = await getData('/api/stocks/performance/up')
+    } catch (error) {
+      updateStatus([$perfUp], 'error')
+      // console.error(error)
+    }
+    printStockList(bestPerformance, $perfUp, 'perf1M')
+    updateStatus([$perfUp], 'success')
+
+    const $perfDown = document.getElementById('performance-down')
+    updateStatus([$perfDown], 'loading')
+    let worstPerformance = []
+    try {
+      worstPerformance = await getData('/api/stocks/performance/down')
+    } catch (error) {
+      updateStatus([$perfDown], 'error')
+      // console.error(error)
+    }
+    printStockList(worstPerformance, $perfDown, 'perf1M')
+    updateStatus([$perfDown], 'success')
+
   }
 }

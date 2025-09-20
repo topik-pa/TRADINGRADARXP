@@ -18,30 +18,24 @@ block main
   include ./components/shared/breadcrumbs/breadcrumbs.pug
 
   h1= __(`exchanges.${exchange}StockExchange`)
+
   section
-    h2!= __('exchange.section1.title', { date: new Date().toLocaleDateString(locale ,{ weekday:'long', day:'numeric', month:'long' })})
+    h2!= __('rallyTitle', { date: new Date().toLocaleDateString(locale ,{ weekday:'long', day:'numeric', month:'long' })})
     div
-      h3= __('exchange.section1.rallyUpTitle')
+      h3= __('rallyUpSubtitle')
       div(id="bests", class="bullet-wrap")
     div
-      h3= __('exchange.section1.rallyDownTitle')
+      h3= __('rallyDownSubtitle')
       div(id="worsts", class="bullet-wrap")
 
-  //- section
-  //-   h2= __('exchange.section2.title')
-  //-   h3= __('exchange.section2.subtitleUp')
-  //-   div(id="performance-up", class="bullet-wrap")
-  //-   h3= __('exchange.section2.subtitleDown')
-  //-   div(id="performance-down", class="bullet-wrap")
-
   section
-    h2= __('exchange.section2.title')
+    h2= __('performanceTitle')
     div(class="list-wrapper")
       div(id="perf-month-up")
-        h3= __('exchange.section2.subtitleUp')
+        h3= __('performanceSubtitleUp')
         ul(id="performance-up", class="trlist rank")
       div(id="perf-month-down")
-        h3= __('exchange.section2.subtitleDown')
+        h3= __('performanceSubtitleDown')
         ul(id="performance-down", class="trlist rank")
 
   aside(id="disclaimer")!= __('disclaimer')

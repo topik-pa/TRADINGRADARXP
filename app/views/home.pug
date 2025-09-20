@@ -8,7 +8,7 @@ block append meta
 
   title= __('home') + ' | ' + __('proj_name') 
   meta(name="description" content=__('proj_description'))
-  meta(name="keywords" content=__('index.keywords'))
+  meta(name="keywords" content=__('index.meta.keywords'))
 
   link(rel="canonical", href=canonicalUrl)
   each link in hreflangs
@@ -17,23 +17,33 @@ block append meta
 block main
   section(class="flex")
     div(class="rounded")
-      h1!= __('index.title')
+      h1!= __('proj_name')
       p!= __('index.description')
     div(class="rounded")
       h2!= __('index.subtitle')
       p!= __('index.rally')
 
   section
-    h2!= __('index.section2.title', { date: new Date().toLocaleDateString(locale ,{ weekday:'long', day:'numeric', month:'long' })})
+    h2!= __('rallyTitle', { date: new Date().toLocaleDateString(locale ,{ weekday:'long', day:'numeric', month:'long' })})
     div
-      h3= __('index.section2.rallyUpTitle')
+      h3= __('rallyUpSubtitle')
       div(id="bests", class="bullet-wrap")
     div
-      h3= __('index.section2.rallyDownTitle')
+      h3= __('rallyDownSubtitle')
       div(id="worsts", class="bullet-wrap")
 
   section
-    h2= __('index.section3.title')
+    h2= __('performanceTitle')
+    div(class="list-wrapper")
+      div(id="perf-month-up")
+        h3= __('performanceSubtitleUp')
+        ul(id="performance-up", class="trlist rank")
+      div(id="perf-month-down")
+        h3= __('performanceSubtitleDown')
+        ul(id="performance-down", class="trlist rank")
+
+  section
+    h2= __('index.sectionExchanges.title')
     div(id="cards")
       cmp-card(color="red")
         span(slot="title")= __('exchanges.euronextGlobal')
@@ -42,7 +52,7 @@ block main
         span(slot="subtitle")= __('exchanges.euronextGlobal')
         span(slot="description")= __('exchanges.euronextGlobalDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.euronextGlobal'))= __('index.section3.discover')
+          a(href="#", title=__('exchanges.euronextGlobal'))= __('index.sectionExchanges.discover')
 
       cmp-card(color="blue")
         span(slot="title")= __('exchanges.milanStockExchange')
@@ -51,7 +61,7 @@ block main
         span(slot="subtitle")= __('exchanges.milanStockExchange')
         span(slot="description")= __('exchanges.milanStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.milanStockExchange'))= __('index.section3.discover')
+          a(href="#", title=__('exchanges.milanStockExchange'))= __('index.sectionExchanges.discover')
 
       cmp-card(color="yellow")
         span(slot="title")= __('exchanges.parisStockExchange')
@@ -60,7 +70,7 @@ block main
         span(slot="subtitle")= __('exchanges.parisStockExchange')
         span(slot="description")= __('exchanges.parisStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.parisStockExchange'))= __('index.section3.discover')
+          a(href="#", title=__('exchanges.parisStockExchange'))= __('index.sectionExchanges.discover')
 
       cmp-card(color="green")
         span(slot="title")= __('exchanges.osloStockExchange')
@@ -69,7 +79,7 @@ block main
         span(slot="subtitle")= __('exchanges.osloStockExchange')
         span(slot="description")= __('exchanges.osloStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.osloStockExchange'))= __('index.section3.discover')
+          a(href="#", title=__('exchanges.osloStockExchange'))= __('index.sectionExchanges.discover')
 
       cmp-card(color="green")
         span(slot="title")= __('exchanges.amsterdamStockExchange')
@@ -78,7 +88,7 @@ block main
         span(slot="subtitle")= __('exchanges.amsterdamStockExchange')
         span(slot="description")= __('exchanges.amsterdamStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.amsterdamStockExchange'))= __('index.section3.discover')
+          a(href="#", title=__('exchanges.amsterdamStockExchange'))= __('index.sectionExchanges.discover')
 
       cmp-card(color="green")
         span(slot="title")= __('exchanges.brusselsStockExchange')
@@ -87,7 +97,7 @@ block main
         span(slot="subtitle")= __('exchanges.brusselsStockExchange')
         span(slot="description")= __('exchanges.brusselsStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.brusselsStockExchange'))= __('index.section3.discover')
+          a(href="#", title=__('exchanges.brusselsStockExchange'))= __('index.sectionExchanges.discover')
 
       cmp-card(color="green")
         span(slot="title")= __('exchanges.lisbonStockExchange')
@@ -96,7 +106,7 @@ block main
         span(slot="subtitle")= __('exchanges.lisbonStockExchange')
         span(slot="description")= __('exchanges.lisbonStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.lisbonStockExchange'))= __('index.section3.discover')
+          a(href="#", title=__('exchanges.lisbonStockExchange'))= __('index.sectionExchanges.discover')
 
       cmp-card(color="green")
         span(slot="title")= __('exchanges.dublinStockExchange')
@@ -105,11 +115,11 @@ block main
         span(slot="subtitle")= __('exchanges.dublinStockExchange')
         span(slot="description")= __('exchanges.dublinStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.dublinStockExchange'))= __('index.section3.discover')                        
+          a(href="#", title=__('exchanges.dublinStockExchange'))= __('index.sectionExchanges.discover')                        
   
   section(class="center")
-    h2= __('index.section4.title')
-    p= __('index.section4.text')
+    h2= __('index.sectionAVA.title')
+    p= __('index.sectionAVA.text')
     p
       script.avaJavaCode(type='text/javascript').
         (function () {

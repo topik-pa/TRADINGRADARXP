@@ -43,26 +43,28 @@
   "column": {
     "exchanges": "Mercati"
   },
+  "rallyTitle": "Titoli in rally oggi <em>{{date}}</em>",
+  "rallyUpSubtitle": "Titoli in rally rialzista",
+  "rallyDownSubtitle": "Titoli in rally ribassista",
+  "performanceTitle": "Le performance più interessanti",
+  "performanceSubtitleUp": "Migliori perfomance rialziste dell'ultimo mese",
+  "performanceSubtitleDown": "Peggiori perfomance ribassiste dell'ultimo mese",
   "disclaimer": "<em>Attenzione</em>: operare in Borsa e fare trading costituiscono <em>azioni ad alto rischio</em>. Le informazioni qui presentate non costituiscono una sollecitazione di acquisto o vendita di titoli azionari e si intendono <em>per puro uso informativo</em>. Il Portale Web tradingradar.net non si dichiara responsabile di un utilizzo improprio delle informazioni qui ottenute.",
   "breadcrumbs": {
     "text": "Sei in: "
   },
   "index": {
-    "keywords": "trading, radar",
-    "title": "tradingradar.net",
+    "meta": {
+      "keywords": "trading, radar"
+    },
     "description": "<em>...titoli sull'orlo di una crisi di nervi</em>. <br><br>tradingradar.net interroga in tempo reale le quotazioni delle principali azioni europee ed <em>evidenzia i titoli in fase di rally</em>. <br><br>Trova i titoli azionari che stanno vivendo un <em>momento di forte espansione o di forte contrazione</em> e decidi la tua strategia. <br><em>Segui il mercato</em> e basa le tue azioni assecondando il momento!",
     "subtitle": "Cosa sono i titoli <em>in rally</em>?",
     "rally": "Le azioni in rally sono i titoli azionari che stanno vivendo una <em>fase di forte movimentazione del prezzo</em> accompagnata da una <em>espansione dei volumi</em>. <br>Sono quei titoli che per i motivi più svariati stanno crescendo (o decrescendo) con velocità molto maggiore rispetto alle precedenti sedute. <br><br>In generale si tratta di un periodo breve (al più qualche giorno), ma nel quale è possibile mettere a segno importati operazioni di acquisto o vendita.",
-    "section2": {
-      "title": "Titoli in rally oggi <em>{{date}}</em>",
-      "rallyUpTitle": "Titoli in rally rialzista",
-      "rallyDownTitle": "Titoli in rally ribassista"
-    },
-    "section3": {
+    "sectionExchanges": {
       "title": "Tutti i mercati",
       "discover": "Scopri tutti i titoli >>"
     },
-    "section4": {
+    "sectionAVA": {
       "title": "Vivi l'emozione del trading azionario con i servizi proposti da AvaTrade",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit sem ante, eget lobortis lorem tincidunt et. Etiam vehicula odio nec lorem commodo efficitur."
     }
@@ -71,16 +73,6 @@
     "meta": {
       "keywords": "{{keywords}}, mercato, mercati, borsa, trading, radar",
       "description": "Descrizione: {{exchange}}"
-    },
-    "section1": {
-      "title": "Titoli in rally oggi <em>{{date}}</em>",
-      "rallyUpTitle": "Titoli in rally rialzista",
-      "rallyDownTitle": "Titoli in rally ribassista"
-    },
-    "section2": {
-      "title": "Le performance più interessanti",
-      "subtitleUp": "Migliori perfomance rialziste dell'ultimo mese",
-      "subtitleDown": "Peggiori perfomance ribassiste dell'ultimo mese"
     }
   }
 }
