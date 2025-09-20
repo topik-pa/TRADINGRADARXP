@@ -5,10 +5,10 @@ const ACCENT = 5
 export async function getStocksPerformance(req, res, next) {
   const trend = req.params.trend === 'up' ? -1 : 1
   const exchange = req.params.exchange
-  let query
+  let query = { perf1M: { $exists: true, $ne: null } }
   if (exchange) {
     const re = new RegExp(exchange, 'i')
-    query = { market: re }
+    query.market = re
   } else {
     query = {}
   }
