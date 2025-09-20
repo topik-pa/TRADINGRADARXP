@@ -3,7 +3,7 @@ template.innerHTML = `
   <style>
     section {
       border-bottom: 1px solid var(--light-gray);
-      width: 18rem;
+      width: 21rem;
       margin-bottom: var(--main-padding);
     }
     header {
