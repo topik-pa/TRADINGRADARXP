@@ -23,12 +23,10 @@ export async function getStocksPerformance(req, res, next) {
 // GET all stocks exchange accents
 export async function getStocksAccents(req, res, next) {
   const exchange = req.params.exchange
-  let query
+  const query = { relVariation: { $exists: true, $ne: null } }
   if (exchange) {
     const re = new RegExp(exchange, 'i')
-    query = { market: re }
-  } else {
-    query = {}
+    query.market = re
   }
   let stocks = []
   try {
@@ -51,12 +49,10 @@ export async function getStocksAccents(req, res, next) {
 // GET stocks
 export async function getStocks(req, res, next) {
   const exchange = req.params.exchange
-  let query
+  const query = {}
   if (exchange) {
     const re = new RegExp(exchange, 'i')
-    query = { market: re }
-  } else {
-    query = {}
+    query.market = re
   }
   let stocks = []
   try {
