@@ -21,13 +21,7 @@ export default  {
     const $cards = document.getElementById('cards')
 
     updateStatus([$bests, $worsts, $cards], 'loading')
-    let accents = []
-    try {
-      accents = await getData('/api/stocks/accents')
-    } catch (error) {
-      updateStatus([$bests, $worsts, $cards], 'error')
-      // console.error(error)
-    }
+    let accents = await getData('/api/stocks/accents')
     if (accents.length === 0) return
     accents = removeSmallCaps(accents)
     accents.forEach(stock => {
@@ -46,25 +40,15 @@ export default  {
 
     const $perfUp = document.getElementById('performance-up')
     updateStatus([$perfUp], 'loading')
-    let bestPerformance = []
-    try {
-      bestPerformance = await getData('/api/stocks/performance/up')
-    } catch (error) {
-      updateStatus([$perfUp], 'error')
-      // console.error(error)
-    }
+    const bestPerformance = await getData('/api/stocks/performance/up')
+
     printStockList(bestPerformance, $perfUp, 'perf1M')
     updateStatus([$perfUp], 'success')
 
     const $perfDown = document.getElementById('performance-down')
     updateStatus([$perfDown], 'loading')
-    let worstPerformance = []
-    try {
-      worstPerformance = await getData('/api/stocks/performance/down')
-    } catch (error) {
-      updateStatus([$perfDown], 'error')
-      // console.error(error)
-    }
+    const worstPerformance = await getData('/api/stocks/performance/down')
+
     printStockList(worstPerformance, $perfDown, 'perf1M')
     updateStatus([$perfDown], 'success')
 

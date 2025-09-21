@@ -3,7 +3,8 @@ template.innerHTML = `
   <style>
     .bullet {
       border: 1px solid var(--lighter-gray);
-      background-color: var(--lighter-gray);
+      background-color: var(--lightest-gray);
+      background: linear-gradient(22deg,rgba(234, 233, 230, .15) 50%, rgba(212, 211, 208, .15) 100%);
       border-radius: var(--border-radius-small);
       width: 18rem;
       &:hover {

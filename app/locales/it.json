@@ -25,7 +25,7 @@
     "brusselsStockExchange": "Borsa di Brussels",
     "lisbonStockExchange": "Borsa di Lisbona",
     "dublinStockExchange": "Borsa di Dublino",
-    "euronextGlobal": "Euronext Global",
+    "globalStockExchange": "Euronext Global",
     "milanStockExchangeDescription": "Cuore finanziario italiano, nota per titoli bancari ed energetici, volatilità interessante per il day trading.",
     "parisStockExchangeDescription": "Mercato dinamico con grandi multinazionali, buona liquidità e settori chiave come lusso e industria.",
     "osloStockExchangeDescription": "Specializzata in energia e shipping, ideale per chi cerca volatilità legata a petrolio e materie prime.",
@@ -73,6 +73,13 @@
     "meta": {
       "keywords": "{{keywords}}, mercato, mercati, borsa, trading, radar",
       "description": "Descrizione: {{exchange}}"
+    }
+  },
+  "stock": {
+    "meta": {
+      "keywords": "{{stock}}, azioni, titolo, trading, radar",
+      "title": "Titolo: {{stock}}",
+      "description": "Descrizione: {{stock}}"
     }
   }
 }

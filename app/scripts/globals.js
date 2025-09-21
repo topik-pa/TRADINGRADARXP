@@ -36,7 +36,7 @@ export async function getData(url) {
   try {
     const response = await fetch(url)
     if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`)
+      console.error(`Response status: ${response.status}`)
     }
     return await response.json()
   } catch (error) {
