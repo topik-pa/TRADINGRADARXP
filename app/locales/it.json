@@ -11,6 +11,11 @@
   "lisbon": "Lisbona",
   "dublin": "Dublino",
   "global": "Global",
+  "lastPrice": "Ultimo prezzo",
+  "relVariation": "Variazione",
+  "volume": "Volume",
+  "monthPerformance": "Performance mensile",
+  "yearPerformance": "Performance annuale",
   "views": {
     "home": "Home",
     "privacy": "Privacy",

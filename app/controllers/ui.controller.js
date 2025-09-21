@@ -1,4 +1,5 @@
 import { i18n } from '../../server.js'
+import { getStockBySlug } from './db.controller.js'
 const baseUrl = 'https://www.tradingradar.net'
 const supportedLangs = ['en', 'it']
 const fallback = 'en'
@@ -15,6 +16,19 @@ const getViewParams = function(id, lang, path) {
     canonicalUrl,
     hreflangs
   }
+}
+
+
+const getMarketUrl = function(market) {
+  market = market.toLowerCase()
+  const markets = ['milan','oslo','paris','amsterdam','brussels','lisbon','dublin','global']
+  let url = '/'
+  markets.forEach(m => {
+    if (market.includes(m)) {
+      url = m
+    }
+  })
+  return url
 }
 
 
@@ -54,14 +68,20 @@ export async function exchangeView(req, res) {
 export async function stockView(req, res) {
   const lang = req.params.lang
   const stockUrl = req.params.stockUrl
+  const stock = await getStockBySlug(stockUrl)
   if (!supportedLangs.includes(lang)) {
     res.redirect((req.url).replace(lang, fallback))
   } else {
+    res.locals.stock = stock
     i18n.setLocale(req, lang)
     let params = getViewParams('stock', lang, req.path)
     const breadcrumbs = [
       {
-        name: stockUrl
+        name: stock.market,
+        url: getMarketUrl(stock.market)
+      },
+      {
+        name: stock.name
       }
     ]
     params = { ...params, breadcrumbs, stockUrl }

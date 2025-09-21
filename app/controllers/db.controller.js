@@ -22,6 +22,16 @@ export async function readStock(isin) {
   }
 }
 
+export async function getStockBySlug(slug) {
+  try {
+    const stock = await Stock.findOne({ stockUrl: slug })
+    return stock
+  } catch (err) {
+    logger.error(new Error(`Error during get stock:\n${err}`))
+    throw err
+  }
+}
+
 export async function upsertStock(data) {
   try {
     const filter = { isin: data.isin }
