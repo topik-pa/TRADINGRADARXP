@@ -55,7 +55,7 @@ export async function exchangeView(req, res) {
     let params = getViewParams('exchange', lang, req.path)
     const breadcrumbs = [
       {
-        name: exchange
+        name: 'exchanges.' + exchange + 'StockExchange'
       }
     ]
     params = { ...params, breadcrumbs, exchange }

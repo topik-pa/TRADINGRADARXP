@@ -16,6 +16,13 @@
   "volume": "Volume",
   "monthPerformance": "Performance mensile",
   "yearPerformance": "Performance annuale",
+  "details": "Dettagli",
+  "isin": "ISIN",
+  "code": "Code",
+  "market": "Mercato",
+  "currency": "Valuta",
+  "performance": "Performance",
+  "graph": "Grafico",
   "views": {
     "home": "Home",
     "privacy": "Privacy",

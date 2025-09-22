@@ -4,7 +4,7 @@ h1 {
   color: var(--black);
   letter-spacing: .15rem;
   font-weight: 500;
-  margin-bottom: var(--large-space);
+  margin-bottom: var(--x-large-space);
 }
 h2 {
   font-family: "Encode Sans", sans-serif;

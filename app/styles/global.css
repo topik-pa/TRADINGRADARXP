@@ -151,6 +151,21 @@ section {
   width: 48%;
 }
 
+dl {
+  dt {
+    font-size: var(--font-size-base);
+    letter-spacing: .1rem;
+    color: var(--darker-gray);
+  }
+  dd {
+    font-size: var(--font-size-big);
+    margin-left: var(--base-space);
+    margin-top: var(--xx-small-space);
+    margin-bottom: var(--small-space);
+    font-style: italic;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   main {

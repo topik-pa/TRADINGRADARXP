@@ -2,9 +2,10 @@ const template = document.createElement('template')
 template.innerHTML = `
   <style>
     .bullet {
-      border: 1px solid var(--lighter-gray);
+      border: 1px solid var(--blue);
       background-color: var(--lightest-gray);
       background: linear-gradient(22deg,rgba(234, 233, 230, .15) 50%, rgba(212, 211, 208, .15) 100%);
+      border-bottom: 8px solid var(--blue);
       border-radius: var(--border-radius-small);
       width: 18rem;
       &:hover {
@@ -18,9 +19,7 @@ template.innerHTML = `
       &.positive {
         background-color: var(--green);
         background: linear-gradient(22deg,rgba(153, 255, 204, .15) 50%, rgba(0, 158, 79, .15) 100%);
-        footer {
-          background-color: var(--green);
-        }
+        border-color: var(--green);
         .value {
           color: var(--green);
         }
@@ -28,9 +27,7 @@ template.innerHTML = `
       &.negative {
         background-color: var(--red);
         background: linear-gradient(22deg,rgba(255, 161, 165, .15) 50%, rgba(205, 33, 42, .15) 100%);
-        footer {
-          background-color: var(--red);
-        }
+        border-color: var(--red);
         .value {
           color: var(--red);
         }
@@ -39,19 +36,16 @@ template.innerHTML = `
     .head {
       padding: var(--main-padding) var(--main-padding) var(--x-large-space) var(--main-padding);
       font-weight: 500;
-      color: var(--darker-gray)
+      color: var(--darkest-gray)
     }
     .name {
       padding: 0 var(--main-padding);
-      a {
-        color: var(--secondary);
-        font-size: var(--font-size-big);
-        font-weight: 500;
-        text-decoration: none;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
+      color: var(--secondary);
+      font-size: var(--font-size-big);
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .value {
       padding: var(--x-small-space) var(--main-padding);
@@ -60,42 +54,21 @@ template.innerHTML = `
       font-weight: bold;
       text-shadow: 0 1px 0px var(--darkest-gray);
     }
-    footer {
-      background-color: var(--lighter-gray);
-      padding: var(--xx-small-space);
-      display: flex;
-      justify-content: end;
-      a {
-        text-decoration: none;
-        color: var(--primary);
-        font-size: var(--font-size-x-small);
-        text-shadow: 0 1px 0px var(--darkest-gray);
-        span {
-          font-size: var(--font-size-big);
-        }
-        &:hover {
-          font-style: italic;
-        }
-      }
-    }
   </style>
   <div class="bullet">
     <header class="head">
       <slot name="head"></slot>
     </header>
     <div class="name">
-      <a href="#"><slot name="name"></slot></a>
+      <slot name="name"></slot>
     </div>
     <div class="value">
-      <slot name="value"></slot><small>%</small>
+      <slot name="value"></slot>
     </div>
-    <footer>
-      <a href="#"><slot name="footer"></slot>&nbsp;<span>&#10148;</span></a>
-    </footer>
   </div>
 `
 
-class CmpBullet extends HTMLElement {
+class CmpLightBullet extends HTMLElement {
 
   constructor() {
     super()
@@ -106,8 +79,7 @@ class CmpBullet extends HTMLElement {
 
   connectedCallback() {
     this.root.classList.add(this.getAttribute('direction'))
-    this.root.querySelectorAll('a').forEach((el) => {el.href = this.getAttribute('slug')})
   }
 }
 
-customElements.define('cmp-bullet', CmpBullet)
+customElements.define('cmp-light-bullet', CmpLightBullet)

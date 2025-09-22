@@ -90,7 +90,7 @@ export async function feedDB(mode) {
           update.history[key] = Array.isArray(savedStock?.history?.[key]) ? savedStock?.history?.[key] : []
           if(mode === 'fod') {
             update.history[key].push(+value)
-            if (update.history[key].length > 25) update.history[key].shift()
+            if (update.history[key].length > 23) update.history[key].shift()
           } else {
             update.history[key][update.history[key].length - 1] = +value
           }

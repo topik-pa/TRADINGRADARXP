@@ -18,42 +18,55 @@ block main
   include ./components/shared/breadcrumbs/breadcrumbs.pug
 
   h1(id="stock-name") #{stock.name}
+  section(class="details")
+    div(class="flex")
+      dl
+        dt= __('isin')
+        dd #{stock.isin}
+        dt= __('code')
+        dd #{stock.code}
+      dl
+        dt= __('market')
+        dd #{stock.market}
+        dt= __('currency')
+        dd #{stock.currency}
+
 
   section
-    h2 Dettagli 
+    h2= __('details')
     div(class="bullet-wrap")
-      cmp-bullet
-        span(slot="head") #{stock.name}
-        span(slot="name")= __('lastPrice')
-        span(slot="value") #{stock.price}
-      cmp-bullet(direction=stock.relVariation > 0 ? 'positive' : 'negative')
+      cmp-light-bullet(direction=stock.relVariation > 0 ? 'positive' : 'negative')
         span(slot="head") #{stock.name}
         span(slot="name")= __('relVariation')
-        span(slot="value") #{stock.relVariation}
-      cmp-bullet
+        span(slot="value") #{stock.relVariation}<small>%</small>
+      cmp-light-bullet
         span(slot="head") #{stock.name}
         span(slot="name")= __('volume')
         span(slot="value") #{stock.volume}
+      cmp-light-bullet
+        span(slot="head") #{stock.name}
+        span(slot="name")= __('lastPrice')
+        span(slot="value") #{stock.price}<small>€</small>
 
 
   section
-    h2 Grafico 
+    h2= __('graph')
     div(id="stock-graph")
       canvas(id="myChart", data-volumes=stock.history.volume, data-prices=stock.history.price)
 
   section
-    h2 Performance 
+    h2= __('performance')
     div(class="bullet-wrap")
-      cmp-bullet(direction=stock.perf1M > 0 ? 'positive' : 'negative')
+      cmp-light-bullet(direction=stock.perf1M > 0 ? 'positive' : 'negative')
         span(slot="head") #{stock.name}
         span(slot="name")= __('monthPerformance')
         span(slot="value") #{stock.perf1M}
-      cmp-bullet(direction=stock.perf52W > 0 ? 'positive' : 'negative')
+      cmp-light-bullet(direction=stock.perf52W > 0 ? 'positive' : 'negative')
         span(slot="head") #{stock.name}
         span(slot="name")= __('yearPerformance')
         span(slot="value") #{stock.perf52W}
 
-  aside(id="disclaimer") #[em Attenzione: ] operare in Borsa e fare trading costituiscono #[em azioni ad alto rischio]. Le informazioni qui presentate non costituiscono una sollecitazione di acquisto o vendita di titoli azionari e si intendono #[em per puro uso informativo]. Il Portale Web tradingradar.net non si dichiara responsabile di un utilizzo improprio delle informazioni qui ottenute.
+  aside(id="disclaimer")!= __('disclaimer')
 
 
 block column 

@@ -8,3 +8,8 @@
 #stock-graph {
   width: 70%;
 }
+
+#stock .details div {
+  justify-content: flex-start;
+  gap: var(--xx-large-space);
+}
