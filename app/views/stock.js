@@ -35,12 +35,15 @@ export default  {
             type: 'line',
             label: 'Variazione prezzo',
             data: prices,
+            borderColor: '#3F6580',
+            backgroundColor: '#84bde2',
             yAxisID: 'yPrice'
           },
           {
             type: 'bar',
             label: 'Variazione Volumi',
             data: volumes,
+            backgroundColor: '#a9ddff',
             yAxisID: 'yVolume'
           }],
         labels: labels
