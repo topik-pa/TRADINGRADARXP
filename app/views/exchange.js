@@ -36,6 +36,18 @@ export default  {
         document.getElementById(id).appendChild(bullet)
       })
     }
+    if($bests.children.length === 0) {
+      const bullet = createComponent('cmp-light-bullet', { }, [
+        createComponent('span', { slot: 'name' }, ['No data'])
+      ])
+      $bests.appendChild(bullet)
+    }
+    if($worsts.children.length === 0) {
+      const bullet = createComponent('cmp-light-bullet', { }, [
+        createComponent('span', { slot: 'name' }, ['No data'])
+      ])
+      $worsts.appendChild(bullet)
+    }
     updateStatus([$bests, $worsts], 'success')
 
 

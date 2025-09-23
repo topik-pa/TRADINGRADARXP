@@ -22,19 +22,32 @@ export default  {
 
     updateStatus([$bests, $worsts, $cards], 'loading')
     let accents = await getData('/api/stocks/accents')
-    if (accents.length === 0) return
-    accents = removeSmallCaps(accents)
-    accents.forEach(stock => {
-      const direction = stock.relVariation > 0 ? 'positive' : 'negative'
-      const id = stock.relVariation > 0 ? 'bests' : 'worsts'
-      const bullet = createComponent('cmp-bullet', { direction, slug: stock.stockUrl }, [
-        createComponent('span', { slot: 'head' }, [stock.market]),
-        createComponent('span', { slot: 'name' }, [stock.name]),
-        createComponent('span', { slot: 'value' }, [stock.relVariation]),
-        createComponent('span', { slot: 'footer' }, [stock.name])
+    if (accents.length !== 0) {
+      accents = removeSmallCaps(accents)
+      accents.forEach(stock => {
+        const direction = stock.relVariation > 0 ? 'positive' : 'negative'
+        const id = stock.relVariation > 0 ? 'bests' : 'worsts'
+        const bullet = createComponent('cmp-bullet', { direction, slug: stock.stockUrl }, [
+          createComponent('span', { slot: 'head' }, [stock.market]),
+          createComponent('span', { slot: 'name' }, [stock.name]),
+          createComponent('span', { slot: 'value' }, [stock.relVariation]),
+          createComponent('span', { slot: 'footer' }, [stock.name])
+        ])
+        document.getElementById(id).appendChild(bullet)
+      })
+    }
+    if($bests.children.length === 0) {
+      const bullet = createComponent('cmp-light-bullet', { }, [
+        createComponent('span', { slot: 'name' }, ['No data'])
       ])
-      document.getElementById(id).appendChild(bullet)
-    })
+      $bests.appendChild(bullet)
+    }
+    if($worsts.children.length === 0) {
+      const bullet = createComponent('cmp-light-bullet', { }, [
+        createComponent('span', { slot: 'name' }, ['No data'])
+      ])
+      $worsts.appendChild(bullet)
+    }
     updateStatus([$bests, $worsts, $cards], 'success')
 
 

@@ -8,7 +8,7 @@ template.innerHTML = `
       border-radius: var(--border-radius-small);
       width: 18rem;
       &:hover {
-        filter:brightness(90%);
+        border-color: var(--dark-gray);
         .name a {
           text-decoration: underline;
           text-decoration-color: var(--dark-gray);

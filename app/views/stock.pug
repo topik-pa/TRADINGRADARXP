@@ -60,11 +60,11 @@ block main
       cmp-light-bullet(direction=stock.perf1M > 0 ? 'positive' : 'negative')
         span(slot="head") #{stock.name}
         span(slot="name")= __('monthPerformance')
-        span(slot="value") #{stock.perf1M}
+        span(slot="value") #{stock.perf1M}<small>%</small>
       cmp-light-bullet(direction=stock.perf52W > 0 ? 'positive' : 'negative')
         span(slot="head") #{stock.name}
         span(slot="name")= __('yearPerformance')
-        span(slot="value") #{stock.perf52W}
+        span(slot="value") #{stock.perf52W}<small>%</small>
 
 
   section(class="center")
