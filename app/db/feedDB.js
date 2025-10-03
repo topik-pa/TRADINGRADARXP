@@ -56,7 +56,7 @@ const TARGETS = [
 ]
 
 
-export async function feedDB(mode) {
+export async function feedDB(fod=false, partial=false) {
   const json = JSON.parse(
     await readFile(
       new URL(OUTPUT_PATH, import.meta.url)
@@ -66,6 +66,7 @@ export async function feedDB(mode) {
   for (const stock of json) {
     // For every url in sources...
     for (const [i, url] of stock.sources.entries()) {
+      if(partial && i===1) continue
       let html, key, value
       const update = {}
       logger.info('Conneting to: ' + url)
@@ -77,10 +78,8 @@ export async function feedDB(mode) {
       update.isin = stock.isin
 
       let savedStock = null
-      // if(mode === 'fod') {
       savedStock = await readStock(stock.isin)
       update.history = savedStock?.history ? savedStock.history : {}
-      // }
 
       TARGETS[i].forEach(t => {
         key = t.key
@@ -92,7 +91,7 @@ export async function feedDB(mode) {
           value = value?.replace(/[,]/g, '')
 
           update.history[key] = Array.isArray(savedStock?.history?.[key]) ? savedStock?.history?.[key] : []
-          if(mode === 'fod') {
+          if(fod) {
             update.history[key].push(+value)
             if (update.history[key].length > 23) update.history[key].shift()
           } else {

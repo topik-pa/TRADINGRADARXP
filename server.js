@@ -110,11 +110,17 @@ if (process.env.NODE_ENV !== 'test') {
 // INIT DB
 if (process.env.NODE_ENV === 'development') {
   // await initDB()
-  // await feedDB('fod')
+  // await feedDB(1, 1)
   // await feedDB()
 } else {
-  cron.schedule(process.env.CRON_SCHEDULE_DB_UPDATE, async() => {
-    await initDB()
+  cron.schedule(process.env.CRON_SCHEDULE_FIRSTOFDAY, async() => {
+    await feedDB(1, 1)
+  })
+  cron.schedule(process.env.CRON_SCHEDULE_INTRADAY, async() => {
+    await feedDB(0, 1)
+  })
+  cron.schedule(process.env.CRON_SCHEDULE_LASTOFDAY, async() => {
+    await feedDB(0, 0)
   })
 }
 
