@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "build": "webpack --mode production --config webpack.config.js",
     "start": "NODE_ENV=production node index.js",
