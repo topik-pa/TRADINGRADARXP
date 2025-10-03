@@ -27,6 +27,10 @@ const TARGETS = [
     {
       key: 'relVariation',
       path: '.mt-auto span:nth-child(3)'
+    },
+    {
+      key: 'status',
+      path: '#instrstatusl1'
     }
   ],
   [

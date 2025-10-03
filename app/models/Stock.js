@@ -60,6 +60,12 @@ const stockSchema = new Schema({
         nullable: true,
         unique: false
       },
+  status:
+      {
+        type: String,
+        nullable: true,
+        unique: false
+      },
   perf1M:
       {
         type: Number,
