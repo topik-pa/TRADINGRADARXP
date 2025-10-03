@@ -93,5 +93,27 @@
       "title": "Titolo: {{stock}}",
       "description": "Descrizione: {{stock}}"
     }
+  },
+  "privacy": {
+    "meta": {
+      "keywords": "privacy, cookie, sicurezza, dati, diritti",
+      "description": "Pagina Privacy: norme e diritti riguardanti la fruizione del servizio"
+    },
+    "title": "Privacy Policy",
+    "section0": "<h2>Privacy Policy</h2><p>tradingradar.net rispetta la privacy dell'utente e si impegna a proteggere i suoi dati personali sulla base del Regolamento (UE) 2016/679 del Parlamento Europeo e del Consiglio del 27 aprile 2016 “relativo alla protezione delle persone fisiche con riguardo al trattamento dei dati personali, nonché alla libera circolazione di tali dati e che abroga la direttiva 95/46/CE (Regolamento generale sulla protezione dei dati), in vigore dal 24 maggio 2016, e applicabile a partire dal 25 maggio 2018.</p><p>La presente informativa privacy è valida per tutti i visitatori del sito internet www.tradingradar.net.</p>",
+    "section1": "<h2>Premessa</h2><p></p>",
+    "section2": "<h2>Sito Istituzionale</h2><p></p>",
+    "section3": "<h2>Dati personali che possiamo raccogliere</h2><p></p>",
+    "section4": "<h2>Come avviene la raccolta dei dati personali</h2><p></p>",
+    "section5": "<h2>Come usiamo i dati personali dell'utente</h2><p></p>",
+    "section6": "<h2>I fondamenti giuridici su cui ci basiamo per il trattamento dei dati personali</h2><p></p>",
+    "section7": "<h2>Pubblicità, marketing e preferenze dell'utente nelle comunicazioni</h2><p></p>",
+    "section8": "<h2>Cookie</h2><p></p>",
+    "section9": "<h2>Divulgazione dei dati personali</h2><p></p>",
+    "section10": "<h2>Sicurezza dei dati</h2><p></p>",
+    "section11": "<h2>Link di parti terze</h2><p></p>",
+    "section12": "<h2>Conservazione dei dati</h2><p></p>",
+    "section13": "<h2>I diritti garantiti dalla legge</h2><p></p>",
+    "section14": "<h2>Come contattare VivaBioCell SPA per domande sulla privacy</h2><p></p>"
   }
 }

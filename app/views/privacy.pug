@@ -1,18 +1,33 @@
 extends layout.pug
 
 block append meta
-  meta(name="og:title" content="")
-  meta(name="og:description" content="")
+  meta(name="og:title" content= 'Privacy | ' + __('proj_name') )
+  meta(name="og:description" content=__('privacy.meta.description'))
   meta(name="og:image" content=og_image)
   meta(name="og:url" content=canonicalUrl)
 
-  title= __('privacy') + ' | ' + proj_name
-  meta(name="description" content=__('privacy'))
-  meta(name="keywords" content="")
+  title= 'Privacy | ' + __('proj_name') 
+  meta(name="description" content=__('privacy.meta.description'))
+  meta(name="keywords" content=__('privacy.meta.keywords'))
 
   link(rel="canonical", href=canonicalUrl)
   each link in hreflangs
     link(rel="alternate", hreflang=link.lang, href=link.url)
 
 block main
-  h1= __('privacy')
+  h1= __('privacy.title')
+  section!= __('privacy.section0')
+  section!= __('privacy.section1')
+  section!= __('privacy.section2')
+  section!= __('privacy.section3')
+  section!= __('privacy.section4')
+  section!= __('privacy.section5')
+  section!= __('privacy.section6')
+  section!= __('privacy.section7')
+  section!= __('privacy.section8')
+  section!= __('privacy.section9')
+  section!= __('privacy.section10')
+  section!= __('privacy.section11')
+  section!= __('privacy.section12')
+  section!= __('privacy.section13')
+  section!= __('privacy.section14')
