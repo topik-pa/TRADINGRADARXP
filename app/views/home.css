@@ -15,10 +15,10 @@ main.hp .rounded:nth-child(1), main.hp .rounded:nth-child(2) {
   }
 }
 main.hp .rounded:nth-child(1)::after {
-  background-image: url('~/app/assets/images/logo.webp');
+  background-image: url('../assets/images/logo.webp');
 }
 main.hp .rounded:nth-child(2)::after {
-  background-image: url('~/app/assets/images/updown.webp');
+  background-image: url('../assets/images/updown.webp');
 }
 
 main.hp #cards {
