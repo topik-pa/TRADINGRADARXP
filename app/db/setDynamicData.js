@@ -1,7 +1,7 @@
 
 import { JSDOM } from 'jsdom'
 import { Stock } from '../models/Stock.js'
-import { upsertStock } from '../controllers/db.controller.js'
+import { upsertStock, upsertHistory, readHistory } from '../controllers/db.controller.js'
 import pLimit from 'p-limit'
 import logger from '../config/logger.js'
 
@@ -48,7 +48,7 @@ import logger from '../config/logger.js'
 
 
 
-export async function setDynamicData(/*fod=false, partial=false*/) {
+export async function setDynamicData(fod=false, partial=false) {
   async function getStocks() {
     let cursor
     try {
@@ -66,17 +66,15 @@ export async function setDynamicData(/*fod=false, partial=false*/) {
   async function updateDynamicData(isin, sources) {
     const updatedData = await getUpdateData(sources)
     updatedData.isin = isin
-    try {
-      await upsertStock(updatedData)
-      logger.info(`✅ Stock updated: ${isin}`)
-    } catch (error) {
-      logger.error(`❌ Stock update error: ${isin}.`, error)
-    }
+    // Update History data
+    await updateHistory(isin, updatedData.price, updatedData.volume)
+    await upsertStock(updatedData)
   }
   async function getUpdateData(sources) {
     let data = {}
     // For every url in sources...
     for (const [i, url] of sources.entries()) {
+      if (partial && i===2) continue
       let html
       logger.info('Conneting to: ' + url)
       try {
@@ -149,8 +147,24 @@ export async function setDynamicData(/*fod=false, partial=false*/) {
 
       fragment[key] = value
     })
-
     return fragment
+  }
+  async function updateHistory(isin, price, volume) {
+    const history = await readHistory(isin) || { isin }
+    if(!Array.isArray(history.prices)){
+      history.prices = []
+    }
+    if(!Array.isArray(history.volumes)){
+      history.volumes = []
+    }
+    if(fod) {
+      history.prices.push(+price)
+      history.volumes.push(+volume)
+    } else {
+      history.prices[history.prices.length - 1] = +price
+      history.volumes[history.volumes.length - 1] = +volume
+    }
+    await upsertHistory(history)
   }
 
   const limit = pLimit(5)

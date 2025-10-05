@@ -1,4 +1,5 @@
 import { Stock } from '../models/Stock.js'
+import { History } from '../models/History.js'
 import logger from '../config/logger.js'
 
 export async function createStock(data) {
@@ -7,7 +8,7 @@ export async function createStock(data) {
     const savedStock = await stock.save()
     return savedStock
   } catch (err) {
-    logger.error(new Error(`Error saving stock:\n${err}`))
+    logger.error(new Error(`❌ Error saving stock:\n${err}`))
     throw err
   }
 }
@@ -17,7 +18,7 @@ export async function readStock(isin) {
     const stock = await Stock.findOne({ isin })
     return stock
   } catch (err) {
-    logger.error(new Error(`Error during read stock:\n${err}`))
+    logger.error(new Error(`❌ Error during read stock:\n${err}`))
     throw err
   }
 }
@@ -27,7 +28,7 @@ export async function getStockBySlug(slug) {
     const stock = await Stock.findOne({ slug })
     return stock
   } catch (err) {
-    logger.error(new Error(`Error during get stock:\n${err}`))
+    logger.error(new Error(`❌ Error during get stock:\n${err}`))
     throw err
   }
 }
@@ -42,9 +43,38 @@ export async function upsertStock(data) {
       runValidators: true // applica le validazioni dello schema
     }
     const stock = await Stock.findOneAndUpdate(filter, update, options)
+    logger.info(`✅ Stock updated: ${data.isin}`)
     return stock
   } catch (err) {
-    logger.error(new Error(`Error during upsert stock:\n${err}`))
+    logger.error(new Error(`❌ Error during upsert ${data.isin}:\n${err}`))
+    throw err
+  }
+}
+
+
+export async function readHistory(isin) {
+  try {
+    const history = await History.findOne({ isin })
+    return history
+  } catch (err) {
+    logger.error(new Error(`❌ Error during read history:\n${err}`))
+    throw err
+  }
+}
+
+export async function upsertHistory(data) {
+  try {
+    const filter = { isin: data.isin }
+    const update = { ...data }
+    const options = {
+      new: true,       // ritorna il documento aggiornato
+      upsert: true,    // crea se non esiste
+      runValidators: true // applica le validazioni dello schema
+    }
+    const history = await History.findOneAndUpdate(filter, update, options)
+    return history
+  } catch (err) {
+    logger.error(new Error(`❌ Error during upsert history:\n${err}`))
     throw err
   }
 }
