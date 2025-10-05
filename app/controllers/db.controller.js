@@ -24,7 +24,7 @@ export async function readStock(isin) {
 
 export async function getStockBySlug(slug) {
   try {
-    const stock = await Stock.findOne({ stockUrl: slug })
+    const stock = await Stock.findOne({ slug })
     return stock
   } catch (err) {
     logger.error(new Error(`Error during get stock:\n${err}`))

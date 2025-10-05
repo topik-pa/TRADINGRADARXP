@@ -29,7 +29,7 @@ beforeEach(async() => {
       'currency': 'EUR',
       'market': 'Euronext Growth Milan',
       'name': 'A.B.P. NOCIVELLI',
-      'stockUrl': 'a-b-p--nocivelli',
+      'slug': 'a-b-p--nocivelli',
       'absVariation': -0.05,
       'price': 5.10,
       'relVariation': -0.97
@@ -42,7 +42,7 @@ beforeEach(async() => {
       'currency': 'EUR',
       'market': 'Euronext Brussels, Paris',
       'name': 'ABO GROUP',
-      'stockUrl': 'abo-group',
+      'slug': 'abo-group',
       'absVariation': 0.00,
       'price': 6.30,
       'relVariation': 0.00
@@ -55,7 +55,7 @@ beforeEach(async() => {
       'currency': 'EUR',
       'market': 'Euronext Paris',
       'name': 'ABEO',
-      'stockUrl': 'abeo',
+      'slug': 'abeo',
       'absVariation': 0.06,
       'price': 9.72,
       'relVariation': 0.62

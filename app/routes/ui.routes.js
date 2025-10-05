@@ -39,7 +39,7 @@ router.get(`/:lang(${CURRENT_LANGS})/contacts`, contactsView)
 router.get(`/:lang(${CURRENT_LANGS})/about`, aboutView)
 
 // Stock page
-router.get(`/:lang(${CURRENT_LANGS})/:stockUrl`, stockView)
+router.get(`/:lang(${CURRENT_LANGS})/:slug`, stockView)
 
 
 // Home page

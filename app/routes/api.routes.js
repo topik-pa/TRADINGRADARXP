@@ -1,6 +1,6 @@
 import express from 'express'
 import {
-  getStockByStockUrl,
+  getStockBySlug,
   getStocks,
   getStocksAccents,
   getStocksPerformance
@@ -27,7 +27,7 @@ router.get(`/stocks/:exchange(${CURRENT_EXCHANGES})`, getStocks)
 
 
 // GET stock by url fragment
-router.get('/stocks/:stockurl', getStockByStockUrl)
+router.get('/stocks/:stockurl', getStockBySlug)
 
 
 // GET all stocks

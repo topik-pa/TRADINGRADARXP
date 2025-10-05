@@ -2,8 +2,7 @@ import 'dotenv/config'
 import express from 'express'
 import cron from 'node-cron'
 import { connectToDB } from './app/db/mongoose.js'
-import { initDB } from './app/db/initDB.js'
-import { feedDB } from './app/db/feedDB.js'
+import { setDynamicData } from './app/db/setDynamicData.js'
 import apiRoutes from './app/routes/api.routes.js'
 import uiRoutes from './app/routes/ui.routes.js'
 import path from 'path'
@@ -109,18 +108,17 @@ if (process.env.NODE_ENV !== 'test') {
 }
 // INIT DB
 if (process.env.NODE_ENV === 'development') {
-  // await initDB()
-  // await feedDB(1, 1)
-  // await feedDB()
+  // await setDynamicData()
+  // await setDynamicData(1, 1)
 } else {
   cron.schedule(process.env.CRON_SCHEDULE_FIRSTOFDAY, async() => {
-    await feedDB(1, 1)
+    await setDynamicData(1, 1)
   })
   cron.schedule(process.env.CRON_SCHEDULE_INTRADAY, async() => {
-    await feedDB(0, 1)
+    await setDynamicData(0, 1)
   })
   cron.schedule(process.env.CRON_SCHEDULE_LASTOFDAY, async() => {
-    await feedDB(0, 0)
+    await setDynamicData(0, 0)
   })
 }
 

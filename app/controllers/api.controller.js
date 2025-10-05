@@ -64,12 +64,12 @@ export async function getStocks(req, res, next) {
 }
 
 
-// GET stock by stockUrl
-export async function getStockByStockUrl(req, res, next) {
-  const stockUrl = req.params.stockurl
+// GET stock by slug
+export async function getStockBySlug(req, res, next) {
+  const slug = req.params.slug
   let stock
   try {
-    stock = await Stock.findOne({ stockUrl: stockUrl })
+    stock = await Stock.findOne({ slug })
   } catch (error) {
     return next(error)
   }

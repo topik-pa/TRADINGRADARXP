@@ -9,10 +9,10 @@ const stockSchema = new Schema({
         nullable: false,
         unique: true
       },
-  stockUrl:
+  slug:
       {
         type: String,
-        required: [true, 'Stock url fragment is required'],
+        required: [true, 'Stock slug is required'],
         nullable: false,
         unique: true
       },
@@ -84,9 +84,9 @@ const stockSchema = new Schema({
         nullable: true,
         unique: false
       },
-  cap:
+  sources:
       {
-        type: Number,
+        type: Schema.Types.Mixed,
         nullable: true,
         unique: false
       },

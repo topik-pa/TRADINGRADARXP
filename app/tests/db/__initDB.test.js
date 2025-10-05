@@ -255,7 +255,7 @@ describe('filterStocksAndBuildData', () => {
       'isin': 'IT0001233417',
       'market': 'Euronext Milan',
       'name': 'A2A',
-      'stockUrl': 'a2a'
+      'slug': 'a2a'
     })
   })
 })

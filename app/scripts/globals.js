@@ -58,7 +58,7 @@ export function printStockList(stocks, $target, key) {
     const $a = document.createElement('a')
     $a.innerText = stock.name
     $a.title = stock.name
-    $a.href = stock.stockUrl
+    $a.href = stock.slug
     const $span = document.createElement('span')
     $span.innerText = stock[key] + '%' || ''
     $li.appendChild($a)

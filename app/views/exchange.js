@@ -27,7 +27,7 @@ export default  {
       accents.forEach(stock => {
         const direction = stock.relVariation > 0 ? 'positive' : 'negative'
         const id = stock.relVariation > 0 ? 'bests' : 'worsts'
-        const bullet = createComponent('cmp-bullet', { direction, slug: stock.stockUrl }, [
+        const bullet = createComponent('cmp-bullet', { direction, slug: stock.slug }, [
           createComponent('span', { slot: 'head' }, [stock.market]),
           createComponent('span', { slot: 'name' }, [stock.name]),
           createComponent('span', { slot: 'value' }, [stock.relVariation]),

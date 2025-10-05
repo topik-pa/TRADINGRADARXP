@@ -67,8 +67,8 @@ export async function exchangeView(req, res) {
 // Stock
 export async function stockView(req, res) {
   const lang = req.params.lang
-  const stockUrl = req.params.stockUrl
-  const stock = await getStockBySlug(stockUrl)
+  const slug = req.params.slug
+  const stock = await getStockBySlug(slug)
   if (!supportedLangs.includes(lang)) {
     res.redirect((req.url).replace(lang, fallback))
   } else {
@@ -84,7 +84,7 @@ export async function stockView(req, res) {
         name: stock.name
       }
     ]
-    params = { ...params, breadcrumbs, stockUrl }
+    params = { ...params, breadcrumbs, slug }
     res.render('stock', params)
   }
 }
