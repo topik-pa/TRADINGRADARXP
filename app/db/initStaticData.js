@@ -141,9 +141,9 @@ for(const letter of process.env.ALPHABET) {
   report.add('Added stocks for letter: ' + letter + '\n')
   // ALERT: for mongoDB service limitation limit must be low
   const limit = pLimit(5)
-  let test = [stocks[0], stocks[1], stocks[2], stocks[3], stocks[4]]
+  // let test = [stocks[0], stocks[1], stocks[2], stocks[3], stocks[4]]
   const results = await Promise.allSettled(
-    test.map(stock => {
+    stocks.map(stock => {
       if(isStockValid(stock)) {
         const storing = getStaticData(stock)
         if(storing) {

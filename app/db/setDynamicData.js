@@ -78,7 +78,11 @@ export async function setDynamicData(fod=false, partial=false) {
       let html
       logger.info('Conneting to: ' + url)
       try {
-        html = await (await fetch(url)).text()
+        const response = await fetch(url)
+        if (response.status === 429) {
+          logger.warn('!Status 429!')
+        }
+        html = await response.text()
       } catch (error) {
         logger.error(new Error(error.message))
       }
