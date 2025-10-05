@@ -52,7 +52,7 @@ block main
   section
     h2= __('graph')
     div(id="stock-graph")
-      canvas(id="myChart", data-volumes=stock.history.volume, data-prices=stock.history.price)
+      canvas(id="myChart", data-volumes=history.volumes, data-prices=history.prices)
 
   section
     h2= __('performance')

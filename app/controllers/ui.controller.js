@@ -1,5 +1,5 @@
 import { i18n } from '../../server.js'
-import { getStockBySlug } from './db.controller.js'
+import { getStockBySlug, readHistory } from './db.controller.js'
 const baseUrl = 'https://www.tradingradar.net'
 const supportedLangs = ['en', 'it']
 const fallback = 'en'
@@ -69,10 +69,12 @@ export async function stockView(req, res) {
   const lang = req.params.lang
   const slug = req.params.slug
   const stock = await getStockBySlug(slug)
+  const history = await readHistory(stock.isin)
   if (!supportedLangs.includes(lang)) {
     res.redirect((req.url).replace(lang, fallback))
   } else {
     res.locals.stock = stock
+    res.locals.history = history
     i18n.setLocale(req, lang)
     let params = getViewParams('stock', lang, req.path)
     const breadcrumbs = [
