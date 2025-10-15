@@ -48,7 +48,7 @@ import logger from '../config/logger.js'
 
 
 
-export async function setDynamicData(fod=false, partial=false) {
+export async function setDynamicData(fod=false, partial=[]) {
   async function getStocks() {
     let cursor
     try {
@@ -74,7 +74,7 @@ export async function setDynamicData(fod=false, partial=false) {
     let data = {}
     // For every url in sources...
     for (const [i, url] of sources.entries()) {
-      if (partial && i===2) continue
+      if (!partial.includes(i)) continue
       let html
       logger.info('Conneting to: ' + url)
       try {
