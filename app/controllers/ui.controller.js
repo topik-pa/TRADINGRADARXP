@@ -1,5 +1,6 @@
 import { i18n } from '../../server.js'
 import { getStockBySlug, readHistory } from './db.controller.js'
+import logger from '../config/logger.js'
 const baseUrl = 'https://www.tradingradar.net'
 const supportedLangs = ['en', 'it']
 const fallback = 'en'
@@ -68,8 +69,13 @@ export async function exchangeView(req, res) {
 export async function stockView(req, res) {
   const lang = req.params.lang
   const slug = req.params.slug
-  const stock = await getStockBySlug(slug)
-  const history = await readHistory(stock.isin)
+  let stock, history = undefined
+  try {
+    stock = await getStockBySlug(slug)
+    history = await readHistory(stock.isin)
+  } catch (err) {
+    logger.error(new Error(`❌ Error during getting stock:\n${err}`))
+  }
   if (!supportedLangs.includes(lang)) {
     res.redirect((req.url).replace(lang, fallback))
   } else {

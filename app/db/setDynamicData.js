@@ -66,9 +66,14 @@ export async function setDynamicData(fod=false, partial=[]) {
   async function updateDynamicData(isin, sources) {
     const updatedData = await getUpdateData(sources)
     updatedData.isin = isin
-    // Update History data
-    await updateHistory(isin, updatedData.price, updatedData.volume)
-    await upsertStock(updatedData)
+    try {
+      // Update History data
+      await updateHistory(isin, updatedData.price, updatedData.volume)
+      // Update Stock data
+      await upsertStock(updatedData)
+    } catch (error) {
+      logger.error(new Error(error.message))
+    }
   }
   async function getUpdateData(sources) {
     let data = {}
@@ -154,7 +159,12 @@ export async function setDynamicData(fod=false, partial=[]) {
     return fragment
   }
   async function updateHistory(isin, price, volume) {
-    const history = await readHistory(isin) || { isin }
+    let history
+    try {
+      history = await readHistory(isin) || { isin }
+    } catch (error) {
+      logger.error(new Error(error.message))
+    }
     if(!Array.isArray(history.prices)){
       history.prices = []
     }
@@ -168,7 +178,11 @@ export async function setDynamicData(fod=false, partial=[]) {
       history.prices[history.prices.length - 1] = +price
       history.volumes[history.volumes.length - 1] = +volume
     }
-    await upsertHistory(history)
+    try {
+      await upsertHistory(history)
+    } catch (error) {
+      logger.error(new Error(error.message))
+    }
   }
 
   const limit = pLimit(5)
