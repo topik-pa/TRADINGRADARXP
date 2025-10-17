@@ -71,8 +71,8 @@ export async function stockView(req, res) {
   const slug = req.params.slug
   let stock, history = undefined
   try {
-    stock = await getStockBySlug(slug)
-    history = await readHistory(stock.isin)
+    stock = await getStockBySlug(slug) || {}
+    history = await readHistory(stock.isin) || {}
   } catch (err) {
     logger.error(new Error(`❌ Error during getting stock:\n${err}`))
   }
