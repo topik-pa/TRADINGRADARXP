@@ -89,12 +89,6 @@ const stockSchema = new Schema({
         type: Schema.Types.Mixed,
         nullable: true,
         unique: false
-      },
-  history:
-      {
-        type: Schema.Types.Mixed,
-        nullable: true,
-        unique: false
       }
 }, { timestamps: true } )
 
