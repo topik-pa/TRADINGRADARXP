@@ -149,7 +149,7 @@ export async function setDynamicData(fod=false, partial=[]) {
           value = new JSDOM(html).window.document.querySelector('table > tbody > tr:nth-child(4) > td:nth-child(2)')?.firstChild?.nodeValue.trim() || null //!!
         }
       }
-      if (key==='price' || key==='volume') {
+      if (key==='price' || key==='volume' || key==='perf1M' || key==='perf52W') {
         value = value?.replace(/[,]/g, '')
       }
       /*Exceptions*/
@@ -185,6 +185,6 @@ export async function setDynamicData(fod=false, partial=[]) {
     }
   }
 
-  const limit = pLimit(5)
+  const limit = pLimit(3)
   getStocks()
 }
