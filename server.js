@@ -108,7 +108,8 @@ if (process.env.NODE_ENV !== 'test') {
 }
 // INIT DB
 if (process.env.NODE_ENV === 'development') {
-  await setDynamicData(1, [0])
+  // await setDynamicData(1, [0,1,2])
+  // await setDynamicData(1, [0])
 } else {
   cron.schedule(process.env.CRON_SCHEDULE_FIRSTOFDAY, async() => {
     await setDynamicData(1, [0,1])

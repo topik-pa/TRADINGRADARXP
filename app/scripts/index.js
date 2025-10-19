@@ -7,6 +7,7 @@ import './CmpCard.js'
 import './CmpNavigation.js'
 
 const pageId = document.body.id
+const lang = document.documentElement.lang
 
 mainMenu.toggleMobileMenu()
 gotoTop.init()
@@ -27,3 +28,11 @@ if (modules[pageId]) {
     // console.warn(err)
   })
 }
+
+function setUpdateValue() {
+  const updates = document.getElementsByClassName('update')
+  for (const item of updates) {
+    item.children[0].innerText = new Date().toLocaleDateString(lang ,{ weekday:'long', day:'numeric', month:'long' })
+  }
+}
+setUpdateValue()

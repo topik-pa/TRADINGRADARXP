@@ -1,5 +1,5 @@
 aside(id="column") 
-  span(id="colcollapse", class="icon-cheveron-up")
+  span(id="colcollapse", class="icon-cheveron-up hide")
   cmp-navigation
     span(slot="title")= __('column.exchanges')
     span(slot="list")
@@ -20,13 +20,14 @@ aside(id="column")
       li(class="cmp-navigation-slotted-li")
         a(href="dublin", class="cmp-navigation-slotted-a")=  __('exchanges.dublinStockExchange')
   div(class="col-widget")
-    h4 Telegram
-    p Per ottenere le azioni con i maggiori rialzi o ribassi della giornata. 
-    a(href="https://t.me/tradingradarnet", title="Telegram") #[i(class="icon-telegram")] Segui su Telegram
+    h4= __('column.telegram')
+    p= __('column.telegramText')
+    a(href="https://t.me/tradingradarnet", title="Telegram")= __('column.telegramCTA') 
+      i(class="icon-telegram")
   div(class="col-widget partner")
-    h4 Investi con AVA
+    h4= __('column.AVA')
     div
-      p(class="center") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit sem ante, eget lobortis lorem tincidunt et. Etiam vehicula odio nec lorem commodo efficitur.
+      p(class="center")= __('column.AVAText1')
       p(class="center")
         script.avaJavaCode(type='text/javascript').
           (function () {
@@ -48,7 +49,7 @@ aside(id="column")
           cP.parentNode.insertBefore(ifr, cP);
           }());
     div
-      p(class="center") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit sem ante, eget lobortis lorem tincidunt et. Etiam vehicula odio nec lorem commodo efficitur.    
+      p(class="center")= __('column.AVAText2')  
       p(class="center")
         script.avaJavaCode(type='text/javascript').
           (function () {
@@ -70,7 +71,7 @@ aside(id="column")
           cP.parentNode.insertBefore(ifr, cP);
           }());
     div
-      p(class="center") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit sem ante, eget lobortis lorem tincidunt et. Etiam vehicula odio nec lorem commodo efficitur.    
+      p(class="center")= __('column.AVAText3')    
       p(class="center")
         script.avaJavaCode(type='text/javascript').
           (function () {

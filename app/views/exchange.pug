@@ -20,7 +20,10 @@ block main
   h1= __(`exchanges.${exchange}StockExchange`)
 
   section
-    h2!= __('rallyTitle', { date: new Date().toLocaleDateString(locale ,{ weekday:'long', day:'numeric', month:'long' })})
+    h2!= __('rallyTitle')
+    p(class="update")= __('update')
+      em
+    p!= __('rallyText')
     div
       h3= __('rallyUpSubtitle')
       div(id="bests", class="bullet-wrap")
@@ -30,6 +33,9 @@ block main
 
   section
     h2= __('performanceTitle')
+    p(class="update")= __('update')
+      em
+    p!= __('performanceText')
     div(class="list-wrapper")
       div(id="perf-month-up")
         h3= __('performanceSubtitleUp')

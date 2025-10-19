@@ -62,17 +62,13 @@ template.innerHTML = `
     }
     footer {
       background-color: var(--lighter-gray);
-      padding: var(--xx-small-space);
+      padding: var(--x-small-space);
       display: flex;
       justify-content: end;
       a {
-        text-decoration: none;
         color: var(--primary);
         font-size: var(--font-size-x-small);
         text-shadow: 0 1px 0px var(--darkest-gray);
-        span {
-          font-size: var(--font-size-big);
-        }
         &:hover {
           font-style: italic;
         }

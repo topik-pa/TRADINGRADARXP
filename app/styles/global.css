@@ -70,7 +70,7 @@ em, .em {
 }
 
 p {
-  margin: var(--x-small-space) 0;
+  margin: var(--small-space) 0;
   line-height: 130%;
 }
 
@@ -107,6 +107,11 @@ small {
 
 .center {
   text-align: center;
+}
+
+.update {
+  font-style: italic;
+  margin-bottom: var(--large-space);
 }
 
 section {

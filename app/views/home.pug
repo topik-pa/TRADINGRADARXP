@@ -6,7 +6,7 @@ block append meta
   meta(name="og:image" content=og_image)
   meta(name="og:url" content=canonicalUrl)
 
-  title= __('home') + ' | ' + __('proj_name') 
+  title= __('views.home') + ' | ' + __('proj_name') 
   meta(name="description" content=__('proj_description'))
   meta(name="keywords" content=__('index.meta.keywords'))
 
@@ -24,7 +24,10 @@ block main
       p!= __('index.rally')
 
   section
-    h2!= __('rallyTitle', { date: new Date().toLocaleDateString(locale ,{ weekday:'long', day:'numeric', month:'long' })})
+    h2!= __('rallyTitle')
+    p(class="update")= __('update')
+      em
+    p!= __('rallyText')
     div
       h3= __('rallyUpSubtitle')
       div(id="bests", class="bullet-wrap")
@@ -34,6 +37,9 @@ block main
 
   section
     h2= __('performanceTitle')
+    p(class="update")= __('update')
+      em
+    p!= __('performanceText')
     div(class="list-wrapper")
       div(id="perf-month-up")
         h3= __('performanceSubtitleUp')
@@ -44,6 +50,7 @@ block main
 
   section
     h2= __('index.sectionExchanges.title')
+    p!= __('index.sectionExchanges.text')
     div(id="cards")
       cmp-card(color="red")
         span(slot="title")= __('exchanges.globalStockExchange')

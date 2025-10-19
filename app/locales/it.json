@@ -23,10 +23,12 @@
   "currency": "Valuta",
   "performance": "Performance",
   "graph": "Grafico",
+  "update": "Ultimo aggiornamento dati: ",
   "views": {
     "home": "Home",
     "privacy": "Privacy",
     "contacts": "Contatti",
+    "about": "Su di noi",
     "exchanges": "Mercati"
   },
   "exchanges": {
@@ -53,12 +55,21 @@
     "contacts": "Contatti"
   },
   "column": {
-    "exchanges": "Mercati"
+    "exchanges": "Mercati",
+    "telegram": "Telegram",
+    "telegramText": "Iscriviti al Canale Telegram per ottenere direttamente sul tuo smartphone le azioni con i maggiori rialzi o ribassi della giornata.",
+    "telegramCTA": "Segui su Telegram",
+    "AVA": "Investi con AvaTrade",
+    "AVAText1": "Affidati a una piattaforma di trading online solida e professionale. Con AvaTrade hai accesso a strumenti avanzati, analisi di mercato accurate e supporto dedicato per gestire al meglio ogni operazione",
+    "AVAText2": "Sfrutta le potenzialità dei mercati globali con AvaTrade. Una piattaforma completa, pensata per investitori attenti, che combina tecnologia, sicurezza e assistenza per decisioni consapevoli",
+    "AVAText3": "Non restare a guardare: agisci ora e cavalca le opportunità dei mercati! Con AvaTrade hai piattaforma potente, analisi professionali e strumenti pronti a massimizzare i tuoi profitti"
   },
-  "rallyTitle": "Titoli in rally oggi <em>{{date}}</em>",
+  "rallyTitle": "Titoli in rally",
+  "rallyText": "Questa è la lista dei titoli azionari in rally al momento dell'ultimo aggiornamento dei dati. Si tratta di una selezione dei principali titoli che al momento hanno una importante variazione della quotazione seguita da un forte aumento dei volumi di scambio.",
   "rallyUpSubtitle": "Titoli in rally rialzista",
   "rallyDownSubtitle": "Titoli in rally ribassista",
   "performanceTitle": "Le performance più interessanti",
+  "performanceText": "Queste, invece, sono le performance mensili più interessanti. E' uno visione più generale della valutazione di un titolo azionario e una possibile conferma, se presente anche qui, della validità del movimento in atto.",
   "performanceSubtitleUp": "Migliori perfomance rialziste dell'ultimo mese",
   "performanceSubtitleDown": "Peggiori perfomance ribassiste dell'ultimo mese",
   "disclaimer": "<em>Attenzione</em>: operare in Borsa e fare trading costituiscono <em>azioni ad alto rischio</em>. Le informazioni qui presentate non costituiscono una sollecitazione di acquisto o vendita di titoli azionari e si intendono <em>per puro uso informativo</em>. Il Portale Web tradingradar.net non si dichiara responsabile di un utilizzo improprio delle informazioni qui ottenute.",
@@ -71,14 +82,15 @@
     },
     "description": "<em>...titoli sull'orlo di una crisi di nervi</em>. <br><br>tradingradar.net interroga in tempo reale le quotazioni delle principali azioni europee ed <em>evidenzia i titoli in fase di rally</em>. <br><br>Trova i titoli azionari che stanno vivendo un <em>momento di forte espansione o di forte contrazione</em> e decidi la tua strategia. <br><em>Segui il mercato</em> e basa le tue azioni assecondando il momento!",
     "subtitle": "Cosa sono i titoli <em>in rally</em>?",
-    "rally": "Le azioni in rally sono i titoli azionari che stanno vivendo una <em>fase di forte movimentazione del prezzo</em> accompagnata da una <em>espansione dei volumi</em>. <br>Sono quei titoli che per i motivi più svariati stanno crescendo (o decrescendo) con velocità molto maggiore rispetto alle precedenti sedute. <br><br>In generale si tratta di un periodo breve (al più qualche giorno), ma nel quale è possibile mettere a segno importati operazioni di acquisto o vendita.",
+    "rally": "<br>Le azioni in rally sono i titoli azionari che stanno vivendo una <em>fase di forte movimentazione del prezzo</em> accompagnata da una <em>espansione dei volumi</em>. <br>Sono quei titoli che per i motivi più svariati stanno crescendo (o decrescendo) con velocità molto maggiore rispetto alle precedenti sedute. <br><br>In generale si tratta di un periodo breve (al più qualche giorno), ma nel quale è possibile mettere a segno importati operazioni di acquisto o vendita.",
     "sectionExchanges": {
       "title": "Tutti i mercati",
+      "text": "Lista dei mercati presi in esame dalla nostra piattaforma.",
       "discover": "Scopri tutti i titoli >>"
     },
     "sectionAVA": {
       "title": "Vivi l'emozione del trading azionario con i servizi proposti da AvaTrade",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit sem ante, eget lobortis lorem tincidunt et. Etiam vehicula odio nec lorem commodo efficitur."
+      "text": "Scopri come operare sui mercati finanziari con strumenti professionali e una piattaforma affidabile. AvaTrade mette a tua disposizione tecnologie avanzate, analisi di mercato in tempo reale e supporto qualificato, per offrirti un’esperienza di trading completa e sicura. Che tu sia un investitore esperto o alle prime armi, potrai contare su un ambiente intuitivo, trasparente e ricco di risorse per prendere decisioni consapevoli. Clicca e inizia a esplorare nuove opportunità di investimento."
     }
   },
   "exchange": {
@@ -93,6 +105,25 @@
       "title": "Titolo: {{stock}}",
       "description": "Descrizione: {{stock}}"
     }
+  },
+  "contacts": {
+    "meta": {
+      "keywords": "contatti, trading, radar",
+      "title": "Contattaci",
+      "description": "Pagina Contatti"
+    },
+    "title": "Contattaci",
+    "text": "Contatta tradingradar.net per domande, informazioni o altre necessità.",
+    "subTitleEMail": "Tramite email",
+    "textEMail": "E' possibile utilizzare questo indirizzo email: "
+  },
+  "about": {
+    "meta": {
+      "keywords": "chi, siamo, trading, radar",
+      "title": "Chi siamo",
+      "description": "Chi siamo"
+    },
+    "title": "Su di noi"
   },
   "privacy": {
     "meta": {
