@@ -2,7 +2,7 @@
 	"hello": "Ciao",
   "proj_name": "tradingradar.net",
   "proj_description": "Trova le migliori opportunità di investimento sfruttando i titoli azionari in fase di rally",
-  "proj_tagline": "...titoli sull'orlo di una crisi di nervi",
+  "proj_tagline": "Quali sono i titoli in rally oggi?",
   "milan": "Milano",
   "paris": "Parigi",
   "oslo": "Oslo",
@@ -80,7 +80,7 @@
     "meta": {
       "keywords": "trading, radar"
     },
-    "description": "<em>...titoli sull'orlo di una crisi di nervi</em>. <br><br>tradingradar.net interroga in tempo reale le quotazioni delle principali azioni europee ed <em>evidenzia i titoli in fase di rally</em>. <br><br>Trova i titoli azionari che stanno vivendo un <em>momento di forte espansione o di forte contrazione</em> e decidi la tua strategia. <br><em>Segui il mercato</em> e basa le tue azioni assecondando il momento!",
+    "description": "<em>Quali sono i titoli in rally oggi?</em>. <br><br>tradingradar.net interroga in tempo reale le quotazioni delle principali azioni europee ed <em>evidenzia i titoli in fase di rally</em>. <br><br>Trova i titoli azionari che stanno vivendo un <em>momento di forte espansione o di forte contrazione</em> e decidi la tua strategia. <br><em>Segui il mercato</em> e basa le tue azioni assecondando il momento!",
     "subtitle": "Cosa sono i titoli <em>in rally</em>?",
     "rally": "<br>Le azioni in rally sono i titoli azionari che stanno vivendo una <em>fase di forte movimentazione del prezzo</em> accompagnata da una <em>espansione dei volumi</em>. <br>Sono quei titoli che per i motivi più svariati stanno crescendo (o decrescendo) con velocità molto maggiore rispetto alle precedenti sedute. <br><br>In generale si tratta di un periodo breve (al più qualche giorno), ma nel quale è possibile mettere a segno importati operazioni di acquisto o vendita.",
     "sectionExchanges": {

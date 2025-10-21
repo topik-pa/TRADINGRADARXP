@@ -12,7 +12,7 @@ export async function getStocksPerformance(req, res, next) {
   }
   let stocks = []
   try {
-    stocks = await Stock.find(query).sort({ perf1M: trend }).limit(10)
+    stocks = await Stock.find(query).sort({ perf1M: trend }).limit(20)
   } catch (error) {
     return next(error)
   }
