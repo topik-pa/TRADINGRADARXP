@@ -74,6 +74,11 @@ template.innerHTML = `
         }
       }
     }
+    @media screen and (max-width: 768px) {
+      .bullet {
+        width: 100%;
+      }
+    }
   </style>
   <div class="bullet">
     <header class="head">

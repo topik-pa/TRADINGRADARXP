@@ -136,8 +136,8 @@ section {
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
-  gap: var(--main-padding);
   margin-bottom: var(--x-large-space);
+  gap: var(--main-padding);
 }
 
 .list-wrapper {
@@ -168,6 +168,12 @@ dl {
   }
 }
 
+
+@media screen and (max-width: 768px) {
+  .bullet-wrap {
+    flex-direction: column;
+  }
+}
 
 @media screen and (max-width: 768px) {
   main {

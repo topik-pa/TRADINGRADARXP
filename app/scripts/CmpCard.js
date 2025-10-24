@@ -4,7 +4,6 @@ template.innerHTML = `
     section {
       border-bottom: 1px solid var(--light-gray);
       width: 16rem;
-      margin-bottom: var(--main-padding);
     }
     header {
       border-top-left-radius: var(--border-radius-small);
@@ -37,6 +36,11 @@ template.innerHTML = `
       padding: var(--main-padding);
       display: flex;
       justify-content: end;
+    }
+    @media screen and (max-width: 768px) {
+      section {
+        width: 100%;
+      }
     }
   </style>
   <section>
