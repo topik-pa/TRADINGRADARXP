@@ -14,6 +14,13 @@
   font-weight: 500;
 }
 
+@media screen and (max-width: 768px) {
+  #breadcrumbs a:nth-of-type(3) {
+    display: block;
+    margin-top: var(--xx-small-space);
+  }
+}
+
 /* #breadcrumbs a:not(:first-child)::before {
   content: '\2192';
 } */

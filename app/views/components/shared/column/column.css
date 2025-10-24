@@ -41,14 +41,13 @@ aside#column .col-widget {
 
 aside#column a[title="Telegram"] {
   display: block;
-  margin-top: var(--base-space);
   text-align: center;
-  font-size: var(--font-size-base);
+  font-style: italic;
 }
 aside#column i.icon-telegram {
-  font-size: var(--font-size-bigger);
+  font-size: var(--font-size-big);
   vertical-align: middle;
-  margin-left: var(--base-space);
+  margin-left: var(--x-small-space);
   text-decoration: none;
 }
 

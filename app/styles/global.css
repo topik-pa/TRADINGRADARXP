@@ -23,9 +23,6 @@ body {
 .layout main {
   width: calc(80% - var(--main-padding) * 2);
   padding: var(--main-padding);
-  &.hp {
-    padding-top: var(--x-large-space);
-  }
 }
 .layout #column {
   padding: var(--main-padding);
@@ -180,10 +177,10 @@ dl {
     width: auto;
   }
   .layout main {
-    width: calc(60% - var(--main-padding) * 2);
+    width: calc(64% - var(--main-padding) * 2);
   }
   .layout #column {
-    width: calc(40% - var(--main-padding) * 2);
+    width: calc(36% - var(--main-padding) * 2);
   }
   .list-wrapper {
     flex-direction: column;
