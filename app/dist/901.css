@@ -1,1 +1,1 @@
-#stock-details{justify-content:space-between}#stock-performance{justify-content:space-evenly}#stock-graph{width:70%}#stock .details div{gap:var(--xx-large-space);justify-content:flex-start}
+#stock-details{justify-content:space-between}#stock-performance{justify-content:space-evenly}#stock-graph{width:70%}#stock .details div{gap:var(--xx-large-space);justify-content:flex-start}@media screen and (max-width:768px){#stock .details div{flex-direction:column}#stock-graph{width:100%}}
