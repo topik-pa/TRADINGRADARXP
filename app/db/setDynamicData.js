@@ -6,49 +6,12 @@ import pLimit from 'p-limit'
 import logger from '../config/logger.js'
 
 
-/*async function getUpdatedData(stock) {
-  // For every url in sources...
-  for (const [i, url] of stock.sources.entries()) {
-    let html, key, value
-    const update = {}
-    logger.info('Conneting to: ' + url)
-    try {
-      html = await (await fetch(url)).text()
-    } catch (error) {
-      logger.error(new Error(error.message))
-    }
-    TARGETS[i].forEach(t => {
-      key = t.key
-      value = new JSDOM(html).window.document.querySelector(t.path)?.firstChild?.nodeValue.trim() || null //!!
-      if (key==='relVariation') {
-        value = value?.replace(/[()%]/g, '')
-      }
-      if (key==='price' || key==='volume') {
-        value = value?.replace(/[,]/g, '')
-
-        update.history[key] = Array.isArray(stock?.history?.[key]) ? stock?.history?.[key] : []
-        if(fod) {
-          update.history[key].push(+value)
-          if (update.history[key].length > 23) update.history[key].shift()
-        } else {
-          update.history[key][update.history[key].length - 1] = +value
-        }
-      }
-      if (key==='cap' && value) {
-        const order = value.slice(-1)
-        const digits = value.slice(0, -1)
-        value = order === 'B' ? digits * 1_000 : digits
-      }
-      update[key] = value
-
-      update.history = stock.history ? stock.history : {}
-    })
-  }
-}*/
-
 
 
 export async function setDynamicData(fod=false, partial=[]) {
+  const limit = pLimit(3)
+  const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+
   async function getStocks() {
     let cursor
     try {
@@ -61,6 +24,7 @@ export async function setDynamicData(fod=false, partial=[]) {
       tasks.push(limit(() => updateDynamicData(stock.isin, stock.sources)))
     }
     await Promise.all(tasks)
+    await sleep(300)
     logger.info('All stocks updated!')
   }
   async function updateDynamicData(isin, sources) {
@@ -68,7 +32,9 @@ export async function setDynamicData(fod=false, partial=[]) {
     updatedData.isin = isin
     try {
       // Update History data
-      await updateHistory(isin, updatedData.price, updatedData.volume)
+      if (updatedData.price && updatedData.volume) {
+        await updateHistory(isin, updatedData.price, updatedData.volume)
+      }
       // Update Stock data
       await upsertStock(updatedData)
     } catch (error) {
@@ -185,6 +151,6 @@ export async function setDynamicData(fod=false, partial=[]) {
     }
   }
 
-  const limit = pLimit(3)
+
   getStocks()
 }
