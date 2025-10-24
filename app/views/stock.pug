@@ -48,12 +48,6 @@ block main
         span(slot="name")= __('volume')
         span(slot="value") #{(stock.volume / 1000000).toFixed(2)}<small>Mill.</small>
 
-
-  section
-    h2= __('graph')
-    div(id="stock-graph")
-      canvas(id="myChart", data-volumes=history.volumes, data-prices=history.prices)
-
   section
     h2= __('performance')
     div(class="bullet-wrap")
@@ -66,30 +60,16 @@ block main
         span(slot="name")= __('yearPerformance')
         span(slot="value") #{stock.perf52W}<small>%</small>
 
+  section
+    h2= __('graph')
+    div(id="stock-graph")
+      canvas(id="myChart", data-volumes=history.volumes, data-prices=history.prices)
+
 
   section(class="center")
     h2= __('index.sectionAVA.title')
     p= __('index.sectionAVA.text')
-    p
-      script.avaJavaCode(type='text/javascript').
-        (function () {
-        const locale = "#{locale}"
-        const bannerMap = {
-          it: '36240',
-          en: '35669'
-        }
-        const url = `https://tracking.avapartner.com/impression/?affid=209215&html5Id=${bannerMap[locale]}&adTheme=770&campaign=221989&campaignName=Default%20Campaign&tag=209215`;
-        if (!window.aSC) window.aSC = 0;
-        window.aSC += 1;
-        const cIX = window.aSC - 1;
-        const ifr = document.createElement("iframe");
-        ifr.setAttribute("src", url + "&sid=" + Math.random());
-        ifr.setAttribute("frameborder", "0");
-        ifr.setAttribute("scrolling","no");
-        ifr.setAttribute("style", "width:640px;height:120px;");
-        const cP = document.getElementsByClassName("avaJavaCode")[cIX];
-        cP.parentNode.insertBefore(ifr, cP);
-        }());
+    p(id="ava-banner-5")
 
   aside(id="disclaimer")!= __('disclaimer')
 

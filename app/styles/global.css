@@ -21,7 +21,7 @@ body {
   align-items: stretch;
 }
 .layout main {
-  width: 100%;
+  width: calc(80% - var(--main-padding) * 2);
   padding: var(--main-padding);
   &.hp {
     padding-top: var(--x-large-space);
@@ -31,7 +31,7 @@ body {
   padding: var(--main-padding);
   background: var(--darker-gray);
   position: relative;
-  width: 25%;
+  width: calc(20% - var(--main-padding) * 2);
   transition: all .4s ease-in-out;
 }
 .layout #column.collapsed {
@@ -178,5 +178,17 @@ dl {
   }
   .content {
     width: auto;
+  }
+  .layout main {
+    width: calc(60% - var(--main-padding) * 2);
+  }
+  .layout #column {
+    width: calc(40% - var(--main-padding) * 2);
+  }
+  .list-wrapper {
+    flex-direction: column;
+    > div {
+      width: auto;
+    }
   }
 }

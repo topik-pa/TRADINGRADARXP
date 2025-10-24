@@ -34,3 +34,12 @@ main.hp #cards {
 main.hp #worsts {
   flex-direction: row-reverse;
 }
+
+@media screen and (max-width: 768px) {
+  main.hp .head {
+    flex-direction: column;
+    .rounded {
+      width: auto;
+    }
+  }
+}

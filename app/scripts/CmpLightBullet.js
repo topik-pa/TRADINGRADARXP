@@ -7,7 +7,7 @@ template.innerHTML = `
       background: linear-gradient(22deg,rgba(234, 233, 230, .15) 50%, rgba(212, 211, 208, .15) 100%);
       border-bottom: 8px solid var(--blue);
       border-radius: var(--border-radius-small);
-      width: 18rem;
+      width: 16rem;
       &.positive {
         background-color: var(--green);
         background: linear-gradient(22deg,rgba(153, 255, 204, .15) 50%, rgba(0, 158, 79, .15) 100%);

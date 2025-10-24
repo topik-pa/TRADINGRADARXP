@@ -5,6 +5,7 @@ import './CmpBullet.js'
 import './CmpLightBullet.js'
 import './CmpCard.js'
 import './CmpNavigation.js'
+import { avaBannerManagement } from './avaBannerManagement.js'
 
 const pageId = document.body.id
 const lang = document.documentElement.lang
@@ -36,3 +37,5 @@ function setUpdateValue() {
   }
 }
 setUpdateValue()
+
+avaBannerManagement(lang)
