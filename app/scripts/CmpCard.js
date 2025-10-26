@@ -10,18 +10,10 @@ template.innerHTML = `
       border-top-right-radius: var(--border-radius-small);
       padding: var(--main-padding);
       text-transform: uppercase;
-      background-color: #B0ACAC;
-      background: linear-gradient(90deg,rgba(176, 172, 172, 1) 50%, rgba(102, 101, 101, 1) 100%);
-    }
-    header.blue {
-      background-color: #0c72f7;
-      background: linear-gradient(90deg,rgba(12, 114, 247, 1) 50%, rgba(0, 97, 224, 1) 100%);
       color: var(--white);
-    }
-    header.yellow {
-      background-color: #fff421;
-      background: linear-gradient(90deg,rgba(255, 244, 33, 1) 50%, rgba(255, 169, 41, 1) 100%);
-      color: var(--secondary);
+      background-color: #B0ACAC;
+      background: linear-gradient(90deg,rgba(63, 101, 128, 1) 50%, rgba(29, 84, 124, 1) 100%);
+      text-shadow: var(--text-shadow);
     }
     h3 {
       margin: 0;
@@ -36,6 +28,7 @@ template.innerHTML = `
       padding: var(--main-padding);
       display: flex;
       justify-content: end;
+      font-weight: 500;
     }
     @media screen and (max-width: 768px) {
       section {
@@ -50,7 +43,7 @@ template.innerHTML = `
       </h3>
     </header>
     <main>
-      <slot name="image"></slot>
+      <!--<slot name="image"></slot>-->
       <h4>
         <slot name="subtitle"></slot>
       </h4>

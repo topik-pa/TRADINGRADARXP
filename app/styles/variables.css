@@ -47,7 +47,7 @@
 
   /* SHADOWS */
   --shadow: 0 0 10px 0 var(--black);
-  --text-shadow: 0 3px 3px var(--black);
+  --text-shadow: 0 1px 1px var(--black);
 
   /* DIMENSIONS */
   --xx-small-space: .2rem;

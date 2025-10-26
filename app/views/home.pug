@@ -27,7 +27,7 @@ block main
     h2!= __('rallyTitle')
     p(class="update")= __('update')
       em
-    p!= __('rallyText')
+    //- p!= __('rallyText')
     div
       h3= __('rallyUpSubtitle')
       div(id="bests", class="bullet-wrap")
@@ -39,7 +39,7 @@ block main
     h2= __('performanceTitle')
     p(class="update")= __('update')
       em
-    p!= __('performanceText')
+    //- p!= __('performanceText')
     div(class="list-wrapper")
       div(id="perf-month-up")
         h3= __('performanceSubtitleUp')
@@ -50,79 +50,79 @@ block main
 
   section
     h2= __('index.sectionExchanges.title')
-    p!= __('index.sectionExchanges.text')
+    //- p!= __('index.sectionExchanges.text')
     div(id="cards")
-      cmp-card(color="red")
+      cmp-card
         span(slot="title")= __('exchanges.globalStockExchange')
         a(slot="image", title=__('exchanges.globalStockExchange'), href="global")
           img(src="/assets/images/exchanges/placeholder.jpg", width="262", height="262", loading="lazy", alt=__('exchanges.globalStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.globalStockExchange')
         span(slot="description")= __('exchanges.euronextGlobalDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.globalStockExchange'))= __('index.sectionExchanges.discover')
+          a(href="global", title=__('exchanges.globalStockExchange'))= __('index.sectionExchanges.discover')
 
-      cmp-card(color="blue")
+      cmp-card
         span(slot="title")= __('exchanges.milanStockExchange')
         a(slot="image", title=__('exchanges.milanStockExchange'), href="milan")
           img(src="/assets/images/exchanges/borsa-italiana.webp", width="262", height="262", loading="lazy", alt=__('exchanges.milanStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.milanStockExchange')
         span(slot="description")= __('exchanges.milanStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.milanStockExchange'))= __('index.sectionExchanges.discover')
+          a(href="milan", title=__('exchanges.milanStockExchange'))= __('index.sectionExchanges.discover')
 
-      cmp-card(color="yellow")
+      cmp-card
         span(slot="title")= __('exchanges.parisStockExchange')
         a(slot="image", title=__('exchanges.parisStockExchange'), href="paris")
           img(src="/assets/images/exchanges/bourse_de_paris.webp", width="262", height="262", loading="lazy", alt=__('exchanges.parisStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.parisStockExchange')
         span(slot="description")= __('exchanges.parisStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.parisStockExchange'))= __('index.sectionExchanges.discover')
+          a(href="paris", title=__('exchanges.parisStockExchange'))= __('index.sectionExchanges.discover')
 
-      cmp-card(color="green")
+      cmp-card
         span(slot="title")= __('exchanges.osloStockExchange')
         a(slot="image", title=__('exchanges.osloStockExchange'), href="oslo")
           img(src="/assets/images/exchanges/placeholder.jpg", width="262", height="262", loading="lazy", alt=__('exchanges.osloStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.osloStockExchange')
         span(slot="description")= __('exchanges.osloStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.osloStockExchange'))= __('index.sectionExchanges.discover')
+          a(href="oslo", title=__('exchanges.osloStockExchange'))= __('index.sectionExchanges.discover')
 
-      cmp-card(color="green")
+      cmp-card
         span(slot="title")= __('exchanges.amsterdamStockExchange')
         a(slot="image", title=__('exchanges.amsterdamStockExchange'), href="amsterdam")
           img(src="/assets/images/exchanges/placeholder.jpg", width="262", height="262", loading="lazy", alt=__('exchanges.amsterdamStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.amsterdamStockExchange')
         span(slot="description")= __('exchanges.amsterdamStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.amsterdamStockExchange'))= __('index.sectionExchanges.discover')
+          a(href="amsterdam", title=__('exchanges.amsterdamStockExchange'))= __('index.sectionExchanges.discover')
 
-      cmp-card(color="green")
+      cmp-card
         span(slot="title")= __('exchanges.brusselsStockExchange')
         a(slot="image", title=__('exchanges.brusselsStockExchange'), href="brussels")
           img(src="/assets/images/exchanges/placeholder.jpg", width="262", height="262", loading="lazy", alt=__('exchanges.brusselsStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.brusselsStockExchange')
         span(slot="description")= __('exchanges.brusselsStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.brusselsStockExchange'))= __('index.sectionExchanges.discover')
+          a(href="brussels", title=__('exchanges.brusselsStockExchange'))= __('index.sectionExchanges.discover')
 
-      cmp-card(color="green")
+      cmp-card
         span(slot="title")= __('exchanges.lisbonStockExchange')
         a(slot="image", title=__('exchanges.lisbonStockExchange'), href="lisbon")
           img(src="/assets/images/exchanges/placeholder.jpg", width="262", height="262", loading="lazy", alt=__('exchanges.lisbonStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.lisbonStockExchange')
         span(slot="description")= __('exchanges.lisbonStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.lisbonStockExchange'))= __('index.sectionExchanges.discover')
+          a(href="lisbon", title=__('exchanges.lisbonStockExchange'))= __('index.sectionExchanges.discover')
 
-      cmp-card(color="green")
+      cmp-card
         span(slot="title")= __('exchanges.dublinStockExchange')
         a(slot="image", title=__('exchanges.dublinStockExchange'), href="dublin")
           img(src="/assets/images/exchanges/placeholder.jpg", width="262", height="262", loading="lazy", alt=__('exchanges.dublinStockExchange'), class="cmp-card-slotted-img")
         span(slot="subtitle")= __('exchanges.dublinStockExchange')
         span(slot="description")= __('exchanges.dublinStockExchangeDescription')
         span(slot="link")
-          a(href="#", title=__('exchanges.dublinStockExchange'))= __('index.sectionExchanges.discover')                        
+          a(href="dublin", title=__('exchanges.dublinStockExchange'))= __('index.sectionExchanges.discover')                        
   
   section(class="center")
     h2= __('index.sectionAVA.title')
