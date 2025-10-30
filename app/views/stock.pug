@@ -33,6 +33,7 @@ block main
 
 
   section
+    span(class="lastmod")= __('stock.lastmod', { lastmod: new Date(stock.updatedAt).toLocaleString('it', {dateStyle: 'long', timeStyle: 'short'}) })
     h2= __('details')
     div(class="bullet-wrap")
       cmp-light-bullet(direction=stock.relVariation > 0 ? 'positive' : 'negative')

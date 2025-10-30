@@ -104,7 +104,8 @@
       "keywords": "{{stock}}, azioni, titolo, rally, analisi, tempo, reale, prezzo, volumi",
       "title": "{{stock}} - titolo in rally?",
       "description": "Il titolo {{stock}} è in rally? Analisi automatica di prezzo e volumi"
-    }
+    },
+    "lastmod": "Ultimo aggiornamento dati: {{lastmod}}."
   },
   "contacts": {
     "meta": {

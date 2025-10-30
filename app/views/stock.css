@@ -5,13 +5,15 @@
   justify-content: space-evenly;
 }
 
-#stock-graph {
-  width: 70%;
-}
-
 #stock .details div {
   justify-content: flex-start;
   gap: var(--xx-large-space);
+}
+
+#stock .lastmod {
+  color: var(--dark-gray);
+  margin-bottom: var(--large-space);
+  display: block;
 }
 
 @media screen and (max-width: 768px) {
