@@ -6,6 +6,7 @@ import './CmpLightBullet.js'
 import './CmpCard.js'
 import './CmpNavigation.js'
 import { avaBannerManagement } from './avaBannerManagement.js'
+import cookieLayer from '../views/components/shared/cookie_layer/cookie_layer.js'
 
 const pageId = document.body.id
 const lang = document.documentElement.lang
@@ -13,6 +14,7 @@ const lang = document.documentElement.lang
 mainMenu.toggleMobileMenu()
 gotoTop.init()
 column.init()
+cookieLayer.init()
 
 // Import views specific scripts
 const modules = {
