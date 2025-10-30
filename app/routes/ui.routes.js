@@ -15,13 +15,17 @@ const CURRENT_EXCHANGES = 'milan|oslo|paris|amsterdam|brussels|lisbon|dublin|glo
 const CURRENT_LANGS = 'it|en'
 
 // sitemap.xml
-router.get('/sitemap.xml', (req, res) => {
+router.get('/sitemap-index.xml', (req, res) => {
   const sitemapIndex = `
     <?xml version="1.0" encoding="UTF-8"?>
     <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <sitemap>
+          <loc>${BASE_URL}/sitemap.xml</loc>
+          <lastmod>${new Date().toISOString()}</lastmod>
+        </sitemap>
       ${LETTERS.map(letter => `
         <sitemap>
-          <loc>${BASE_URL}/sitemap-${letter}.xml</loc>
+          <loc>${BASE_URL}/sitemap-${letter.toLowerCase()}.xml</loc>
           <lastmod>${new Date().toISOString()}</lastmod>
         </sitemap>
       `).join('')}
@@ -38,7 +42,11 @@ router.get('/sitemap-:letter([A-Z]).xml', async(req, res) => {
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${stocks.map(stock => `
       <url>
-        <loc>${BASE_URL}/${encodeURI(stock.name.toLowerCase().replaceAll(/[\s.]/g, '-').replace(/&/g, '&amp;'))}</loc>
+        <loc>${BASE_URL}/it/${encodeURI(stock.name.toLowerCase().replaceAll(/[\s.]/g, '-').replace(/&/g, '&amp;'))}</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+      </url>
+      <url>
+        <loc>${BASE_URL}/en/${encodeURI(stock.name.toLowerCase().replaceAll(/[\s.]/g, '-').replace(/&/g, '&amp;'))}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
       </url>
     `).join('')}
@@ -46,6 +54,9 @@ router.get('/sitemap-:letter([A-Z]).xml', async(req, res) => {
 
   res.header('Content-Type', 'application/xml')
   res.send(xml.trim())
+})
+router.get('/sitemap.xml', (req, res) => {
+  res.sendFile('app/public/sitemap.xml', { root: '.' })
 })
 
 // robots.txt
