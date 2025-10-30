@@ -2,7 +2,7 @@ extends layout.pug
 
 block append meta
   meta(name="og:title" content= __(`exchanges.${exchange}StockExchange`) + ' | ' + __('proj_name') )
-  meta(name="og:description" content=__('exchange.meta.description'))
+  meta(name="og:description" content=__('exchange.meta.description', {exchange: __(exchange)}))
   meta(name="og:image" content=og_image)
   meta(name="og:url" content=canonicalUrl)
 

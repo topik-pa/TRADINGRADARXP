@@ -1,7 +1,7 @@
 {
 	"hello": "Ciao",
-  "proj_name": "TRADINGRADAR.NET",
-  "proj_description": "Trova le migliori opportunità di investimento sfruttando i titoli azionari in fase di rally",
+  "proj_name": "tradingradar.net",
+  "proj_description": "Trova le azioni più promettenti del mercato europeo: analisi automatica di prezzo e volumi per identificare in tempo reale i titoli in fase di rally",
   "proj_tagline": "Quali sono i titoli in rally oggi?",
   "milan": "Milano",
   "paris": "Parigi",
@@ -78,7 +78,7 @@
   },
   "index": {
     "meta": {
-      "keywords": "trading, radar"
+      "keywords": "trading, radar, azioni, titoli, europa, rally, analisi, tempo, reale, prezzo, volumi"
     },
     "description": "<em>Quali sono i titoli in rally oggi?</em>. <br><br>tradingradar.net interroga in tempo reale le quotazioni delle principali azioni europee ed <em>evidenzia i titoli in fase di rally</em>. <br><br>Trova i titoli azionari che stanno vivendo un <em>momento di forte espansione o di forte contrazione</em> e decidi la tua strategia. <br><em>Segui il mercato</em> e basa le tue azioni assecondando il momento!",
     "subtitle": "Cosa sono i titoli <em>in rally</em>?",
@@ -95,15 +95,15 @@
   },
   "exchange": {
     "meta": {
-      "keywords": "{{keywords}}, mercato, mercati, borsa, trading, radar",
-      "description": "Descrizione: {{exchange}}"
+      "keywords": "{{keywords}}, mercato, mercati, borsa, trading, radar, azioni, titoli, rally, analisi, tempo, reale, prezzo, volumi",
+      "description": "Trova le azioni più promettenti della Borsa di {{exchange}}: analisi automatica di prezzo e volumi per identificare in tempo reale i titoli in fase di rally"
     }
   },
   "stock": {
     "meta": {
-      "keywords": "{{stock}}, azioni, titolo, trading, radar",
-      "title": "Titolo: {{stock}}",
-      "description": "Descrizione: {{stock}}"
+      "keywords": "{{stock}}, azioni, titolo, rally, analisi, tempo, reale, prezzo, volumi",
+      "title": "{{stock}} - titolo in rally?",
+      "description": "Il titolo {{stock}} è in rally? Analisi automatica di prezzo e volumi"
     }
   },
   "contacts": {
