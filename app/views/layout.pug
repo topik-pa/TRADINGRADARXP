@@ -8,6 +8,8 @@
   let proj_email = 'marco@tradingradar.net'
   let proj_logo = 'https://tradingradar.net/assets/images/logo.webp'
   let og_image = 'https://tradingradar.net/assets/images/tr-og-image.webp'
+  let sc_project = 11043457
+  let sc_security = '9f87886c'
 
 doctype html
 html(lang=locale)
@@ -37,6 +39,11 @@ html(lang=locale)
     include ./components/shared/cookie_layer/cookie_layer.pug
     include ./components/shared/footer/footer.pug
     include ./components/shared/goto_top/goto_top.pug
+    script.
+        var sc_project = #{sc_project};
+        var sc_invisible = 1;
+        var sc_security = "#{sc_security}";
+    script(async, defer, src='https://www.statcounter.com/counter/counter.js')
     script(type='application/ld+json').
       {
         "@context": "https://schema.org",
