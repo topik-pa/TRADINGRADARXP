@@ -38,6 +38,7 @@
   --rt: rgba(201, 30, 44, var(--transparent)); */
 
   /* FONT SIZES */
+  --font-size-x-small: .81rem;
   --font-size-small: .9rem;
   --font-size-base: 1.11rem;
   --font-size-big: 1.411rem;

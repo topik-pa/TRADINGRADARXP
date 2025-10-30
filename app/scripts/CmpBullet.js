@@ -60,6 +60,12 @@ template.innerHTML = `
       font-weight: bold;
       text-shadow: 0 1px 0px var(--darkest-gray);
     }
+    .lastmod {
+      padding: var(--x-small-space) var(--main-padding);
+      font-size: var(--font-size-x-small);
+      color: var(--dark-gray);
+      font-style: italic;
+    }
     footer {
       background-color: var(--lighter-gray);
       padding: var(--x-small-space);
@@ -89,6 +95,9 @@ template.innerHTML = `
     </div>
     <div class="value">
       <slot name="value"></slot><small>%</small>
+    </div>
+    <div class="lastmod">
+      <slot name="lastmod"></slot>
     </div>
     <footer>
       <a href="#"><slot name="footer"></slot>&nbsp;<span>&#10148;</span></a>
