@@ -62,7 +62,7 @@ block main
         span(slot="value") #{stock.perf52W}<small>%</small>
 
   section
-    h2= __('graph')
+    h2= __('stock.graph')
     div(id="stock-graph")
       canvas(id="myChart", data-volumes=history.volumes, data-prices=history.prices)
 

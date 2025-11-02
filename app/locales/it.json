@@ -22,7 +22,6 @@
   "market": "Mercato",
   "currency": "Valuta",
   "performance": "Performance",
-  "graph": "Grafico",
   "update": "Ultimo aggiornamento dati: ",
   "views": {
     "home": "Home",
@@ -105,7 +104,8 @@
       "title": "{{stock}} - titolo in rally?",
       "description": "Il titolo {{stock}} è in rally? Analisi automatica di prezzo e volumi"
     },
-    "lastmod": "Ultimo aggiornamento dati: {{lastmod}}."
+    "lastmod": "Ultimo aggiornamento dati: {{lastmod}}.",
+    "graph": "Grafico delle ultime sedute"
   },
   "contacts": {
     "meta": {

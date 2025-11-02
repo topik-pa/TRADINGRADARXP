@@ -23,7 +23,7 @@ export default  {
       const labels = []
       for (let i = 0; i < prices.length; i++) {
         if (i===0) {
-          labels.unshift('Today')
+          labels.unshift('Last')
         } else {
           labels.unshift(-i)
         }
@@ -33,7 +33,7 @@ export default  {
           datasets: [
             {
               type: 'line',
-              label: 'Variazione prezzo',
+              label: 'Prezzo',
               data: prices,
               borderColor: '#3F6580',
               backgroundColor: '#84bde2',
@@ -41,7 +41,7 @@ export default  {
             },
             {
               type: 'bar',
-              label: 'Variazione Volumi',
+              label: 'Volumi',
               data: volumes,
               backgroundColor: '#a9ddff',
               yAxisID: 'yVolume'
