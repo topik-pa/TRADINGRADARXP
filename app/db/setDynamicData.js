@@ -114,9 +114,12 @@ export async function setDynamicData(fod=false, partial=[]) {
         if(testEl){
           value = new JSDOM(html).window.document.querySelector('table > tbody > tr:nth-child(4) > td:nth-child(2)')?.firstChild?.nodeValue.trim() || null //!!
         }
-        value = isNaN(+value) ? null : value
+        if(value !== null) {
+          value = value?.replace(/[,]/g, '')
+          value = isNaN(+value) ? null : +value
+        }
       }
-      if (key==='price' || key==='volume' || key==='perf1M' || key==='perf52W' || key==='absVariation') {
+      if (key==='price' || key==='perf1M' || key==='perf52W' || key==='absVariation') {
         value = value?.replace(/[,]/g, '')
       }
       /*Exceptions*/
