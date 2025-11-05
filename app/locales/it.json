@@ -23,6 +23,8 @@
   "currency": "Valuta",
   "performance": "Performance",
   "update": "Ultimo aggiornamento dati: ",
+  "website": "Website",
+  "seeOnEuronext": "{{stock}} su Euronext",
   "views": {
     "home": "Home",
     "privacy": "Privacy",

@@ -30,6 +30,10 @@ block main
         dd #{stock.market}
         dt= __('currency')
         dd #{stock.currency}
+      dl
+        dt= __('website')
+        dd
+          a(href="#", title=__('seeOnEuronext'), id="euronext", data-url=stock.sources[0], data-isin=stock.isin)= __('seeOnEuronext', {stock: stock.name}) 
 
 
   section

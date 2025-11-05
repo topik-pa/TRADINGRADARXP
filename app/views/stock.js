@@ -16,6 +16,12 @@ export default  {
     const $main = document.querySelector('main')
     updateStatus([$main], 'loading')
 
+    const euronext = document.getElementById('euronext')
+    const isin = euronext.dataset.isin
+    const urlfrag2 = euronext.dataset.url.substring(euronext.dataset.url.indexOf(isin))
+    const urlfrag1 = document.documentElement.lang
+    euronext.href = `https://live.euronext.com/${urlfrag1}/product/equities/${urlfrag2}`
+
     const ctx = document.getElementById('myChart')
     if(ctx.dataset.prices && ctx.dataset.volumes) {
       const prices = JSON.parse(ctx.dataset.prices)
