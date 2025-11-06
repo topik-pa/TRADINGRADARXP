@@ -15,7 +15,8 @@ const getViewParams = function(id, lang, path) {
     id,
     className: id,
     canonicalUrl,
-    hreflangs
+    hreflangs,
+    lang
   }
 }
 
