@@ -1,8 +1,0 @@
-main.exchange #worsts {
-  flex-direction: row-reverse;
-}
-@media screen and (max-width: 768px) {
-  main.exchange #worsts {
-    flex-direction: column-reverse;
-  }
-}
