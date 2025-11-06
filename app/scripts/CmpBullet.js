@@ -6,14 +6,15 @@ template.innerHTML = `
       background-color: var(--lightest-gray);
       background: linear-gradient(22deg,rgba(234, 233, 230, .15) 50%, rgba(212, 211, 208, .15) 100%);
       border-radius: var(--border-radius-small);
-      width: 16rem;
+      width: 100%;
+      min-width: 16rem;
+      .name a {
+        text-decoration: underline;
+        text-decoration-color: var(--dark-gray);
+        text-decoration-thickness: 1px;
+      }
       &:hover {
         border-color: var(--dark-gray);
-        .name a {
-          text-decoration: underline;
-          text-decoration-color: var(--dark-gray);
-          text-decoration-thickness: 1px;
-        }
       }
       &.positive {
         background-color: var(--green);
@@ -80,7 +81,7 @@ template.innerHTML = `
         }
       }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 430px) {
       .bullet {
         width: 100%;
       }

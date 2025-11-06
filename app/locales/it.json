@@ -22,7 +22,7 @@
   "market": "Mercato",
   "currency": "Valuta",
   "performance": "Performance",
-  "update": "Ultimo aggiornamento dati: ",
+  "update": "Ultimo aggiornamento dati (UTC time): ",
   "website": "Website",
   "seeOnEuronext": "{{stock}} su Euronext",
   "views": {
@@ -106,7 +106,7 @@
       "title": "{{stock}} - titolo in rally?",
       "description": "Il titolo {{stock}} è in rally? Analisi automatica di prezzo e volumi"
     },
-    "lastmod": "Ultimo aggiornamento dati: {{lastmod}}.",
+    "lastmod": "Ultimo aggiornamento dati (UTC time): {{lastmod}}.",
     "graph": "Grafico delle ultime sedute"
   },
   "contacts": {

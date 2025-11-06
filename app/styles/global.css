@@ -168,13 +168,6 @@ dl {
   }
 }
 
-
-@media screen and (max-width: 768px) {
-  .bullet-wrap {
-    flex-direction: column;
-  }
-}
-
 @media screen and (max-width: 768px) {
   main {
     flex-direction: column;
@@ -193,5 +186,11 @@ dl {
     > div {
       width: auto;
     }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .bullet-wrap {
+    flex-direction: column;
   }
 }
