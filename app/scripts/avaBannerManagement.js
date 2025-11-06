@@ -169,6 +169,7 @@ export function avaBannerManagement(lang) {
     ifr.setAttribute('src', url + '&sid=' + Math.random())
     ifr.setAttribute('frameborder', '0')
     ifr.setAttribute('scrolling','no')
+    ifr.setAttribute('title','AVATRADE Sponsor banner')
     ifr.setAttribute('style', banner[lang][device].style)
     const cP = document.getElementById('ava-banner-' + i)
     if(cP) cP.appendChild(ifr)

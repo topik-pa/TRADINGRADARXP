@@ -5,13 +5,6 @@ template.innerHTML = `
       background-color: var(--black);
       font-size: var(--font-size-small);
     }
-    h4 {
-      margin: 0;
-      color: var(--white);
-      text-transform: uppercase;
-      background-color: var(--darkest-gray);
-      padding: var(--main-padding);
-    }
     ul {
       margin: 0;
       padding: 0;
@@ -20,9 +13,6 @@ template.innerHTML = `
     }
   </style>
   <nav>
-    <h4>
-      <slot name="title"></slot>
-    </h4>
     <ul>
       <slot name="list"></slot>
     </ul>

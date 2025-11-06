@@ -2,7 +2,7 @@ const template = document.createElement('template')
 template.innerHTML = `
   <style>
     .bullet {
-      border: 1px solid var(--lighter-gray);
+      border: 1px solid var(--darker-gray);
       background-color: var(--lightest-gray);
       background: linear-gradient(22deg,rgba(234, 233, 230, .15) 50%, rgba(212, 211, 208, .15) 100%);
       border-radius: var(--border-radius-small);
@@ -13,15 +13,9 @@ template.innerHTML = `
         text-decoration-color: var(--dark-gray);
         text-decoration-thickness: 1px;
       }
-      &:hover {
-        border-color: var(--dark-gray);
-      }
       &.positive {
         background-color: var(--green);
         background: linear-gradient(22deg,rgba(153, 255, 204, .15) 50%, rgba(0, 158, 79, .15) 100%);
-        footer {
-          background-color: var(--green);
-        }
         .value {
           color: var(--green);
         }
@@ -29,9 +23,6 @@ template.innerHTML = `
       &.negative {
         background-color: var(--red);
         background: linear-gradient(22deg,rgba(255, 161, 165, .15) 50%, rgba(205, 33, 42, .15) 100%);
-        footer {
-          background-color: var(--red);
-        }
         .value {
           color: var(--red);
         }
@@ -68,7 +59,7 @@ template.innerHTML = `
       font-style: italic;
     }
     footer {
-      background-color: var(--lighter-gray);
+      background-color: var(--darkest-gray);
       padding: var(--x-small-space);
       display: flex;
       justify-content: end;
