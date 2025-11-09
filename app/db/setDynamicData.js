@@ -24,7 +24,7 @@ export async function setDynamicData(fod=false, partial=[]) {
       tasks.push(limit(() => updateDynamicData(stock.isin, stock.sources)))
     }
     await Promise.all(tasks)
-    await sleep(300)
+    await sleep(600)
     logger.info('All stocks updated!')
   }
   async function updateDynamicData(isin, sources) {
@@ -154,7 +154,6 @@ export async function setDynamicData(fod=false, partial=[]) {
       logger.error(new Error(error.message))
     }
   }
-
 
   getStocks()
 }
