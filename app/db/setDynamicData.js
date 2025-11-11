@@ -21,10 +21,12 @@ export async function setDynamicData(fod=false, partial=[]) {
     }
     const tasks = []
     for await (const stock of cursor) {
-      tasks.push(limit(() => updateDynamicData(stock.isin, stock.sources)))
+      tasks.push(limit(async() => {
+        await sleep(500)
+        updateDynamicData(stock.isin, stock.sources)
+      }))
     }
     await Promise.all(tasks)
-    await sleep(600)
     logger.info('All stocks updated!')
   }
   async function updateDynamicData(isin, sources) {
