@@ -51,13 +51,13 @@
 		<loc>https://tradingradar.net/it/privacy</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>yearly</changefreq>
-		<priority>0.5</priority>
+		<priority>0.1</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/en/privacy</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>yearly</changefreq>
-		<priority>0.5</priority>
+		<priority>0.1</priority>
 	</url>
 
 
@@ -65,49 +65,49 @@
 		<loc>https://tradingradar.net/it/global</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/it/milan</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/it/paris</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/it/oslo</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/it/amsterdam</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/it/brussels</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/it/lisbon</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/it/dublin</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 
 
@@ -115,49 +115,49 @@
 		<loc>https://tradingradar.net/en/global</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/en/milan</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/en/paris</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/en/oslo</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/en/amsterdam</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/en/brussels</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/en/lisbon</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 	<url>
 		<loc>https://tradingradar.net/en/dublin</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>yearly</changefreq>
-		<priority>0.5</priority>
+		<priority>1.0</priority>
 	</url> 
 
 </urlset>
