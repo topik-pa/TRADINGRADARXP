@@ -1,8 +1,11 @@
 if breadcrumbs
   div(id="breadcrumbs")
     nav
-      a(href="/", title="Home")= __('header.home')
+      a(href='/'+locale, title="Home")= __('header.home')
       span &nbsp;
       each elem in breadcrumbs
         span &nbsp;&#10142;&nbsp;
-        a(href=elem.url, title=__(elem.name))= __(elem.name)
+        if elem.url
+          a(href='/'+locale+'/'+elem.url, title=__(elem.name))= __(elem.name)
+        else
+          span= __(elem.name)

@@ -108,7 +108,7 @@ class CmpBullet extends HTMLElement {
 
   connectedCallback() {
     this.root.classList.add(this.getAttribute('direction'))
-    this.root.querySelectorAll('a').forEach((el) => {el.href = this.getAttribute('slug')})
+    this.root.querySelectorAll('a').forEach((el) => {el.href = this.getAttribute('url')})
   }
 }
 

@@ -73,6 +73,19 @@ app.use((req, res, next) => {
   next()
 })
 
+// Redirect URL senza slash finale
+app.use((req, res, next) => {
+  const { path, query } = req
+  if (path !== '/' && path.endsWith('/')) {
+    const newPath = path.slice(0, -1)
+    const qs = Object.keys(query).length
+      ? '?' + new URLSearchParams(query).toString()
+      : ''
+    return res.redirect(301, newPath + qs)
+  }
+  next()
+})
+
 app.use('/styles', express.static(path.join(__dirname, 'app', 'styles')))
 app.use('/assets', express.static(path.join(__dirname, 'app', 'assets')))
 app.use('/views', express.static(path.join(__dirname, 'app', 'views')))

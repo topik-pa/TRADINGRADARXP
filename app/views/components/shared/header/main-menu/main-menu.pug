@@ -8,12 +8,12 @@
     {
       id: 'about',
       name: __('header.about'),
-      url: 'about'
+      url: '/about'
     },
     {
       id: 'contacts',
       name: __('header.contacts'),
-      url: 'contacts'
+      url: '/contacts'
     }
   ] 
 span(class="hamburger icon-menu") 
@@ -25,5 +25,5 @@ nav(id="main-menu")
         li(class = (id === link.id) ? "active" : "")
           if link.class
             span(class=link.class)
-          a(href=link.url, title=link.name) #{link.name}
+          a(href='/'+locale + link.url, title=link.name) #{link.name}
   
