@@ -28,8 +28,8 @@ export default  {
       accents.forEach(stock => {
         const direction = stock.relVariation > 0 ? 'positive' : 'negative'
         const id = stock.relVariation > 0 ? 'bests' : 'worsts'
-        const bullet = createComponent('cmp-bullet', { direction, url: '/'+lang+'/'+stock.slug }, [
-          createComponent('span', { slot: 'head' }, [stock.market]),
+        const bullet = createComponent('cmp-bullet', { direction, url: '/'+lang+'/'+stock.slug, status: 'Status: '+stock.status }, [
+          createComponent('span', { slot: 'market' }, [stock.market]),
           createComponent('span', { slot: 'name' }, [stock.name]),
           createComponent('span', { slot: 'value' }, [stock.relVariation]),
           createComponent('span', { slot: 'lastmod' }, [new Date(stock.updatedAt).toLocaleString(document.documentElement.lang, {

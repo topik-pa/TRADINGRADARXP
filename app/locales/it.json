@@ -25,6 +25,7 @@
   "update": "Ultimo aggiornamento dati (UTC time): ",
   "website": "Website",
   "seeOnEuronext": "{{stock}} su Euronext",
+  "status": "Status",
   "views": {
     "home": "Home",
     "privacy": "Privacy",

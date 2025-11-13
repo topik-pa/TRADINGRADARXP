@@ -31,7 +31,8 @@ template.innerHTML = `
     .head {
       padding: var(--main-padding) var(--main-padding) var(--x-large-space) var(--main-padding);
       font-weight: 500;
-      color: var(--darker-gray)
+      color: var(--darker-gray);
+      position:relative
     }
     .name {
       padding: 0 var(--main-padding);
@@ -72,6 +73,21 @@ template.innerHTML = `
         }
       }
     }
+    #status {
+      font-size: 1.1rem;
+      width: 01.1rem;
+      height: 1.1rem;
+      display: block;
+      position: absolute;
+      top: .1rem;
+      right: .1rem;
+      border: 1px solid var(--darker-gray);
+      border-radius: 50%;
+      padding: 0.1rem;
+      text-align: center;
+      background-color: var(--white);
+      color: var(--darker-gray)
+    }
     @media screen and (max-width: 430px) {
       .bullet {
         width: 100%;
@@ -80,7 +96,8 @@ template.innerHTML = `
   </style>
   <div class="bullet">
     <header class="head">
-      <slot name="head"></slot>
+      <span><slot name="market"></slot></span>
+      <span id="status">&#83;</span>
     </header>
     <div class="name">
       <a href="#"><slot name="name"></slot></a>
@@ -109,6 +126,7 @@ class CmpBullet extends HTMLElement {
   connectedCallback() {
     this.root.classList.add(this.getAttribute('direction'))
     this.root.querySelectorAll('a').forEach((el) => {el.href = this.getAttribute('url')})
+    this.root.querySelector('#status').setAttribute('title', this.getAttribute('status'))
   }
 }
 
