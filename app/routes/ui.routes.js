@@ -44,10 +44,12 @@ router.get('/sitemap-:letter([A-Z]).xml', async(req, res) => {
       <url>
         <loc>${BASE_URL}/it/${encodeURI(stock.name.toLowerCase().replaceAll(/[\s.]/g, '-').replace(/&/g, '&amp;'))}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>hourly</changefreq>
       </url>
       <url>
         <loc>${BASE_URL}/en/${encodeURI(stock.name.toLowerCase().replaceAll(/[\s.]/g, '-').replace(/&/g, '&amp;'))}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>hourly</changefreq>
       </url>
     `).join('')}
   </urlset>`
