@@ -8,7 +8,8 @@
 
 #main-logo a div {
   line-height: 85%;
-  letter-spacing: 3px;  
+  letter-spacing: 3px;
+  text-shadow: var(--text-shadow);
 }
 #main-logo a span {
   font-weight: 600;
