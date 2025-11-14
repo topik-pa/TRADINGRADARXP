@@ -1,12 +1,12 @@
 extends layout.pug
 
 block append meta
-  meta(name="og:title" content=__('views.home') + ' | ' + __('proj_name') )
+  meta(name="og:title" content=__('proj_tagline') + ' | ' + __('proj_name') )
   meta(name="og:description" content=__('proj_description'))
   meta(name="og:image" content=og_image)
   meta(name="og:url" content=canonicalUrl)
 
-  title= __('views.home') + ' | ' + __('proj_name') 
+  title= __('proj_tagline') + ' | ' + __('proj_name')
   meta(name="description" content=__('proj_description'))
   meta(name="keywords" content=__('index.meta.keywords'))
 

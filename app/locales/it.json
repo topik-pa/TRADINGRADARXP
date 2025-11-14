@@ -1,7 +1,7 @@
 {
 	"hello": "Ciao",
   "proj_name": "tradingradar.net",
-  "proj_description": "Trova le azioni più promettenti del mercato europeo: analisi automatica di prezzo e volumi per identificare in tempo reale i titoli in fase di rally",
+  "proj_description": "Scopri quali titoli azionari sono in fase di rally. In questo momento, tradingradar.net mostra le azioni delle borse europee con prezzi e volumi in forte movimento.",
   "proj_tagline": "Quali sono i titoli in rally oggi?",
   "milan": "Milano",
   "paris": "Parigi",
@@ -97,15 +97,16 @@
   },
   "exchange": {
     "meta": {
+      "title": "{{exchange}}: azioni in rally",
       "keywords": "{{keywords}}, mercato, mercati, borsa, trading, radar, azioni, titoli, rally, analisi, tempo, reale, prezzo, volumi",
-      "description": "Trova le azioni più promettenti della Borsa di {{exchange}}: analisi automatica di prezzo e volumi per identificare in tempo reale i titoli in fase di rally"
+      "description": "Trova le azioni in fase di rally della Borsa di {{exchange}}: analisi automatica di prezzo e volumi per identificare in tempo reale i titoli più promettenti."
     }
   },
   "stock": {
     "meta": {
       "keywords": "{{stock}}, azioni, titolo, rally, analisi, tempo, reale, prezzo, volumi",
-      "title": "{{stock}} - titolo in rally?",
-      "description": "Il titolo {{stock}} è in rally? Analisi automatica di prezzo e volumi"
+      "title": "Azioni {{stock}}: titolo in rally?",
+      "description": "Il titolo {{stock}} è in fase di rally? Analizza prezzo e volumi di {{stock}} e scopri le sue potenzialità di investimento."
     },
     "lastmod": "Ultimo aggiornamento dati (UTC time): {{lastmod}}.",
     "graph": "Grafico delle ultime sedute"
