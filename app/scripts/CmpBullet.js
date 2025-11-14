@@ -88,6 +88,15 @@ template.innerHTML = `
       background-color: var(--white);
       color: var(--darker-gray)
     }
+    #status:hover:after {
+      content: attr(title);
+      position: absolute;
+      top: 0;
+      left: -10.5rem;
+      width: 10rem;
+      background-color: var(--white);
+      border: 1px solid var(--darker-gray);
+    }
     @media screen and (max-width: 430px) {
       .bullet {
         width: 100%;
