@@ -130,6 +130,12 @@
     },
     "title": "About us"
   },
+  "404": {
+    "text": "This page is no longer available or never existed. <br><br>Start browsing from the Home page.<br><br>"
+  },
+  "500": {
+    "text": "This page has generated an error on the server and is currently unavailable.<br><br>Start browsing from the Home page.<br><br>"
+  },
   "cookielayer": {
     "title": "This web application uses cookies",
     "text": "This site or the third-party tools integrated into it use cookies that are necessary for its operation and to achieve the purposes described in the cookie policy. To learn more or to withdraw your consent to one or all cookies, please refer to the cookie policy. You accept the use of cookies by closing or hiding this banner, clicking on a link or button, or continuing to browse in any other way. For further information, please visit the privacy policy page",

@@ -101,18 +101,15 @@ app.use('/api', apiRoutes)
 app.use('/', uiRoutes)
 // 404 handling
 app.use((req, res) => {
-  res.status(404).send({
-    error: 404,
-    message: 'Resource not found'
-  })
+  res.status(400)
+  res.render('404')
 })
 // 500 handling
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
-  return res.status(err.status || 500).send({
-    error: err.status || 500,
-    message: err.message
-  })
+  console.error(err.stack)
+  res.status(500)
+  res.render('500')
 })
 
 // Connect to DB

@@ -1,0 +1,24 @@
+extends layout.pug
+
+block append meta
+  title Error 500 | #{proj_name}
+  meta(name="description" content="Server error")
+  style.
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    h1 {
+      color: var(--red);
+      margin: 5rem;
+    }
+
+block main
+  h1 500
+  p!= __('500.text')
+  a(href=proj_url, title="Home page") #{proj_name}
+
+block column 
+  include ./components/shared/column/column.pug   

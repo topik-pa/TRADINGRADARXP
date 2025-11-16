@@ -1,0 +1,24 @@
+extends layout.pug
+
+block append meta
+  title Error 404 | #{proj_name}
+  meta(name="description" content="Page not found")
+  style.
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    h1 {
+      color: var(--red);
+      margin: 5rem;
+    }
+
+block main
+  h1 404
+  p!= __('404.text')
+  a(href=proj_url, title="Home page") #{proj_name}
+
+block column 
+  include ./components/shared/column/column.pug   
