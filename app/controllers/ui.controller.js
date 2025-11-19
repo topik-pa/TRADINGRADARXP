@@ -1,7 +1,7 @@
 import { i18n } from '../../server.js'
 import { getStockBySlug, readHistory } from './db.controller.js'
 import logger from '../config/logger.js'
-const baseUrl = 'https://www.tradingradar.net'
+const baseUrl = 'https://rallyingstocks.com'
 const supportedLangs = ['en', 'it']
 const fallback = 'en'
 

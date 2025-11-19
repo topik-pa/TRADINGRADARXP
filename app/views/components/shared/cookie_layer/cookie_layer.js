@@ -1,6 +1,6 @@
 const cookieLayer = {
   init: () => {
-    const cookieName = 'tradingradarnet-project-privacy'
+    const cookieName = 'rallyingstocks.com-privacy'
     const cookieDuration = 120
     const cookieLayerWait = 3000
 

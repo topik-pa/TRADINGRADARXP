@@ -1,7 +1,7 @@
 export function avaBannerManagement(lang) {
   const affid = '209215'
   const campaign = '221989'
-  const campaignName = 'tradingradar.net'
+  const campaignName = 'rallyingstocks.com'
   const isMobile = window.matchMedia('(max-width: 1366px)').matches
   const banners = [
     {

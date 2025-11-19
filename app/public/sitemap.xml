@@ -3,58 +3,58 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 	<url>
-		<loc>https://tradingradar.net</loc>
+		<loc>https://rallyingstocks.com</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>https://tradingradar.net/it</loc>
+		<loc>https://rallyingstocks.com/it</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>https://tradingradar.net/en</loc>
+		<loc>https://rallyingstocks.com/en</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
-		<loc>https://tradingradar.net/it/about</loc>
+		<loc>https://rallyingstocks.com/it/about</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>https://tradingradar.net/en/about</loc>
+		<loc>https://rallyingstocks.com/en/about</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 
 	<url>
-		<loc>https://tradingradar.net/it/contacts</loc>
+		<loc>https://rallyingstocks.com/it/contacts</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/en/contacts</loc>
+		<loc>https://rallyingstocks.com/en/contacts</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 
 	<url>
-		<loc>https://tradingradar.net/it/privacy</loc>
+		<loc>https://rallyingstocks.com/it/privacy</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.1</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/en/privacy</loc>
+		<loc>https://rallyingstocks.com/en/privacy</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.1</priority>
@@ -62,49 +62,49 @@
 
 
 	<url>
-		<loc>https://tradingradar.net/it/global</loc>
+		<loc>https://rallyingstocks.com/it/global</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/it/milan</loc>
+		<loc>https://rallyingstocks.com/it/milan</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/it/paris</loc>
+		<loc>https://rallyingstocks.com/it/paris</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/it/oslo</loc>
+		<loc>https://rallyingstocks.com/it/oslo</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/it/amsterdam</loc>
+		<loc>https://rallyingstocks.com/it/amsterdam</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/it/brussels</loc>
+		<loc>https://rallyingstocks.com/it/brussels</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/it/lisbon</loc>
+		<loc>https://rallyingstocks.com/it/lisbon</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/it/dublin</loc>
+		<loc>https://rallyingstocks.com/it/dublin</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
@@ -112,49 +112,49 @@
 
 
 	<url>
-		<loc>https://tradingradar.net/en/global</loc>
+		<loc>https://rallyingstocks.com/en/global</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/en/milan</loc>
+		<loc>https://rallyingstocks.com/en/milan</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/en/paris</loc>
+		<loc>https://rallyingstocks.com/en/paris</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/en/oslo</loc>
+		<loc>https://rallyingstocks.com/en/oslo</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/en/amsterdam</loc>
+		<loc>https://rallyingstocks.com/en/amsterdam</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/en/brussels</loc>
+		<loc>https://rallyingstocks.com/en/brussels</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/en/lisbon</loc>
+		<loc>https://rallyingstocks.com/en/lisbon</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url> 
 	<url>
-		<loc>https://tradingradar.net/en/dublin</loc>
+		<loc>https://rallyingstocks.com/en/dublin</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>1.0</priority>

@@ -9,7 +9,7 @@ import {
   exchangeView } from '../controllers/ui.controller.js'
 const router = express.Router()
 
-const BASE_URL = 'https://www.tradingradar.net'
+const BASE_URL = 'https://rallyingstocks.com'
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 const CURRENT_EXCHANGES = 'milan|oslo|paris|amsterdam|brussels|lisbon|dublin|global'
 const CURRENT_LANGS = 'it|en'
