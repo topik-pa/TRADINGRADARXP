@@ -1,1 +1,1 @@
-"use strict";(self.webpackChunktradingradarxp=self.webpackChunktradingradarxp||[]).push([[901],{901:(a,r,e)=>{e.r(r)}}]);
+"use strict";(self.webpackChunkrallystocks=self.webpackChunkrallystocks||[]).push([[901],{901:(s,k,l)=>{l.r(k)}}]);
