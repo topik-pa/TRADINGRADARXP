@@ -80,7 +80,7 @@
   },
   "index": {
     "meta": {
-      "keywords": "trading, radar, azioni, titoli, europa, rally, analisi, tempo, reale, prezzo, volumi"
+      "keywords": "rallying, stocks, azioni, titoli, europa, rally, analisi, tempo, reale, prezzo, volumi"
     },
     "description": "<em>Quali sono i titoli in rally oggi?</em>. <br><br>rallyingstocks.com interroga in tempo reale le quotazioni delle principali azioni europee ed <em>evidenzia i titoli in fase di rally</em>. <br><br>Trova i titoli azionari che stanno vivendo un <em>momento di forte espansione o di forte contrazione</em> e decidi la tua strategia. <br><em>Segui il mercato</em> e basa le tue azioni assecondando il momento!",
     "subtitle": "Cosa sono i titoli <em>in rally</em>?",
@@ -98,7 +98,7 @@
   "exchange": {
     "meta": {
       "title": "{{exchange}}: azioni in rally",
-      "keywords": "{{keywords}}, mercato, mercati, borsa, trading, radar, azioni, titoli, rally, analisi, tempo, reale, prezzo, volumi",
+      "keywords": "{{keywords}}, mercato, mercati, borsa, rallying, stocks, azioni, titoli, rally, analisi, tempo, reale, prezzo, volumi",
       "description": "Trova le azioni in fase di rally della Borsa di {{exchange}}: analisi automatica di prezzo e volumi per identificare in tempo reale i titoli più promettenti."
     }
   },
@@ -113,7 +113,7 @@
   },
   "contacts": {
     "meta": {
-      "keywords": "contatti, trading, radar",
+      "keywords": "contatti, rallying, stocks",
       "title": "Contattaci",
       "description": "Pagina Contatti"
     },
@@ -124,7 +124,7 @@
   },
   "about": {
     "meta": {
-      "keywords": "chi, siamo, trading, radar",
+      "keywords": "chi, siamo, rallying, stocks",
       "title": "Chi siamo",
       "description": "Chi siamo"
     },

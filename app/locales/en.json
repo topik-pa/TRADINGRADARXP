@@ -80,7 +80,7 @@
   },
   "index": {
     "meta": {
-      "keywords": "trading, radar, stocks, share, europe, rally, analysis, price, volume"
+      "keywords": "rallying, stocks, stocks, share, europe, rally, analysis, price, volume"
     },
     "description": "<em>Which stocks are rallying today?</em>. <br><br>rallyingstocks.com queries the prices of the main European stocks in real time and <em>highlights the stocks that are rallying</em>. <br><br>Find the stocks that are experiencing a <em>period of strong growth or sharp decline</em> and decide on your strategy. <br><em>Follow the market</em> and base your actions on the current situation!",
     "subtitle": "What are <em>rallying</em> stocks?",
@@ -98,7 +98,7 @@
   "exchange": {
     "meta": {
       "title": "{{exchange}}: rallying stocks",
-      "keywords": "{{keywords}}, exchange, exchanges, market, trading, radar, stocks, shares, rally, analysis, prices, volumes",
+      "keywords": "{{keywords}}, exchange, exchanges, market, rallying, stocks, stocks, shares, rally, analysis, prices, volumes",
       "description": "Find stocks rallying on the {{exchange}} stock exchange: automatic price and volume analysis to identify the most promising stocks in real time."
     }
   },
@@ -113,7 +113,7 @@
   },
   "contacts": {
     "meta": {
-      "keywords": "contacts, trading, radar",
+      "keywords": "contacts, rallying, stocks",
       "title": "Contact us",
       "description": "Contact rallyingstocks.com"
     },
@@ -124,7 +124,7 @@
   },
   "about": {
     "meta": {
-      "keywords": "about, us, trading, radar",
+      "keywords": "about, us, rallying, stocks",
       "title": "About us",
       "description": "About us"
     },
