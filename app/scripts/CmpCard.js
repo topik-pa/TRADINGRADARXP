@@ -3,7 +3,7 @@ template.innerHTML = `
   <style>
     section {
       border-bottom: 1px solid var(--light-gray);
-      width: 16rem;
+      width: 20rem;
     }
     header {
       border-top-left-radius: var(--border-radius-small);
@@ -30,7 +30,7 @@ template.innerHTML = `
       justify-content: end;
       font-weight: 500;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 430px) {
       section {
         width: 100%;
       }
@@ -43,7 +43,7 @@ template.innerHTML = `
       </h3>
     </header>
     <main>
-      <!--<slot name="image"></slot>-->
+      <slot name="image"></slot>
       <h4>
         <slot name="subtitle"></slot>
       </h4>
