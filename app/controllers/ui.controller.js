@@ -22,7 +22,8 @@ const getViewParams = function(id, lang, path) {
 
 
 const getMarketUrl = function(market) {
-  market = market.toLowerCase()
+  if(!market) return '#'
+  market = market?.toLowerCase()
   const markets = ['milan','oslo','paris','amsterdam','brussels','lisbon','dublin','global']
   let url = '/'
   markets.forEach(m => {
@@ -72,10 +73,13 @@ export async function stockView(req, res) {
   const slug = req.params.slug
   let stock, history = undefined
   try {
-    stock = await getStockBySlug(slug) || {}
+    stock = await getStockBySlug(slug) || null
     history = await readHistory(stock.isin) || {}
   } catch (err) {
     logger.error(new Error(`❌ Error during getting stock:\n${err}`))
+  }
+  if (!stock) {
+    return res.redirect('/')
   }
   if (!supportedLangs.includes(lang)) {
     res.redirect((req.url).replace(lang, fallback))
