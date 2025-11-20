@@ -25,7 +25,7 @@ aside#column a {
   color: var(--white);
 }
 
-aside#column h4 {
+aside#column h3 {
   font-size: var(--font-size-small);
   font-weight: 600;
   margin: 0;
