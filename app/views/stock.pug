@@ -40,7 +40,8 @@ block main
 
   section
     span(class="lastmod")= __('stock.lastmod', { lastmod: new Date(stock.updatedAt).toLocaleString(lang, {dateStyle: 'long', timeStyle: 'short'}) })
-    h2= __('details')
+    h2= __('stock.details', {stock: stock.name})
+    p!= __('stock.details_text')
     div(class="bullet-wrap")
       cmp-light-bullet(direction=stock.relVariation > 0 ? 'positive' : 'negative')
         span(slot="head") #{stock.name}
@@ -48,15 +49,16 @@ block main
         span(slot="value") #{stock.relVariation}<small>%</small>
       cmp-light-bullet
         span(slot="head") #{stock.name}
-        span(slot="name")= __('lastPrice')
-        span(slot="value") #{stock.price}<small>€</small>
-      cmp-light-bullet
-        span(slot="head") #{stock.name}
         span(slot="name")= __('volume')
         span(slot="value") #{(stock.volume / 1000000).toFixed(3)}<small>Mln.</small>
+      cmp-light-bullet
+        span(slot="head") #{stock.name}
+        span(slot="name")= __('lastPrice')
+        span(slot="value") #{stock.price}<small>€</small>
 
   section
-    h2= __('performance')
+    h2= __('stock.performance', {stock: stock.name})
+    p!= __('stock.performance_text')
     div(class="bullet-wrap")
       cmp-light-bullet(direction=stock.perf1M > 0 ? 'positive' : 'negative')
         span(slot="head") #{stock.name}
@@ -69,6 +71,7 @@ block main
 
   section
     h2= __('stock.graph')
+    p= __('stock.graph_text')
     div(id="stock-graph")
       canvas(id="myChart", data-volumes=history.volumes, data-prices=history.prices)
 

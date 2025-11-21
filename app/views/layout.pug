@@ -47,18 +47,32 @@ html(lang=locale)
     script(type='application/ld+json').
       {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": "#{proj_url}",
-        "name": "#{proj_name}",
-        "description": "#{proj_name} - #{proj_tagline}",
-        "image": "#{proj_logo}",
-        "author": {
-          "@type": "Person",
-          "name": "#{proj_owner}"
-        },
-        "copyrightHolder": {
-          "@type": "Person",
-          "name": "#{proj_owner}"
-        }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://rallyingstocks.com/#organization",
+            "name": "rallyingstocks.com",
+            "url": "https://rallyingstocks.com",
+            "logo": "https://rallyingstocks.com/assets/images/logo.webp",
+            "description": "rallyingstocks.com shows European stock market shares with prices and volumes in sharp movement",
+            "sameAs": [
+              "https://t.me/rallyingstocks",
+              "https://www.linkedin.com/in/markopavan/"
+            ],
+            "founder": {
+              "@type": "Person",
+              "name": "Marco Pavan"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://rallyingstocks.com/#website",
+            "name": "rallyingstocks.com",
+            "url": "https://rallyingstocks.com",
+            "publisher": {
+              "@id": "https://rallyingstocks.com/#organization"
+            }
+          }
+        ]
       }
     

@@ -16,12 +16,10 @@
   "volume": "Volume",
   "monthPerformance": "Monthly performance",
   "yearPerformance": "Annual performance",
-  "details": "Details",
   "isin": "ISIN",
   "code": "Code",
   "market": "Market",
   "currency": "Currency",
-  "performance": "Performance",
   "update": "Last data update (UTC time): ",
   "website": "Website",
   "seeOnEuronext": "{{stock}} on Euronext",
@@ -109,7 +107,12 @@
       "description": "Is {{stock}} stock rallying? Analyse {{stock}}'s price and volume and discover its investment potential."
     },
     "lastmod": "Last data update (UTC time): {{lastmod}}.",
-    "graph": "Chart of recent sessions"
+    "details": "Stock details {{stock}}",
+    "details_text": "The main parameters for determining whether a stock is rallying are a <em>significant change in price</em> compared to the previous day and a <em>substantial increase in volume</em>, indicating market interest in the stock.",
+    "performance": "Monthly and annual performance of the {{stock}} share",
+    "performance_text": "Monthly and annual performances provide more information about the current context in which the stock finds itself: a rally phase that <em>bucks the trend</em> of recent performances could indicate a <em>reversal of the trend</em>; alternatively, a rally <em>consistent</em> with past performances could indicate a <em>strengthening of the main trend</em>.",
+    "graph": "Chart of recent sessions",
+    "graph_text": "Chart showing price and volume changes during recent trading sessions."
   },
   "contacts": {
     "meta": {
