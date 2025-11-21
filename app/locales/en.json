@@ -65,11 +65,11 @@
     "AVAText3": "Don't just stand by and watch: act now and seize market opportunities! With AvaTrade, you have a powerful platform, professional analysis and tools ready to maximise your profits."
   },
   "rallyTitle": "Stocks rally",
-  "rallyText": "This is the list of stocks that were rallying at the time of the last data update. It is a selection of the main stocks that are currently experiencing a significant change in price followed by a sharp increase in trading volumes.",
+  "rallyText": "The selection of stocks that, at the time of the last update, are experiencing a </em>significant price change confirmed by a sharp increase in trading volumes</em>.",
   "rallyUpSubtitle": "Stocks in bullish rally",
   "rallyDownSubtitle": "Shares in a bearish rally",
   "performanceTitle": "The most interesting performances",
-  "performanceText": "These, on the other hand, are the most interesting monthly performances. It is a more general view of the valuation of a stock and a possible confirmation, if present here too, of the validity of the current movement.",
+  "performanceText": "The most interesting monthly performances: this is a more general view of a stock's valuation and a possible confirmation, if present here too, of the validity of the current movement. A rally phase that is <em>contrary</em> to recent performance could indicate a <em>reversal of the trend</em>; alternatively, a rally that is <em>consistent</em> with performance could indicate a <em>strengthening of the main trend.</em>",
   "performanceSubtitleUp": "Best bullish performances of the last month",
   "performanceSubtitleDown": "Worst bullish performances of the last month",
   "disclaimer": "<em>Warning</em>: Trading on the stock market and trading in general are high-risk activities. The information presented here does not constitute a solicitation to buy or sell securities and is intended for informational purposes only. The rallyingstocks.com website is not responsible for any misuse of the information obtained here.",
