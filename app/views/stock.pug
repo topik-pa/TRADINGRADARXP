@@ -33,7 +33,7 @@ block main
       dl
         dt= __('website')
         dd
-          a(href="#", title=__('seeOnEuronext'), id="euronext", data-url=stock.sources[0], data-isin=stock.isin)= __('seeOnEuronext', {stock: stock.name})
+          a(href="#", title=__('seeOnEuronext'), id="euronext", data-url=stock.sources[0], data-isin=stock.isin, , data-name=stock.name)= __('seeOnEuronext', {stock: stock.name})
         dt= __('status')
         dd #{stock.status || 'N/A'}
 

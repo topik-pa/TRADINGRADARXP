@@ -67,3 +67,10 @@ export function printStockList(stocks, $target, key) {
     $target.appendChild($li)
   })
 }
+
+export function printJSONLD(ld) {
+  const script = document.createElement('script')
+  script.type = 'application/ld+json'
+  script.textContent = JSON.stringify(ld, null, 2)
+  document.body.appendChild(script)
+}

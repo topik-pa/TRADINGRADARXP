@@ -3,7 +3,8 @@ import {
   getData,
   removeSmallCaps,
   updateStatus,
-  printStockList
+  printStockList,
+  printJSONLD
 } from '../scripts/globals.js'
 
 export default  {
@@ -67,6 +68,23 @@ export default  {
     const worstPerformance = await getData('/api/stocks/performance/' + exchange + '/' + 'down')
     printStockList(worstPerformance, $perfDown, 'perf1M')
     updateStatus([$perfDown], 'success')
+
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `https://rallyingstocks.com/${lang}/${exchange}/#webpage`,
+      'name': document.querySelector('title')?.innerText || '',
+      'url': `https://rallyingstocks.com/${lang}/${exchange}`,
+      'description': document.querySelector('meta[name="description"]')?.content || '',
+      'publisher': {
+        '@id': 'https://rallyingstocks.com/#organization'
+      },
+      'inLanguage': lang,
+      'isPartOf': {
+        '@id': 'https://rallyingstocks.com/#website'
+      }
+    }
+    printJSONLD(ld)
 
   }
 }

@@ -1,5 +1,6 @@
 import {
-  updateStatus
+  updateStatus,
+  printJSONLD
 } from '../scripts/globals.js'
 import '../scripts/vendor/Chart.js'
 
@@ -16,8 +17,10 @@ export default  {
     const $main = document.querySelector('main')
     updateStatus([$main], 'loading')
 
+    const lang = document.documentElement.lang
     const euronext = document.getElementById('euronext')
     const isin = euronext.dataset.isin
+    const name = euronext.dataset.name.toLocaleLowerCase()
     const urlfrag2 = euronext.dataset.url.substring(euronext.dataset.url.indexOf(isin))
     const urlfrag1 = document.documentElement.lang
     euronext.href = `https://live.euronext.com/${urlfrag1}/product/equities/${urlfrag2}`
@@ -60,5 +63,23 @@ export default  {
       })
     }
     updateStatus([$main], 'success')
+
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `https://rallyingstocks.com/${lang}/${name}/#webpage`,
+      'name': document.querySelector('title')?.innerText || '',
+      'url': `https://rallyingstocks.com/${lang}/${name}`,
+      'description': document.querySelector('meta[name="description"]')?.content || '',
+      'publisher': {
+        '@id': 'https://rallyingstocks.com/#organization'
+      },
+      'inLanguage': lang,
+      'isPartOf': {
+        '@id': 'https://rallyingstocks.com/#website'
+      }
+    }
+    printJSONLD(ld)
+
   }
 }
