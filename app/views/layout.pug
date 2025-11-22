@@ -39,11 +39,11 @@ html(lang=locale)
     include ./components/shared/cookie_layer/cookie_layer.pug
     include ./components/shared/footer/footer.pug
     include ./components/shared/goto_top/goto_top.pug
-    script.
+    script(nonce=nonce).
         var sc_project = #{sc_project};
         var sc_invisible = 1;
         var sc_security = "#{sc_security}";
-    script(async, defer, src='https://www.statcounter.com/counter/counter.js')
+    script(async, defer, src='https://www.statcounter.com/counter/counter.js', nonce=nonce)
     script(type='application/ld+json').
       {
         "@context": "https://schema.org",

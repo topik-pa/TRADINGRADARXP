@@ -1,4 +1,4 @@
-import { i18n } from '../../server.js'
+import { i18n, nonce } from '../../server.js'
 import { getStockBySlug, readHistory } from './db.controller.js'
 import logger from '../config/logger.js'
 const baseUrl = 'https://rallyingstocks.com'
@@ -16,7 +16,8 @@ const getViewParams = function(id, lang, path) {
     className: id,
     canonicalUrl,
     hreflangs,
-    lang
+    lang,
+    nonce
   }
 }
 

@@ -9,6 +9,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import { I18n } from 'i18n'
 import compression from 'compression'
+import crypto from 'crypto'
 
 // Emulates __dirname in ESM
 const __filename = fileURLToPath(import.meta.url)
@@ -30,11 +31,13 @@ function shouldCompress(req, res) {
   return compression.filter(req, res)
 }
 
+// Add nonce attribute
+const nonce = crypto.randomUUID()
 // Set custom headers
 app.use(function(req, res, next) {
   res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload')
   res.setHeader('Upgrade-insecure-requests', '1')
-  res.setHeader('Content-Security-Policy', 'default-src \'none\'; script-src https://www.statcounter.com/ \'self\' \'unsafe-inline\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' https://c.statcounter.com/ https://tracking.avapartner.com; object-src \'none\'; frame-src https://tracking.avapartner.com/ https://c.statcounter.com/ \'self\'; form-action \'self\'; font-src \'self\'; media-src \'self\'; connect-src https://c.statcounter.com/ \'self\'; frame-ancestors \'none\'; base-uri \'none\'')
+  res.setHeader('Content-Security-Policy', `default-src 'none'; script-src 'self' 'nonce-${nonce}'; style-src 'self' 'unsafe-inline'; img-src 'self' https://c.statcounter.com; object-src 'none'; frame-src 'self' https://tracking.avapartner.com; form-action 'self'; font-src 'self'; media-src 'self'; connect-src 'self' https://c.statcounter.com; frame-ancestors 'none'; base-uri 'none'`)
   res.setHeader('X-Content-Type-Options', 'nosniff')
   next()
 })
@@ -132,4 +135,4 @@ if (process.env.NODE_ENV === 'development') {
   })
 }
 
-export { app, i18n }
+export { app, i18n, nonce }
