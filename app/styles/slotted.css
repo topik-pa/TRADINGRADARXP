@@ -3,9 +3,6 @@
   height: auto;
 }
 
-.cmp-navigation-slotted-li {
-  
-}
 .cmp-navigation-slotted-li:hover {
   background-color: var(--darkest-gray);
   box-shadow: inset 5px 0 0 var(--blue);

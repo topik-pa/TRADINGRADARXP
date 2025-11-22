@@ -107,8 +107,9 @@
       "description": "Il titolo {{stock}} è in fase di rally? Analizza prezzo e volumi di {{stock}} e scopri le sue potenzialità di investimento."
     },
     "lastmod": "Ultimo aggiornamento dati (UTC time): {{lastmod}}.",
-    "details": "Dettagli del titolo azionario {{stock}}",
-    "details_text": "I principali parametri per stabilire se un titolo azionario sia in fase di rally sono una <em>significativa variazione di prezzo</em> rispetto alla giornata precedente e un <em>consistente aumento di volumi</em>, indice di interesse del Mercato per il titolo azionario.",
+    "details": "Dettagli titolo",
+    "quotation": "Quotazione del titolo azionario {{stock}}",
+    "quotation_text": "I principali parametri per stabilire se un titolo azionario sia in fase di rally sono una <em>significativa variazione di prezzo</em> rispetto alla giornata precedente e un <em>consistente aumento di volumi</em>, indice di interesse del Mercato per il titolo azionario.",
     "performance": "Performance mensili e annuali del titolo azionario {{stock}}",
     "performance_text": "Le performance mensili ed annuali danno maggiori informazioni sul contesto attuale in cui si trova il titolo azionario: una fase di rally in <em>controtendenza</em> rispetto alle ultime performance potrebbe indicare una <em>inversione del trend</em>; in alternativa, un rally <em>coerente</em> con le performance potrebbe indicare un <em>rafforzamento del trend principale.</em>",
     "graph": "Grafico delle ultime sedute",
