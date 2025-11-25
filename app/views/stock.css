@@ -11,7 +11,7 @@
 }
 
 #stock .lastmod {
-  color: var(--dark-gray);
+  color: var(--darker-gray);
   margin-bottom: var(--large-space);
   display: block;
 }
