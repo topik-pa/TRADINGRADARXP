@@ -25,6 +25,60 @@ export default  {
     const urlfrag1 = document.documentElement.lang
     euronext.href = `https://live.euronext.com/${urlfrag1}/product/equities/${urlfrag2}`
 
+    const rallyIndexElem = document.getElementById('rallyindex')
+    const rallyIndexValue = document.getElementsByClassName('rallyindex')[0]
+    const variation = Math.abs(rallyIndexElem.dataset.variation)
+    const capPriceRatio = +(100 / (rallyIndexElem.dataset.cap / (rallyIndexElem.dataset.volume * rallyIndexElem.dataset.price))).toFixed(3)
+    let rallyIndex = 50
+
+    if (variation >= 20) {
+      rallyIndex += 30
+    } else if (variation >= 15) {
+      rallyIndex += 25
+    } else if (variation >= 8) {
+      rallyIndex += 15
+    } else if (variation >= 5) {
+      rallyIndex += 10
+    }
+
+    if (capPriceRatio >= 3.0) {
+      rallyIndex += 30
+    } else if (capPriceRatio >= 1.5) {
+      rallyIndex += 25
+    } else if (capPriceRatio >= 0.7) {
+      rallyIndex += 15
+    } else if (capPriceRatio >= 0.3) {
+      rallyIndex += 10
+    }
+
+    let rIndex
+    if (rallyIndex > 100) {
+      rIndex = 'A+'
+    } else if (rallyIndex > 95 && rallyIndex <= 100) {
+      rIndex = 'A'
+    } else if (rallyIndex > 90 && rallyIndex <= 95) {
+      rIndex = 'B+'
+    } else if (rallyIndex > 85 && rallyIndex <= 90) {
+      rIndex = 'B'
+    } else if (rallyIndex > 80 && rallyIndex <= 85) {
+      rIndex = 'C+'
+    } else if (rallyIndex > 75 && rallyIndex <= 80) {
+      rIndex = 'C'
+    } else if (rallyIndex > 70 && rallyIndex <= 75) {
+      rIndex = 'D'
+    } else {
+      rIndex = 'E'
+    }
+
+
+    rallyIndexValue.innerHTML = `<span>${rIndex}</span>`
+    if(rallyIndexElem.dataset.variation > 0) {
+      rallyIndexValue.classList.add('green')
+    } else {
+      rallyIndexValue.classList.add('red')
+    }
+
+
     const ctx = document.getElementById('myChart')
     if(ctx.dataset.prices && ctx.dataset.volumes) {
       const prices = JSON.parse(ctx.dataset.prices)

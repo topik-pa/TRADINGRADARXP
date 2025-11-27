@@ -20,7 +20,7 @@
   "code": "Code",
   "market": "Mercato",
   "capitalization": "Capitalizzazione",
-  "capVolRatio": "Rapporto Cap/Vol",
+  "capVolRatio": "Capitalizzazione/Volume",
   "currency": "Valuta",
   "update": "Ultimo aggiornamento dati (UTC time): ",
   "website": "Website",
@@ -110,13 +110,14 @@
     },
     "lastmod": "Ultimo aggiornamento dati (UTC time): {{lastmod}}.",
     "details": "Dettagli titolo",
-    "details_text": "Variazione giornaliera, quantità di scambio, ultimo prezzo rilevato e rapporto tra capitalizzazione e volume di scambi.",
+    "details_text": "Traccia ogni parametro significativo: dalla variazione giornaliera alle quantità negoziate, fino all’ultimo prezzo registrato e al rapporto capitalizzazione/volume. Una <em>panoramica precisa</em> per comprendere momentum e liquidità del titolo.",
     "quotation": "Quotazione del titolo azionario {{stock}}",
     "quotation_text": "I principali parametri per stabilire se un titolo azionario sia in fase di rally sono una <em>significativa variazione di prezzo</em> rispetto alla giornata precedente e un <em>consistente aumento di volumi</em>, indice di interesse del Mercato per il titolo azionario.",
     "performance": "Performance mensili e annuali del titolo azionario {{stock}}",
     "performance_text": "Le performance mensili ed annuali danno maggiori informazioni sul contesto attuale in cui si trova il titolo azionario: una fase di rally in <em>controtendenza</em> rispetto alle ultime performance potrebbe indicare una <em>inversione del trend</em>; in alternativa, un rally <em>coerente</em> con le performance potrebbe indicare un <em>rafforzamento del trend principale.</em>",
     "graph": "Grafico delle ultime sedute",
-    "graph_text": "Grafico delle variazioni di prezzo e dei volumi avvenuti nelle ultime sedute borsistiche."
+    "graph_text": "Un grafico intuitivo che mette in evidenza le variazioni di prezzo e l’intensità dei volumi nelle ultime sedute, offrendo una visione immediata delle tendenze più recenti del mercato.",
+    "rallyDesc": "Il <em>RALLY INDEX</em> per il titolo azionario {{stock}} e valutato in base ai parametri di <em>variazione di prezzo</em>, <em>volume di scambi</em> e <em>capitalizzazione</em> (con attenzione al rapporto volume/capitalizzazione). Valori alti (A oppure B) indicano che il movimento in atto (positivo o negativo, che sia) è supportato da consistenti volumi ed incontra l'interesse attuale di molti operatori del Mercato."
   },
   "contacts": {
     "meta": {

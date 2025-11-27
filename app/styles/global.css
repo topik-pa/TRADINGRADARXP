@@ -185,6 +185,12 @@ dl dd {
   .list-wrapper > div {
     width: auto;
   }
+  .flex {
+    flex-direction: column;
+  }
+  .flex > div {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 430px) {

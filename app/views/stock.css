@@ -12,12 +12,42 @@
 
 #stock .lastmod {
   color: var(--darker-gray);
-  margin-bottom: var(--large-space);
+  margin-bottom: var(--xx-large-space);
   display: block;
 }
 
 #stock #stock-graph {
   max-width: 800px;
+}
+
+#stock #rallyindex > div {
+  align-items: center;
+}
+#stock .rallyindex {
+  font-size: var(--font-size-biggest);
+  text-align: center;
+}
+#stock .rallyindex.green {
+  background-color: rgba(0, 158, 79, .06)
+}
+#stock .rallyindex.green span{
+  background: var(--green);
+}
+#stock .rallyindex.red {
+  background-color: rgba(205, 33, 42, .06)
+}
+#stock .rallyindex.red span{
+  background: var(--red);
+}
+#stock .rallyindex span {
+  display: inline-block;
+  border: 1px solid var(--darker-gray);
+  border-radius: var(--border-radius-small);
+  color: var(--white);
+  padding: var(--small-space);
+  margin: var(--small-space);
+  font-weight: 500;
+  text-shadow: 0 1px 0px var(--darkest-gray);
 }
 
 @media screen and (max-width: 768px) {

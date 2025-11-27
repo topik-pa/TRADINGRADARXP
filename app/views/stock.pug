@@ -18,6 +18,8 @@ block main
   include ./components/shared/breadcrumbs/breadcrumbs.pug
 
   h1(id="stock-name") #{stock.name}
+  span(class="lastmod")= __('stock.lastmod', { lastmod: new Date(stock.updatedAt).toLocaleString(lang, {dateStyle: 'long', timeStyle: 'short'}) })
+
   section(class="details")
     h2= __('stock.details')
     div(class="flex")
@@ -40,9 +42,13 @@ block main
         dt= __('status')
         dd #{stock.status || 'N/A'}
 
+  section(id="rallyindex", data-variation=stock.relVariation, data-cap=stock.cap, data-volume=stock.volume, data-price=stock.price)
+    h2 Rally index
+    div(class="flex")
+      div(class="rallyindex")
+      div!= __('stock.rallyDesc', {stock: stock.name})
 
   section
-    span(class="lastmod")= __('stock.lastmod', { lastmod: new Date(stock.updatedAt).toLocaleString(lang, {dateStyle: 'long', timeStyle: 'short'}) })
     h2= __('stock.quotation', {stock: stock.name})
     p!= __('stock.details_text')
     div(class="bullet-wrap")
