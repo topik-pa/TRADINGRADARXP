@@ -26,6 +26,8 @@ block main
         dd #{stock.isin}
         dt= __('code')
         dd #{stock.code}
+        dt= __('capitalization')
+        dd #{Math.ceil(stock.cap / 1000000)} Mln
       dl
         dt= __('market')
         dd #{stock.market}
@@ -56,6 +58,10 @@ block main
         span(slot="head") #{stock.name}
         span(slot="name")= __('lastPrice')
         span(slot="value") #{stock.price}<small>€</small>
+      cmp-light-bullet
+        span(slot="head") #{stock.name}
+        span(slot="name")= __('capVolRatio')
+        span(slot="value") #{ (100 / (stock.cap / (stock.volume * stock.price))).toFixed(3) }<small>%</small>
 
   section
     h2= __('stock.performance', {stock: stock.name})

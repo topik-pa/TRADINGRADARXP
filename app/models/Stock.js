@@ -84,6 +84,12 @@ const stockSchema = new Schema({
         nullable: true,
         unique: false
       },
+  cap:
+      {
+        type: Number,
+        nullable: true,
+        unique: false
+      },
   sources:
       {
         type: Schema.Types.Mixed,

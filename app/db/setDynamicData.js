@@ -88,6 +88,10 @@ export async function setDynamicData(fod=false, partial=[]) {
         {
           key: 'volume',
           path: 'table > tbody > tr:nth-child(3) > td:nth-child(2)'
+        },
+        {
+          key: 'cap',
+          path: 'table > tbody > tr:nth-child(13) > td:nth-child(2)'
         }
       ],
       [
@@ -108,6 +112,9 @@ export async function setDynamicData(fod=false, partial=[]) {
       value = new JSDOM(html).window.document.querySelector(t.path)?.firstChild?.nodeValue.trim() || null //!!
 
       /*Exceptions*/
+      if (key==='cap') {
+        value = value?.replace(/[M]/, '.000').replace(/[B]/, '.000.000').replace(/[.]/g, '')
+      }
       if (key==='relVariation') {
         value = value?.replace(/[()%]/g, '')
       }
