@@ -29,6 +29,7 @@ body {
   background: var(--darker-gray);
   position: relative;
   width: calc(20% - var(--main-padding) * 2);
+  min-width: 250px;
   transition: all .4s ease-in-out;
 }
 .layout #column.collapsed {
@@ -178,6 +179,7 @@ dl dd {
   }
   .layout #column {
     width: calc(36% - var(--main-padding) * 2);
+    min-width: 120px;
   }
   .list-wrapper {
     flex-direction: column;

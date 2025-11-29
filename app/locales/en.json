@@ -117,7 +117,7 @@
     "performance_text": "Monthly and annual performances provide more information about the current context in which the stock finds itself: a rally phase that <em>bucks the trend</em> of recent performances could indicate a <em>reversal of the trend</em>; alternatively, a rally <em>consistent</em> with past performances could indicate a <em>strengthening of the main trend</em>.",
     "graph": "Chart of recent sessions",
     "graph_text": "An intuitive chart highlighting price changes and volume intensity in recent sessions, providing an immediate overview of the latest market trends.",
-    "rallyDesc": "The <em>RALLY INDEX</em> for the {{stock}} share is assessed on the basis of <em>price variation</em>, trading <em>volume</em> and <em>capitalisation</em> parameters (with a focus on the volume/capitalisation ratio). High values (A or B) indicate that the current movement (whether positive or negative) is supported by consistent volumes and is attracting the interest of many market operators."
+    "rallyDesc": "The <em>RALLY INDEX</em> for the {{stock}} share is assessed on the basis of the parameters of <em>price variation</em>, <em>trading volume</em> and <em>capitalisation</em> (with attention to the volume/capitalisation ratio). High values (A or B) are correlated with the magnitude of the current movement (whether positive or negative) and the consistency of trading volumes, indicating that the stock is currently attracting the interest of many market operators."
   },
   "contacts": {
     "meta": {
