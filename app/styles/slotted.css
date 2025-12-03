@@ -11,5 +11,5 @@
   color: var(--white);
   text-decoration-color: var(--gray);
   display: block;
-  padding: var(--x-small-space) var(--small-space) var(--x-small-space);
+  padding: var(--small-space) var(--small-space) var(--small-space);
 }

@@ -1,12 +1,12 @@
 extends layout.pug
 
 block append meta
-  meta(name="og:title" content= __('stock.meta.title', {stock: __(stock.name.toUpperCase())}) + ' | ' + __('proj_name') )
+  meta(name="og:title" content= __('stock.meta.title', {stock: __(stock.name.toUpperCase())}) + __('analysisRS'))
   meta(name="og:description" content= __('stock.meta.description', {stock: __(stock.name.toUpperCase())}) )
   meta(name="og:image" content=og_image)
   meta(name="og:url" content=canonicalUrl)
 
-  title= __('stock.meta.title', {stock: __(stock.name.toUpperCase())}) + ' | ' + __('proj_name')
+  title= __('stock.meta.title', {stock: __(stock.name.toUpperCase())}) + __('analysisRS')
   meta(name="description" content= __('stock.meta.description', {stock: __(stock.name.toUpperCase())}) )
   meta(name="keywords" content= __('stock.meta.keywords', {stock: __(stock.name)}))
 

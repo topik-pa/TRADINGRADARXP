@@ -28,27 +28,32 @@ export default  {
     const rallyIndexElem = document.getElementById('rallyindex')
     const rallyIndexValue = document.getElementsByClassName('rallyindex')[0]
     const variation = Math.abs(rallyIndexElem.dataset.variation)
+    const cap = rallyIndexElem.dataset.cap
     const capPriceRatio = +(100 / (rallyIndexElem.dataset.cap / (rallyIndexElem.dataset.volume * rallyIndexElem.dataset.price))).toFixed(3)
     let rallyIndex = 50
 
     if (variation >= 20) {
-      rallyIndex += 30
+      rallyIndex += 35
     } else if (variation >= 15) {
-      rallyIndex += 25
+      rallyIndex += 30
     } else if (variation >= 8) {
-      rallyIndex += 15
+      rallyIndex += 20
     } else if (variation >= 5) {
-      rallyIndex += 10
+      rallyIndex += 15
     }
 
     if (capPriceRatio >= 3.0) {
       rallyIndex += 30
-    } else if (capPriceRatio >= 1.5) {
-      rallyIndex += 25
     } else if (capPriceRatio >= 0.7) {
+      rallyIndex += 25
+    } else if (capPriceRatio >= 0.4) {
       rallyIndex += 15
-    } else if (capPriceRatio >= 0.3) {
+    } else if (capPriceRatio >= 0.1) {
       rallyIndex += 10
+    }
+
+    if (cap > 1000000000) {
+      rallyIndex += 25
     }
 
     let rIndex

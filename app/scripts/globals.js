@@ -62,6 +62,7 @@ export function printStockList(stocks, $target, key) {
     $a.href = '/'+lang+'/'+stock.slug
     const $span = document.createElement('span')
     $span.innerText = stock[key] + '%' || ''
+    $span.classList.add(stock[key] > 0 ? 'green' : 'red')
     $li.appendChild($a)
     $li.appendChild($span)
     $target.appendChild($li)
