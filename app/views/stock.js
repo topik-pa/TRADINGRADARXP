@@ -32,9 +32,9 @@ export default  {
     const capPriceRatio = +(100 / (rallyIndexElem.dataset.cap / (rallyIndexElem.dataset.volume * rallyIndexElem.dataset.price))).toFixed(3)
     let rallyIndex = 50
 
-    if (variation >= 20) {
+    if (variation >= 21) {
       rallyIndex += 35
-    } else if (variation >= 15) {
+    } else if (variation >= 13) {
       rallyIndex += 30
     } else if (variation >= 8) {
       rallyIndex += 20
@@ -42,14 +42,14 @@ export default  {
       rallyIndex += 15
     }
 
-    if (capPriceRatio >= 3.0) {
-      rallyIndex += 30
-    } else if (capPriceRatio >= 0.7) {
-      rallyIndex += 25
-    } else if (capPriceRatio >= 0.4) {
-      rallyIndex += 15
+    if (capPriceRatio >= 3.4) {
+      rallyIndex += 34
+    } else if (capPriceRatio >= 2.1) {
+      rallyIndex += 21
+    } else if (capPriceRatio >= 0.8) {
+      rallyIndex += 13
     } else if (capPriceRatio >= 0.1) {
-      rallyIndex += 10
+      rallyIndex += 8
     }
 
     if (cap > 1000000000) {
