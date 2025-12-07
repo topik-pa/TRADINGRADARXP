@@ -22,7 +22,7 @@
   "capitalization": "Capitalization",
   "capVolRatio": "Capitalization/Volume",
   "currency": "Currency",
-  "update": "Last data update (UTC time): ",
+  "update": "Last data update: ",
   "website": "Website",
   "seeOnEuronext": "{{stock}} on Euronext",
   "status": "Status",
@@ -109,7 +109,7 @@
       "title": "Stocks {{stock}} is rallying right now?",
       "description": "Is {{stock}} stock rallying? Analyse {{stock}}'s price and volume and discover its investment potential."
     },
-    "lastmod": "Last data update (UTC time): {{lastmod}}.",
+    "lastmod": "Last data update: {{lastmod}}.",
     "details": "Stock details",
     "details_text": "Track every significant parameter: from daily changes to traded volumes, to the last recorded price and the capitalisation/volume ratio. A <em>precise overview</em> to understand the momentum and liquidity of the security.",
     "quotation": "{{stock}} share price",

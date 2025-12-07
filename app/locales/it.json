@@ -22,7 +22,7 @@
   "capitalization": "Capitalizzazione",
   "capVolRatio": "Capitalizzazione/Volume",
   "currency": "Valuta",
-  "update": "Ultimo aggiornamento dati (UTC time): ",
+  "update": "Ultimo aggiornamento dati: ",
   "website": "Website",
   "seeOnEuronext": "{{stock}} su Euronext",
   "status": "Status",
@@ -109,7 +109,7 @@
       "title": "Azioni {{stock}}: titolo in rally?",
       "description": "Il titolo {{stock}} è in fase di rally? Analizza prezzo e volumi di {{stock}} e scopri le sue potenzialità di investimento."
     },
-    "lastmod": "Ultimo aggiornamento dati (UTC time): {{lastmod}}.",
+    "lastmod": "Ultimo aggiornamento dati: {{lastmod}}.",
     "details": "Dettagli titolo",
     "details_text": "Traccia ogni parametro significativo: dalla variazione giornaliera alle quantità negoziate, fino all’ultimo prezzo registrato e al rapporto capitalizzazione/volume. Una <em>panoramica precisa</em> per comprendere momentum e liquidità del titolo.",
     "quotation": "Quotazione del titolo azionario {{stock}}",

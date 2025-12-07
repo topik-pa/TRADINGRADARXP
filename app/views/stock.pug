@@ -18,7 +18,7 @@ block main
   include ./components/shared/breadcrumbs/breadcrumbs.pug
 
   h1(id="stock-name") #{stock.name}
-  span(class="lastmod")= __('stock.lastmod', { lastmod: new Date(stock.updatedAt).toLocaleString(lang, {dateStyle: 'long', timeStyle: 'short'}) })
+  span(class="lastmod")!= __('stock.lastmod', { lastmod: stock.lastTrade })
 
   section(class="details")
     h2= __('stock.details')

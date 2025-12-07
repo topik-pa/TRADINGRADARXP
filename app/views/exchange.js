@@ -33,10 +33,7 @@ export default  {
           createComponent('span', { slot: 'head' }, [stock.market]),
           createComponent('span', { slot: 'name' }, [stock.name]),
           createComponent('span', { slot: 'value' }, [stock.relVariation]),
-          createComponent('span', { slot: 'lastmod' }, [new Date(stock.updatedAt).toLocaleString(document.documentElement.lang, {
-            dateStyle: 'short',
-            timeStyle: 'short'
-          })]),
+          createComponent('span', { slot: 'lastmod' }, [stock.lastTrade]),
           createComponent('span', { slot: 'footer' }, [stock.name])
         ])
         document.getElementById(id).appendChild(bullet)

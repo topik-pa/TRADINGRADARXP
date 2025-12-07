@@ -82,6 +82,10 @@ export async function setDynamicData(fod=false, partial=[]) {
         {
           key: 'status',
           path: '#instrstatusl1'
+        },
+        {
+          key: 'lastTrade',
+          path: '.last-price-date-time'
         }
       ],
       [
@@ -130,6 +134,9 @@ export async function setDynamicData(fod=false, partial=[]) {
       }
       if (key==='price' || key==='perf1M' || key==='perf52W' || key==='absVariation') {
         value = value?.replace(/[,]/g, '')
+      }
+      if (key==='lastTrade') {
+        value = value.replaceAll('\t', '').replace('\n', '')
       }
       /*Exceptions*/
 

@@ -90,6 +90,12 @@ const stockSchema = new Schema({
         nullable: true,
         unique: false
       },
+  lastTrade:
+      {
+        type: String,
+        nullable: true,
+        unique: false
+      },
   sources:
       {
         type: Schema.Types.Mixed,
