@@ -117,7 +117,7 @@ export async function setDynamicData(fod=false, partial=[]) {
 
       /*Exceptions*/
       if (key==='cap') {
-        value = value?.replace(/[M]/, '.000').replace(/[B]/, '.000.000').replace(/[.]/g, '')
+        value = value?.replace(/[K]/, '').replace(/[M]/, '.000').replace(/[B]/, '.000.000').replace(/[.]/g, '').replace(/[,]/g, '')
       }
       if (key==='relVariation') {
         value = value?.replace(/[()%]/g, '')
@@ -135,7 +135,7 @@ export async function setDynamicData(fod=false, partial=[]) {
       if (key==='price' || key==='perf1M' || key==='perf52W' || key==='absVariation') {
         value = value?.replace(/[,]/g, '')
       }
-      if (key==='lastTrade') {
+      if (key==='lastTrade' && value) {
         value = value.replaceAll('\t', '').replace('\n', '')
       }
       /*Exceptions*/
