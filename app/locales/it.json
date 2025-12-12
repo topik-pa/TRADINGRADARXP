@@ -26,7 +26,9 @@
   "website": "Website",
   "seeOnEuronext": "{{stock}} su Euronext",
   "status": "Status",
-  "analysisRS": " Analisi rallyingstocks.com",
+  "support": "Supporto",
+  "resistance": "Resistenza",
+  "analysisRS": " Analisi tecnica rallyingstocks.com",
   "views": {
     "home": "Home",
     "privacy": "Privacy",
@@ -106,7 +108,7 @@
   "stock": {
     "meta": {
       "keywords": "{{stock}}, azioni, titolo, rally, analisi, tempo, reale, prezzo, volumi",
-      "title": "Azioni {{stock}}: titolo in rally?",
+      "title": "Azioni {{stock}} in rally?",
       "description": "Il titolo {{stock}} è in fase di rally? Analizza prezzo e volumi di {{stock}} e scopri le sue potenzialità di investimento."
     },
     "lastmod": "Ultimo aggiornamento dati: {{lastmod}}.",
@@ -116,9 +118,10 @@
     "quotation_text": "I principali parametri per stabilire se un titolo azionario sia in fase di rally sono una <em>significativa variazione di prezzo</em> rispetto alla giornata precedente e un <em>consistente aumento di volumi</em>, indice di interesse del Mercato per il titolo azionario.",
     "performance": "Performance mensili e annuali del titolo azionario {{stock}}",
     "performance_text": "Le performance mensili ed annuali danno maggiori informazioni sul contesto attuale in cui si trova il titolo azionario: una fase di rally in <em>controtendenza</em> rispetto alle ultime performance potrebbe indicare una <em>inversione del trend</em>; in alternativa, un rally <em>coerente</em> con le performance potrebbe indicare un <em>rafforzamento del trend principale.</em>",
-    "graph": "Grafico delle ultime sedute",
+    "graph": "Grafico delle ultime sedute {{stock}}",
     "graph_text": "Un grafico intuitivo che mette in evidenza le variazioni di prezzo e l’intensità dei volumi nelle ultime sedute, offrendo una visione immediata delle tendenze più recenti del mercato.",
-    "rallyDesc": "Il <em>RALLY INDEX</em> per il titolo azionario {{stock}} e valutato in base ai parametri di <em>variazione di prezzo</em>, <em>volume di scambi</em> e <em>capitalizzazione</em> (con attenzione al rapporto volume/capitalizzazione). Valori alti (A oppure B) sono correlati alla ampiezza del movimento in atto (positivo o negativo, che sia) e alla consistenza dei volumi di scambio, indice che tale titolo incontra l'interesse attuale di molti operatori del Mercato."
+    "rallyDesc": "Il <em>RALLY INDEX</em> per il titolo azionario {{stock}} e valutato in base ai parametri di <em>variazione di prezzo</em>, <em>volume di scambi</em> e <em>capitalizzazione</em> (con attenzione al rapporto volume/capitalizzazione). Valori alti (A oppure B) sono correlati alla ampiezza del movimento in atto (positivo o negativo, che sia) e alla consistenza dei volumi di scambio, indice che tale titolo incontra l'interesse attuale di molti operatori del Mercato.",
+    "analysis": "{{stock}} livelli di resistenza e supporto"
   },
   "contacts": {
     "meta": {

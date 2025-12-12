@@ -33,18 +33,18 @@ export default  {
     let rallyIndex = 50
 
     if (variation >= 21) {
-      rallyIndex += 35
+      rallyIndex += 34
     } else if (variation >= 13) {
-      rallyIndex += 30
+      rallyIndex += 21
     } else if (variation >= 8) {
-      rallyIndex += 20
+      rallyIndex += 13
     } else if (variation >= 5) {
-      rallyIndex += 15
+      rallyIndex += 8
     }
 
-    if (capPriceRatio >= 3.4) {
+    if (capPriceRatio >= 2.1) {
       rallyIndex += 34
-    } else if (capPriceRatio >= 2.1) {
+    } else if (capPriceRatio >= 1.3) {
       rallyIndex += 21
     } else if (capPriceRatio >= 0.8) {
       rallyIndex += 13
@@ -52,9 +52,19 @@ export default  {
       rallyIndex += 8
     }
 
-    if (cap > 1000000000) {
-      rallyIndex += 25
+    if (cap > 5 * 10**6) {
+      rallyIndex += 5  //5
     }
+    if (cap > 8 * 10**6) {
+      rallyIndex += 3  //8
+    }
+    if (cap > 13 * 10**6) {
+      rallyIndex += 5  //13
+    }
+    if (cap > 21 * 10**6) {
+      rallyIndex += 8  //21
+    }
+
 
     let rIndex
     if (rallyIndex > 100) {

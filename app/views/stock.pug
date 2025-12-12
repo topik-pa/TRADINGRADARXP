@@ -42,12 +42,6 @@ block main
         dt= __('status')
         dd #{stock.status || 'N/A'}
 
-  section(id="rallyindex", data-variation=stock.relVariation, data-cap=stock.cap, data-volume=stock.volume, data-price=stock.price)
-    h2 Rally index
-    div(class="flex")
-      div(class="rallyindex")
-      div!= __('stock.rallyDesc', {stock: stock.name})
-
   section
     h2= __('stock.quotation', {stock: stock.name})
     p!= __('stock.details_text')
@@ -69,6 +63,25 @@ block main
         span(slot="name")= __('capVolRatio')
         span(slot="value") #{ (100 / (stock.cap / (stock.volume * stock.price))).toFixed(3) }<small>%</small>
 
+  section(id="rallyindex", data-variation=stock.relVariation, data-cap=stock.cap, data-volume=stock.volume, data-price=stock.price)
+    h2 #{stock.name} Rally index
+    div(class="flex")
+      div(class="rallyindex")
+      div!= __('stock.rallyDesc', {stock: stock.name})
+
+  section(id="techanalisys")
+    h2= __('stock.analysis', {stock: stock.name})
+    div(class="bullet-wrap")
+      cmp-light-bullet
+        span(slot="head") #{stock.name}
+        span(slot="name")= __('resistance')
+        span(slot="value") #{stock.resistance}<small>€</small> <small class="bmore">(#{ ((stock.price - stock.resistance) / (stock.price / 100)).toFixed(1)}%)</small>
+      cmp-light-bullet
+        span(slot="head") #{stock.name}
+        span(slot="name")= __('support')
+        span(slot="value") #{stock.support}<small>€</small> <small class="bmore">(#{ ((stock.price - stock.support) / (stock.price / 100)).toFixed(1)}%)</small>
+      
+
   section
     h2= __('stock.performance', {stock: stock.name})
     p!= __('stock.performance_text')
@@ -83,7 +96,7 @@ block main
         span(slot="value") #{stock.perf52W}<small>%</small>
 
   section
-    h2= __('stock.graph')
+    h2= __('stock.graph', {stock: stock.name})
     p= __('stock.graph_text')
     div(id="stock-graph")
       canvas(id="myChart", data-volumes=history.volumes, data-prices=history.prices)

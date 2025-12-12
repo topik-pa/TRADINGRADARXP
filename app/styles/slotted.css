@@ -13,3 +13,7 @@
   display: block;
   padding: var(--small-space) var(--small-space) var(--small-space);
 }
+
+.bmore {
+  color: var(--darker-gray);
+}

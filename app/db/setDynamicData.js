@@ -22,8 +22,8 @@ export async function setDynamicData(fod=false, partial=[]) {
     const tasks = []
     for await (const stock of cursor) {
       tasks.push(limit(async() => {
-        await sleep(500)
         updateDynamicData(stock.isin, stock.sources)
+        await sleep(1000) //to avoid rate limiting
       }))
     }
     await Promise.all(tasks)
@@ -96,6 +96,14 @@ export async function setDynamicData(fod=false, partial=[]) {
         {
           key: 'cap',
           path: 'table > tbody > tr:nth-child(13) > td:nth-child(2)'
+        },
+        {
+          key: 'resistance',
+          path: 'table > tbody > tr:nth-child(10) > td:nth-child(2) > span:nth-child(1)'
+        },
+        {
+          key: 'support',
+          path: 'table > tbody > tr:nth-child(10) > td:nth-child(2) > span:nth-child(2)'
         }
       ],
       [
@@ -105,7 +113,7 @@ export async function setDynamicData(fod=false, partial=[]) {
         },
         {
           key: 'perf52W',
-          path: 'table > tbody > tr:nth-child(3) > td:nth-child(4)'
+          path: 'table > tbody > tr:nth-child(3) > td:nth-child(5)'
         }
       ]
     ]
