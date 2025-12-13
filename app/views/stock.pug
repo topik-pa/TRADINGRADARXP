@@ -69,17 +69,18 @@ block main
       div(class="rallyindex")
       div!= __('stock.rallyDesc', {stock: stock.name})
 
-  section(id="techanalisys")
-    h2= __('stock.analysis', {stock: stock.name})
-    div(class="bullet-wrap")
-      cmp-light-bullet
-        span(slot="head") #{stock.name}
-        span(slot="name")= __('resistance')
-        span(slot="value") #{stock.resistance}<small>€</small> <small class="bmore">(#{ ((stock.price - stock.resistance) / (stock.price / 100)).toFixed(1)}%)</small>
-      cmp-light-bullet
-        span(slot="head") #{stock.name}
-        span(slot="name")= __('support')
-        span(slot="value") #{stock.support}<small>€</small> <small class="bmore">(#{ ((stock.price - stock.support) / (stock.price / 100)).toFixed(1)}%)</small>
+  if stock.resistance && stock.support
+    section(id="techanalisys")
+      h2= __('stock.analysis', {stock: stock.name})
+      div(class="bullet-wrap")
+        cmp-light-bullet
+          span(slot="head") #{stock.name}
+          span(slot="name")= __('resistance')
+          span(slot="value") #{stock.resistance}<small>€</small> <small class="bmore">(#{ ((stock.price - stock.resistance) / (stock.price / 100)).toFixed(1)}%)</small>
+        cmp-light-bullet
+          span(slot="head") #{stock.name}
+          span(slot="name")= __('support')
+          span(slot="value") #{stock.support}<small>€</small> <small class="bmore">(#{ ((stock.price - stock.support) / (stock.price / 100)).toFixed(1)}%)</small>
       
 
   section
