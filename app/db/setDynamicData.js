@@ -123,16 +123,30 @@ export async function setDynamicData(fod=false, partial=[]) {
       key = t.key
       value = new JSDOM(html).window.document.querySelector(t.path)?.firstChild?.nodeValue.trim() || null //!!
 
+      const valuationClose = new JSDOM(html).window.document.querySelector('table > tbody > tr:nth-child(3) td.py-1')
+
       /*Exceptions*/
       if (key==='cap') {
-        value = value?.replace(/[K]/, '').replace(/[M]/, '.000').replace(/[B]/, '.000.000').replace(/[.]/g, '').replace(/[,]/g, '')
+        if(valuationClose){
+          value = new JSDOM(html).window.document.querySelector('table > tbody > tr:nth-child(14) > td:nth-child(2)')?.firstChild?.nodeValue.trim() || null //!!
+        }
+        if(value) {
+          value = value.replace(/[,]/g, '')
+          if(value.indexOf('B') !== -1) {
+            value = +value.replace('B', '') * 1e3
+          } else if(value.indexOf('M') !== -1) {
+            value = +value.replace('M', '') * 1
+          } else if(value.indexOf('K') !== -1) {
+            value = +value.replace('K', '') / 1000
+          }
+        }
       }
       if (key==='relVariation') {
         value = value?.replace(/[()%]/g, '')
       }
       if (key==='volume') {
-        const testEl = new JSDOM(html).window.document.querySelector('table > tbody > tr:nth-child(3) td.py-1')
-        if(testEl){
+
+        if(valuationClose){
           value = new JSDOM(html).window.document.querySelector('table > tbody > tr:nth-child(4) > td:nth-child(2)')?.firstChild?.nodeValue.trim() || null //!!
         }
         if(value !== null) {
@@ -145,6 +159,13 @@ export async function setDynamicData(fod=false, partial=[]) {
       }
       if (key==='lastTrade' && value) {
         value = value.replaceAll('\t', '').replace('\n', '')
+      }
+
+      if (key==='resistance' && valuationClose) {
+        value = new JSDOM(html).window.document.querySelector('table > tbody > tr:nth-child(11) > td:nth-child(2) > span:nth-child(1)')?.firstChild?.nodeValue.trim() || null //!!
+      }
+      if (key==='support' && valuationClose) {
+        value = new JSDOM(html).window.document.querySelector('table > tbody > tr:nth-child(11) > td:nth-child(2) > span:nth-child(2)')?.firstChild?.nodeValue.trim() || null //!!
       }
       /*Exceptions*/
 
