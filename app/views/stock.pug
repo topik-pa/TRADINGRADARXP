@@ -29,7 +29,7 @@ block main
         dt= __('code')
         dd #{stock.code}
         dt= __('capitalization')
-        dd #{Math.ceil(stock.cap / 1000000)} Mln
+        dd #{Math.ceil(stock.cap)} Mln
       dl
         dt= __('market')
         dd #{stock.market}
@@ -61,7 +61,7 @@ block main
       cmp-light-bullet
         span(slot="head") #{stock.name}
         span(slot="name")= __('capVolRatio')
-        span(slot="value") #{ (100 / (stock.cap / (stock.volume * stock.price))).toFixed(3) }<small>%</small>
+        span(slot="value") #{ (100 / (stock.cap *1e6 / (stock.volume * stock.price))).toFixed(3) }<small>%</small>
 
   section(id="rallyindex", data-variation=stock.relVariation, data-cap=stock.cap, data-volume=stock.volume, data-price=stock.price)
     h2 #{stock.name} Rally index
