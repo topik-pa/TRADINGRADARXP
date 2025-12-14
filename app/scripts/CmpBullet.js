@@ -73,7 +73,7 @@ template.innerHTML = `
         }
       }
     }
-    #status {
+    #status, #bigcap {
       font-size: 1.1rem;
       width: 01.1rem;
       height: 1.1rem;
@@ -88,14 +88,24 @@ template.innerHTML = `
       background-color: var(--white);
       color: var(--darker-gray)
     }
-    #status:hover:after {
+    #bigcap {
+      right: var(--x-large-space);
+      color: var(--white);
+      background-color: var(--blue);
+    }
+    #status:hover:after, #bigcap:hover:after {
       content: attr(title);
+      color: var(--darker-gray);
       position: absolute;
       top: 0;
       left: -10.5rem;
       width: 10rem;
       background-color: var(--white);
       border: 1px solid var(--darker-gray);
+      z-index: 9;
+    }
+    .hide {
+      display: none!important;
     }
     @media screen and (max-width: 430px) {
       .bullet {
@@ -107,6 +117,7 @@ template.innerHTML = `
     <header class="head">
       <span><slot name="market"></slot></span>
       <span id="status">&#83;</span>
+      <span id="bigcap" class="hide">B</span>
     </header>
     <div class="name">
       <a href="#"><slot name="name"></slot></a>
@@ -135,7 +146,13 @@ class CmpBullet extends HTMLElement {
   connectedCallback() {
     this.root.classList.add(this.getAttribute('direction'))
     this.root.querySelectorAll('a').forEach((el) => {el.href = this.getAttribute('url')})
-    this.root.querySelector('#status').setAttribute('title', this.getAttribute('status'))
+    this.root.querySelector('#status').setAttribute(
+      'title', this.getAttribute('status'))
+    if (this.getAttribute('isBigCap') !== 'nope') {
+      const bigcapEl = this.root.querySelector('#bigcap')
+      bigcapEl.setAttribute('title', this.getAttribute('isBigCap'))
+      bigcapEl.classList.remove('hide')
+    }
   }
 }
 
