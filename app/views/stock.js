@@ -111,7 +111,7 @@ export default  {
           datasets: [
             {
               type: 'line',
-              label: 'Prezzo',
+              label: 'Price',
               data: prices,
               borderColor: '#3F6580',
               backgroundColor: '#84bde2',
@@ -119,7 +119,7 @@ export default  {
             },
             {
               type: 'bar',
-              label: 'Volumi',
+              label: 'Volume',
               data: volumes,
               backgroundColor: '#a9ddff',
               yAxisID: 'yVolume'
@@ -127,7 +127,15 @@ export default  {
           labels: labels
         },
         options: {
-          responsive: true
+          responsive: true,
+          scales: {
+            yPrice: {
+              display: false
+            },
+            yVolume: {
+              display: false
+            }
+          }
         }
       })
     }

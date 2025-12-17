@@ -189,6 +189,8 @@ export async function setDynamicData(fod=false, partial=[]) {
     if(fod) {
       history.prices.push(+price)
       history.volumes.push(+volume)
+      history.prices = history.prices.slice(-10)
+      history.volumes = history.volumes.slice(-10)
     } else {
       history.prices[history.prices.length - 1] = +price
       history.volumes[history.volumes.length - 1] = +volume
