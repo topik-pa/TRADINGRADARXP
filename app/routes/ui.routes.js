@@ -42,12 +42,12 @@ router.get('/sitemap-:letter([A-Z]).xml', async(req, res) => {
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${stocks.map(stock => `
       <url>
-        <loc>${BASE_URL}/it/${encodeURI(stock.name.toLowerCase().replaceAll(/[\s.]/g, '-').replace(/&/g, '&amp;'))}</loc>
+        <loc>${BASE_URL}/it/${stock.slug}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>hourly</changefreq>
       </url>
       <url>
-        <loc>${BASE_URL}/en/${encodeURI(stock.name.toLowerCase().replaceAll(/[\s.]/g, '-').replace(/&/g, '&amp;'))}</loc>
+        <loc>${BASE_URL}/en/${stock.slug}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>hourly</changefreq>
       </url>

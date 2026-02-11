@@ -63,7 +63,7 @@ export function getStaticData(stock) {
   const name = new JSDOM(stock[1]).window.document.querySelector('a').textContent
   const isin = stock[2]
   const code = stock[3]
-  const slug = encodeURI(name.toLowerCase().replaceAll(/[\s.]/g, '-'))
+  const slug = encodeURIComponent(name.toLowerCase().replaceAll(/[\s./']/g, '-'))
   // Some fields are required
   if (!name || !isin || !code || !slug) return null
 
