@@ -8,7 +8,7 @@ template.innerHTML = `
       border-bottom: 8px solid var(--blue);
       border-radius: var(--border-radius-small);
       width: 100%;
-      min-width: 16rem;
+      min-width: 18rem;
       &.positive {
         background-color: var(--green);
         background: linear-gradient(22deg,rgba(153, 255, 204, .15) 50%, rgba(0, 158, 79, .15) 100%);

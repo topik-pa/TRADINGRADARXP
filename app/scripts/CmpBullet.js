@@ -7,7 +7,7 @@ template.innerHTML = `
       background: linear-gradient(22deg,rgba(234, 233, 230, .15) 50%, rgba(212, 211, 208, .15) 100%);
       border-radius: var(--border-radius-small);
       width: 100%;
-      min-width: 16rem;
+      min-width: 18rem;
       .name a {
         text-decoration: underline;
         text-decoration-color: var(--dark-gray);
