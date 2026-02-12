@@ -56,6 +56,7 @@
   },
   "header": {
     "home": "Home",
+    "stocks": "Stocks",
     "about": "About us",
     "contacts": "Contacts"
   },
@@ -104,6 +105,14 @@
       "keywords": "{{keywords}}, exchange, exchanges, market, rallying, stocks, stocks, shares, rally, analysis, prices, volumes",
       "description": "Find stocks rallying on the {{exchange}} stock exchange: automatic price and volume analysis to identify the most promising stocks in real time."
     }
+  },
+  "stocks": {
+    "meta": {
+      "keywords": "stocks, list",
+      "title": "Stock List",
+      "description": "List of stocks"
+    },
+    "title": "Stock List"
   },
   "stock": {
     "meta": {

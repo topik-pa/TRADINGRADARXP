@@ -8,6 +8,7 @@ template.innerHTML = `
       border-radius: var(--border-radius-small);
       width: 100%;
       min-width: 18rem;
+      max-width: 21rem;
       .name a {
         text-decoration: underline;
         text-decoration-color: var(--dark-gray);

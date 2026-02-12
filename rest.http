@@ -34,6 +34,8 @@ GET http://localhost:3000/api/stocks/
 
 ### OK All stocks Milan Market
 GET http://localhost:3000/api/stocks/milan
+### OK All stocks by first letter
+GET http://localhost:3000/api/stocks/y
 
 
 

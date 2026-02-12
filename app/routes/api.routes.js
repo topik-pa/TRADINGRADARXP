@@ -8,6 +8,7 @@ import {
 const router = express.Router()
 
 const CURRENT_EXCHANGES = 'milan|oslo|paris|amsterdam|brussels|lisbon|dublin|global'
+const ALPHABET = 'A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|Numbers'
 const TRENDS = 'up|down'
 
 // GET all stocks exchange performance 1M
@@ -25,9 +26,11 @@ router.get('/stocks/accents', getStocksAccents)
 // GET stocks by exchange
 router.get(`/stocks/:exchange(${CURRENT_EXCHANGES})`, getStocks)
 
+// GET stocks by first letter
+router.get(`/stocks/:letter(${ALPHABET})`, getStocks)
 
-// GET stock by url fragment
-router.get('/stocks/:stockurl', getStockBySlug)
+// GET stock by slug
+router.get('/stocks/:slug', getStockBySlug)
 
 
 // GET all stocks

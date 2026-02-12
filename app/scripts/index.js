@@ -20,7 +20,8 @@ cookieLayer.init()
 const modules = {
   hp: () => import('../views/home.js'),
   exchange: () => import('../views/exchange.js'),
-  stock: () => import('../views/stock.js')
+  stock: () => import('../views/stock.js'),
+  stocks: () => import('../views/stocks.js')
 }
 
 // Execute view specific script

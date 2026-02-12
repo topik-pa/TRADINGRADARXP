@@ -68,6 +68,26 @@ export async function exchangeView(req, res) {
 }
 
 
+// Stocks
+export async function stocksView(req, res) {
+  const lang = req.params.lang
+  const letter = req.params.letter || 'A'
+  if (!supportedLangs.includes(lang)) {
+    res.redirect((req.url).replace(lang, fallback))
+  } else {
+    i18n.setLocale(req, lang)
+    let params = getViewParams('stocks', lang, req.path)
+    const breadcrumbs = [
+      {
+        name: 'stocks'
+      }
+    ]
+    params = { ...params, breadcrumbs, letter }
+    res.render('stocks', params)
+  }
+}
+
+
 // Stock
 export async function stockView(req, res) {
   const lang = req.params.lang

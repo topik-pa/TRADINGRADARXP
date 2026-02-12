@@ -1,0 +1,24 @@
+#stocks {}
+
+.alphabet {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: var(--xxx-large-space) 0;
+}
+.alphabet a {
+  cursor: pointer;
+  padding: var(--base-space);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+}
+
+#stocks_list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: var(--large-space);
+  margin: var(--large-space) 0;
+}
+
+@media screen and (max-width: 768px) {}

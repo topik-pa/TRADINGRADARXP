@@ -2,6 +2,7 @@ import express from 'express'
 import { Stock } from '../models/Stock.js'
 import {
   hpView,
+  stocksView,
   stockView,
   privacyView,
   contactsView,
@@ -70,6 +71,9 @@ router.get('/favicon.ico', (req, res) => {
   res.sendFile('/public/favicon.ico', { root: './app' })
 })
 
+// Stocks list
+router.get(`/:lang(${CURRENT_LANGS})/stocks`, stocksView)
+router.get(`/:lang(${CURRENT_LANGS})/stocks/:letter([a-z]|numbers)`, stocksView)
 
 // Exchange
 router.get(`/:lang(${CURRENT_LANGS})/:exchange(${CURRENT_EXCHANGES})`, exchangeView)

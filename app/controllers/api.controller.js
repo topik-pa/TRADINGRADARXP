@@ -49,10 +49,20 @@ export async function getStocksAccents(req, res, next) {
 // GET stocks
 export async function getStocks(req, res, next) {
   const exchange = req.params.exchange
+  const letter = req.params.letter
   const query = {}
   if (exchange) {
     const re = new RegExp(exchange, 'i')
     query.market = re
+  }
+  if (letter) {
+    if(letter === 'numbers') {
+      const re = new RegExp('^\\d.*')
+      query.name = re
+    } else {
+      const re = new RegExp('^' + letter, 'i')
+      query.name = re
+    }
   }
   let stocks = []
   try {

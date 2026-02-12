@@ -56,6 +56,7 @@
   },
   "header": {
     "home": "Home",
+    "stocks": "Azioni",
     "about": "Chi siamo",
     "contacts": "Contatti"
   },
@@ -104,6 +105,14 @@
       "keywords": "{{keywords}}, mercato, mercati, borsa, rallying, stocks, azioni, titoli, rally, analisi, tempo, reale, prezzo, volumi",
       "description": "Trova le azioni in fase di rally della Borsa di {{exchange}}: analisi automatica di prezzo e volumi per identificare in tempo reale i titoli più promettenti."
     }
+  },
+  "stocks": {
+    "meta": {
+      "keywords": "azioni, lista",
+      "title": "Lista azioni",
+      "description": "Lista dei titoli azionari"
+    },
+    "title": "Lista azioni"
   },
   "stock": {
     "meta": {
