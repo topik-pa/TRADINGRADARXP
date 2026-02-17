@@ -40,6 +40,18 @@ export function avaBannerManagement(lang) {
           adTheme: '804',
           style: 'width:300px;height:250px;'
         }
+      },
+      de: {
+        mobile: {
+          html5Id: '37316',
+          adTheme: '827',
+          style: 'width:120px;height:600px;'
+        },
+        desktop: {
+          html5Id: '37318',
+          adTheme: '827',
+          style: 'width:300px;height:250px;'
+        }
       }
     },
     {
@@ -76,6 +88,18 @@ export function avaBannerManagement(lang) {
         desktop: {
           html5Id: '35514',
           adTheme: '786',
+          style: 'width:300px;height:250px;'
+        }
+      },
+      de: {
+        mobile: {
+          html5Id: '37303',
+          adTheme: '827',
+          style: 'width:120px;height:600px;'
+        },
+        desktop: {
+          html5Id: '37305',
+          adTheme: '827',
           style: 'width:300px;height:250px;'
         }
       }
@@ -116,6 +140,18 @@ export function avaBannerManagement(lang) {
           adTheme: '833',
           style: 'width:300px;height:250px;'
         }
+      },
+      de: {
+        mobile: {
+          html5Id: '35535',
+          adTheme: '786',
+          style: 'width:120px;height:600px;'
+        },
+        desktop: {
+          html5Id: '35536',
+          adTheme: '786',
+          style: 'width:250px;height:250px;'
+        }
       }
     },
     {
@@ -153,6 +189,18 @@ export function avaBannerManagement(lang) {
           html5Id: '36210',
           adTheme: '770',
           style: 'width:600px;height:314px;'
+        }
+      },
+      de: {
+        mobile: {
+          html5Id: '36089',
+          adTheme: '793',
+          style: 'width:160px;height:600px;'
+        },
+        desktop: {
+          html5Id: '37323',
+          adTheme: '827',
+          style: 'width:600px;height:425px;'
         }
       }
     },
@@ -192,6 +240,18 @@ export function avaBannerManagement(lang) {
           adTheme: '770',
           style: 'width:600px;height:314px;'
         }
+      },
+      de: {
+        mobile: {
+          html5Id: '36162',
+          adTheme: '794',
+          style: 'width:160px;height:600px;'
+        },
+        desktop: {
+          html5Id: '36159',
+          adTheme: '794',
+          style: 'width:336px;height:280px;'
+        }
       }
     },
     {
@@ -227,6 +287,18 @@ export function avaBannerManagement(lang) {
         },
         desktop: {
           html5Id: '36210',
+          adTheme: '770',
+          style: 'width:600px;height:314px;'
+        }
+      },
+      de: {
+        mobile: {
+          html5Id: '35680',
+          adTheme: '770',
+          style: 'width:160px;height:600px;'
+        },
+        desktop: {
+          html5Id: '35668',
           adTheme: '770',
           style: 'width:600px;height:314px;'
         }

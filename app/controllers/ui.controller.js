@@ -2,7 +2,7 @@ import { i18n, nonce } from '../../server.js'
 import { getStockBySlug, readHistory } from './db.controller.js'
 import logger from '../config/logger.js'
 const baseUrl = 'https://rallyingstocks.com'
-const supportedLangs = ['en', 'it', 'fr']
+const supportedLangs = ['en', 'it', 'fr', 'de']
 const fallback = 'en'
 
 const getViewParams = function(id, lang, path) {

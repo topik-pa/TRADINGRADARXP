@@ -26,6 +26,12 @@
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
 	</url>
+	<url>
+		<loc>https://rallyingstocks.com/de</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>hourly</changefreq>
+		<priority>1.0</priority>
+	</url>
 
 	<url>
 		<loc>https://rallyingstocks.com/it/about</loc>
@@ -41,6 +47,12 @@
 	</url>
 	<url>
 		<loc>https://rallyingstocks.com/fr/about</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://rallyingstocks.com/de/about</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
@@ -64,6 +76,12 @@
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
+	<url>
+		<loc>https://rallyingstocks.com/de/contacts</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
 
 	<url>
 		<loc>https://rallyingstocks.com/it/privacy</loc>
@@ -79,6 +97,12 @@
 	</url>
 	<url>
 		<loc>https://rallyingstocks.com/fr/privacy</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>https://rallyingstocks.com/de/privacy</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.1</priority>
@@ -228,6 +252,55 @@
 	</url> 
 	<url>
 		<loc>https://rallyingstocks.com/fr/dublin</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>hourly</changefreq>
+		<priority>1.0</priority>
+	</url> 
+
+	<url>
+		<loc>https://rallyingstocks.com/de/global</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>hourly</changefreq>
+		<priority>1.0</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/milan</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>hourly</changefreq>
+		<priority>1.0</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/paris</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>hourly</changefreq>
+		<priority>1.0</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/oslo</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>hourly</changefreq>
+		<priority>1.0</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/amsterdam</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>hourly</changefreq>
+		<priority>1.0</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/brussels</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>hourly</changefreq>
+		<priority>1.0</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/lisbon</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>hourly</changefreq>
+		<priority>1.0</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/dublin</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
 		<changefreq>hourly</changefreq>
 		<priority>1.0</priority>
@@ -737,6 +810,175 @@
 	</url>
 	<url>
 		<loc>https://rallyingstocks.com/en/stocks/numbers</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/a</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/b</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/c</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/d</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/e</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/f</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/g</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/h</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/i</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/j</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/k</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/l</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/m</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/n</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/o</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/p</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/q</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/r</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/s</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/t</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/u</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/v</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/w</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/x</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/y</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url> 
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/z</loc>
+		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://rallyingstocks.com/de/stocks/numbers</loc>
 		<lastmod>2026-02-02T12:00:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
