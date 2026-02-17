@@ -63,7 +63,7 @@ app.set('trust proxy', true)
 app.use(wwwRedirect)
 
 const i18n = new I18n({
-  locales: ['en', 'it'],
+  locales: ['en', 'it', 'fr'],
   directory: path.join(__dirname, 'app', 'locales'),
   defaultLocale: 'en',
   queryParameter: 'lang',

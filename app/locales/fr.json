@@ -1,0 +1,187 @@
+{
+  "hello": "Bonjour",
+  "proj_name": "rallyingstocks.com",
+  "proj_description": "Découvrez quels sont les actions qui rallient. En ce moment, rallyingstocks.com affiche les actions du marché boursier européen avec des prix et des volumes en mouvement net.",
+  "proj_tagline": "Quels stocks rallissent aujourd'hui ?",
+  "milan": "Milan",
+  "paris": "Paris",
+  "oslo": "Oslo",
+  "amsterdam": "Amsterdam",
+  "brussels": "Bruxelles",
+  "lisbon": "Lisbonne",
+  "dublin": "Dublin",
+  "global": "Mondial",
+  "lastPrice": "Dernier prix",
+  "relVariation": "Variation",
+  "volume": "Volume",
+  "monthPerformance": "Performance mensuelle",
+  "yearPerformance": "Performance annuelle",
+  "isin": "ISIN",
+  "code": "Code",
+  "market": "Marché",
+  "capitalization": "Capitalisation",
+  "capVolRatio": "Capitalisation/Volume",
+  "currency": "Devise",
+  "update": "Dernière mise à jour des données : ",
+  "website": "Site web",
+  "seeOnEuronext": "{{stock}} sur Euronext",
+  "status": "Statut",
+  "support": "Support",
+  "resistance": "Résistance",
+  "analysisRS": " Analyse rallyingstocks.com",
+  "views": {
+    "home": "Accueil",
+    "privacy": "Confidentialité",
+    "contacts": "Contacts",
+    "about": "À propos",
+    "exchanges": "Marchés"
+  },
+  "exchanges": {
+    "milanStockExchange": "Bourse de Milan",
+    "parisStockExchange": "Bourse de Paris",
+    "osloStockExchange": "Bourse d'Oslo",
+    "amsterdamStockExchange": "Bourse d'Amsterdam",
+    "brusselsStockExchange": "Bourse de Bruxelles",
+    "lisbonStockExchange": "Bourse de Lisbonne",
+    "dublinStockExchange": "Bourse de Dublin",
+    "globalStockExchange": "Bourse Euronext Mondiale",
+    "milanStockExchangeDescription": "Le cœur financier de l'Italie, connu pour ses actions bancaires et énergétiques, avec une volatilité attractive pour le day trading.",
+    "parisStockExchangeDescription": "Un marché dynamique avec de grandes multinationales, bonne liquidité et secteurs clés tels que les biens de luxe et l'industrie.",
+    "osloStockExchangeDescription": "Spécialisée dans l'énergie et la navigation, idéale pour ceux qui recherchent une volatilité liée au pétrole et aux matières premières.",
+    "amsterdamStockExchangeDescription": "Forte en technologie, commerce électronique et finance, elle garantit des mouvements rapides et de bonnes opportunités de scalping.",
+    "brusselsStockExchangeDescription": "Petite mais stable, elle offre des actions défensives et industrielles, adaptées aux stratégies ciblées à court terme.",
+    "lisbonStockExchangeDescription": "Un petit marché concentré sur l'énergie et les télécommunications, utile pour ceux qui recherchent des tendances claires et directes.",
+    "dublinStockExchangeDescription": "Axée sur la finance et les produits pharmaceutiques, bonne volatilité grâce aux multinationales technologiques et de santé cotées.",
+    "euronextGlobalDescription": "Une plateforme paneuropéenne combinant plusieurs bourses, liquidité abondante et diversification des secteurs pour une négociation rapide."
+  },
+  "header": {
+    "home": "Accueil",
+    "stocks": "Actions",
+    "about": "À propos",
+    "contacts": "Contacts"
+  },
+  "column": {
+    "exchanges": "Marchés",
+    "telegram": "Telegram",
+    "telegramText": "Abonnez-vous à la Chaîne Telegram pour recevoir des notifications sur votre smartphone concernant les actions avec les plus grands gains ou pertes de la journée.",
+    "telegramCTA": "Suivez sur Telegram",
+    "AVA": "Investir avec AvaTrade",
+    "AVAText1": "Fiez-vous à une plateforme de trading en ligne solide et professionnelle. Avec AvaTrade, vous avez accès à des outils avancés, une analyse de marché précise et un support dédié pour vous aider à gérer chaque transaction de la meilleure façon possible.",
+    "AVAText2": "Exploitez la puissance des marchés mondiaux avec AvaTrade. Une plateforme complète conçue pour les investisseurs avertis, combinant technologie, sécurité et support pour des décisions éclairées.",
+    "AVAText3": "Ne vous contentez pas de regarder : agissez maintenant et saisissez les opportunités du marché ! Avec AvaTrade, vous avez une plateforme puissante, une analyse professionnelle et des outils prêts à maximiser vos profits."
+  },
+  "rallyTitle": "Stocks en hausse",
+  "rallyText": "La sélection des actions qui, au moment de la dernière mise à jour, connaissent une <em>variation de prix importante confirmée par une augmentation nette des volumes de négociation</em>.",
+  "rallyUpSubtitle": "Actions en hausse",
+  "rallyDownSubtitle": "Actions en baisse",
+  "performanceTitle": "Les performances les plus intéressantes",
+  "performanceText": "Les performances mensuelles les plus intéressantes : c'est une vision plus générale de l'évaluation d'une action et une confirmation possible, si elle est également présente ici, de la validité du mouvement actuel. Une phase de hausse <em>contraire</em> à la performance récente pourrait indiquer un <em>retournement de tendance</em> ; alternativement, une hausse <em>cohérente</em> avec la performance pourrait indiquer un <em>renforcement de la tendance principale.</em>",
+  "performanceSubtitleUp": "Meilleures performances haussières du mois dernier",
+  "performanceSubtitleDown": "Pires performances haussières du mois dernier",
+  "disclaimer": "<em>Avertissement</em> : Le trading sur le marché boursier et le trading en général sont des activités à haut risque. Les informations présentées ici ne constituent pas une sollicitation à l'achat ou à la vente de titres et sont destinées à titre informatif uniquement. Le site Web rallyingstocks.com n'est pas responsable de tout mauvais usage des informations obtenues ici.",
+  "breadcrumbs": {
+    "text": "Vous êtes sur : "
+  },
+  "index": {
+    "meta": {
+      "keywords": "rallier, actions, stocks, partage, europe, hausse, analyse, prix, volume"
+    },
+    "description": "<em>Quels stocks rallissent aujourd'hui ?</em>. <br><br>rallyingstocks.com interroge les prix des principales actions européennes en temps réel et <em>met en évidence les actions qui rallissent</em>. <br><br>Trouvez les actions qui connaissent une <em>période de forte croissance ou de baisse nette</em> et décidez de votre stratégie. <br><em>Suivez le marché</em> et basez vos actions sur la situation actuelle !",
+    "subtitle": "Que sont les actions <em>rallissantes</em> ?",
+    "rally": "<br>Les actions rallissantes sont des actions qui connaissent une <em>phase de mouvement de prix important</em> accompagnée d'une <em>expansion des volumes</em>. <br>Ce sont des actions qui, pour diverses raisons, augmentent (ou diminuent) à un rythme beaucoup plus rapide que dans les sessions précédentes. <br><br>En général, c'est une courte période (quelques jours au maximum), mais pendant laquelle il est possible de faire des achats ou des ventes importants.",
+    "sectionExchanges": {
+      "title": "Tous les marchés",
+      "text": "Liste des marchés couverts par rallyingstocks.com",
+      "discover": "Découvrez toutes les actions >>"
+    },
+    "sectionAVA": {
+      "title": "Vivez le frisson du trading d'actions avec les services offerts par AvaTrade",
+      "text": "Découvrez comment trader sur les marchés financiers avec des outils professionnels et une plateforme fiable. AvaTrade vous fournit une technologie avancée, une analyse de marché en temps réel et un support expert pour vous offrir une expérience de trading complète et sécurisée. Que vous soyez un investisseur expérimenté ou un novice, vous pouvez compter sur un environnement intuitif, transparent et riche en ressources pour prendre des décisions éclairées. Cliquez et commencez à explorer de nouvelles opportunités d'investissement."
+    }
+  },
+  "exchange": {
+    "meta": {
+      "title": "{{exchange}} : actions rallissantes",
+      "keywords": "{{keywords}}, bourse, bourses, marché, rallissant, actions, stocks, partages, hausse, analyse, prix, volumes",
+      "description": "Trouvez les actions rallissantes sur la bourse {{exchange}} : analyse automatique des prix et des volumes pour identifier les actions les plus prometteuses en temps réel."
+    }
+  },
+  "stocks": {
+    "meta": {
+      "keywords": "actions, liste",
+      "title": "Liste des actions",
+      "description": "Liste des actions"
+    },
+    "title": "Liste des actions"
+  },
+  "stock": {
+    "meta": {
+      "keywords": "{{stock}}, actions, partages, hausse, analyse, prix, volume",
+      "title": "L'action {{stock}} rallisse-t-elle en ce moment ?",
+      "description": "L'action {{stock}} rallisse-t-elle ? Analysez le prix et le volume de {{stock}} et découvrez son potentiel d'investissement."
+    },
+    "lastmod": "Dernière mise à jour des données : {{lastmod}}.",
+    "details": "Détails des actions",
+    "details_text": "Suivez chaque paramètre important : des changements quotidiens aux volumes négociés, au dernier prix enregistré et au ratio capitalisation/volume. Un <em>aperçu précis</em> pour comprendre l'élan et la liquidité du titre.",
+    "quotation": "Prix de l'action {{stock}}",
+    "quotation_text": "Les paramètres principaux pour déterminer si une action rallisse sont une <em>variation de prix significative</em> par rapport au jour précédent et une <em>augmentation substantielle du volume</em>, indiquant l'intérêt du marché pour l'action.",
+    "performance": "Performance mensuelle et annuelle de l'action {{stock}}",
+    "performance_text": "Les performances mensuelles et annuelles fournissent plus d'informations sur le contexte actuel dans lequel se trouve l'action : une phase de hausse qui <em>va à l'encontre de la tendance</em> des performances récentes pourrait indiquer un <em>retournement de tendance</em> ; alternativement, une hausse <em>cohérente</em> avec les performances passées pourrait indiquer un <em>renforcement de la tendance principale</em>.",
+    "graph": "Graphique des séances récentes pour {{stock}}",
+    "graph_text": "Un graphique intuitif mettant en évidence les changements de prix et l'intensité du volume dans les séances récentes, fournissant un aperçu immédiat des dernières tendances du marché.",
+    "rallyDesc": "L'<em>INDEX DE HAUSSE</em> pour l'action {{stock}} est évalué en fonction des paramètres de <em>variation de prix</em>, de <em>volume de négociation</em> et de <em>capitalisation</em> (en tenant compte du ratio volume/capitalisation). Les valeurs élevées (A ou B) sont corrélées à l'ampleur du mouvement actuel (qu'il soit positif ou négatif) et à la cohérence des volumes de négociation, indiquant que l'action attire actuellement l'intérêt de nombreux opérateurs de marché.",
+    "analysis": "Niveaux de résistance et de support pour {{stock}}"
+  },
+  "contacts": {
+    "meta": {
+      "keywords": "contacts, rallissant, actions",
+      "title": "Nous contacter",
+      "description": "Contacter rallyingstocks.com"
+    },
+    "title": "Nous contacter",
+    "text": "Contactez rallyingstocks.com pour toute question, information ou autre besoin.",
+    "subTitleEMail": "Par email",
+    "textEMail": "Vous pouvez utiliser cette adresse email : "
+  },
+  "about": {
+    "meta": {
+      "keywords": "à propos, nous, rallissant, actions",
+      "title": "À propos de nous",
+      "description": "À propos de nous"
+    },
+    "title": "À propos de nous"
+  },
+  "404": {
+    "text": "Cette page n'est plus disponible ou n'a jamais existé. <br><br>Commencez à naviguer à partir de la page d'accueil.<br><br>"
+  },
+  "500": {
+    "text": "Cette page a généré une erreur sur le serveur et n'est actuellement pas disponible.<br><br>Commencez à naviguer à partir de la page d'accueil.<br><br>"
+  },
+  "cookielayer": {
+    "title": "Cette application Web utilise des cookies",
+    "text": "Ce site ou les outils tiers qui y sont intégrés utilisent des cookies nécessaires à son fonctionnement et pour atteindre les objectifs décrits dans la politique relative aux cookies. Pour en savoir plus ou pour retirer votre consentement à tout ou partie des cookies, veuillez vous référer à la politique relative aux cookies. Vous acceptez l'utilisation de cookies en fermant ou en masquant cette bannière, en cliquant sur un lien ou un bouton, ou en continuant à naviguer de toute autre manière. Pour plus d'informations, veuillez visiter la page de politique de confidentialité",
+    "ok": "OK",
+    "privacy": "Confidentialité"
+  },
+  "privacy": {
+    "meta": {
+      "keywords": "confidentialité, cookies, sécurité, données, droits",
+      "description": "Page de confidentialité : règles et droits concernant l'utilisation du service"
+    },
+    "title": "Politique de confidentialité",
+    "section0": "<h2>Politique de confidentialité</h2><p>rallyingstocks.com respecte votre vie privée et s'engage à protéger vos données personnelles conformément au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données, abrogeant la directive 95/46/CE (Règlement général sur la protection des données), en vigueur depuis le 24 mai 2016 et applicable à partir du 25 mai 2018. </p><p>Cette politique de confidentialité s'applique à tous les visiteurs du site Web rallyingstocks.com.",
+    "section1": "<h2>Introduction</h2><p>Cette politique décrit comment rallyingstocks.com traite les données personnelles lorsque vous interagissez avec rallyingstocks.com pour nos services ou simplement pour naviguer sur notre site Web. Il vise également à informer les utilisateurs de leurs droits légaux en matière de confidentialité et de la protection offerte par le système juridique. Nous vous invitons à lire attentivement cette politique de confidentialité afin d'être informé de l'utilisation de vos données personnelles. Si vous avez des questions ou souhaitez exercer un droit relatif à la confidentialité, veuillez suivre les instructions de cette politique de confidentialité. Veuillez contacter rallyingstocks.com pour toute question concernant la confidentialité à l'adresse e-mail du responsable du traitement des données : info@rallyingstocks.com.",
+    "section2": "<h2>Données personnelles que nous pouvons collecter</h2><p>Les données personnelles, ou informations personnelles, sont des informations relatives à une personne à partir desquelles son identité peut être déterminée. Cela exclut donc les données dont l'identité de l'utilisateur a été supprimée (données anonymes). Nous collectons une variété d'informations sur nos clients. Ces données personnelles se répartissent dans les catégories suivantes. <br><br>Données d'identification : prénom, nom de famille et, si l'utilisateur communique avec nous via les réseaux sociaux, cette catégorie comprend également le nom d'utilisateur utilisé sur ces réseaux sociaux. <br>Coordonnées : adresse postale, numéros de téléphone, adresses e-mail, adresse de facturation. <br>Codes ou clés d'identification des utilisateurs. <br>Données relatives aux caractéristiques personnelles : date de naissance, sexe, nationalité. <br>Données opérationnelles : cela comprend les informations concernant les paiements vers et depuis le client, ainsi que les informations supplémentaires concernant les produits et services achetés chez nous. <br><br>Nous ne collectons pas de données sensibles vous concernant (y compris les données révélant l'origine raciale ou ethnique, les convictions religieuses ou philosophiques, la vie sexuelle, l'orientation sexuelle, les opinions politiques, les informations de santé, les données génétiques et biométriques). De plus, nous ne collectons pas de données judiciaires vous concernant.",
+    "section3": "<h2>Comment les données personnelles sont collectées</h2><p>Ci-dessous, une liste des différentes méthodes que nous utilisons pour collecter les données des utilisateurs.<br><br>Interaction directe. <br>L'utilisateur décide de fournir ses données d'identification, de contact et financières en remplissant un formulaire ou en communiquant ces données par courrier postal, téléphone, e-mail, chat ou réseaux sociaux. <br>Les données personnelles fournies par l'utilisateur sont incluses lorsque :<br><br>Ils demandent une offre pour nos biens/services ; <br>Ils soumettent des demandes ou demandent des informations ; Ils demandent un rendez-vous ; Ils soumettent un CV depuis notre site Web ;<br>Ils nous contactent via les réseaux sociaux ; <br>Ils s'abonnent à notre Infolettre.",
+    "section4": "<h2>Comment nous utilisons vos données personnelles</h2><p>Nous utilisons les données personnelles dans les limites de la loi. En général, nous utilisons des données dans les circonstances suivantes : <br><br>Si nous devons exécuter un contrat qui est en cours de conclusion ou qui a déjà été conclu avec vous. Par exemple, émettre une facture pour les biens/services qui vous ont été fournis. <br>S'il est nécessaire de poursuivre nos intérêts légitimes (ou ceux de tiers), à condition que les intérêts et droits fondamentaux de l'utilisateur ne les remplacent pas. <br>Si nous devons nous conformer aux obligations imposées par les lois ou réglementations. <br>En général, la base juridique sur laquelle nous nous appuyons pour le traitement de vos données personnelles ne comprend pas votre consentement, sauf dans les cas expressément prévus par la loi, comme pour l'envoi de certaines communications de marketing direct. <br>Dans les cas où la base juridique est fondée sur le consentement, vous avez le droit de retirer votre consentement à tout moment. <br><br>Pour plus d'informations, veuillez comparer les bases juridiques sur lesquelles nous nous appuyons pour le traitement des données personnelles avec la base juridique sur laquelle nous nous appuyons pour le traitement des données personnelles.",
+    "section5": "<h2>La base juridique sur laquelle nous traitons les données personnelles</h2><p>Vous êtes conscient que nous pouvons traiter vos données personnelles sur différentes bases juridiques, selon l'objectif spécifique de l'utilisation des données. Notre processus de prise de décision n'est pas automatisé. Nous vous invitons à nous envoyer toute question que vous pourriez avoir à ce sujet. Pour les questions concernant la confidentialité, veuillez vous référer à la section Comment contacter rallyingstocks.com.",
+    "section6": "<h2>Publicité, marketing et préférences de l'utilisateur dans les communications</h2><p>Avec votre consentement spécifique, nous pouvons utiliser des stratégies de marketing direct par e-mail, téléphone, SMS ou courrier postal. Par exemple, vous pouvez recevoir notre infolettre via votre adresse e-mail. <br>Nous nous efforçons de nous assurer que notre site Web indique clairement nos activités et le type de messages qui vous sont envoyés, à la fois lorsque vous décidez de recevoir notre infolettre et lorsque vous remplissez le formulaire de contact. <br>Vous pouvez changer d'avis à tout moment et décider de vous désabonner.",
+    "section7": "<h2>Cookies</h2><p>En utilisant le site Web, les utilisateurs consentent à l'utilisation de cookies conformément à cette politique. Si l'utilisateur ne consent pas à l'utilisation de cookies de cette façon, il doit configurer son navigateur de manière appropriée ou ne pas utiliser le site Web. Si l'utilisateur décide de désactiver les cookies, cela peut affecter son expérience de navigation sur le site Web. Les cookies sont des fichiers informatiques ou des données partielles qui peuvent être stockés sur votre ordinateur ou d'autres appareils compatibles Internet (par exemple, smartphones ou tablettes) lorsque vous visitez un site Web. Un cookie contient le nom du site Web dont il provient, la durée du cookie (c'est-à-dire combien de temps il restera sur votre appareil) et une valeur qui est généralement un nombre unique généré de manière aléatoire. Les cookies sont utilisés pour faciliter l'utilisation du site Web et/ou pour adapter le site Web et les services offerts aux intérêts et besoins de l'utilisateur. Les cookies peuvent également être utilisés pour accélérer les futures activités de l'utilisateur sur le site Web. Les cookies sont également utilisés pour suivre les utilisateurs et compiler des statistiques anonymes sous forme agrégée. <br><br>Plus d'informations sur les cookies utilisés. <br>Lorsque vous visitez ce site Web, les quatre types de cookies suivants peuvent être placés sur votre ordinateur ou votre appareil : <br>cookies internes, <br>cookies tiers, <br>cookies de session, <br>et cookies persistants. <br><br>Cookies de session <br>La période de temps entre l'ouverture et la fermeture de votre navigateur Internet est appelée session de navigation. <br>Les cookies de session sont des cookies stockés sur votre ordinateur ou autre appareil pendant une session de navigation, mais ils expirent et sont normalement supprimés à la fin de la session de navigation. <br><br>Cookies internes <br>Les cookies internes sont des cookies qui sont stockés directement sur l'ordinateur ou l'appareil de l'utilisateur. Ils peuvent inclure des cookies tels que les cookies de session et les cookies persistants (décrits ci-dessous). <br>Nous utilisons des cookies internes pour suivre les mouvements du ordinateur ou autre appareil du visiteur qui consulte l'un de nos sites, par exemple à des fins d'analyse. <br><br>Cookies tiers <br>Les cookies tiers sont des cookies gérés par des tiers qui peuvent collecter et suivre certaines données de navigation. Ce site utilise le service Google Analytics (décrit dans les données de navigation et les statistiques collectées par des tiers). Les cookies persistants sont des cookies stockés sur l'ordinateur ou l'appareil du visiteur pendant une session de navigation, mais qui restent sur l'ordinateur ou l'appareil après la fin de cette session de navigation (par exemple, enregistrement du mot de passe). <br>Les cookies persistants permettent à nos sites Web de reconnaître l'ordinateur ou l'appareil du visiteur lorsqu'il est utilisé pour accéder à l'un de nos sites Web à nouveau, après la fin d'une session de navigation et au début d'une nouvelle session de navigation, essentiellement pour aider le visiteur à se reconnecter rapidement à notre site Web. <br><br>Données de navigation et statistiques collectées par des tiers <br>Comme c'est désormais courant sur Internet, ce site utilise des outils d'analyse statistique fournis et gérés par des tiers qui peuvent collecter et suivre certaines données de navigation. <br>Il convient de noter que de nombreux sites italiens et étrangers utilisent normalement ces technologies et des solutions externalisées, mais très peu en parlent dans leurs politiques de confidentialité. Nous avons essayé de le faire et de vous informer de la manière la plus précise et transparente possible : en tout cas, nous sommes toujours à votre disposition. Comme ces données sont collectées par des outils et des entreprises autres que l'opérateur du site Web, elles ne sont pas physiquement détenues par rallyingstocks.com, qui ne peut que les utiliser à des fins de consultation mais ne peut pas les modifier ou les supprimer indépendamment. Pour ces opérations et en savoir plus sur la politique de confidentialité appliquée à ces données, l'utilisateur doit contacter directement le responsable du traitement des données, c'est-à-dire la société qui fournit directement le service statistique utilisé. Les outils tiers utilisés dans ce site sont les suivants : - Google Analytics (fourni par : Google Inc. 1600 Amphitheatre Parkway - Mountain View CA 94043, USA). <br><br>Informations sur Google Analytics. <br>Ce site Web utilise Google Analytics, un service d'analyse Web fourni par Google, Inc. (Google). Google Analytics utilise des cookies, qui sont des fichiers texte placés sur votre ordinateur pour aider le site Web à analyser la façon dont les utilisateurs utilisent le site. <br>Les informations générées par le cookie sur votre utilisation du site Web (y compris votre adresse IP) seront transmises à et stockées par Google sur des serveurs aux États-Unis. Google utilisera ces informations pour évaluer votre utilisation du site Web, compiler des rapports sur l'activité du site Web pour les opérateurs de sites Web et fournir d'autres services liés à l'activité du site Web et à l'utilisation d'Internet. Google peut également transférer ces informations à des tiers lorsque cela est requis par la loi, ou lorsque ces tiers traitent les informations au nom de Google. Google n'associera pas votre adresse IP à aucune autre donnée détenue par Google. Vous pouvez refuser l'utilisation de cookies en sélectionnant les paramètres appropriés dans votre navigateur, mais cela peut vous empêcher d'utiliser toutes les fonctionnalités de ce site Web. En utilisant ce site Web, vous consentez au traitement de vos données par Google de la manière et pour les objectifs énoncés ci-dessus. Liens utiles pour une meilleure compréhension de la politique de confidentialité de Google Analytics : - http://www.google.com/analytics/it-IT/tos.html - http://www.google.com/privacypolicy.html . Toute demande concernant les données sujettes à ce traitement doit être adressée au responsable du traitement des données (Google Inc.).",
+    "section8": "<h2>Divulgation de données personnelles</h2><p>Vos données personnelles ne seront pas partagées avec des tiers, sauf pour les auditeurs externes et les conseillers professionnels tels que les conseillers bancaires, juridiques, comptables et d'assurance, ainsi que les agences administratives, réglementaires et chargées de l'application de la loi. De plus, si l'activité demandée nécessite l'implication d'un inspecteur externe ou d'un collaborateur, les données peuvent être partagées avec ce dernier.  <br>Nous exigeons que tous les tiers respectent la sécurité de vos données personnelles et les traitent conformément à la loi applicable. <br>Nous ne permettons pas aux fournisseurs de services tiers d'utiliser vos données personnelles à leurs propres fins, mais nous leur permettons de traiter vos données personnelles uniquement aux fins spécifiées et conformément à nos instructions.",
+    "section9": "<h2>Sécurité des données</h2><p>Nous avons pris les mesures de sécurité appropriées pour prévenir la perte accidentelle de vos données personnelles, ainsi que leur utilisation ou leur accès par des parties non autorisées, et leur altération ou dissémination. De plus, l'accès à vos données personnelles est limité aux employés et autres tiers qui, pour des raisons liées à l'exécution de leurs tâches, ont besoin de les connaître. Vos données personnelles seront traitées exclusivement selon nos instructions, et ces personnes sont liées par des obligations de confidentialité. <br>Nous avons établi des procédures pour traiter toute violation de données personnelles et vous informerons, ainsi que l'autorité de contrôle compétente, de toute violation de ce type, si cela est requis par la loi.",
+    "section10": "<h2>Liens tiers</h2><p>Ce site peut inclure des liens vers des sites tiers, ainsi que des plug-ins et applications tiers (par exemple, Facebook). En cliquant sur ces liens ou en vous y connectant, vous acceptez que les tiers collectent ou partagent vos données. Les sites tiers ne sont pas contrôlés par nous, et rallyingstocks.com n'est pas responsable de leurs politiques de confidentialité. <br>Lorsque vous quittez notre site, vous devez lire la politique de confidentialité de tout autre site que vous visitez.",
+    "section11": "<h2>Conservation des données</h2><p>Nous conserverons vos données personnelles uniquement aussi longtemps que nécessaire pour réaliser les fins pour lesquelles elles ont été collectées, y compris les obligations légales, comptables ou de rapport. <br>Afin de déterminer la période de conservation appropriée des données personnelles, nous tenons compte du montant, de la nature et de la sensibilité des données personnelles, du risque potentiel de préjudice résultant de l'utilisation ou de la divulgation non autorisées de vos données personnelles, des fins pour lesquelles nous traitons vos données personnelles et du fait que nous avons ou non d'autres moyens de traiter vos données personnelles, ainsi que les obligations légales applicables. À des fins fiscales, la loi nous oblige à conserver les informations de base sur nos clients (y compris les coordonnées, les données d'identification, les données financières et les transactions) pendant dix ans à compter du moment où le statut du client devient invalide. Les CV soumis via la section pertinente de notre site Web sont conservés pendant un maximum de 24 mois, après quoi ils sont supprimés de notre base de données. Dans certaines circonstances, vous pouvez nous demander de supprimer des données vous concernant ; pour plus d'informations, veuillez consulter la section sur vos droits légaux ci-dessous.",
+    "section12": "<h2>Droits garantis par la loi</h2><p>Le Règlement général sur la protection des données européen s'applique à vous, car vous êtes titulaire des droits accordés par la législation sur la protection de la vie privée concernant vos données personnelles. <br><br>Droit à l'information - nous sommes obligés de vous informer sur la façon dont notre entreprise utilise vos données personnelles (une obligation dont nous nous acquittons conformément à cette politique de confidentialité) ;<br>Droit d'accès - le droit de soumettre une demande d'accès aux données pour obtenir une copie des données personnelles stockées par rallyingstocks.com ;  <br>Droit de rectification - le droit de demander la correction des données personnelles si elles sont incomplètes ou inexactes ; <br>Droit à l'oubli - également connu sous le nom de Droit à l'oubli lorsque, dans certaines circonstances, vous pouvez demander la suppression de vos données personnelles (à condition qu'il n'existe pas d'obligation impérieuse de les conserver) ;  <br>Droit à la limitation du traitement - le droit de demander, dans certaines circonstances, la suspension du traitement de vos données personnelles ;<br>Droit à la portabilité - le droit de demander une copie de vos données personnelles dans un format couramment utilisé (par exemple, un fichier .csv) ; <br>Droit d'opposition – le droit de vous opposer au traitement de vos données personnelles (par exemple, si vous ne consentez pas au traitement de vos données à des fins de marketing direct).<br><br>Ces droits sont soumis à certaines règles régissant leur exercice. Pour plus d'informations, veuillez vous référer au Guide d'application du Règlement européen sur la protection des données personnelles. Vous pouvez nous contacter si vous souhaitez exercer l'un des droits ci-dessus (voir la section Contacter rallyingstocks.com pour une demande de confidentialité). L'accès à vos données personnelles (ou l'exercice des droits ci-dessus) est gratuit. Cependant, nous nous réservons le droit de facturer des frais si la demande est manifestement infondée, répétitive ou excessive. Alternativement, dans de telles circonstances, nous pouvons refuser de nous conformer à votre demande. Nous pouvons vous demander des informations spécifiques pour nous aider à confirmer votre identité et à assurer un accès approprié à vos données personnelles (ou à exercer l'un de vos droits). <br>Cette mesure de sécurité est nécessaire pour garantir que les données personnelles ne sont pas divulguées à des tiers qui ne sont pas autorisés à les recevoir. Nous pouvons également vous contacter pour vous demander des informations supplémentaires concernant votre demande afin d'accélérer le processus. Nous faisons de notre mieux pour répondre à toutes les demandes légitimes dans un délai d'un mois. Parfois, cela peut prendre plus d'un mois si la demande est particulièrement complexe ou si vous avez fait plusieurs demandes. Dans de tels cas, nous vous communiquerons le délai et vous tiendrons informé. Si vous avez d'autres questions concernant cette politique de confidentialité ou si vous souhaitez soumettre une demande pour exercer l'un de vos droits légaux, vous pouvez contacter le Groupe de travail de la protection des données à l'aide des coordonnées fournies à la section 14. Comment contacter rallyingstocks.com pour les questions de confidentialité.",
+    "section13": "<h2>Comment contacter rallyingstocks.com pour les questions de confidentialité</h2><p>Si vous avez des questions sur cette politique de confidentialité, ou si vous souhaitez exercer l'un de vos droits, vous pouvez contacter la Société de la manière suivante : Email : info@rallyingstocks.com.</p>"
+  }
+}

@@ -13,7 +13,7 @@ const router = express.Router()
 const BASE_URL = 'https://rallyingstocks.com'
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 const CURRENT_EXCHANGES = 'milan|oslo|paris|amsterdam|brussels|lisbon|dublin|global'
-const CURRENT_LANGS = 'it|en'
+const CURRENT_LANGS = 'it|en|fr'
 
 // sitemap.xml
 router.get('/sitemap-index.xml', (req, res) => {
@@ -49,6 +49,11 @@ router.get('/sitemap-:letter([A-Z]).xml', async(req, res) => {
       </url>
       <url>
         <loc>${BASE_URL}/en/${stock.slug}</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>hourly</changefreq>
+      </url>
+      <url>
+        <loc>${BASE_URL}/fr/${stock.slug}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>hourly</changefreq>
       </url>
@@ -98,7 +103,7 @@ router.get(`/:lang(${CURRENT_LANGS})`, hpView)
 // root page
 router.get('/', (req, res) => {
   // Get browser prefered language
-  const lang = req.acceptsLanguages('en', 'it') || 'en'
+  const lang = req.acceptsLanguages('en', 'it', 'fr') || 'en'
   // Redirects
   res.redirect(301, `/${lang}/`)
 })
