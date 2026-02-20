@@ -7,8 +7,8 @@ template.innerHTML = `
       background: linear-gradient(22deg,rgba(234, 233, 230, .15) 50%, rgba(212, 211, 208, .15) 100%);
       border-radius: var(--border-radius-small);
       width: 100%;
-      min-width: 18rem;
-      max-width: 21rem;
+      min-width: 20rem;
+      max-width: 24rem;
       .name a {
         text-decoration: underline;
         text-decoration-color: var(--dark-gray);
@@ -74,36 +74,29 @@ template.innerHTML = `
         }
       }
     }
-    #status, #bigcap {
-      font-size: 1.1rem;
-      width: 01.1rem;
-      height: 1.1rem;
-      display: block;
-      position: absolute;
-      top: .1rem;
-      right: .1rem;
-      border: 1px solid var(--darker-gray);
-      border-radius: 50%;
-      padding: 0.1rem;
-      text-align: center;
-      background-color: var(--white);
-      color: var(--darker-gray)
+    .market {
+        color: var(--darkest-gray);
+        /*width: 18ch;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: inline-block;*/
     }
-    #bigcap {
-      right: var(--x-large-space);
-      color: var(--white);
-      background-color: var(--blue);
+    .status {
+        display: block;
+        font-size: var(--font-size-x-small);
+        margin-top: var(--xx-small-space);
     }
-    #status:hover:after, #bigcap:hover:after {
-      content: attr(title);
-      color: var(--darker-gray);
-      position: absolute;
-      top: 0;
-      left: -10.5rem;
-      width: 10rem;
-      background-color: var(--white);
-      border: 1px solid var(--darker-gray);
-      z-index: 9;
+    .bigcap {
+        display: block;
+        font-size: var(--font-size-x-small);
+        position: absolute;
+        right: var(--main-padding);
+        top: var(--main-padding);
+        background-color: var(--blue);
+        padding: var(--xx-small-space);
+        border-radius: var(--border-radius-small);
+        color: var(--white);
     }
     .hide {
       display: none!important;
@@ -116,9 +109,9 @@ template.innerHTML = `
   </style>
   <div class="bullet">
     <header class="head">
-      <span><slot name="market"></slot></span>
-      <span id="status">&#83;</span>
-      <span id="bigcap" class="hide">B</span>
+      <span class="market"><slot name="market"></slot></span>
+      <span class="status"></span>
+      <span class="bigcap hide"></span>
     </header>
     <div class="name">
       <a href="#"><slot name="name"></slot></a>
@@ -147,11 +140,10 @@ class CmpBullet extends HTMLElement {
   connectedCallback() {
     this.root.classList.add(this.getAttribute('direction'))
     this.root.querySelectorAll('a').forEach((el) => {el.href = this.getAttribute('url')})
-    this.root.querySelector('#status').setAttribute(
-      'title', this.getAttribute('status'))
+    this.root.querySelector('.status').innerText = this.getAttribute('status')
     if (this.getAttribute('isBigCap') !== 'nope') {
-      const bigcapEl = this.root.querySelector('#bigcap')
-      bigcapEl.setAttribute('title', this.getAttribute('isBigCap'))
+      const bigcapEl = this.root.querySelector('.bigcap')
+      bigcapEl.innerText = this.getAttribute('isBigCap')
       bigcapEl.classList.remove('hide')
     }
   }

@@ -27,10 +27,16 @@ export default  {
     if (accents.length !== 0) {
       accents = removeSmallCaps(accents)
       accents.forEach(stock => {
+        const isBigCap = stock.cap > 3000
         const direction = stock.relVariation > 0 ? 'positive' : 'negative'
         const id = stock.relVariation > 0 ? 'bests' : 'worsts'
-        const bullet = createComponent('cmp-bullet', { direction, url: '/'+lang+'/'+stock.slug, status: 'Status: '+(stock.status || 'N/A') }, [
-          createComponent('span', { slot: 'head' }, [stock.market]),
+        const bullet = createComponent('cmp-bullet', {
+          direction,
+          url: '/'+lang+'/'+stock.slug,
+          status: 'Status: '+(stock.status || 'N/A'),
+          isBigCap: isBigCap ? 'BIG CAP' : 'nope'
+        }, [
+          createComponent('span', { slot: 'market' }, [stock.market]),
           createComponent('span', { slot: 'name' }, [stock.name]),
           createComponent('span', { slot: 'value' }, [stock.relVariation]),
           createComponent('span', { slot: 'lastmod' }, [stock.lastTrade]),

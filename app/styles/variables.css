@@ -1,7 +1,7 @@
 :root {
   /* COLORS */
   --white:         #FAF9F6;
-  --lightest-gray: #EAE9E6;
+  --lightest-gray: #ecece9;
   --lighter-gray:  #D4D3D0;
   --light-gray:    #B9B8B5;
   --gray:          #9E9D99;
@@ -12,7 +12,7 @@
 
   --blue: #3F6580;
   --red:  #CD212A;
-  --green:#009e4f;
+  --green:#028343;
   --gold:   #ffd700;
   --silver: #aaa9ad;
   --bronze: #cd7f32;

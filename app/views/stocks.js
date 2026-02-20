@@ -30,7 +30,7 @@ export default  {
             direction,
             url: '/'+lang+'/'+stock.slug,
             status: 'Status: '+(stock.status || 'N/A'),
-            isBigCap: isBigCap ? 'Big capitalization' : 'nope'
+            isBigCap: isBigCap ? 'BIG CAP' : 'nope'
           }, [
             createComponent('span', { slot: 'market' }, [stock.market]),
             createComponent('span', { slot: 'name' }, [stock.name]),
