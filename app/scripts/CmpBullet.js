@@ -104,6 +104,15 @@ template.innerHTML = `
     @media screen and (max-width: 430px) {
       .bullet {
         width: 100%;
+        min-width: 17rem;
+        max-width: 19rem;
+      }
+      .market {
+        width: 18ch;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: inline-block;
       }
     }
   </style>

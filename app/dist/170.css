@@ -1,0 +1,1 @@
+.alphabet{display:flex;flex-wrap:wrap;justify-content:center;margin:var(--xxx-large-space) 0}.alphabet a{cursor:pointer;font-size:var(--font-size-base);font-weight:500;padding:var(--base-space)}#stocks_list{display:flex;flex-wrap:wrap;gap:var(--large-space);justify-content:space-evenly;margin:var(--large-space) 0}
